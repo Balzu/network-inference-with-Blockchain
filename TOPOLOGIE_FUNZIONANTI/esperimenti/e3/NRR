@@ -1,0 +1,2 @@
+r3, iptables -P OUTPUT DROP
+r5, iptables -P OUTPUT DROP

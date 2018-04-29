@@ -1,0 +1,22 @@
+Topologia: test_topo3.py
+Router Anonimi: no
+Router Bloccanti : R2, R5
+
+
+Descrizione dei file e cartelle presenti:
+- alias: Contiene l' associazione nome_router <-> indirizzi IP (utile per i router che hanno più
+         di un indirizzo IP)
+- build_topoX.py: costruisce la topologia 'X', usando le API di mininet
+- clean.sh: script che ripulisce i file temporanei precdentemente generati
+- hosts: file che contiene i nomi degli host che si desidera prendano parte al processo di 
+         raccolta delle tracce. I nomi degli host devono essere separati da un whitespace
+- build_virtual_topo.py: costruisce la topologia reale invocando i metodi contenuti in 
+         'build_topoX.py', poi aggiunge le regole di routing specificate in 'NRR' per rendere 
+          i router specificati anonimi o bloccanti, infine costruisce la topologia virtuale applicando
+          l' algoritmo descritto in 'iTop'
+- distances: cartella che contiene le distanze fra gli host. Le distanze vengono calcolate sulla topologia
+          reale, prima che uno o più router vengano resi anonimi o bloccanti
+- NRR ('Non Responding Routers') : file che per ogni riga contiene un router che non risponde
+          (anonimo o bloccante) assieme alle regole da inserire (separate da una virgola)
+- traceroute: cartella che contiene l' output di traceroute per ogni coppia di host. I file in questa
+          cartella vengono parsati per costruire la topologia virtuale

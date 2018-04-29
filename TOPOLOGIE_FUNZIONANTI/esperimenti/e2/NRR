@@ -1,0 +1,3 @@
+r3, iptables -P OUTPUT DROP
+r3, iptables -P INPUT DROP
+r3, iptables -P FORWARD DROP

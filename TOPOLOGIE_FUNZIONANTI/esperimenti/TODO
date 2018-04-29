@@ -1,0 +1,8 @@
+CODICE AGGIORNATO E' IN e2 e e4
+
+
+Ogni cartella e1, e2, e3.. contiene i file necessari per eseguire l' esperimento.
+Ma il codice è lo stesso: conviene avere una cartella  TOPOLOGIE contenente il codice per 
+creare topologie diverse con Mininet, e poi da linea di comando delezionare quale topologia usare.
+Conviene anche specificare da linea di comando? quali router sono anonimi o bloccanti
+
