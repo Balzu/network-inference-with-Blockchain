@@ -59,19 +59,21 @@ def create_virtual_topo_and_traces(alias, net):
         for h1 in hosts:
             for h2 in hosts:
                 if h1 != h2:
-                    traces[h1+h2] = []      
-                    traces[h1+h2].extend(get_responding_routers(h1,h2,alias))
+                    traces[h1+h2] = []
+                    pdb.set_trace()
+                   
                     if get_answer_from_dest(h1,h2): 
                         #Manage the cases in which no blocking router is found
                         # could find one or more anonymouse router
-                        add_routers(topo, h1, h2, x, alias, 100)
+                        add_routers(topo, h1, h2, x, alias, traces, 100, False)                            
                     else:
                         #Manage the case in which you find at least one blocking router  
+                        traces[h1+h2].extend(get_responding_routers(h1,h2,alias))
                         numr_h1 = num_responding_routers(h1, h2)
                         numr_h2 = num_responding_routers(h2, h1)
                         num_r = get_real_distance(h1,h2)
                         # Add the the responding routers on the path before the block and save the last                             
-                        last_h1 = add_routers(topo, h1, h2, x, alias, numr_h1)
+                        last_h1 = add_routers(topo, h1, h2, x, alias, traces, numr_h1, True)
                         last_h2 = get_last_responding_router(h2, h1, alias)
                         unobserved = num_r - numr_h1 - numr_h2
                         if unobserved == 1: # Case 1: only one blocking router
@@ -184,8 +186,9 @@ def get_answer_from_dest(host1,host2):
         return False
 
 # Adds to the virtual topology the routers found in the traces and returns the last added router
-# Works by scanning a trace line by line
-def add_routers(topo, host1, host2, x, alias, max_iter):
+# Works by scanning a trace line by line. If this method is not invoked in the blocking case,
+# It also takes care of creating the traces from host1 to host2
+def add_routers(topo, host1, host2, x, alias, traces, max_iter, blocking_case):
     with open("traceroute/"+host1+host2) as trace:
         lines = trace.readlines()        
         src = None
@@ -197,10 +200,16 @@ def add_routers(topo, host1, host2, x, alias, max_iter):
             dst = find_router(lines[1].split(), alias)
             if dst not in topo:
                 topo[dst] = ('R', set())
+                if not blocking_case:
+                    traces[host1+host2].append(dst)
         for i in range(1, max_iter):
             src = find_router(lines[i].split(), alias)
             dst = find_router(lines[i+1].split(), alias)
-            (src,dst) = add_link(topo,(src,dst),x,i)
+            (src,dst) = add_link(topo,(src,dst) ,x ,i)
+            if not blocking_case:
+                if i==1:
+                    traces[host1+host2].append(src)
+                traces[host1+host2].append(dst)
     return dst   
 
 def find_router(line,alias):
@@ -213,7 +222,7 @@ def find_router(line,alias):
         return alias[line[i]]
 
 # Adds a directed link and returns the pair (src,dst) with their real name
-def add_link(topo,(src,dst),x,line=100, bidirectional=True):  # line=100 is an impossible value. Keep this default when you insert links by hand and not by scanning the lines
+def add_link(topo, (src,dst),x,line=100, bidirectional=True):  # line=100 is an impossible value. Keep this default when you insert links by hand and not by scanning the lines
     
     if src not in topo: # A non responding router is NEVER in the topology (don't have as keys 'A', 'B', 'H' or 'NC')
         if is_responding(src):   #If we have a responding router, add it as responding
@@ -238,6 +247,7 @@ def add_link(topo,(src,dst),x,line=100, bidirectional=True):  # line=100 is an i
             _type = dst
             dst = 'X'+str(x[0])
             topo[dst] = (_type, set())
+            #traces[h1+h2].append(dst) # Add the anonymous router to the trace
     topo[src][1].add(dst)
     if bidirectional == True:
         topo[dst][1].add(src)
