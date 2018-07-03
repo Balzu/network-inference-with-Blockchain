@@ -231,7 +231,7 @@ def replace_option(M, old_e, new_e):
     #return new_e
 
 # Ih the endpoint e_j is deleted from M after a merge, can't leave e_j as valid merge option!
-'''def update_endpoints(M, M_e, e_i, e_j, edges):
+def update_endpoints(M, M_e, e_i, e_j, edges):
     R1 =  e_i.split()[0]
     R2 =  e_i.split()[2]
     R3 =  e_j.split()[0]
@@ -245,7 +245,6 @@ def replace_option(M, old_e, new_e):
             M_e.append(new_e)
             M_e.remove(e)
             replace_option(M, e, new_e)
-            print ('Caso 1\n'+'e_i='+e_i+'\ne_j='+e_j)
             edges.remove(e)
             if new_e not in edges:
                 edges.append(new_e)
@@ -255,7 +254,6 @@ def replace_option(M, old_e, new_e):
             M_e.append(new_e)
             M_e.remove(e)
             replace_option(M, e, new_e)
-            print ('Caso 2\n'+'e_i='+e_i+'\ne_j='+e_j)
             edges.remove(e)
             if new_e not in edges:
                 edges.append(new_e)
@@ -265,7 +263,6 @@ def replace_option(M, old_e, new_e):
             M_e.append(new_e)
             M_e.remove(e)
             replace_option(M, e, new_e)
-            print ('Caso 3\n'+'e_i='+e_i+'\ne_j='+e_j)
             edges.remove(e)
             if new_e not in edges:
                 edges.append(new_e)
@@ -275,7 +272,6 @@ def replace_option(M, old_e, new_e):
             M_e.append(new_e)
             M_e.remove(e)
             replace_option(M, e, new_e)
-            print ('Caso 4\n'+'e_i='+e_i+'\ne_j='+e_j)
             edges.remove(e)
             if new_e not in edges:
                 edges.append(new_e) 
@@ -285,50 +281,14 @@ def replace_option(M, old_e, new_e):
             M_e.append(new_e)
             M_e.remove(e)
             replace_option(M, e, new_e)
-            print ('Caso 5\n'+'e_i='+e_i+'\ne_j='+e_j)
             edges.remove(e)
             if new_e not in edges:
                 edges.append(new_e)
-'''
-
-def get_new_endpoints(e, e_i, e_j):
-    R1 =  e_i.split()[0]
-    R2 =  e_i.split()[2]
-    R3 =  e_j.split()[0]
-    R4 =  e_j.split()[2]
-    Re1 =  e.split()[0]
-    Re2 =  e.split()[2]
-    if Re1==R3 or Re1==R4 or Re2==R3 or Re2==R4:
-        if Re1 == R3:
-            Re1 = R1
-        elif Re1 == R4:
-            Re1 = R2
-        if Re2 == R3:
-            Re2 = R1
-        elif Re2 == R4:
-            Re2 = R2
-        return (True, Re1, Re2)
-    return (False, Re1, Re2)
-         
-def update_endpoints(M, e_i, e_j):
-    for e in M.keys():
-        for ee in M[e]:
-            (new, Re1, Re2) = get_new_endpoints(ee, e_i, e_j)
-            if new: # First: if the case, change the endpoints in the option list of e
-                M[e].remove(ee)
-                M[e].append(Re1 + ' -> ' + Re2)
-        (new, Re1, Re2) = get_new_endpoints(e, e_i, e_j)
-        if new: # Second: if the case, change the endpoint of e ( and update the dictionary)
-            new_e = Re1 + ' -> ' + Re2
-            lst = M[e]
-            del M[e]
-            M[new_e] = lst
-        
-
+           
 def merge_links(e_i, e_j, M, topo, C):
     '''Performs the merge, updating the topology; updates the merge options; updates the router classes'''
     types = get_new_types(e_i, e_j, C, topo) 
-    print 'Merge Links: e_i= '+ e_i + ', e_j = ' + e_j
+
     merge(e_i, e_j, topo, copy = False) #TODO check if correct
     to_remove = []    
     [to_remove.append(e) for e in M[e_i] if e not in M[e_j]]
@@ -346,10 +306,8 @@ def merge_links(e_i, e_j, M, topo, C):
                 M[e].remove(e_i)
             elif e_j in M[e] and e_i not in M[e]:
                 M[e].remove(e_j)
-            #update_endpoints(M, M[e], e_i, e_j, edges)
-  
-    update_endpoints(M, e_i, e_j)
-
+            update_endpoints(M, M[e], e_i, e_j, edges)
+    
     R1 =  e_i.split()[0]
     R2 =  e_i.split()[2]
     T1 = types.split('-')[0]
@@ -364,16 +322,12 @@ def create_merge_topology(M, topo, C):
     e_j = get_link_with_min_options_from_list(M[e_i], M)
     while e_i != None:
         e_j = get_link_with_min_options_from_list(M[e_i], M)
-        try:
-            if is_compatible(e_i, e_j, C, topo):     
-                merge_links(e_i, e_j, M, topo, C)
-            else:
-                M[e_i].remove(e_j)
-                if e_i in M[e_j]:
-                    M[e_j].remove(e_i)
-        except AttributeError as e:
-            pass
-                #del M[e_i] #TODO controlla
+        if is_compatible(e_i, e_j, C, topo):           
+            merge_links(e_i, e_j, M, topo, C)
+        else:
+            M[e_i].remove(e_j)
+            if e_i in M[e_j]:
+                M[e_j].remove(e_i)
         e_i = get_link_with_min_options(M)
     return (M, topo)        
 

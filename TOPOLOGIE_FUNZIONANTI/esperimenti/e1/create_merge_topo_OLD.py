@@ -194,15 +194,10 @@ def get_link_with_min_options(M):
 def get_link_with_min_options_from_list(M_ei, M):
     e_min = None
     min_opt = maxint
-    to_remove = []
     for e in M_ei:
-        try:
-            if len(M[e]) < min_opt: 
-                min_opt = len(M[e])
-                e_min = e
-        except KeyError, err:
-            to_remove.append(e)
-    [M_ei.remove(e) for e in to_remove]
+        if len(M[e]) < min_opt: 
+            min_opt = len(M[e])
+            e_min = e
     return e_min  #, min_opt)
     
 
@@ -218,20 +213,16 @@ def get_new_types(e_i, e_j, C, topo):
     return C[T1+'-'+T2][T3+'-'+T4]
 
 def replace_option(M, old_e, new_e):
-    print 'OLD: ' + old_e
-    print 'NEW: ' + new_e
     lst = M[old_e]
     del M[old_e]
-    print 'Deleted in replace_option ' + old_e
     M[new_e] = lst
     for e in M:
         if old_e in M[e]:
             M[e].remove(old_e)
             M[e].append(new_e)
-    #return new_e
 
 # Ih the endpoint e_j is deleted from M after a merge, can't leave e_j as valid merge option!
-'''def update_endpoints(M, M_e, e_i, e_j, edges):
+def update_endpoints(M, M_e, e_i, e_j):
     R1 =  e_i.split()[0]
     R2 =  e_i.split()[2]
     R3 =  e_j.split()[0]
@@ -241,115 +232,52 @@ def replace_option(M, old_e, new_e):
         # Look at the table with all possible cases (case e = e_j examinated by caller function)
         if Re1 == R4 and Re2 == R3:
             new_e = R2 + ' -> ' + R1
-           # if e!= new_e:
             M_e.append(new_e)
             M_e.remove(e)
             replace_option(M, e, new_e)
-            print ('Caso 1\n'+'e_i='+e_i+'\ne_j='+e_j)
-            edges.remove(e)
-            if new_e not in edges:
-                edges.append(new_e)
         elif Re1 == R3:
             new_e = R1 + ' -> ' + Re2
-            #if e!= new_e:
             M_e.append(new_e)
             M_e.remove(e)
             replace_option(M, e, new_e)
-            print ('Caso 2\n'+'e_i='+e_i+'\ne_j='+e_j)
-            edges.remove(e)
-            if new_e not in edges:
-                edges.append(new_e)
         elif Re1 == R4:
             new_e = R2 + ' -> ' + Re2
-            #if e!= new_e:
             M_e.append(new_e)
             M_e.remove(e)
             replace_option(M, e, new_e)
-            print ('Caso 3\n'+'e_i='+e_i+'\ne_j='+e_j)
-            edges.remove(e)
-            if new_e not in edges:
-                edges.append(new_e)
         elif Re2 == R3:
             new_e = Re1 + ' -> ' + R1
-            #if e!= new_e:
             M_e.append(new_e)
             M_e.remove(e)
             replace_option(M, e, new_e)
-            print ('Caso 4\n'+'e_i='+e_i+'\ne_j='+e_j)
-            edges.remove(e)
-            if new_e not in edges:
-                edges.append(new_e) 
         elif Re2 == R4:
             new_e = Re1 + ' -> ' + R2
-            #if e!= new_e:
             M_e.append(new_e)
             M_e.remove(e)
             replace_option(M, e, new_e)
-            print ('Caso 5\n'+'e_i='+e_i+'\ne_j='+e_j)
-            edges.remove(e)
-            if new_e not in edges:
-                edges.append(new_e)
-'''
 
-def get_new_endpoints(e, e_i, e_j):
-    R1 =  e_i.split()[0]
-    R2 =  e_i.split()[2]
-    R3 =  e_j.split()[0]
-    R4 =  e_j.split()[2]
-    Re1 =  e.split()[0]
-    Re2 =  e.split()[2]
-    if Re1==R3 or Re1==R4 or Re2==R3 or Re2==R4:
-        if Re1 == R3:
-            Re1 = R1
-        elif Re1 == R4:
-            Re1 = R2
-        if Re2 == R3:
-            Re2 = R1
-        elif Re2 == R4:
-            Re2 = R2
-        return (True, Re1, Re2)
-    return (False, Re1, Re2)
-         
-def update_endpoints(M, e_i, e_j):
-    for e in M.keys():
-        for ee in M[e]:
-            (new, Re1, Re2) = get_new_endpoints(ee, e_i, e_j)
-            if new: # First: if the case, change the endpoints in the option list of e
-                M[e].remove(ee)
-                M[e].append(Re1 + ' -> ' + Re2)
-        (new, Re1, Re2) = get_new_endpoints(e, e_i, e_j)
-        if new: # Second: if the case, change the endpoint of e ( and update the dictionary)
-            new_e = Re1 + ' -> ' + Re2
-            lst = M[e]
-            del M[e]
-            M[new_e] = lst
-        
 
 def merge_links(e_i, e_j, M, topo, C):
     '''Performs the merge, updating the topology; updates the merge options; updates the router classes'''
     types = get_new_types(e_i, e_j, C, topo) 
-    print 'Merge Links: e_i= '+ e_i + ', e_j = ' + e_j
+
     merge(e_i, e_j, topo, copy = False) #TODO check if correct
     to_remove = []    
     [to_remove.append(e) for e in M[e_i] if e not in M[e_j]]
     [M[e_i].remove(e) for e in to_remove]
     del M[e_j]
-    print 'deleted ' + e_j
-    edges = M.keys()
-    for e in edges: # TODO qui c'era solo M 
+    for e in M.keys(): # TODO qui c'era solo M 
 # Could use just 2 conditions, leave 3 for readability
 # Check ' e in M ' because you actually change the keys in update_endpoints()
-        if e != e_i: # and e in M: 
+        if e != e_i and e in M: 
             if e_i in M[e] and e_j in M[e]:
                 M[e].remove(e_j) # leave only e_i
             elif e_i in M[e] and e_j not in M[e]:
                 M[e].remove(e_i)
             elif e_j in M[e] and e_i not in M[e]:
                 M[e].remove(e_j)
-            #update_endpoints(M, M[e], e_i, e_j, edges)
-  
-    update_endpoints(M, e_i, e_j)
-
+            update_endpoints(M, M[e], e_i, e_j)
+    
     R1 =  e_i.split()[0]
     R2 =  e_i.split()[2]
     T1 = types.split('-')[0]
@@ -364,16 +292,12 @@ def create_merge_topology(M, topo, C):
     e_j = get_link_with_min_options_from_list(M[e_i], M)
     while e_i != None:
         e_j = get_link_with_min_options_from_list(M[e_i], M)
-        try:
-            if is_compatible(e_i, e_j, C, topo):     
-                merge_links(e_i, e_j, M, topo, C)
-            else:
-                M[e_i].remove(e_j)
-                if e_i in M[e_j]:
-                    M[e_j].remove(e_i)
-        except AttributeError as e:
-            pass
-                #del M[e_i] #TODO controlla
+        if is_compatible(e_i, e_j, C, topo):           
+            merge_links(e_i, e_j, M, topo, C)
+        else:
+            M[e_i].remove(e_j)
+            if e_i in M[e_j]:
+                M[e_j].remove(e_i)
         e_i = get_link_with_min_options(M)
     return (M, topo)        
 

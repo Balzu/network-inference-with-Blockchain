@@ -60,7 +60,7 @@ def create_virtual_topo_and_traces(alias, net):
             for h2 in hosts:
                 if h1 != h2:
                     traces[h1+h2] = []
-                    pdb.set_trace()
+                  
                    
                     if get_answer_from_dest(h1,h2): 
                         #Manage the cases in which no blocking router is found
@@ -261,6 +261,7 @@ def is_responding(router):
         return False
 
 def print_topo(topo):
+    print "\n--- TOPOLOGY ---\n"
     for src in topo:
         for d in topo[src][1]:
             print src + ' -> ' + d
@@ -275,23 +276,3 @@ def print_traces(traces):
         for r in traces[t]:
             print r + ' '
 
-def run():
-    os.system('./clean.sh')  # Delete previously generated files..
-    topo = NetworkTopo()
-    net = Mininet( topo=topo )
-    add_static_routes(net)
-    net.start()
-    compute_distances(net) 
-    make_anonymous_and_blocking_routers(net)
-    create_traces(net)
-    alias = create_alias()
-    (vtopo, traces) = create_virtual_topo_and_traces(alias, net)
-    print_topo(vtopo)
-    print_nodes(vtopo)
-    print_traces(traces)
-    net.stop()
-    
-
-if __name__ == '__main__':
-    setLogLevel( 'info' )
-    run()

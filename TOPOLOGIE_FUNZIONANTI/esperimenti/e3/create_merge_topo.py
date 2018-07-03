@@ -364,7 +364,6 @@ def create_merge_topology(M, topo, C):
     e_j = get_link_with_min_options_from_list(M[e_i], M)
     while e_i != None:
         e_j = get_link_with_min_options_from_list(M[e_i], M)
-        pdb.set_trace()
         try:
             if is_compatible(e_i, e_j, C, topo):     
                 merge_links(e_i, e_j, M, topo, C)
