@@ -261,6 +261,7 @@ def is_responding(router):
         return False
 
 def print_topo(topo):
+    print "\n--- TOPOLOGY ---\n"
     for src in topo:
         for d in topo[src][1]:
             print src + ' -> ' + d
