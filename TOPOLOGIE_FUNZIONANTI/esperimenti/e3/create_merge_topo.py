@@ -91,7 +91,7 @@ def merge(e_i, e_j, topo, copy = True):
     #The two links could have an endpoint in common
     if R3 != R1 and R3 != R2: 
         del m_topo[R3]
-    if R4 != R1 and R4 != R2: 
+    if R4 != R1 and R4 != R2 and R4!=R3: # If R4 = R3, I already deleted it! 
         del m_topo[R4]
     return m_topo
 
@@ -136,16 +136,20 @@ def is_compatible(e_i, e_j, C, topo):
     R2 = (R2, topo[R2][0])
     R3 = (R3, topo[R3][0])
     R4 = (R4, topo[R4][0])
-# Check if e_j is a valid option for e_i 
-    if R3[1] + '-' + R4[1] not in C[R1[1] + '-' + R2[1]]:
+# Check if e_j is a valid option for e_i. Return false if the types or R3 and R4 are not
+# valid options for R1 and R3
+    try:
+        if R3[1] + '-' + R4[1] not in C[R1[1] + '-' + R2[1]]:
+            return False
+        else:  # If corresponding routers are responding ones, they must be the same
+            if is_responding(R1[1]) and is_responding(R3[1]):
+                if R1[0] != R3[0]:
+                    return False
+            if is_responding(R2[1]) and is_responding(R4[1]):
+                if R2[0] != R4[0]:
+                    return False
+    except KeyError, e:
         return False
-    else:  # If corresponding routers are responding ones, they must be the same
-        if is_responding(R1[1]) and is_responding(R3[1]):
-            if R1[0] != R3[0]:
-                return False
-        if is_responding(R2[1]) and is_responding(R4[1]):
-            if R2[0] != R4[0]:
-                return False
     return True
 
 
