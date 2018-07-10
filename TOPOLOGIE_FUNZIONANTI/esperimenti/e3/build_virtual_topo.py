@@ -265,6 +265,7 @@ def print_topo(topo):
     for src in topo:
         for d in topo[src][1]:
             print src + ' -> ' + d
+    print "\n--- END TOPOLOGY ---\n"
 
 def print_nodes(topo):
     for src in topo:
