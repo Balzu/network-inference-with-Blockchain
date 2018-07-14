@@ -50,7 +50,11 @@ def trace_preservation(M, paths):
 def find_sources(traces): 
     sources = set()
     for path in traces:
-        sources.add(traces[path][0])
+        print ' ------ '
+        print path
+        print traces[path]
+        if traces[path] != []: # Monitors could be directly connected ( don't pass via any router)
+            sources.add(traces[path][0])
     return sources  
 
 def copy_topo(topo):
@@ -169,14 +173,14 @@ def create_merge_options(topo, traces):
     M = {} 
     for e in paths:
         M[e] = paths.keys() 
-    print 'M with Full virtual topo'
-    print_table(M)   
+    #print 'M with Full virtual topo'
+    #print_table(M)   
     trace_preservation(M, paths)
-    print 'M after trace preservation'
-    print_table(M)   
+    #print 'M after trace preservation'
+    #print_table(M)   
     distance_preservation(topo, traces, M)
-    print 'M after distance preservation'
-    print_table(M)   
+    #print 'M after distance preservation'
+    #print_table(M)   
     C = get_compatibility_table()
     endpoint_compatibility(M,C,topo) 
     return (M, C)
@@ -297,7 +301,7 @@ def merge_links(e_i, e_j, M, topo, C):
 
 def create_merge_topology(M, topo, C):
     e_i = get_link_with_min_options(M)
-    e_j = get_link_with_min_options_from_list(M[e_i], M)
+    #e_j = get_link_with_min_options_from_list(M[e_i], M)
     while e_i != None:
         e_j = get_link_with_min_options_from_list(M[e_i], M)
         try:

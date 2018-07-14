@@ -1,0 +1,105 @@
+Starting ping from h11 ... 
+Starting ping from h11 ... 
+Starting ping from h62 ... 
+Starting ping from h62 ... 
+Starting ping from h71 ... 
+Starting ping from h71 ... 
+Starting collection of traces from h11 ... 
+Starting collection of traces from h11 ... 
+Starting collection of traces from h62 ... 
+Starting collection of traces from h62 ... 
+Starting collection of traces from h71 ... 
+Starting collection of traces from h71 ... 
+Starting ping from h41 ... 
+Starting ping from h41 ... 
+Starting ping from h61 ... 
+Starting ping from h61 ... 
+Merge Links: e_i= X4 -> r7, e_j = X7 -> r7
+deleted X7 -> r7
+Merge Links: e_i= X4 -> r7, e_j = X8 -> r7
+deleted X8 -> r7
+Merge Links: e_i= X4 -> r7, e_j = X10 -> r7
+deleted X10 -> r7
+Merge Links: e_i= X4 -> r6, e_j = X2 -> r6
+deleted X2 -> r6
+Merge Links: e_i= X4 -> r6, e_j = X4 -> r6
+deleted X4 -> r6
+Merge Links: e_i= r6 -> X4, e_j = r6 -> X5
+deleted r6 -> X5
+Merge Links: e_i= r6 -> X4, e_j = r6 -> X4
+deleted r6 -> X4
+Merge Links: e_i= X1 -> r2, e_j = X6 -> r2
+deleted X6 -> r2
+Merge Links: e_i= X1 -> r2, e_j = X9 -> r2
+deleted X9 -> r2
+Merge Links: e_i= X1 -> r2, e_j = X3 -> r2
+deleted X3 -> r2
+Merge Links: e_i= r2 -> X1, e_j = r2 -> X1
+deleted r2 -> X1
+Merge Links: e_i= r7 -> X4, e_j = r7 -> X4
+deleted r7 -> X4
+Merge Links: e_i= r4 -> X1, e_j = r4 -> X1
+deleted r4 -> X1
+Merge Links: e_i= r4 -> X4, e_j = r4 -> X4
+deleted r4 -> X4
+Merge Links: e_i= X4 -> r4, e_j = X1 -> r4
+deleted X1 -> r4
+Merge Links: e_i= X4 -> r4, e_j = X4 -> r4
+deleted X4 -> r4
+
+--- TOPOLOGY ---
+
+r4 -> X4
+r6 -> X4
+r7 -> X4
+r1 -> r2
+r2 -> r1
+r2 -> X4
+X4 -> r4
+X4 -> r6
+X4 -> r7
+X4 -> r2
+
+--- END TOPOLOGY ---
+
+Starting ping from h71 ... 
+Starting ping from h71 ... 
+Starting collection of traces from h41 ... 
+Starting collection of traces from h41 ... 
+Starting collection of traces from h61 ... 
+Starting collection of traces from h61 ... 
+Starting collection of traces from h71 ... 
+Starting collection of traces from h71 ... 
+Merge Links: e_i= r6 -> X7, e_j = r6 -> X3
+deleted r6 -> X3
+Merge Links: e_i= X4 -> r7, e_j = X2 -> r7
+deleted X2 -> r7
+Merge Links: e_i= X4 -> r7, e_j = X5 -> r7
+deleted X5 -> r7
+Merge Links: e_i= X4 -> r6, e_j = X1 -> r6
+deleted X1 -> r6
+Merge Links: e_i= r7 -> X4, e_j = r7 -> X4
+deleted r7 -> X4
+Merge Links: e_i= X7 -> r6, e_j = X4 -> r6
+deleted X4 -> r6
+Merge Links: e_i= r6 -> X7, e_j = r6 -> X7
+deleted r6 -> X7
+Merge Links: e_i= X7 -> r4, e_j = X7 -> r4
+deleted X7 -> r4
+Merge Links: e_i= r4 -> X7, e_j = r4 -> X7
+deleted r4 -> X7
+
+--- TOPOLOGY ---
+
+r4 -> X7
+r6 -> X7
+r7 -> X7
+X6 -> X7
+X7 -> r4
+X7 -> r6
+X7 -> r7
+X7 -> X6
+
+--- END TOPOLOGY ---
+
+Threads finished
