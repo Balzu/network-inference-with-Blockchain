@@ -67,7 +67,7 @@ def create_virtual_topo_and_traces(alias, net, hosts):
             if h1 != h2:
                 print 'h1 = ' + h1 + ', h2 =  ' + h2
                 print ('A' in topo)
-                pdb.set_trace()
+                #pdb.set_trace()
                 traces[h1+h2] = []
                 if get_answer_from_dest(h1,h2): 
                 #Manage the cases in which no blocking router is found
@@ -79,7 +79,8 @@ def create_virtual_topo_and_traces(alias, net, hosts):
                     numr_h1 = num_responding_routers(h1, h2)
                     numr_h2 = num_responding_routers(h2, h1)
                     num_r = get_real_distance(h1,h2)
-                    # Add the the responding routers on the path before the block and save the last                          last_h1 = add_routers(topo, h1, h2, x, alias, traces, numr_h1, True)
+                    # Add the the responding routers on the path before the block and save the last  
+                    last_h1 = add_routers(topo, h1, h2, x, alias, traces, numr_h1, True)
                     last_h2 = get_last_responding_router(h2, h1, alias)
                     unobserved = num_r - numr_h1 - numr_h2
                     if unobserved == 1: # Case 1: only one blocking router

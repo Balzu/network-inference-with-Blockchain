@@ -1,0 +1,27 @@
+
+Thread 1 :
+Hosts che hanno partecipato a raccolta tracce:
+h41
+h31
+h61
+h71
+h21
+Topologia indotta:
+X25 -> X24
+X25 -> X30
+X24 -> X25
+X24 -> r4
+X24 -> X27
+X24 -> X22
+X27 -> X24
+X20 -> X30
+X22 -> X24
+X30 -> r4
+X30 -> r6
+X30 -> r7
+X30 -> X25
+X30 -> X20
+r4 -> X30
+r4 -> X24
+r6 -> X30
+r7 -> X30

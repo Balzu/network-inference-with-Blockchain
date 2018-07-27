@@ -5,7 +5,6 @@ from create_compatibility_table import *
 from heapq import *
 from sys import maxint
 
-#TODO puoi accorparlo con print_traces
 def print_table(table):
     for t in table:
         print t + ' : '
@@ -51,7 +50,11 @@ def trace_preservation(M, paths):
 def find_sources(traces): 
     sources = set()
     for path in traces:
-        sources.add(traces[path][0])
+        print ' ------ '
+        print path
+        print traces[path]
+        if traces[path] != []: # Monitors could be directly connected ( don't pass via any router)
+            sources.add(traces[path][0])
     return sources  
 
 def copy_topo(topo):
@@ -67,7 +70,7 @@ def merge(e_i, e_j, topo, copy = True):
     if copy:
         m_topo = copy_topo(topo) #TODO non efficiente la copia dell' intera topologia ogni volta    
     else:
-        m_topo = topo #TODO controlla che topo riceva tutti i side effects del caso    
+        m_topo = topo    
     R1 = e_i.split()[0]
     R2 = e_i.split()[2]
     R3 = e_j.split()[0]
@@ -166,22 +169,19 @@ def endpoint_compatibility(M,C,topo):
 
 def create_merge_options(topo, traces):
     paths = create_paths_table(traces)
-    print_table(paths)
     # Merge option table. Initially, each link has the whole set of links as merge options
     M = {} 
     for e in paths:
         M[e] = paths.keys() 
-    print 'M with Full virtual topo'
-    print_table(M)
-   
+    #print 'M with Full virtual topo'
+    #print_table(M)   
     trace_preservation(M, paths)
-    print 'M after trace preservation'
-    print_table(M)   
+    #print 'M after trace preservation'
+    #print_table(M)   
     distance_preservation(topo, traces, M)
-    print 'M after distance preservation'
-    print_table(M)   
+    #print 'M after distance preservation'
+    #print_table(M)   
     C = get_compatibility_table()
-   
     endpoint_compatibility(M,C,topo) 
     return (M, C)
 
@@ -193,7 +193,7 @@ def get_link_with_min_options(M):
         if len(M[e]) < min_opt and len(M[e]) > 0: 
             min_opt = len(M[e])
             e_min = e
-    return e_min #, min_opt)
+    return e_min
 
 def get_link_with_min_options_from_list(M_ei, M):
     e_min = None
@@ -222,8 +222,6 @@ def get_new_types(e_i, e_j, C, topo):
     return C[T1+'-'+T2][T3+'-'+T4]
 
 def replace_option(M, old_e, new_e):
-    print 'OLD: ' + old_e
-    print 'NEW: ' + new_e
     lst = M[old_e]
     del M[old_e]
     print 'Deleted in replace_option ' + old_e
@@ -232,68 +230,6 @@ def replace_option(M, old_e, new_e):
         if old_e in M[e]:
             M[e].remove(old_e)
             M[e].append(new_e)
-    #return new_e
-
-# Ih the endpoint e_j is deleted from M after a merge, can't leave e_j as valid merge option!
-'''def update_endpoints(M, M_e, e_i, e_j, edges):
-    R1 =  e_i.split()[0]
-    R2 =  e_i.split()[2]
-    R3 =  e_j.split()[0]
-    R4 =  e_j.split()[2]
-    for e in M_e:
-        (Re1, Re2) = e.split(' -> ')
-        # Look at the table with all possible cases (case e = e_j examinated by caller function)
-        if Re1 == R4 and Re2 == R3:
-            new_e = R2 + ' -> ' + R1
-           # if e!= new_e:
-            M_e.append(new_e)
-            M_e.remove(e)
-            replace_option(M, e, new_e)
-            print ('Caso 1\n'+'e_i='+e_i+'\ne_j='+e_j)
-            edges.remove(e)
-            if new_e not in edges:
-                edges.append(new_e)
-        elif Re1 == R3:
-            new_e = R1 + ' -> ' + Re2
-            #if e!= new_e:
-            M_e.append(new_e)
-            M_e.remove(e)
-            replace_option(M, e, new_e)
-            print ('Caso 2\n'+'e_i='+e_i+'\ne_j='+e_j)
-            edges.remove(e)
-            if new_e not in edges:
-                edges.append(new_e)
-        elif Re1 == R4:
-            new_e = R2 + ' -> ' + Re2
-            #if e!= new_e:
-            M_e.append(new_e)
-            M_e.remove(e)
-            replace_option(M, e, new_e)
-            print ('Caso 3\n'+'e_i='+e_i+'\ne_j='+e_j)
-            edges.remove(e)
-            if new_e not in edges:
-                edges.append(new_e)
-        elif Re2 == R3:
-            new_e = Re1 + ' -> ' + R1
-            #if e!= new_e:
-            M_e.append(new_e)
-            M_e.remove(e)
-            replace_option(M, e, new_e)
-            print ('Caso 4\n'+'e_i='+e_i+'\ne_j='+e_j)
-            edges.remove(e)
-            if new_e not in edges:
-                edges.append(new_e) 
-        elif Re2 == R4:
-            new_e = Re1 + ' -> ' + R2
-            #if e!= new_e:
-            M_e.append(new_e)
-            M_e.remove(e)
-            replace_option(M, e, new_e)
-            print ('Caso 5\n'+'e_i='+e_i+'\ne_j='+e_j)
-            edges.remove(e)
-            if new_e not in edges:
-                edges.append(new_e)
-'''
 
 def get_new_endpoints(e, e_i, e_j):
     R1 =  e_i.split()[0]
@@ -365,7 +301,7 @@ def merge_links(e_i, e_j, M, topo, C):
 
 def create_merge_topology(M, topo, C):
     e_i = get_link_with_min_options(M)
-    e_j = get_link_with_min_options_from_list(M[e_i], M)
+    #e_j = get_link_with_min_options_from_list(M[e_i], M)
     while e_i != None:
         e_j = get_link_with_min_options_from_list(M[e_i], M)
         try:

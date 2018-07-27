@@ -3,6 +3,7 @@
 import os
 import pdb
 from build_topo3 import *
+from random import randint
 
 def make_anonymous_and_blocking_routers(net):
     with open("NRR", "r") as nrr_file:
@@ -11,33 +12,41 @@ def make_anonymous_and_blocking_routers(net):
             net[r[0]].cmd(r[1])
        
     
-def compute_distances(net):
-    with open ("hosts", "r") as hosts_file:
+def compute_distances(net, hosts):
+    distances = {}
+    for h1 in hosts:
+        for h2 in hosts:
+            if h1 != h2:                    
+            # For each host different from host1, add a line with the name of the host
+            # and the distance from host1 (exploit TTL to derive the distance)
+                print "Starting ping from " + h1 + " ... "
+                os.system("touch distances/" + h1) 
+                os.system("echo -n '" + h2 + " '  >> distances/" + h1)
+                net[h1].cmd('ping -c 1 ' + net[h2].IP() + 
+                " | grep from | awk '{split($6,a,\"=\"); print 64 - a[2]}'>> distances/" + 
+                h1)
+                os.system("echo  '---'  >>distances/" + h1) #TODO check
+
+
+def get_hosts(num):
+    '''Return "num" random hosts'''
+    with open ("hosts", "r") as hosts_file:   
         hosts = hosts_file.read().split()
-        distances = {}
-        for h1 in hosts:
-            for h2 in hosts:
-                if h1 != h2:                    
-                # For each host different from host1, add a line with the name of the host
-                # and the distance from host1 (exploit TTL to derive the distance)
-                    print "Starting ping from " + h1 + " ... "
-                    os.system("touch distances/" + h1) 
-                    os.system("echo -n '" + h2 + " '  >> distances/" + h1)
-                    net[h1].cmd('ping -c 1 ' + net[h2].IP() + 
-                    " | grep from | awk '{split($6,a,\"=\"); print 64 - a[2]}'>> distances/" + 
-                    h1)
-    
-def create_traces(net):
-    with open ("hosts", "r") as hosts_file:
-        hosts = hosts_file.read().split()
-        for h1 in hosts:
-            for h2 in hosts:
-                if h1 != h2:                    
-                # For each host different from host1, add a line with the name of the host
-                # and the distance from host1 (exploit TTL to derive the distance)
-                    print "Starting collection of traces from " + h1 + " ... " 
-                    net[h1].cmd('traceroute -n -w 0.5 ' + net[h2].IP() + ' > traceroute/' + h1 + h2)
- 
+        r_hosts = []
+        for i in range(num):
+            r = randint(0, len(hosts)-1)
+            r_hosts.append(hosts.pop(r))
+        return r_hosts
+
+
+def create_traces(net, hosts):
+    for h1 in hosts:
+        for h2 in hosts:
+            if h1 != h2:                    
+            # For each host different from host1, add a line with the name of the host
+            # and the distance from host1 (exploit TTL to derive the distance)
+                print "Starting collection of traces from " + h1 + " ... " 
+                net[h1].cmd('traceroute -n -w 0.5 ' + net[h2].IP() + ' > traceroute/' + h1 + h2)
 
 def create_alias():
     with open("alias", "r") as alias_file:
@@ -48,62 +57,61 @@ def create_alias():
                 alias[address]=(l[0]) #l[0] is the router name
         return alias
 
-def create_virtual_topo_and_traces(alias, net):
-    with open ("hosts", "r") as hosts_file:    
-        
-        hosts = hosts_file.read().split()
-        topo = {}
-        x = [0]  # Incremental identifier for non responding routers. x is a list used as single value
-        done = set() # Insert hosts already visited (in case a blocking router is found)
-        traces = {}
-        for h1 in hosts:
-            for h2 in hosts:
-                if h1 != h2:
-                    traces[h1+h2] = []
-                  
-                   
-                    if get_answer_from_dest(h1,h2): 
-                        #Manage the cases in which no blocking router is found
-                        # could find one or more anonymouse router
-                        add_routers(topo, h1, h2, x, alias, traces, 100, False)                            
-                    else:
-                        #Manage the case in which you find at least one blocking router  
-                        traces[h1+h2].extend(get_responding_routers(h1,h2,alias))
-                        numr_h1 = num_responding_routers(h1, h2)
-                        numr_h2 = num_responding_routers(h2, h1)
-                        num_r = get_real_distance(h1,h2)
-                        # Add the the responding routers on the path before the block and save the last                             
-                        last_h1 = add_routers(topo, h1, h2, x, alias, traces, numr_h1, True)
-                        last_h2 = get_last_responding_router(h2, h1, alias)
-                        unobserved = num_r - numr_h1 - numr_h2
-                        if unobserved == 1: # Case 1: only one blocking router
-                            if last_h1 != None:
-                                next = add_router(topo, x, last_h1, 'B') 
-                                traces[h1+h2].append(next)                          
-                            elif last_h2 != None:
-                                next = add_router(topo, x, last_h2, 'B')
-                                traces[h1+h2].append(next)                          
-                            else:
-                                add_only_router(topo, x, 'B')
-                            last_h1h2 = get_responding_routers(h2,h1,alias)[::-1]
-                            traces[h1+h2].extend(last_h1h2)                            
-                        elif unobserved > 1:
-                            if last_h1 != None: 
-                                last = add_router(topo, x, last_h1, 'NC')
-                                traces[h1+h2].append(last)
-                            else:
-                                last = add_only_router(topo, x, 'NC')    
-                                traces[h1+h2].append(last)
-                            for i in range(unobserved - 2):
-                                last = add_router(topo, x, last, 'H')
-                                traces[h1+h2].append(last)
-                            ncr_h2 = add_router(topo, x, last, 'NC')
-                            traces[h1+h2].append(ncr_h2)
-                            if last_h2 != None:
-                                add_router(topo, x, last_h2, 'NC', new=False)    
+def create_virtual_topo_and_traces(alias, net, hosts):
+    topo = {}
+    x = [0]  # Incremental identifier for non responding routers. x is a list used as single value
+    done = set() # Insert hosts already visited (in case a blocking router is found)
+    traces = {}
+    for h1 in hosts:
+        #pdb.set_trace()
+        for h2 in hosts:
+            if h1 != h2:
+                print 'h1 = ' + h1 + ', h2 =  ' + h2
+                print ('A' in topo)
+                #pdb.set_trace()
+                traces[h1+h2] = []
+                if get_answer_from_dest(h1,h2): 
+                #Manage the cases in which no blocking router is found
+                # could find one or more anonymouse router
+                    add_routers(topo, h1, h2, x, alias, traces, 100, False)                            
+                else:
+                    #Manage the case in which you find at least one blocking router  
+                    traces[h1+h2].extend(get_responding_routers(h1,h2,alias))
+                    numr_h1 = num_responding_routers(h1, h2)
+                    numr_h2 = num_responding_routers(h2, h1)
+                    num_r = get_real_distance(h1,h2)
+                    # Add the the responding routers on the path before the block and save the last  
+                    last_h1 = add_routers(topo, h1, h2, x, alias, traces, numr_h1, True)
+                    last_h2 = get_last_responding_router(h2, h1, alias)
+                    unobserved = num_r - numr_h1 - numr_h2
+                    if unobserved == 1: # Case 1: only one blocking router
+                        if last_h1 != None:
+                            next = add_router(topo, x, last_h1, 'B') 
+                            traces[h1+h2].append(next)                          
+                        elif last_h2 != None:
+                            next = add_router(topo, x, last_h2, 'B')
+                            traces[h1+h2].append(next)                          
+                        else:
+                            add_only_router(topo, x, 'B')
+                        last_h1h2 = get_responding_routers(h2,h1,alias)[::-1]
+                        traces[h1+h2].extend(last_h1h2)                            
+                    elif unobserved > 1:
+                        if last_h1 != None: 
+                            last = add_router(topo, x, last_h1, 'NC')
+                            traces[h1+h2].append(last)
+                        else:
+                            last = add_only_router(topo, x, 'NC')    
+                            traces[h1+h2].append(last)
+                        for i in range(unobserved - 2):
+                            last = add_router(topo, x, last, 'H')
+                            traces[h1+h2].append(last)
+                        ncr_h2 = add_router(topo, x, last, 'NC')
+                        traces[h1+h2].append(ncr_h2)
+                        if last_h2 != None:
+                            add_router(topo, x, last_h2, 'NC', new=False)    
 # Complete the traces from h1 to h2 by adding the reverse path (known!) from h2                        
-                            last_h1h2 = get_responding_routers(h2,h1,alias)[::-1]
-                            traces[h1+h2].extend(last_h1h2)        
+                        last_h1h2 = get_responding_routers(h2,h1,alias)[::-1]
+                        traces[h1+h2].extend(last_h1h2)        
     return (topo,traces)
 
 
@@ -170,12 +178,11 @@ def get_last_responding_router(h1,h2,alias):
 
 def get_real_distance(h1,h2):
     with open ("distances/"+h1, "r") as dist_file:
-        for line in dist_file.readlines():
-            l = line.split()
-            if l[0]== h2:
-                return int(l[1])
-        return 100 # Impossible distance
-        
+            for line in dist_file.readlines():
+                l = line.split()
+                if l[0]== h2:
+                    return int(l[1])
+            return 100 # Impossible distance
 
 
 def get_answer_from_dest(host1,host2):
@@ -199,9 +206,12 @@ def add_routers(topo, host1, host2, x, alias, traces, max_iter, blocking_case):
         if max_iter == 1: # Only add the router to the virtual topo and return it
             dst = find_router(lines[1].split(), alias)
             if dst not in topo:
-                topo[dst] = ('R', set())
-                if not blocking_case:
-                    traces[host1+host2].append(dst)
+                if dst == 'A':
+                    dst = add_only_router(topo, x, dst)
+                else:
+                    topo[dst] = ('R', set())
+            if not blocking_case: #TODO Questo if era annidato, ma credo sia giusto ora. Controlloa
+                traces[host1+host2].append(dst)
         for i in range(1, max_iter):
             src = find_router(lines[i].split(), alias)
             dst = find_router(lines[i+1].split(), alias)
@@ -265,6 +275,7 @@ def print_topo(topo):
     for src in topo:
         for d in topo[src][1]:
             print src + ' -> ' + d
+    print "\n--- END TOPOLOGY ---\n"
 
 def print_nodes(topo):
     for src in topo:

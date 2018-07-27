@@ -1,25 +1,20 @@
 
 Thread 0 :
 Hosts che hanno partecipato a raccolta tracce:
-h61
-h11
+h71
 h62
-h41
 h42
+h41
+h21
 Topologia indotta:
-X5 -> r4
-X5 -> r2
-X18 -> r4
-X18 -> r6
-X10 -> X11
-X11 -> X10
-X11 -> X12
-X12 -> X11
-X12 -> X13
-X13 -> X12
-r4 -> X18
-r4 -> X5
-r6 -> X18
-r1 -> r2
-r2 -> r1
-r2 -> X5
+X27 -> r4
+X27 -> X19
+X27 -> r6
+X27 -> r7
+X27 -> r2
+X19 -> X27
+r4 -> X19
+r4 -> X27
+r6 -> X27
+r7 -> X27
+r2 -> X27
