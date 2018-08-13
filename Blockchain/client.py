@@ -42,6 +42,20 @@ def build_txset_from_topo(topo):
             transactions.append(tx)
     return transaction_set('id', transactions)
 
+def get_transactions_from_topo(topo):
+    # First build dictionary having key = node_name, value = node
+    nodes = {}
+    for n in topo:
+        node = topology_node(n["Name"], n["Type"])
+        nodes[ n["Name"] ] = node
+    # Then create transactions and finally pass them to the transaction_set
+    transactions = []
+    for n in topo:
+        for to in n["Neighbors"]:
+            tx = transaction (nodes[n["Name"]], nodes[to])
+            transactions.append(tx)
+    return transactions
+
 #TODO gestisci caso in cui registrazione non va a buon fine(?)
 def register_client(c):
     c.ask_client_registration()
@@ -72,8 +86,8 @@ if __name__=='__main__':
         register_client(c)
         tfile = get_topo_filename(args.config_file)
         topo = get_topo_from_json(tfile)
-        txset = build_txset_from_topo(topo)
-
+        trans = get_transactions_from_topo(topo)
+        c.send_transactions(trans)
         #TODO Primo scambio di transazioni da client a server
         # Poi pensa che conviene fare: questo thread muore (se è solo client di startup)
         # oppure, se è anche un sensore, comincia ciclo while(true) e invia periodicamente

@@ -193,7 +193,7 @@ class client(node):
             for s in servers:
                 self.send_to(msgs, s, list = True)
 
-    def create_txset_messages(transactions):
+    def create_txset_message(self, transactions):
         msgs = []
         num = len(transactions)
         while num > 50:
