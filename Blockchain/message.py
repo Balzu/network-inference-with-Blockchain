@@ -69,7 +69,8 @@ class message_type(object):
     transaction = 6
     transaction_set = 7
     proposal = 8
-    end = 9 #TODO necessario?
+    ledger = 9
+    end = 10 #TODO necessario?
 
 
     ack_success = 20

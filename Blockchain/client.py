@@ -40,7 +40,7 @@ def build_txset_from_topo(topo):
         for to in n["Neighbors"]:
             tx = transaction (nodes[n["Name"]], nodes[to])
             transactions.append(tx)
-    return transaction_set('id', transactions)
+    return transaction_set( transactions)
 
 def get_transactions_from_topo(topo):
     # First build dictionary having key = node_name, value = node
@@ -52,7 +52,7 @@ def get_transactions_from_topo(topo):
     transactions = []
     for n in topo:
         for to in n["Neighbors"]:
-            tx = transaction (nodes[n["Name"]], nodes[to])
+            tx = transaction(nodes[n["Name"]], nodes[to])
             transactions.append(tx)
     return transactions
 

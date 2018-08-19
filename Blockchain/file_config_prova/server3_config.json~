@@ -12,8 +12,8 @@
     }
   ],
   "quorum" : "0.8",
-  "ledger_min_close" : "20",
-  "ledger_max_close" : "30",
+  "ledger_min_close" : "10",
+  "ledger_max_close" : "20",
   "threshold_values" : {
     "init" : "0.50",
     "mid" : "0.65",

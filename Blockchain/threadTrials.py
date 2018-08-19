@@ -2,6 +2,8 @@
 
 from transaction import *
 from message import *
+from blockchain import *
+from ledger import *
 from node import *
 import json
 import time
@@ -38,7 +40,7 @@ def prova_invio_messaggi():
     r5 = topology_node('r5', 'R')
     tx = transaction(r2, r5)
     tx2 = transaction(r3, r5)
-    txset = transaction_set('1', [tx, tx2])
+    txset = transaction_set( [tx, tx2])
     mh = message_header(c.id(), c.signature(), 'm1', 0, message_type.transaction_set)
     mp = message_payload(txset)
     msg = message(mh, mp)
@@ -64,7 +66,7 @@ def build_txset_from_topo(topo):
         for to in n["Neighbors"]:
             tx = transaction (nodes[n["Name"]], nodes[to])
             transactions.append(tx)
-    return transaction_set('id', transactions)
+    return transaction_set( transactions)
 
 
 def prova_transazioni():
@@ -98,7 +100,7 @@ def prova_size_txset():
     tx9 = transaction(r3, r8)
     tx10 = transaction(r7, r8)
     transactions = [tx]
-    tx_set = transaction_set('id', transactions)
+    tx_set = transaction_set( transactions)
     header = message_header(c.id(), c.signature(), 'id', 0, message_type.transaction_set)
     payload = message_payload(tx_set)
     msg = message(header, payload)
@@ -128,6 +130,105 @@ def prova_registrazione():
     #print s.observers
 
 
+def prova_ledger():
+    r2 = topology_node('r2', 'R')
+    r3 = topology_node('r3', 'R')
+    r5 = topology_node('r5', 'R')
+    tx = transaction(r2, r5)
+    tx2 = transaction(r3, r5)
+    txset = transaction_set([tx, tx2])
+    l = full_ledger(0, txset)
+    b = light_blockchain()
+    b.add_ledger(l)
+    b.add_ledger(l)
+    b.add_ledger(l)
+    ledgers = b.ledgers()
+    print ledgers
+    l2 = full_ledger(2, txset)
+    l3 = full_ledger(3, txset)
+    l4 = full_ledger(4, txset)
+    l5 = full_ledger(5, txset)
+    l6 = full_ledger(6, txset)
+    l7 = full_ledger(7, txset)
+    b = full_blockchain((7,3))
+    b.add_ledger(l)
+    b.add_ledger(l2)
+    b.add_ledger(l3)
+    b.add_ledger(l4)
+    b.add_ledger(l5)
+    b.add_ledger(l6)
+    print 'size: ' + str(b.size())
+    b.add_ledger(l7)
+    print 'size after: ' + str(b.size())
+    ledgers = b.ledgers()
+    print ledgers
+
+def prova_ledger_equality():
+    r2 = topology_node('r2', 'R')
+    r3 = topology_node('r3', 'R')
+    r5 = topology_node('r5', 'R')
+    tx = transaction(r2, r5)
+    tx2 = transaction(r3, r5)
+    txset = transaction_set([tx, tx2])
+    l = full_ledger(0, txset)
+    tx3 = transaction(r2, r5)
+    tx4 = transaction(r3, r5)
+    txset2 = transaction_set([tx4, tx3])
+    l2 = full_ledger(0, txset2)
+    print 'Test: transaction_set sono uguali \n'
+    assert txset == txset2
+    print 'Test: ledger sono uguali \n'
+    assert l == l2
+    print 'Test: ledger sono diversi \n'
+    l3 = full_ledger(1, txset2)
+    assert l != l3
+
+def prova_scambio_proposal():
+    r2 = topology_node('r2', 'R')
+    r3 = topology_node('r3', 'R')
+    r5 = topology_node('r5', 'R')
+    tx = transaction(r2, r5)
+    tx2 = transaction(r3, r5)
+    trans = [tx, tx2]
+    b = light_blockchain()
+    s = server('127.0.0.100', 10000, 0.8, 5, 10, {}, {}, 10, 20, validators = [], unl =['127.0.0.101:10000'])
+    s2 = server('127.0.0.101', 10000, 0.8, 5, 10, {}, {}, 10, 20, validators=[], unl=['127.0.0.100:10000'])
+    c = client('127.0.0.102', '10000', [s, s2])
+    c.ask_client_registration()
+    c.send_transactions(trans)
+    s.start()
+    s2.start()
+    time.sleep(10)
+    s.stop()
+    s2.stop()
+
+def prova_id_txset():
+    r2 = topology_node('r2', 'R')
+    r3 = topology_node('r3', 'R')
+    r5 = topology_node('r5', 'R')
+    tx = transaction(r2, r5)
+    tx2 = transaction(r3, r5)
+    txset = transaction_set([tx, tx2])
+    r2b = topology_node('r2', 'R')
+    r3b = topology_node('r3', 'R')
+    r5b = topology_node('r5', 'R')
+    txb = transaction(r2b, r5b)
+    tx2b = transaction(r3b, r5b)
+    txset2 = transaction_set([tx, tx2])
+    return txset.id() == txset2.id()
+
+
+def prova_stampa_proposal():
+    r2 = topology_node('r2', 'R')
+    r3 = topology_node('r3', 'R')
+    r5 = topology_node('r5', 'R')
+    tx = transaction(r2, r5)
+    tx2 = transaction(r3, r5)
+    txset = transaction_set([tx, tx2])
+    my_pos = proposal('0', 1, txset, '0')
+    print str(my_pos.tx_set())
+    pass
+
 if __name__=='__main__':
 
     """sst = thread.start_new_thread(server_socket, (HOST, PORT))
@@ -155,7 +256,7 @@ if __name__=='__main__':
     tx2 = transaction ( r3, r5 )    
     print 'id tx: ' + tx.id()
     print 'id tx2: ' + tx2.id()
-    txset = transaction_set('1', [tx ,tx2])
+    txset = transaction_set([tx ,tx2])
     c.send_all(tx)
     (bob_pub, bob_priv) = rsa.newkeys(512) #Public key has to be distributed to nodes..
     (bob_pub2, bob_priv2) = rsa.newkeys(512)
@@ -172,7 +273,13 @@ if __name__=='__main__':
     #prova_invio_messaggi()
     #prova_transazioni()
     #prova_registrazione()
-    prova_size_txset()
+    #prova_size_txset()
+    #prova_ledger()
+    #prova_scambio_proposal()
+    #print prova_id_txset()
+    #prova_ledger_equality()
+    prova_stampa_proposal()
+
 
     '''topo = get_topo_from_json("m_topo.json")
     txset = build_txset_from_topo(topo)
