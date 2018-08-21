@@ -1,0 +1,10 @@
+python server.py -i -c file_config_prova/server1_config.json
+
+python server.py -i -c file_config_prova/server2_config.json
+
+python server.py -i -c file_config_prova/server3_config.json
+
+
+python client.py  -c file_config_prova/client1_config.json
+
+python client.py  -c file_config_prova/client2_config.json

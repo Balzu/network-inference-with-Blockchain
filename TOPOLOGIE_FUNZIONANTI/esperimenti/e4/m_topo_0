@@ -1,18 +1,1 @@
-
-Thread 0 :
-Hosts che hanno partecipato a raccolta tracce:
-h31
-h41
-h61
-h21
-h11
-Topologia indotta:
-X22 -> r4
-X22 -> r6
-X22 -> r3
-r4 -> r3
-r4 -> X22
-r6 -> X22
-r1 -> X22
-r3 -> r4
-r3 -> X22
+{"hosts": ["h41", "h11", "h61", "h21"], "topology": [{"Neighbors": ["X10", "r1", "r3"], "Type": "B", "Name": "X21"}, {"Neighbors": ["r6", "X21", "X16"], "Type": "B", "Name": "X10"}, {"Neighbors": ["r4", "X10"], "Type": "H", "Name": "X16"}, {"Neighbors": ["X10", "X16", "r3"], "Type": "R", "Name": "r4"}, {"Neighbors": ["X10"], "Type": "R", "Name": "r6"}, {"Neighbors": ["X21"], "Type": "R", "Name": "r1"}, {"Neighbors": ["r4", "X21"], "Type": "R", "Name": "r3"}]}

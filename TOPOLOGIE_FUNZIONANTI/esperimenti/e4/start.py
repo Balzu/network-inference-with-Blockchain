@@ -2,7 +2,9 @@
 
 import time
 import sys
+import json
 from create_merge_topo import *
+from client import *
 from threading import Thread, Lock, Condition
 
 cv = Condition()
@@ -40,6 +42,37 @@ def run(i, nh, hosts, lock, cv):
     print_topo(mtopo)
     out_i = 'm_topo_' + str(i)
     os.system('touch ' + out_i)
+    topology = {}
+    topology["hosts"] = []
+    topology["topology"] = []
+    for h in hosts:
+        topology["hosts"].append(h)
+    for src in mtopo:
+        item = {}
+        name = src
+        _type = mtopo[src][0]
+        neighbors = []
+        for n in mtopo[src][1]:
+            neighbors.append(n)
+        item["Name"] = name
+        item["Type"] = _type
+        item["Neighbors"] = neighbors
+        topology["topology"].append(item)
+    with open(out_i, "w") as file:
+        json.dump(topology, file)
+
+    print '\n\n --------------------------------\n\n' \
+          '            iTop phase ended. Topology written in Json.\n\n' \
+          '------------------------------------\n\n'
+
+    c = configure_client("file_config_prova/client1_config.json") #TODO va specificato da linea di comando
+    register_client(c)
+    tfile = get_topo_filename("file_config_prova/client1_config.json") #TODO idem
+    topo = get_topo_from_json(out_i)  
+    trans = get_transactions_from_topo(topo)
+    c.send_transactions(trans)
+
+    ''' 
     with open(out_i, "w") as file:
         file.write('\nThread ' + str(i) + ' :\n')
         file.write('Hosts che hanno partecipato a raccolta tracce:\n')        
@@ -48,8 +81,10 @@ def run(i, nh, hosts, lock, cv):
         file.write('Topologia indotta:\n')        
         for src in mtopo:
             for d in mtopo[src][1]:
+        
                 file.write(src + ' -> ' + d + '\n')
-    
+    '''
+
 def stop_net(net):
     net.stop()    
 

@@ -1,5 +1,5 @@
-traceroute to 192.168.3.2 (192.168.3.2), 30 hops max, 60 byte packets
- 1  192.168.5.1  9.073 ms  9.304 ms  9.594 ms
+traceroute to 192.168.13.2 (192.168.13.2), 30 hops max, 60 byte packets
+ 1  192.168.1.1  4.865 ms  4.974 ms  5.084 ms
  2  * * *
  3  * * *
  4  * * *
