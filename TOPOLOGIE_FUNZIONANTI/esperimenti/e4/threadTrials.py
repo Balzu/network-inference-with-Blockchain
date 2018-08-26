@@ -227,7 +227,29 @@ def prova_stampa_proposal():
     txset = transaction_set([tx, tx2])
     my_pos = proposal('0', 1, txset, '0')
     print str(my_pos.tx_set())
-    pass
+
+
+def prova_transazioni_delete():
+    def configure_client(config_file):
+        '''Uses the parameters defined in the configuration file to create a client and return it.'''
+        with open(config_file, 'r') as file:
+            obj = json.load(file)
+            ip = obj["ip"]
+            port = obj["port"]
+            validators = []
+            for v in obj["validators"]:
+                v_id = v["ip"] + ":" + v["port"]
+                validators.append(v_id)
+            return client(ip, port, validators)
+    c = configure_client("file_config_prova/client1_config.json")
+    c.ask_client_registration()
+    trans = []
+    r3 = topology_node('r3', 'R')
+    r4 = topology_node('r4', 'R')
+    r2 = topology_node('R2', 'R')
+    trans.append(transaction(r3,r4,False))
+    trans.append(transaction(r4, r3, False))
+    c.send_transactions(trans)
 
 if __name__=='__main__':
 
@@ -278,7 +300,8 @@ if __name__=='__main__':
     #prova_scambio_proposal()
     #print prova_id_txset()
     #prova_ledger_equality()
-    prova_stampa_proposal()
+    #prova_stampa_proposal()
+    prova_transazioni_delete()
 
 
     '''topo = get_topo_from_json("m_topo.json")

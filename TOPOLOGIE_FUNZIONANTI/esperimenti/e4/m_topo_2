@@ -1,1 +1,35 @@
-{"hosts": ["h61", "h31", "h71", "h11"], "topology": [{"Neighbors": ["r4", "r6", "r7", "r1", "r3", "X6"], "Type": "B", "Name": "X6"}, {"Neighbors": ["r3", "X6"], "Type": "R", "Name": "r4"}, {"Neighbors": ["X6"], "Type": "R", "Name": "r6"}, {"Neighbors": ["X6"], "Type": "R", "Name": "r7"}, {"Neighbors": ["X6"], "Type": "R", "Name": "r1"}, {"Neighbors": ["r4", "X6"], "Type": "R", "Name": "r3"}]}
+{
+  "hosts": [ "h61", "h31", "h71", "h11" ],
+  "topology":
+  [
+    {
+      "Neighbors": [ "r4", "r6", "r7", "r1", "r3", "X6" ],
+      "Type": "B",
+      "Name": "X6"
+    },
+    {
+      "Neighbors": [ "r3", "X6" ],
+      "Type": "R",
+      "Name": "r4"
+    },
+    {
+      "Neighbors": [ "X6" ],
+      "Type": "R",
+      "Name": "r6"
+    },
+    {
+      "Neighbors": [ "X6" ],
+      "Type": "R",
+      "Name": "r7"
+    },
+    {
+      "Neighbors": [ "X6" ],
+      "Type": "R",
+      "Name": "r1"
+    },
+    {
+      "Neighbors": [ "r4", "X6" ],
+      "Type": "R",
+      "Name": "r3"
+    }
+  ]}

@@ -1,7 +1,41 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="02de7c1e-3b13-46aa-8b6d-9f78c1447a4a" name="Default Changelist" comment="" />
+    <list default="true" id="02de7c1e-3b13-46aa-8b6d-9f78c1447a4a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/Blockchain/node.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blockchain/node.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blockchain/threadTrials.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blockchain/threadTrials.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blockchain/transaction.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blockchain/transaction.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/.start.py.swp" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/.start.py.swp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/distances/h11" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/distances/h11" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/distances/h21" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/distances/h21" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/distances/h31" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/distances/h31" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/distances/h41" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/distances/h41" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/distances/h61" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/distances/h61" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/distances/h71" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/distances/h71" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/m_topo_2" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/m_topo_2" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h11h21" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h11h21" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h11h31" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h11h31" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h11h41" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h11h41" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h11h61" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h11h61" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h11h71" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h11h71" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h21h11" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h21h11" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h21h41" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h21h41" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h21h61" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h21h61" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h31h11" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h31h11" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h31h61" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h31h61" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h31h71" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h31h71" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h41h11" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h41h11" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h41h21" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h41h21" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h41h61" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h41h61" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h61h11" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h61h11" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h61h21" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h61h21" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h61h31" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h61h31" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h61h41" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h61h41" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h61h71" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h61h71" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h71h11" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h71h11" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h71h31" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h71h31" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h71h61" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h71h61" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,22 +76,44 @@
         </counts>
       </usages-collector>
     </session>
+    <session id="1745947106">
+      <usages-collector id="statistics.lifecycle.project">
+        <counts>
+          <entry key="project.open.time.2" value="1" />
+          <entry key="project.opened" value="1" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.open">
+        <counts>
+          <entry key="py" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.open">
+        <counts>
+          <entry key="Python" value="2" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.extensions.edit">
+        <counts>
+          <entry key="py" value="272" />
+        </counts>
+      </usages-collector>
+      <usages-collector id="statistics.file.types.edit">
+        <counts>
+          <entry key="Python" value="272" />
+        </counts>
+      </usages-collector>
+    </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Blockchain/node.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="558" selection-start-line="558" selection-end-line="558" />
+            <state relative-caret-position="325">
+              <caret line="544" selection-start-line="544" selection-end-line="544" />
               <folding>
                 <element signature="e#24#55#0" expanded="true" />
-                <marker date="1534696260705" expanded="true" signature="16804:17471" ph="..." />
-                <marker date="1534696260705" expanded="true" signature="25049:25059" ph="..." />
-                <marker date="1534696260705" expanded="true" signature="25818:26239" ph="..." />
-                <marker date="1534696260705" expanded="true" signature="26405:27600" ph="..." />
-                <marker date="1534696260705" expanded="true" signature="27634:27724" ph="..." />
-                <marker date="1534696260705" expanded="true" signature="29043:29192" ph="..." />
               </folding>
             </state>
           </provider>
@@ -66,17 +122,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_bundle/pydev_monkey.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="479">
-              <caret line="613" selection-start-line="613" selection-end-line="613" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file:///usr/lib/python2.7/socket.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="172">
-              <caret line="223" selection-start-line="223" selection-end-line="223" />
+            <state relative-caret-position="-61">
+              <caret line="595" column="41" selection-start-line="595" selection-start-column="41" selection-end-line="595" selection-end-column="41" />
             </state>
           </provider>
         </entry>
@@ -84,35 +131,40 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file:///usr/lib/python2.7/threading.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="164">
+            <state relative-caret-position="11430">
               <caret line="762" selection-start-line="762" selection-end-line="762" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Blockchain/transaction.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="141">
-              <caret line="108" selection-start-line="108" selection-end-line="108" />
+            <state relative-caret-position="225">
+              <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Blockchain/ledger.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="14" lean-forward="true" selection-start-column="14" selection-end-column="14" />
               <folding>
-                <marker date="1534695668381" expanded="true" signature="3464:3738" ph="..." />
+                <element signature="e#15#29#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Blockchain/ledger.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Blockchain/client.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
+            <state relative-caret-position="-100">
+              <caret line="25" column="42" lean-forward="true" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
               <folding>
-                <element signature="e#15#29#0" expanded="true" />
-                <marker date="1534697881491" expanded="true" signature="78:83" ph="..." />
-                <marker date="1534697881491" expanded="true" signature="78:118" ph="..." />
-                <marker date="1534697881491" expanded="true" signature="1356:1361" ph="..." />
-                <marker date="1534697881491" expanded="true" signature="1476:1481" ph="..." />
+                <element signature="e#125#150#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -130,12 +182,11 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Blockchain/threadTrials.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="228" selection-start-line="228" selection-end-line="228" />
+            <state relative-caret-position="215">
+              <caret line="251" selection-start-line="251" selection-end-line="251" />
               <folding>
                 <element signature="e#25#50#0" expanded="true" />
-                <marker date="1534695460121" expanded="true" signature="6067:6829" ph="..." />
-                <marker date="1534695460121" expanded="true" signature="6787:6829" ph="..." />
+                <marker date="1534937485031" expanded="true" signature="7335:7671" ph="..." />
               </folding>
             </state>
           </provider>
@@ -144,12 +195,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Blockchain/proposal.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
+            <state relative-caret-position="255">
               <caret line="17" selection-start-line="17" selection-end-line="17" />
-              <folding>
-                <marker date="1534418117663" expanded="true" signature="23:28" ph="..." />
-                <marker date="1534418117663" expanded="true" signature="553:559" ph="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -157,12 +204,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Blockchain/blockchain.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="178">
+            <state relative-caret-position="1650">
               <caret line="110" column="23" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="23" />
-              <folding>
-                <marker date="1534672285613" expanded="true" signature="62:63" ph="..." />
-                <marker date="1534672285613" expanded="true" signature="62:68" ph="..." />
-              </folding>
             </state>
           </provider>
         </entry>
@@ -178,10 +221,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>send_to</find>
-      <find>handle_response</find>
-      <find>current_tx = [</find>
-      <find>reset</find>
       <find>new_t</find>
       <find>last_ledger</find>
       <find>reset_l</find>
@@ -208,6 +247,10 @@
       <find>print</find>
       <find>my posi</find>
       <find>consensus</find>
+      <find>handle_pro</find>
+      <find>handle_txs</find>
+      <find>add_tr</find>
+      <find>last_led</find>
     </findStrings>
     <replaceStrings>
       <replace>num_keep</replace>
@@ -225,10 +268,10 @@
         <option value="$PROJECT_DIR$/Blockchain/proposal.py" />
         <option value="$PROJECT_DIR$/Blockchain/message.py" />
         <option value="$PROJECT_DIR$/Blockchain/blockchain.py" />
-        <option value="$PROJECT_DIR$/Blockchain/threadTrials.py" />
-        <option value="$PROJECT_DIR$/Blockchain/transaction.py" />
-        <option value="$PROJECT_DIR$/Blockchain/node.py" />
         <option value="$PROJECT_DIR$/Blockchain/ledger.py" />
+        <option value="$PROJECT_DIR$/Blockchain/threadTrials.py" />
+        <option value="$PROJECT_DIR$/Blockchain/node.py" />
+        <option value="$PROJECT_DIR$/Blockchain/transaction.py" />
       </list>
     </option>
   </component>
@@ -243,23 +286,23 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="network-inference-with-Blockchain" type="b2602c69:ProjectViewProjectNode" />
-              <item name="network-inference-with-Blockchain" type="462c0819:PsiDirectoryNode" />
+              <item name="network-inference-with-BlockchainNEW" type="b2602c69:ProjectViewProjectNode" />
+              <item name="network-inference-with-BlockchainNEW" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
-              <item name="network-inference-with-Blockchain" type="b2602c69:ProjectViewProjectNode" />
-              <item name="network-inference-with-Blockchain" type="462c0819:PsiDirectoryNode" />
+              <item name="network-inference-with-BlockchainNEW" type="b2602c69:ProjectViewProjectNode" />
+              <item name="network-inference-with-BlockchainNEW" type="462c0819:PsiDirectoryNode" />
               <item name="Blockchain" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -278,7 +321,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.server">
+  <component name="RunManager" selected="Python.threadTrials">
     <configuration name="client" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="network-inference-with-Blockchain" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -313,7 +356,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Blockchain/server.py" />
-      <option name="PARAMETERS" value="-i -c file_config_prova/server3_config.json" />
+      <option name="PARAMETERS" value="-i -c file_config_prova/server1_config.json" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -349,8 +392,8 @@
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="Python.server" />
         <item itemvalue="Python.threadTrials" />
+        <item itemvalue="Python.server" />
         <item itemvalue="Python.client" />
       </list>
     </recent_temporary>
@@ -369,11 +412,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="64" y="-11" width="1857" height="988" extended-state="6" />
+    <frame x="65" y="-4" width="1855" height="980" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.17303494" />
+      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.17468214" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.3295964" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
@@ -382,13 +425,13 @@
       <window_info anchor="bottom" id="Find" order="4" weight="0.3295964" />
       <window_info anchor="bottom" id="Version Control" order="5" weight="0.3295964" />
       <window_info anchor="bottom" id="Run" order="6" weight="0.33450705" />
-      <window_info active="true" anchor="bottom" id="Debug" order="7" visible="true" weight="0.407277" />
+      <window_info active="true" anchor="bottom" id="Debug" order="7" visible="true" weight="0.34624413" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.2498618" />
     </layout>
     <layout-to-restore>
       <window_info id="Favorites" order="0" side_tool="true" />
@@ -431,7 +474,7 @@
           <line>160</line>
           <option name="timeStamp" value="11" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+        <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Blockchain/threadTrials.py</url>
           <line>178</line>
           <option name="timeStamp" value="31" />
@@ -441,15 +484,20 @@
           <line>519</line>
           <option name="timeStamp" value="55" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+        <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Blockchain/threadTrials.py</url>
           <line>228</line>
           <option name="timeStamp" value="60" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Blockchain/threadTrials.py</url>
+          <line>251</line>
+          <option name="timeStamp" value="65" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Blockchain/node.py</url>
-          <line>558</line>
-          <option name="timeStamp" value="62" />
+          <line>544</line>
+          <option name="timeStamp" value="66" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -562,18 +610,53 @@
     <entry file="file://$PROJECT_DIR$/Blockchain/server.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Blockchain/client.py">
+    <entry file="file://$PROJECT_DIR$/Blockchain/client_config.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file:///usr/lib/python2.7/socket.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1260">
-          <caret line="89" column="13" lean-forward="true" selection-start-line="89" selection-start-column="13" selection-end-line="89" selection-end-column="13" />
-          <folding>
-            <element signature="e#125#150#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="3300">
+          <caret line="223" selection-start-line="223" selection-end-line="223" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Blockchain/client_config.json">
-      <provider selected="true" editor-type-id="text-editor" />
+    <entry file="file:///usr/lib/python2.7/threading.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="11430">
+          <caret line="762" selection-start-line="762" selection-end-line="762" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blockchain/proposal.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="255">
+          <caret line="17" selection-start-line="17" selection-end-line="17" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blockchain/blockchain.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1650">
+          <caret line="110" column="23" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="23" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_bundle/pydev_monkey.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-61">
+          <caret line="595" column="41" selection-start-line="595" selection-start-column="41" selection-end-line="595" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blockchain/ledger.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="14" lean-forward="true" selection-start-column="14" selection-end-column="14" />
+          <folding>
+            <element signature="e#15#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Blockchain/message.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -582,98 +665,41 @@
         </state>
       </provider>
     </entry>
-    <entry file="file:///usr/lib/python2.7/socket.py">
+    <entry file="file://$PROJECT_DIR$/Blockchain/client.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="172">
-          <caret line="223" selection-start-line="223" selection-end-line="223" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file:///usr/lib/python2.7/threading.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="164">
-          <caret line="762" selection-start-line="762" selection-end-line="762" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blockchain/blockchain.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="178">
-          <caret line="110" column="23" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="23" />
+        <state relative-caret-position="-100">
+          <caret line="25" column="42" lean-forward="true" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
           <folding>
-            <marker date="1534672285613" expanded="true" signature="62:63" ph="..." />
-            <marker date="1534672285613" expanded="true" signature="62:68" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_bundle/pydev_monkey.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="479">
-          <caret line="613" selection-start-line="613" selection-end-line="613" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blockchain/proposal.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-          <folding>
-            <marker date="1534418117663" expanded="true" signature="23:28" ph="..." />
-            <marker date="1534418117663" expanded="true" signature="553:559" ph="..." />
+            <element signature="e#125#150#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Blockchain/threadTrials.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="228" selection-start-line="228" selection-end-line="228" />
+        <state relative-caret-position="215">
+          <caret line="251" selection-start-line="251" selection-end-line="251" />
           <folding>
             <element signature="e#25#50#0" expanded="true" />
-            <marker date="1534695460121" expanded="true" signature="6067:6829" ph="..." />
-            <marker date="1534695460121" expanded="true" signature="6787:6829" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blockchain/transaction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="108" selection-start-line="108" selection-end-line="108" />
-          <folding>
-            <marker date="1534695668381" expanded="true" signature="3464:3738" ph="..." />
+            <marker date="1534937485031" expanded="true" signature="7335:7671" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Blockchain/node.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="141">
-          <caret line="558" selection-start-line="558" selection-end-line="558" />
+        <state relative-caret-position="325">
+          <caret line="544" selection-start-line="544" selection-end-line="544" />
           <folding>
             <element signature="e#24#55#0" expanded="true" />
-            <marker date="1534696260705" expanded="true" signature="16804:17471" ph="..." />
-            <marker date="1534696260705" expanded="true" signature="25049:25059" ph="..." />
-            <marker date="1534696260705" expanded="true" signature="25818:26239" ph="..." />
-            <marker date="1534696260705" expanded="true" signature="26405:27600" ph="..." />
-            <marker date="1534696260705" expanded="true" signature="27634:27724" ph="..." />
-            <marker date="1534696260705" expanded="true" signature="29043:29192" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Blockchain/ledger.py">
+    <entry file="file://$PROJECT_DIR$/Blockchain/transaction.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="26" lean-forward="true" selection-start-line="14" selection-start-column="26" selection-end-line="14" selection-end-column="26" />
-          <folding>
-            <element signature="e#15#29#0" expanded="true" />
-            <marker date="1534697881491" expanded="true" signature="78:83" ph="..." />
-            <marker date="1534697881491" expanded="true" signature="78:118" ph="..." />
-            <marker date="1534697881491" expanded="true" signature="1356:1361" ph="..." />
-            <marker date="1534697881491" expanded="true" signature="1476:1481" ph="..." />
-          </folding>
+        <state relative-caret-position="225">
+          <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
         </state>
       </provider>
     </entry>

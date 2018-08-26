@@ -338,10 +338,8 @@ class server(client):
     def run(self):
         while not self.end():
             self.open_phase()
-            self.establish_phase()
-            print '\nMy Position after establish phase: \n' + str(self.my_pos.tx_set()) + '\n' #TODO
-            self.accept_phase()
-            print '\nMy Position after accept phase: \n' + str(self.my_pos.tx_set()) + '\n'  # TODO
+            self.establish_phase()            
+            self.accept_phase()            
         print 'end'
         #self.stop()
 
@@ -545,7 +543,7 @@ class server(client):
                     removed = new_txset.remove_transaction(t)
                     if not removed:
                         print 'The transaction ' + str(t) + ' was not inserted in previous ledger ' \
-                              + last_ledger.sequence_number() + '. Unable to remove it.'
+                              + str(last_ledger.sequence_number()) + '. Unable to remove it.'
             return full_ledger(last_ledger.sequence_number() + 1, new_txset) if last_ledger is not None \
                 else full_ledger(1, new_txset) # Prev pointer added when ledger inserted in the blockchain
 

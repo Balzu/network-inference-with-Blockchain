@@ -62,7 +62,8 @@ def run(i, nh, hosts, lock, cv):
         json.dump(topology, file)
 
     print '\n\n --------------------------------\n\n' \
-          '            iTop phase ended. Topology written in Json.\n\n' \
+          'iTop phase ended. Topology written in Json.\n' \
+          'Now send transactions to the ledger\n\n' \
           '------------------------------------\n\n'
 
     c = configure_client("file_config_prova/client1_config.json") #TODO va specificato da linea di comando

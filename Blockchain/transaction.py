@@ -9,8 +9,8 @@ class transaction:
         sha = hashlib.sha256()
         sha.update(str(_from))
         sha.update(str(_to))
-        sha.update(str(insert))
-        self._id = sha.digest()
+        #sha.update(str(insert))
+        self._id = sha.digest()  # The id does not keep into account if it is a transaction 'I' or 'D'
         self._from = _from
         self._to = _to
         self._type = 'I' if insert is True else 'D'
@@ -25,7 +25,7 @@ class transaction:
         return self._from.name() + ' -> ' + self._to.name()
 
     def copy(self):
-        return transaction(self._from, self._to)
+        return transaction(self._from, self._to, True if self._type == 'I' else False)
 
     def __eq__(self, tx2):
         return self._id == tx2.id()
