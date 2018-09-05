@@ -1,0 +1,1 @@
+{"hosts": ["h21", "h61", "h31", "h71", "h41"], "topology": [{"Neighbors": ["X2", "X14", "r3"], "Type": "R", "Name": "X2"}, {"Neighbors": ["X2", "r6", "r7", "r3"], "Type": "B", "Name": "X14"}, {"Neighbors": ["X14"], "Type": "R", "Name": "r6"}, {"Neighbors": ["X14"], "Type": "R", "Name": "r7"}, {"Neighbors": ["X2", "X14"], "Type": "R", "Name": "r3"}]}

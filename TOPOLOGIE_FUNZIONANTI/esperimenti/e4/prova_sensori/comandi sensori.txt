@@ -1,0 +1,20 @@
+ sudo tcpdump -i any src 192.168.56.1 | awk '{print $3}' | awk -F "." '{print $1 "." $2 "." $3 "." $4}'
+( non funziona ultima parte)
+
+
+
+ sudo tcpdump -l -i any | awk '{print $3}' | awk -F "." '{print $1 "." $2 "." $3 "." $4}'
+
+ r2 tcpdump -l -i any | awk '{print $3}'  >> r2 &
+
+| awk -F "." '{print $1 "." $2 "." $3 "." $4}'
+
+
+Sembra che TCPDUMP non crei la pipe correttamente se in output gli metti awk.
+Invece se salvi output tcpdump su file, e poi applichi awk, funziona...
+
+AGGIUNGI -l ( o -U)
+
+Prova su Mininet (r2) -----------------------------------------------------------
+
+r2 tcpdump -i any -U | awk '{print $3}' | awk -F "." '{print $1 "." $2 "." $3 "." $4}' &

@@ -1,0 +1,6 @@
+r2, iptables -P OUTPUT DROP
+r2, iptables -P INPUT DROP
+r2, iptables -P FORWARD DROP
+r5, iptables -P OUTPUT DROP
+r5, iptables -P INPUT DROP
+r5, iptables -P FORWARD DROP

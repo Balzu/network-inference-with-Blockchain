@@ -2,39 +2,35 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02de7c1e-3b13-46aa-8b6d-9f78c1447a4a" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/Blockchain/node.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blockchain/node.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blockchain/threadTrials.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blockchain/threadTrials.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blockchain/transaction.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blockchain/transaction.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/.start.py.swp" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/.start.py.swp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/distances/h11" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/distances/h11" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/distances/h21" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/distances/h21" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/distances/h31" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/distances/h31" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/distances/h41" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/distances/h41" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/distances/h61" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/distances/h61" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/distances/h71" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/distances/h71" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/m_topo_2" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/m_topo_2" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h11h21" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h11h21" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h11h31" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h11h31" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h11h41" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h11h41" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h11h61" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h11h61" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h11h71" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h11h71" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h21h11" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h21h11" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h21h41" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h21h41" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h21h61" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h21h61" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h31h11" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h31h11" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h31h61" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h31h61" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h31h71" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h31h71" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h41h11" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h41h11" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h41h21" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h41h21" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h41h61" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h41h61" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h61h11" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h61h11" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h61h21" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h61h21" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h61h31" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h61h31" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h61h41" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h61h41" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h61h71" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h61h71" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h71h11" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h71h11" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h71h31" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h71h31" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h71h61" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h71h61" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/NRR" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/alias" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/blockchain.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/build_topo3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/build_virtual_topo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/clean.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/client.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/create_compatibility_table.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/create_merge_topo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/file_config_prova/client1_config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/file_config_prova/client2_config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/file_config_prova/clientR1_config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/file_config_prova/clientR4_config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/file_config_prova/server1_config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/file_config_prova/server2_config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/file_config_prova/server3_config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/hosts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/ledger.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/message.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/node.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/proposal.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/prova_stdout_to_python.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/start.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/transaction.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/util.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/util.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/readme.MD" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/start.py" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/start.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -79,28 +75,43 @@
     <session id="1745947106">
       <usages-collector id="statistics.lifecycle.project">
         <counts>
+          <entry key="project.closed" value="2" />
           <entry key="project.open.time.2" value="1" />
-          <entry key="project.opened" value="1" />
+          <entry key="project.open.time.23" value="1" />
+          <entry key="project.open.time.27" value="1" />
+          <entry key="project.opened" value="3" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
-          <entry key="py" value="2" />
+          <entry key="NRR" value="1" />
+          <entry key="alias" value="2" />
+          <entry key="cmd line" value="2" />
+          <entry key="hosts" value="2" />
+          <entry key="json" value="13" />
+          <entry key="py" value="46" />
+          <entry key="s1" value="2" />
+          <entry key="sh" value="2" />
+          <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
-          <entry key="Python" value="2" />
+          <entry key="JSON" value="13" />
+          <entry key="PLAIN_TEXT" value="12" />
+          <entry key="Python" value="46" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
-          <entry key="py" value="272" />
+          <entry key="dummy" value="50" />
+          <entry key="py" value="9609" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Python" value="272" />
+          <entry key="PLAIN_TEXT" value="50" />
+          <entry key="Python" value="9609" />
         </counts>
       </usages-collector>
     </session>
@@ -108,104 +119,101 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Blockchain/node.py">
+        <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/start.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="325">
-              <caret line="544" selection-start-line="544" selection-end-line="544" />
+            <state relative-caret-position="665">
+              <caret line="74" column="67" selection-start-line="74" selection-start-column="61" selection-end-line="74" selection-end-column="67" />
               <folding>
-                <element signature="e#24#55#0" expanded="true" />
+                <marker date="1535832337446" expanded="true" signature="1761:1998" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_bundle/pydev_monkey.py">
+        <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/start_interactive_with_sensors.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-61">
-              <caret line="595" column="41" selection-start-line="595" selection-start-column="41" selection-end-line="595" selection-end-column="41" />
+            <state relative-caret-position="360">
+              <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
+              <folding>
+                <element signature="e#16#47#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file:///usr/lib/python2.7/threading.py">
+        <entry file="file://$PROJECT_DIR$/Blockchain/cmd line">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="11430">
-              <caret line="762" selection-start-line="762" selection-end-line="762" />
+            <state>
+              <caret column="41" selection-end-line="1" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/start_sensor.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="195">
+              <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/file_config_prova/clientR1_config.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="90">
+              <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/file_config_prova/client1_config.json">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/file_config_prova/client2_config.json">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/sensor.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="466">
+              <caret line="117" column="30" lean-forward="true" selection-start-line="117" selection-start-column="30" selection-end-line="117" selection-end-column="30" />
+              <folding>
+                <element signature="e#16#33#0" expanded="true" />
+                <marker date="1536179859669" expanded="true" signature="128:2186" ph="..." />
+                <marker date="1536179859669" expanded="true" signature="2206:2211" ph="..." />
+                <marker date="1536179859669" expanded="true" signature="2919:2925" ph="..." />
+                <marker date="1536179859669" expanded="true" signature="4471:4776" ph="..." />
+                <marker date="1536179859669" expanded="true" signature="5711:5915" ph="..." />
+                <marker date="1536179859669" expanded="true" signature="7363:8155" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Blockchain/transaction.py">
+        <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/build_topo3.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Blockchain/ledger.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <caret column="14" lean-forward="true" selection-start-column="14" selection-end-column="14" />
+            <state relative-caret-position="256">
+              <caret line="103" column="51" selection-start-line="103" selection-start-column="39" selection-end-line="103" selection-end-column="51" />
               <folding>
-                <element signature="e#15#29#0" expanded="true" />
+                <element signature="e#18#47#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Blockchain/client.py">
+        <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/build_virtual_topo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-100">
-              <caret line="25" column="42" lean-forward="true" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
-              <folding>
-                <element signature="e#125#150#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Blockchain/message.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="736">
-              <caret line="72" column="12" selection-start-line="72" selection-start-column="12" selection-end-line="72" selection-end-column="12" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Blockchain/threadTrials.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="215">
-              <caret line="251" selection-start-line="251" selection-end-line="251" />
-              <folding>
-                <element signature="e#25#50#0" expanded="true" />
-                <marker date="1534937485031" expanded="true" signature="7335:7671" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Blockchain/proposal.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" selection-start-line="17" selection-end-line="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Blockchain/blockchain.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1650">
-              <caret line="110" column="23" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="23" />
+            <state relative-caret-position="163">
+              <caret line="50" column="4" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
             </state>
           </provider>
         </entry>
@@ -221,40 +229,43 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>new_t</find>
-      <find>last_ledger</find>
-      <find>reset_l</find>
-      <find>same_proposal</find>
-      <find>create_my_proposal</find>
-      <find>update_my_proposal</find>
-      <find>update_una</find>
-      <find>update_unapproved_tx</find>
-      <find>add_ledger</find>
-      <find>blockchain</find>
-      <find>None</find>
-      <find>current_ledger_id</find>
-      <find>self.my_pos</find>
-      <find>self.unl</find>
-      <find>self.unl_pos</find>
-      <find>accept</find>
-      <find>last_ledger.tr</find>
-      <find>sleep</find>
-      <find>current_tx l</find>
-      <find>my po</find>
-      <find>inst</find>
-      <find>proposal</find>
-      <find>accept_phase</find>
-      <find>print</find>
-      <find>my posi</find>
       <find>consensus</find>
       <find>handle_pro</find>
       <find>handle_txs</find>
       <find>add_tr</find>
       <find>last_led</find>
+      <find>thread</find>
+      <find>open</find>
+      <find>first</find>
+      <find>max_</find>
+      <find>create_virt</find>
+      <find>get_tra</find>
+      <find>send_transaction</find>
+      <find>reate_txset_messages</find>
+      <find>create_alias</find>
+      <find>create_virtual_topo_and_traces</find>
+      <find>server_s</find>
+      <find>writ</find>
+      <find>ask</find>
+      <find>ask_cl</find>
+      <find>net</find>
+      <find>/16</find>
+      <find>crea</find>
+      <find>/8</find>
+      <find>pdb</find>
+      <find>print</find>
+      <find>__alias</find>
+      <find>alias</find>
+      <find>sensor</find>
+      <find>id</find>
+      <find>192.168.6.1</find>
     </findStrings>
     <replaceStrings>
       <replace>num_keep</replace>
       <replace>capacity</replace>
+      <replace>cmd</replace>
+      <replace>/24</replace>
+      <replace>/8</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -272,10 +283,24 @@
         <option value="$PROJECT_DIR$/Blockchain/threadTrials.py" />
         <option value="$PROJECT_DIR$/Blockchain/node.py" />
         <option value="$PROJECT_DIR$/Blockchain/transaction.py" />
+        <option value="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/prova_stdout_to_python.py" />
+        <option value="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/client.py" />
+        <option value="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/start.py" />
+        <option value="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/util.py" />
+        <option value="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/file_config_prova/clientR1_config.json" />
+        <option value="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/file_config_prova/clientR4_config.json" />
+        <option value="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/test_sensore.py" />
+        <option value="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/build_virtual_topo.py" />
+        <option value="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/start_sensor.py" />
+        <option value="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/start.py" />
+        <option value="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/node.py" />
+        <option value="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/build_topo3.py" />
+        <option value="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/start_interactive_with_sensors.py" />
+        <option value="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/sensor.py" />
       </list>
     </option>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="52" />
     <option name="y" value="83" />
     <option name="width" value="1855" />
@@ -298,6 +323,41 @@
               <item name="network-inference-with-BlockchainNEW" type="462c0819:PsiDirectoryNode" />
               <item name="Blockchain" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="network-inference-with-BlockchainNEW" type="b2602c69:ProjectViewProjectNode" />
+              <item name="network-inference-with-BlockchainNEW" type="462c0819:PsiDirectoryNode" />
+              <item name="TOPOLOGIE_FUNZIONANTI" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="network-inference-with-BlockchainNEW" type="b2602c69:ProjectViewProjectNode" />
+              <item name="network-inference-with-BlockchainNEW" type="462c0819:PsiDirectoryNode" />
+              <item name="TOPOLOGIE_FUNZIONANTI" type="462c0819:PsiDirectoryNode" />
+              <item name="esperimenti" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="network-inference-with-BlockchainNEW" type="b2602c69:ProjectViewProjectNode" />
+              <item name="network-inference-with-BlockchainNEW" type="462c0819:PsiDirectoryNode" />
+              <item name="TOPOLOGIE_FUNZIONANTI" type="462c0819:PsiDirectoryNode" />
+              <item name="esperimenti" type="462c0819:PsiDirectoryNode" />
+              <item name="e4" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="network-inference-with-BlockchainNEW" type="b2602c69:ProjectViewProjectNode" />
+              <item name="network-inference-with-BlockchainNEW" type="462c0819:PsiDirectoryNode" />
+              <item name="TOPOLOGIE_FUNZIONANTI" type="462c0819:PsiDirectoryNode" />
+              <item name="esperimenti" type="462c0819:PsiDirectoryNode" />
+              <item name="e4" type="462c0819:PsiDirectoryNode" />
+              <item name="prova_sensori" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="network-inference-with-BlockchainNEW" type="b2602c69:ProjectViewProjectNode" />
+              <item name="network-inference-with-BlockchainNEW" type="462c0819:PsiDirectoryNode" />
+              <item name="TOPOLOGIE_FUNZIONANTI" type="462c0819:PsiDirectoryNode" />
+              <item name="esperimenti" type="462c0819:PsiDirectoryNode" />
+              <item name="e4" type="462c0819:PsiDirectoryNode" />
+              <item name="prova_sensori" type="462c0819:PsiDirectoryNode" />
+              <item name="file_config_prova" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -308,6 +368,17 @@
   <component name="PropertiesComponent">
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/file_config_prova" />
+      <recent name="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/file_config_prova" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/file_config_prova" />
+      <recent name="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori" />
+      <recent name="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -321,8 +392,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.threadTrials">
-    <configuration name="client" type="PythonConfigurationType" factoryName="Python" temporary="true">
+  <component name="RunManager" selected="Python.test_sensore">
+    <configuration name="prova_stdout_to_python" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="network-inference-with-Blockchain" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
@@ -330,12 +401,33 @@
         <env name="PYTHONUNBUFFERED" value="1" />
       </envs>
       <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Blockchain" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori" />
       <option name="IS_MODULE_SDK" value="true" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Blockchain/client.py" />
-      <option name="PARAMETERS" value="-c file_config_prova/client1_config.json" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/prova_stdout_to_python.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="sensor" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="network-inference-with-Blockchain" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/sensor.py" />
+      <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -357,6 +449,27 @@
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Blockchain/server.py" />
       <option name="PARAMETERS" value="-i -c file_config_prova/server1_config.json" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration name="test_sensore" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="network-inference-with-Blockchain" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/start_sensor.py" />
+      <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
       <option name="MODULE_MODE" value="false" />
@@ -386,15 +499,19 @@
       <method v="2" />
     </configuration>
     <list>
-      <item itemvalue="Python.client" />
       <item itemvalue="Python.threadTrials" />
       <item itemvalue="Python.server" />
+      <item itemvalue="Python.prova_stdout_to_python" />
+      <item itemvalue="Python.sensor" />
+      <item itemvalue="Python.test_sensore" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.test_sensore" />
+        <item itemvalue="Python.prova_stdout_to_python" />
+        <item itemvalue="Python.sensor" />
         <item itemvalue="Python.threadTrials" />
         <item itemvalue="Python.server" />
-        <item itemvalue="Python.client" />
       </list>
     </recent_temporary>
   </component>
@@ -412,20 +529,20 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1855" height="980" extended-state="6" />
+    <frame x="64" y="-11" width="1857" height="988" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.17468214" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.17467248" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.3295964" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="2" weight="0.3295964" />
       <window_info anchor="bottom" id="Message" order="3" />
-      <window_info anchor="bottom" id="Find" order="4" weight="0.3295964" />
+      <window_info anchor="bottom" id="Find" order="4" weight="0.3286385" />
       <window_info anchor="bottom" id="Version Control" order="5" weight="0.3295964" />
       <window_info anchor="bottom" id="Run" order="6" weight="0.33450705" />
-      <window_info active="true" anchor="bottom" id="Debug" order="7" visible="true" weight="0.34624413" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.34624413" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="10" />
@@ -435,22 +552,22 @@
     </layout>
     <layout-to-restore>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info content_ui="combo" id="Project" order="1" visible="true" weight="0.25331858" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.17467248" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" weight="0.3298122" />
+      <window_info anchor="bottom" id="Terminal" order="0" weight="0.3295964" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="2" weight="0.3297362" />
+      <window_info anchor="bottom" id="Python Console" order="2" weight="0.3295964" />
       <window_info anchor="bottom" id="Message" order="3" />
-      <window_info anchor="bottom" id="Find" order="4" />
-      <window_info anchor="bottom" id="Version Control" order="5" weight="0.3297362" />
-      <window_info active="true" anchor="bottom" id="Run" order="6" visible="true" weight="0.33693045" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.39808154" />
+      <window_info anchor="bottom" id="Find" order="4" visible="true" weight="0.3286385" />
+      <window_info anchor="bottom" id="Version Control" order="5" weight="0.3295964" />
+      <window_info anchor="bottom" id="Run" order="6" weight="0.33450705" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.34624413" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="10" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.25" />
+      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.2498618" />
     </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -481,7 +598,7 @@
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Blockchain/node.py</url>
-          <line>519</line>
+          <line>517</line>
           <option name="timeStamp" value="55" />
         </line-breakpoint>
         <line-breakpoint suspend="THREAD" type="python-line">
@@ -496,8 +613,28 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Blockchain/node.py</url>
-          <line>544</line>
+          <line>542</line>
           <option name="timeStamp" value="66" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/prova_stdout_to_python.py</url>
+          <line>20</line>
+          <option name="timeStamp" value="71" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/prova_stdout_to_python.py</url>
+          <line>16</line>
+          <option name="timeStamp" value="72" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/sensor.py</url>
+          <line>75</line>
+          <option name="timeStamp" value="73" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/node.py</url>
+          <line>1</line>
+          <option name="timeStamp" value="74" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -530,89 +667,53 @@
     </expressions>
     <expressions id="evaluateExpression">
       <expression>
-        <expression-string>l.transaction_set_id() == new_ledger.transaction_set_id()</expression-string>
+        <expression-string>proc.returncode</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>l.transactio_set_id() == new_ledger.transaction_set_id()</expression-string>
+        <expression-string>p.stdout</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>l == new_ledger</expression-string>
+        <expression-string>p</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>l</expression-string>
+        <expression-string>p.returncode</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>new_ledger</expression-string>
+        <expression-string>row.split()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>new_ledger.transaction_set().id()</expression-string>
+        <expression-string>row</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>new_ledger.transaction_set()</expression-string>
+        <expression-string>p1.stdout.readline()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>new_ledger.transaction_set_id()</expression-string>
+        <expression-string>p2.stdout</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
       <expression>
-        <expression-string>l.transaction_set_id()</expression-string>
+        <expression-string>p2.stdout.readline()</expression-string>
         <language-id>Python</language-id>
         <evaluation-mode>EXPRESSION</evaluation-mode>
       </expression>
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Blockchain/readme.MD">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_imps/_pydev_execfile.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" selection-start-line="17" selection-end-line="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/pydevd.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="1067" selection-start-line="1067" selection-end-line="1067" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blockchain/file_config_prova/blockchain.py" />
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_bundle/pydev_monkey_qt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2805">
-          <caret line="188" selection-start-line="188" selection-end-line="188" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blockchain/server.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blockchain/client_config.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file:///usr/lib/python2.7/socket.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="3300">
@@ -620,10 +721,64 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/Blockchain/node.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8010">
+          <caret line="542" selection-start-line="542" selection-end-line="542" />
+          <folding>
+            <element signature="e#24#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_bundle/pydev_monkey.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="8895">
+          <caret line="595" column="41" selection-start-line="595" selection-start-column="41" selection-end-line="595" selection-end-column="41" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file:///usr/lib/python2.7/threading.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="11430">
           <caret line="762" selection-start-line="762" selection-end-line="762" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blockchain/ledger.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="14" selection-start-column="14" selection-end-column="14" />
+          <folding>
+            <element signature="e#15#29#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blockchain/client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="300">
+          <caret line="25" column="42" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
+          <folding>
+            <element signature="e#125#150#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blockchain/message.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1080">
+          <caret line="72" column="12" selection-start-line="72" selection-start-column="12" selection-end-line="72" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blockchain/threadTrials.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="3660">
+          <caret line="251" selection-start-line="251" selection-end-line="251" />
+          <folding>
+            <element signature="e#25#50#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
@@ -641,65 +796,258 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_bundle/pydev_monkey.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-61">
-          <caret line="595" column="41" selection-start-line="595" selection-start-column="41" selection-end-line="595" selection-end-column="41" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blockchain/ledger.py">
+    <entry file="file://$PROJECT_DIR$/Blockchain/transaction.py">
       <provider selected="true" editor-type-id="text-editor">
         <state>
-          <caret column="14" lean-forward="true" selection-start-column="14" selection-end-column="14" />
+          <caret selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/prova_stdout_to_python.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="14" />
           <folding>
-            <element signature="e#15#29#0" expanded="true" />
+            <element signature="e#16#33#0" expanded="true" />
+            <marker date="1535613525583" expanded="true" signature="67:170" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Blockchain/message.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="736">
-          <caret line="72" column="12" selection-start-line="72" selection-start-column="12" selection-end-line="72" selection-end-column="12" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/comandi sensori.txt">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Blockchain/client.py">
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/node.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-100">
-          <caret line="25" column="42" lean-forward="true" selection-start-line="25" selection-start-column="42" selection-end-line="25" selection-end-column="42" />
-          <folding>
-            <element signature="e#125#150#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blockchain/threadTrials.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="215">
-          <caret line="251" selection-start-line="251" selection-end-line="251" />
-          <folding>
-            <element signature="e#25#50#0" expanded="true" />
-            <marker date="1534937485031" expanded="true" signature="7335:7671" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blockchain/node.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="325">
-          <caret line="544" selection-start-line="544" selection-end-line="544" />
+        <state relative-caret-position="4935">
+          <caret line="339" column="21" selection-start-line="339" selection-start-column="17" selection-end-line="339" selection-end-column="21" />
           <folding>
             <element signature="e#24#55#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Blockchain/transaction.py">
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/build_topo3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="18" column="23" lean-forward="true" selection-start-line="18" selection-start-column="23" selection-end-line="18" selection-end-column="23" />
+        <state relative-caret-position="15">
+          <caret line="1" column="16" selection-start-line="1" selection-start-column="16" selection-end-line="1" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-945" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/blockchain.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/s1">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/util.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/transaction.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/build_virtual_topo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="50" column="16" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/create_merge_topo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="12" selection-start-line="3" selection-start-column="12" selection-end-line="3" selection-end-column="12" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/create_compatibility_table.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/file_config_prova/client1_config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="1" selection-start-line="21" selection-start-column="1" selection-end-line="21" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/file_config_prova/server2_config.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/file_config_prova/server3_config.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/file_config_prova/server1_config.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blockchain/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-810" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e1/start.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="63" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/start.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="375">
+          <caret line="49" column="30" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
+          <folding>
+            <element signature="e#19#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/hosts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/cmd line">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="43" lean-forward="true" selection-start-line="4" selection-end-line="4" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/file_config_prova/server1_config.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-995" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/file_config_prova/clientR4_config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="208">
+          <caret line="65" column="8" selection-start-line="65" selection-start-column="4" selection-end-line="65" selection-end-column="8" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/client.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="105">
+          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
+          <folding>
+            <element signature="e#125#160#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/alias">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/node.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="148">
+          <caret line="242" column="66" selection-start-line="242" selection-start-column="66" selection-end-line="242" selection-end-column="66" />
+          <folding>
+            <element signature="e#24#55#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/clean.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/NRR">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/file_config_prova/client2_config.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/file_config_prova/clientR1_config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="14" lean-forward="true" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/file_config_prova/client1_config.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blockchain/cmd line">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="41" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/build_virtual_topo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="163">
+          <caret line="50" column="4" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/start_sensor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="14" column="28" lean-forward="true" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/start_interactive_with_sensors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="360">
+          <caret line="24" column="38" selection-start-line="24" selection-start-column="38" selection-end-line="24" selection-end-column="38" />
+          <folding>
+            <element signature="e#16#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/start.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="665">
+          <caret line="74" column="67" selection-start-line="74" selection-start-column="61" selection-end-line="74" selection-end-column="67" />
+          <folding>
+            <marker date="1535832337446" expanded="true" signature="1761:1998" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/sensor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="466">
+          <caret line="117" column="30" lean-forward="true" selection-start-line="117" selection-start-column="30" selection-end-line="117" selection-end-column="30" />
+          <folding>
+            <element signature="e#16#33#0" expanded="true" />
+            <marker date="1536179859669" expanded="true" signature="128:2186" ph="..." />
+            <marker date="1536179859669" expanded="true" signature="2206:2211" ph="..." />
+            <marker date="1536179859669" expanded="true" signature="2919:2925" ph="..." />
+            <marker date="1536179859669" expanded="true" signature="4471:4776" ph="..." />
+            <marker date="1536179859669" expanded="true" signature="5711:5915" ph="..." />
+            <marker date="1536179859669" expanded="true" signature="7363:8155" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/build_topo3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="103" column="51" selection-start-line="103" selection-start-column="39" selection-end-line="103" selection-end-column="51" />
+          <folding>
+            <element signature="e#18#47#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
