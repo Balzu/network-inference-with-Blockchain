@@ -6,9 +6,9 @@ The algorithm used to infer the topology is iTop, and it is able to discover als
 The Blockchain heavily follows the guidilenes defined in Ripple Topology. It is not based on power-consuming proof-of-work but instead relies on collectively trusted subnetworks and proceeds in rounds of consensus.
 The topologies on which the experiments are carried out are built using Mininet.
 The architecture is made of three part:
-..* the Monitors, running iTop and building the first version of the topology
-..* the Blockchain nodes, that receive the topology and securely store it into a shared and agreed-upon ledger
-..* the sensor, which are placed inside the network and check both wheter the topology nodes are still alive and if new nodes joined the topology
+* the Monitors, running iTop and building the first version of the topology
+* the Blockchain nodes, that receive the topology and securely store it into a shared and agreed-upon ledger
+* the sensor, which are placed inside the network and check both wheter the topology nodes are still alive and if new nodes joined the topology
 
 
 ### TODO
