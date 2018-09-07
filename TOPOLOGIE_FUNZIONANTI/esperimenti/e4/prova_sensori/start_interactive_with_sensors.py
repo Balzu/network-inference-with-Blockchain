@@ -14,15 +14,15 @@ def start_net():
     net = Mininet( topo=topo )
     add_static_routes(net)
     net.start()
-    s = sensor('h11', 5, net, 'file_config_prova/client1_config.json', max_fail=2,
-               known_ips=['192.168.1.4', '192.168.12.2', '192.168.1.2'], simulation=True)
+    s = sensor('h11', 5, net, 'file_config_prova/client1_config.json', max_fail=3,
+               known_ips=['192.168.1.4', '192.168.12.2', '192.168.1.2'], simulation=True, readmit = False)
     s.start()
     time.sleep(10)
     h11 = net['h11']
     h21 = net['h21']
     h61 = net['h61']
     h71 = net['h71']
-    net.ping(hosts=[h11, h21, h61, h71])
+    net.pingAll()
     #net.interact()
     return net
 

@@ -8,3 +8,6 @@ python server.py -i -c file_config_prova/server3_config.json
 python client.py  -c file_config_prova/client1_config.json
 
 python client.py  -c file_config_prova/client2_config.json
+
+sudo python start_interactive_with_sensors.py | grep -E 'New|Banned'
+

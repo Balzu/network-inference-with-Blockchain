@@ -9,7 +9,7 @@ from create_merge_topo import *
 class sensor(object):
 
     def __init__(self, id, nh, net, config_file, hosts=[], active = True, passive = True,
-                 known_ips = [], max_fail = 5, simulation = False):
+                 known_ips = [], max_fail = 5, simulation = False, readmit = True):
         '''
         :param id: the id of this sensor. It must be the ID of the node on which the sensor is placed.
         :param nh: the number of hosts (monitors) to be used when they are chosen randomly to run iTop(if hosts=[])
@@ -21,6 +21,8 @@ class sensor(object):
         :param known_ips: list of known ips. Could even start a sensor with empty list
         :param max_fail: maximum number of consecutive PING failures that is tollerated before declaring a node dead
         :param simulation: True if the sensor has to be run on a Mininet host. The active sensor capabilities change.
+        :param readmit: If set to False, an ip will never be readmitted in the topology after it has been declared
+               'dead'. Set to False when the sensor is used in Mininet. Default: 'True'.
         '''
         self.__id = id
         self.__active = active
@@ -32,7 +34,9 @@ class sensor(object):
         self.__max_fail = max_fail
         self.__end = False
         self.__simulation = simulation
+        self.__readmit = readmit
         self.__dead = [] # Updated when found a dead node. Set empty soon after the dead node has been managed.
+        self.__banned = []
         self.__new = [] # Updated when found a new node. Set empty soon after the new node has been managed.
         self.__nh = nh
         self.__hosts = hosts
@@ -55,7 +59,7 @@ class sensor(object):
             threading.Thread(target=self.passive_sensor).start()
         threading.Thread(target=self.run).start()
         threading.Thread(target=self.wait_user_input).start()
-        print '\n END STARTUP\n'
+
 
     def run(self):
         while not self.__end:
@@ -88,12 +92,15 @@ class sensor(object):
                 #pdb.set_trace()
                 s = self.__net[self.__id]
                 result = s.cmd('ping -c 1 ' + ip + ' | grep received |  awk \'{print $4}\'')
-                #print 'PING ' + s.IP() + ' -> ' + ip + ' : ' + result.rstrip() + '/1 pacchetti ricevuti correttamente\n'
+                print 'PING ' + s.IP() + ' -> ' + ip + ' : ' + result.rstrip() + '/1 pacchetti ricevuti correttamente\n'
                 try:
                     if int(result) != 1: # Not received the correct packet back
                         self.handle_unsuccessful_ping(ip)
                     else:
+                        print self.__fail_count
                         self.__fail_count[ip] = 0
+                        print '\nAfter Success, Fail count for ' + ip + '= ' + str(self.__fail_count[ip])
+                        print self.__fail_count
                 except ValueError:
                     self.handle_unsuccessful_ping(ip)
             time.sleep(10)
@@ -103,13 +110,17 @@ class sensor(object):
         print '\nFail count for ' + ip + ' = ' + str(self.__fail_count[ip])
         if self.__fail_count[ip] > self.__max_fail:
             self.__dead.append(ip)
+            if not self.__readmit:
+                self.__banned.append(ip)
+                print '\nBanned ' + ip
             self.__known_ips.remove(ip)
             del self.__fail_count[ip]
 
     def passive_sensor(self):
         '''Runs passive sensor capabilities'''
-        #TODO limitazione sulla sottorete la togli se non esegui con topologia simulata su Mininet
-        cmd = ['sudo', 'tcpdump', '-l', '-i', 'any', 'net',  '192.168.0.0/16']
+        # Limitazione sulla sottorete se topologia simulata su Mininet
+        cmd = ['sudo', 'tcpdump', '-l', '-i', 'any', 'net',  '192.168.0.0/16'] if self.__simulation \
+                else ['sudo', 'tcpdump', '-l', '-i', 'any']
         p = subprocess.Popen(cmd, stdout=subprocess.PIPE)
         print '------------------- START SNIFFING ----------------------'
         for row in iter(p.stdout.readline, b''):
@@ -126,19 +137,21 @@ class sensor(object):
                 break
 
     def handle_match(self, ip):
-        if ip not in self.__known_ips:
-            print '\nNew IP discovered: ' + ip
-            self.__new.append(ip)
-            self.__known_ips.append(ip)
-            self.__fail_count[ip] = 0
+        if ip not in self.__banned:
+            if ip not in self.__known_ips:
+                print '\nNew IP discovered: ' + ip
+                self.__new.append(ip)
+                self.__known_ips.append(ip)
+                self.__fail_count[ip] = 0
+            #TODO Thw passive sensor could be used to reset the fail count. It is sufficient to move the last line
+            #of the function after the second if (not inside). Anyway, now this functionality is disabled, because
+            # MIninet has switches that send IP packets but do not respond to ping, and that definetely should not
+            # belong to topology
 
     def check_new_nodes(self):
         '''Checks whether the passive sensor found traffic dealing with a new, unknown host.
         In such a case, run a new instance of iTop and update the topology in the ledger.'''
-        for n in self.__new:
-             print n + '\n'
         if (len(self.__new)) != 0:
-            print '\nNew node(s) discovered!\n'
             out = self.iTop()
             topo = get_topo_from_json(out)
             trans = get_transactions_from_topo(topo)
@@ -157,12 +170,18 @@ class sensor(object):
             except KeyError:
                 print '\n' + n + ' does not belong to the topology\n' # Only because we are in a simulation
                 self.__dead.remove(n)
+            #finally:
+            #    if not self.__readmit:
+            #        self.__banned.append(n)
+            #        print '\nBanned ' + n
         if len(trans) > 0:
             self.__c.send_transactions(trans)
             self.__dead = []
 
     def clean_ip(self, raw_ip):
-        bytes = raw_ip.split('.')
+        'Clean the ip. A slightly different cleaning is done based on whether the ip is source or destination.'
+        #bytes = raw_ip.split('.')
+        bytes = re.split('\.|:', raw_ip)
         return bytes[0] + '.' + bytes[1] + '.' + bytes[2] + '.' + bytes[3]
 
     def wait_user_input(self):
@@ -181,7 +200,7 @@ class sensor(object):
         (vtopo, traces) = create_virtual_topo_and_traces(self.__alias, hosts)
         (M, C) = create_merge_options(vtopo, traces)
         (M, mtopo) = create_merge_topology(M, vtopo, C)
-        print_topo(mtopo)
+        #print_topo(mtopo)
         out = write_topo_to_file(self.__id, mtopo, hosts)
         return out
 
