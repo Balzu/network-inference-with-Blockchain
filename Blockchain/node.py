@@ -6,6 +6,7 @@ import thread
 import pickle
 import rsa
 import time
+import pdb
 from transaction import *
 from message import *
 from blockchain import *
