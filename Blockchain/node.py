@@ -8,6 +8,7 @@ import rsa
 import time
 import pdb
 from transaction import *
+from graph_tool.all import *
 from message import *
 from blockchain import *
 from proposal import *
@@ -79,10 +80,21 @@ class topology_node(object):
         self._type = type
 
     def __str__(self):
-        return self._name+ ' : ' + self._type
+        return self._name+ ':' + self._type
+
+    def __eq__(self, n2):
+        if isinstance(n2, topology_node):
+            return  self._name == n2.name() and self._type == n2.type()
+        raise TypeError('The comparison must be done among two objects of class "topology_node" ')
+
+    def __ne__(self, other):
+        return not self.__eq__(other)
 
     def name(self):
         return self._name
+
+    def type(self):
+        return self._type
 
 class node(object):
     """Interface for a node of the blockchain network"""
@@ -537,11 +549,26 @@ class server(client):
                 elapsed = time.time()
 
         def create_new_ledger():
-            for t in self.my_pos.tx_set().transactions().values():  #TODO controlla che my_pos contenga l' ultima proposal
+            tx_list = self.my_pos.tx_set().transactions().values()
+            #pdb.set_trace()
+            for t in tx_list:  #TODO controlla che my_pos contenga l' ultima proposal
                 if t.type() == 'I':
                     new_txset.add_transaction(t)
-                else:
-                    removed = new_txset.remove_transaction(t)
+                else: # Type of transaction is 'Delete'. If dst is None, remove all the tx in which src appears.
+                    #pdb.set_trace()
+                    dst = t.dst()
+                    removed = False
+                    if dst is not None:
+                        pdb.set_trace()
+                        removed = new_txset.remove_transaction(t)
+                        tx_list.remove(t)
+                        self.current_tx.remove(t)
+                        if t in self.unapproved_tx:
+                            del self.unapproved_tx[t]
+                        #del self.unapproved_tx[t] #Transazione sparisce da Ledger, cancellala qui
+                    else:
+                        removed = self.remove_all(t.src(), new_txset, tx_list)
+                    self.my_pos.tx_set().remove_transaction(t)
                     if not removed:
                         print 'The transaction ' + str(t) + ' was not inserted in previous ledger ' \
                               + str(last_ledger.sequence_number()) + '. Unable to remove it.'
@@ -567,7 +594,7 @@ class server(client):
                 if l.id() not in share:
                     share[l] = 1
                 else:
-                    share[l] =  share[l] + 1
+                    share[l] = share[l] + 1
             for l in share:
                 if share[l] > self.quorum * len(self.unl):
                     print '\nReached consensus with unl ledger\n'
@@ -605,6 +632,21 @@ class server(client):
         if consensus:
             self.__blockchain.add_ledger(new_ledger)
         return consensus
+
+    def remove_all(self, node, txset, txlist):
+        '''Removes from txset all the transactions in which "node" happears. The transactions have to be removed also
+        from the list 'txlist' of transactions undergoing validation process.'''
+        removed = False
+        for t in txset.transactions().values():
+            if node == t.src() or node == t.dst():
+                txset.remove_transaction(t)
+                txlist.remove(t)
+                self.my_pos.tx_set().remove_transaction(t)
+                self.current_tx.remove(t)
+                if t in self.unapproved_tx:
+                    del self.unapproved_tx[t]
+                removed = True
+        return removed
 
     def received_all_ledgers(self):
         '''Returns True only if all the nodes in the UNL have sent entirely their ledger. Since a ledger may be
@@ -654,9 +696,12 @@ class server(client):
         if consensus:
             validated_trans_set = self.__blockchain.current_ledger().transaction_set()
             self.print_validated_tx(validated_trans_set) # TODO per debug. O lo rimuovi, o lo metti da qualche altra parte
+            #pdb.set_trace()
             for t in self.unapproved_tx.keys():
-                if t in validated_trans_set:
+                if t in validated_trans_set or t.type() == 'D': #TODO pensa se è ok togliere transazioni 'D' senza controllare che siano state applicate
                     del self.unapproved_tx[t]
+                    if t.type() == 'D':  # TODO check
+                        self.current_tx.remove(t)
                 else:
                     self.unapproved_tx[t] = self.unapproved_tx[t] + 1 # Age the transaction
                     if self.unapproved_tx[t] > 5: #TODO Hard coded, define in config file the maximum age
@@ -779,9 +824,16 @@ class server(client):
         ins = 0
         tot = len(txset.transactions())
         for tx in txset.transactions().values():
+            #try:
             if tx not in self.unapproved_tx:
                 self.unapproved_tx[tx] = 0
                 ins += 1
+            '''except AttributeError: #TODO never hit, remove try/except
+                if tx.src() is not None and tx.dst() is None and tx.type() == 'D':
+                    print 'Special Delete Node transaction received'
+                    self.unapproved_tx[tx] = 0
+                  ins += 1
+            '''
         print 'Inserted ' + str(ins) + ' transactions out of ' + str(tot)
         return self.create_success_ack_msg({'inserted':ins, 'total' : tot})
 
@@ -850,6 +902,87 @@ class server(client):
         header = message_header(self.id(), self.signature(), 'id', 0, message_type.observer_registration)
         payload = message_payload(self.public_key())
         return message(header, payload)
+
+    def draw_topology(self, collapse=True):
+        '''Draws the topology of the current ledger and stores it to file.'''
+        # Create data structure for the topology
+        lgr = self.__blockchain.current_ledger()
+        txset = lgr.transaction_set()
+        topo = {} #Key = str(node), values = [str(neighbors)]
+        for tx in txset.transactions().values():
+            src = str(tx.src())
+            dst = str(tx.dst())
+            if src not in topo:
+                topo[src] = [dst]
+            else:
+                topo[src].append(dst)
+            if dst not in topo:
+                topo[dst] = []
+        g = Graph()
+        vprop_name = g.new_vertex_property("string")
+        vprop_col = g.new_vertex_property("vector<float>")
+        vprop_type = {}  # Key=vertex, value=type
+        # Add Vertices to the graph
+        added = {}
+        for s in topo.keys():
+            if s not in added:
+                added[s] = g.add_vertex()
+            for d in topo[s]:
+                if d not in added:
+                    added[d] = g.add_vertex()
+                g.add_edge(added[s], added[d])
+        for v in added:
+            (name,type) = v.split(':')
+            vprop_name[added[v]] = name
+            vprop_type[added[v]] = type
+            vprop_col[added[v]] = [0.3, 0.1, 1, 0.9] if type == 'R' else [0.3, 0.4, 0.5, 0.9]
+        if collapse:
+            removed = g.new_vertex_property("bool")
+            removed.a = False
+            for v in g.vertices():
+                # pdb.set_trace()
+                non_resp = {}  # key: 'A|NC|B|H', value = (type of NRR)
+                try:
+                    for e in v.out_edges():
+                        dst_vtx = g.vertex(e.target())
+                        type = vprop_type[dst_vtx]
+                        if type != 'R':
+                            if type not in non_resp:
+                                non_resp[type] = (dst_vtx, 1)
+                            else:
+                                if dst_vtx.out_degree() == 0 and dst_vtx.in_degree() == 1:
+                                    removed[dst_vtx] = True
+                            vprop_name[dst_vtx] = type
+                    non_resp = {}
+                    for e in v.in_edges():
+                        src_vtx = g.vertex(e.source())
+                        type = vprop_type[src_vtx]
+                        if type != 'R':
+                            if type not in non_resp:
+                                non_resp[type] = src_vtx
+                            else:
+                                if src_vtx.out_degree() == 1 and\
+                                (src_vtx.in_degree() == 0 or self.edge_from_v2(src_vtx, v)):
+                                    removed[src_vtx] = True
+                            vprop_name[src_vtx] = type
+                except ValueError:
+                    print '\nVertex deleted, skip edge\n'
+            g.set_vertex_filter(removed, inverted=True)
+        g.vertex_properties["name"] = vprop_name
+        g.vertex_properties["color"] = vprop_col
+        graph_draw(g, vertex_text=g.vertex_properties["name"], vertex_font_size=18, output_size=(1000, 1000),
+                   vertex_fill_color=g.vertex_properties["color"], edge_pen_width=3.5,
+                   edge_color=[0, 0, 0, 1], vertex_color=g.vertex_properties["color"], vertex_pen_width=3,
+                   output="print_topo.png")
+
+    def edge_from_v2(self, v1, v2):
+        'Returns True IFF vertex v1 has only one incoming edge coming from v2'
+        if v1.in_degree() == 1:
+            for e in v2.in_edges():
+                if e.target() == v2:
+                    return True
+        return False
+
 
     # TODO send de-registration message to unl, end message to observers, and stop sockets?
     def finalize(self):

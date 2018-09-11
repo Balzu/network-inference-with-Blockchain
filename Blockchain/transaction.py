@@ -18,11 +18,21 @@ class transaction:
     def id(self):
         return self._id
 
+    def src(self):
+        return self._from
+
+    def dst(self):
+        return self._to
+
     def type(self):
         return self._type
 
     def __str__(self):
-        return self._from.name() + ' -> ' + self._to.name()
+        try:
+            return self._from.name() + ' -> ' + self._to.name()
+        except AttributeError:
+            if self._from is not None and self._to is None and self._type == 'D':
+                return 'Delete Node ' + self._from.name()
 
     def copy(self):
         return transaction(self._from, self._to, True if self._type == 'I' else False)
@@ -104,7 +114,6 @@ class transaction_set:
             if tid not in transactions2:
                 return False
         return True
-        
 
     def __str__(self):
         stx = ''

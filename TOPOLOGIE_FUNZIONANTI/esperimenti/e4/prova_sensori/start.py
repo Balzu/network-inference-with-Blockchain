@@ -71,7 +71,7 @@ def startup(nt, nh, hosts):
 
 if __name__ == '__main__':
     if len(sys.argv) < 4:
-        print """\nUsage: python start.py <nt> < nh | hosts >\n 
+        print """\nUsage: python start.py <full> <nt> < nh | hosts >\n 
         <Full> = 'Y' to start from iTop, 'N' to run only the sensors (use a previously generated topology)\n
         <nt> = number of threads to be used to collect traces\n 
         <nh> = number of random hosts that each thread will use\n 

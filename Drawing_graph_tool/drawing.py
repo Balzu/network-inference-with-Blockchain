@@ -46,12 +46,13 @@ e = g.add_edge(v8, v5)
 e = g.add_edge(v12, v3)
 '''
 vprop = g.new_vertex_property("string")
-vprop[v1] = 'Jessi'
-vprop[v2] = 'Frenci'
+vprop[v1] = '1A, 3B'
+vprop[v2] = 'R1              '
 g.vertex_properties["name"]=vprop
 vpropc = g.new_vertex_property("vector<float>")
-vpropc[v1] = [0.640625, 0.2, 0, 0.9]
-vpropc[v2] = [1, 1, 0.2, 0.9]
+vpropc[v1] = [0.3, 0.4, 0.5, 0.9]
+vpropc[v2] = [0.3, 0.1, 1, 0.9]
 g.vertex_properties["color"]=vpropc
-graph_draw(g, vertex_text=g.vertex_properties["name"], vertex_font_size=18, output_size=(800, 800),
-           vertex_fill_color= g.vertex_properties["color"],output="more_nodes.png")
+graph_draw(g, vertex_text=g.vertex_properties["name"], vertex_font_size=18, output_size=(1000, 1000),
+           vertex_fill_color= g.vertex_properties["color"], edge_pen_width=3.5,
+           edge_color= [0,0,0,1], vertex_color= g.vertex_properties["color"], vertex_pen_width=3, output="more_nodes.png")

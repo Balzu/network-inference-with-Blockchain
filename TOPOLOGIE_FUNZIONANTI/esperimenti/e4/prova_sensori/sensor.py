@@ -165,15 +165,11 @@ class sensor(object):
         for n in self.__dead:
             print '\nDead node: ' + n + '\n'
             try:
-                tx = transaction(self.__alias[n], None)
+                tx = transaction(self.__alias[n], None, False)
                 trans.append(tx)
             except KeyError:
                 print '\n' + n + ' does not belong to the topology\n' # Only because we are in a simulation
                 self.__dead.remove(n)
-            #finally:
-            #    if not self.__readmit:
-            #        self.__banned.append(n)
-            #        print '\nBanned ' + n
         if len(trans) > 0:
             self.__c.send_transactions(trans)
             self.__dead = []

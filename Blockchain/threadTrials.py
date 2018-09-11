@@ -4,6 +4,7 @@ from transaction import *
 from message import *
 from blockchain import *
 from ledger import *
+from util import *
 from node import *
 import json
 import time
@@ -251,6 +252,29 @@ def prova_transazioni_delete():
     trans.append(transaction(r4, r3, False))
     c.send_transactions(trans)
 
+def prova_deletion():
+    r3 = topology_node('r3', 'R')
+    r3b = topology_node('r1', 'R')
+    r4a = topology_node('X4', 'A')
+    r5a = topology_node('X5', 'A')
+    r6a = topology_node('X6', 'A')
+    r7a = topology_node('X7', 'A')
+    r2 = topology_node('R2', 'R')
+    r5 = topology_node('r5', 'R')
+    tx = [transaction(r3, r4a), transaction(r4a, r3), transaction(r3, r7a), transaction(r7a, r3),
+          transaction(r5, r4a), transaction(r2, r3), transaction(r2, r7a), transaction(r3b, r3),
+          transaction(r6a, r4a), transaction(r5 ,r3), transaction(r5, r7a), transaction(r7a, r2)]
+    c = configure_client("file_config_prova/client1_config.json")  # TODO va specificato da linea di comando
+    register_client(c)
+    c.send_transactions(tx)
+    choice = raw_input("\n---------Press any button to delete r5 -----------\n")
+    tx = [transaction(r5, None, False)]
+    c.send_transactions(tx)
+
+
+
+
+
 if __name__=='__main__':
 
     """sst = thread.start_new_thread(server_socket, (HOST, PORT))
@@ -301,8 +325,8 @@ if __name__=='__main__':
     #print prova_id_txset()
     #prova_ledger_equality()
     #prova_stampa_proposal()
-    prova_transazioni_delete()
-
+    #prova_transazioni_delete()
+    prova_deletion()
 
     '''topo = get_topo_from_json("m_topo.json")
     txset = build_txset_from_topo(topo)

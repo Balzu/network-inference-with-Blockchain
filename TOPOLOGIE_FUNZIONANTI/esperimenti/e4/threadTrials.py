@@ -251,6 +251,15 @@ def prova_transazioni_delete():
     trans.append(transaction(r4, r3, False))
     c.send_transactions(trans)
 
+def prova_topo_nodes():
+    r3 = topology_node('r3', 'R')
+    r3b = topology_node('r3', 'R')
+    r4 = topology_node('r4', 'R')
+    r2 = topology_node('R2', 'R')
+    dict = {}
+    dict[r3] = [r2]
+    print r3b in dict
+
 if __name__=='__main__':
 
     """sst = thread.start_new_thread(server_socket, (HOST, PORT))
@@ -301,8 +310,8 @@ if __name__=='__main__':
     #print prova_id_txset()
     #prova_ledger_equality()
     #prova_stampa_proposal()
-    prova_transazioni_delete()
-
+    #prova_transazioni_delete()
+    prova_topo_nodes()
 
     '''topo = get_topo_from_json("m_topo.json")
     txset = build_txset_from_topo(topo)

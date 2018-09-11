@@ -4,7 +4,6 @@ This module contains utility functions, used to startup the simulation.
 """
 import json
 import os
-from build_topo3 import *
 from node import *
 
 def configure_client(config_file):

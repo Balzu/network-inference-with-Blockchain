@@ -4,8 +4,9 @@
 
 from transaction import *
 from message import *
-from node import *
 import json
+import os
+from node import *
 from argparse import ArgumentParser
 
 def configure_server(config_file, init_unl = True):
@@ -64,7 +65,8 @@ def interactive_interface(s):
     end = False
     while not end:
         choice = raw_input("\n--------------PROMPT----------------------\n"
-                           "\nPress 'r' to register this node to its UNL"
+                           "\nPress 'r' to register this node to its UNL and start the server"
+                           "\nPress 'd' to draw the topology stored in the current ledger"
                            "\nPress 'q' to quit the server program\n"
                            "\n------------------------------------------\n")
         if choice == 'r':
@@ -76,6 +78,9 @@ def interactive_interface(s):
                 registration = True
                 s.start()
                 print 'Server node ' + s.id() + ' successfully started'
+        elif choice == 'd':
+            s.draw_topology()
+            os.system('feh print_topo.png --image-bg white')
         elif choice == 'q':
             s.stop()
             end = True
