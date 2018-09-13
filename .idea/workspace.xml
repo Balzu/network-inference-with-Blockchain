@@ -2,52 +2,34 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02de7c1e-3b13-46aa-8b6d-9f78c1447a4a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Experiments/UpAndDown/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Blockchain/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sensor/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Sensor/sensor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/UpAndDown/alias" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/UpAndDown/client1_config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/UpAndDown/hosts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/UpAndDown/sensor_config.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Tests/UpAndDown/start_net_and_sensor.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topology/__init__.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topology/build_topo3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topology/build_virtual_topo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topology/create_compatibility_table.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topology/create_merge_topo.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topology/readme.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Topology/util.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blockchain/node.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blockchain/node.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blockchain/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blockchain/server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blockchain/start_sensor.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blockchain/threadTrials.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blockchain/threadTrials.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blockchain/transaction.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blockchain/transaction.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blockchain/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blockchain/util.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Drawing_graph_tool/drawing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Drawing_graph_tool/drawing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Drawing_graph_tool/more_nodes.png" beforeDir="false" afterPath="$PROJECT_DIR$/Drawing_graph_tool/more_nodes.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/distances/h11" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/distances/h11" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/distances/h21" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/distances/h21" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/distances/h31" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/distances/h31" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/distances/h41" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/distances/h41" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/distances/h61" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/distances/h61" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/distances/h71" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/distances/h71" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/m_topo_0" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/m_topo_0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/sensor.py" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/sensor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/start.py" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/start.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h11h21" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h11h31" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h11h31" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h11h41" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h11h41" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h11h61" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h11h61" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h11h71" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h11h71" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h21h11" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h31h11" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h31h11" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h31h21" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h31h21" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h31h41" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h31h41" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h31h61" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h31h61" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h31h71" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h31h71" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h41h11" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h41h11" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h41h21" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h41h21" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h41h31" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h41h31" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h41h61" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h41h61" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h41h71" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h41h71" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h61h11" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h61h11" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h61h21" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h61h21" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h61h31" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h61h31" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h61h41" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h61h41" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h61h71" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h61h71" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h71h11" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h71h11" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h71h21" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h71h21" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h71h31" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h71h31" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h71h41" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h71h41" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h71h61" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h71h61" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/threadTrials.py" beforeDir="false" afterPath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/threadTrials.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Drawing_graph_tool/drawing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Miscellaneous/Drawing_graph_tool/drawing.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Drawing_graph_tool/mappa colori.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Miscellaneous/Drawing_graph_tool/mappa colori.pdf" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Drawing_graph_tool/more_nodes.png" beforeDir="false" afterPath="$PROJECT_DIR$/Miscellaneous/Drawing_graph_tool/more_nodes.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Experiments/UpAndDown/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UpAndDown/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/linuxroutermodified.py" beforeDir="false" afterPath="$PROJECT_DIR$/Miscellaneous/linuxroutermodified.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prove_aggiunte/solorouter.py" beforeDir="false" afterPath="$PROJECT_DIR$/Miscellaneous/prove_aggiunte/solorouter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prove_aggiunte/switcherouter.py" beforeDir="false" afterPath="$PROJECT_DIR$/Miscellaneous/prove_aggiunte/switcherouter.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prove_aggiunte/treetopo.py" beforeDir="false" afterPath="$PROJECT_DIR$/Miscellaneous/prove_aggiunte/treetopo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prove_aggiunte/treetopo.py.old" beforeDir="false" afterPath="$PROJECT_DIR$/Miscellaneous/prove_aggiunte/treetopo.py.old" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prove_aggiunte/treetopo_amano.py" beforeDir="false" afterPath="$PROJECT_DIR$/Miscellaneous/prove_aggiunte/treetopo_amano.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/prove_aggiunte/treetopo_controllers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Miscellaneous/prove_aggiunte/treetopo_controllers.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/test_sensore.py" beforeDir="false" afterPath="$PROJECT_DIR$/Miscellaneous/test_sensore.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -105,25 +87,25 @@
         <counts>
           <entry key="MD" value="1" />
           <entry key="NRR" value="1" />
-          <entry key="alias" value="3" />
+          <entry key="alias" value="4" />
           <entry key="cmd line" value="5" />
-          <entry key="hosts" value="3" />
-          <entry key="json" value="17" />
-          <entry key="md" value="1" />
+          <entry key="hosts" value="4" />
+          <entry key="json" value="19" />
+          <entry key="md" value="3" />
           <entry key="png" value="4" />
-          <entry key="py" value="95" />
+          <entry key="py" value="119" />
           <entry key="s1" value="2" />
-          <entry key="sh" value="3" />
+          <entry key="sh" value="4" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Image" value="4" />
-          <entry key="JSON" value="17" />
-          <entry key="Markdown" value="2" />
-          <entry key="PLAIN_TEXT" value="18" />
-          <entry key="Python" value="95" />
+          <entry key="JSON" value="19" />
+          <entry key="Markdown" value="4" />
+          <entry key="PLAIN_TEXT" value="21" />
+          <entry key="Python" value="119" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -131,15 +113,15 @@
           <entry key="cmd line" value="2" />
           <entry key="dummy" value="50" />
           <entry key="hosts" value="10" />
-          <entry key="md" value="1307" />
-          <entry key="py" value="15851" />
+          <entry key="md" value="1796" />
+          <entry key="py" value="16539" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="Markdown" value="1307" />
+          <entry key="Markdown" value="1796" />
           <entry key="PLAIN_TEXT" value="62" />
-          <entry key="Python" value="15851" />
+          <entry key="Python" value="16539" />
         </counts>
       </usages-collector>
     </session>
@@ -147,125 +129,95 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/start.py">
+        <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/start_net_and_sensor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-255">
-              <caret line="51" column="21" lean-forward="true" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
+            <state relative-caret-position="1455">
+              <caret line="97" column="19" selection-start-line="97" selection-start-column="19" selection-end-line="97" selection-end-column="19" />
               <folding>
-                <marker date="1536419996347" expanded="true" signature="1761:1998" ph="..." />
+                <element signature="e#16#35#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/start_interactive_with_sensors.py">
+        <entry file="file://$PROJECT_DIR$/Topology/create_merge_topo.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="250">
-              <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
+            <state>
               <folding>
-                <element signature="e#16#47#0" expanded="true" />
+                <element signature="e#19#51#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Topology/util.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-225">
+              <caret line="9" column="22" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="22" />
+              <folding>
+                <element signature="e#95#106#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Experiments/UpAndDown/readme.md">
-          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-            <state split_layout="SPLIT">
-              <first_editor relative-caret-position="135">
-                <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-              </first_editor>
-              <second_editor />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/util.py">
+        <entry file="file://$PROJECT_DIR$/Blockchain/util.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="90">
-              <caret line="6" selection-start-line="6" selection-end-line="6" />
+            <state relative-caret-position="-345">
+              <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+              <folding>
+                <element signature="e#95#106#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/sensor.py">
+        <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/hosts">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Topology/build_topo3.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="240">
+              <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+              <folding>
+                <element signature="e#18#47#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Topology/create_compatibility_table.py">
+          <provider selected="true" editor-type-id="text-editor" />
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Topology/build_virtual_topo.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/sensor_config.json">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="45">
-              <caret line="3" column="9" lean-forward="true" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-              <folding>
-                <marker date="1536506856461" expanded="true" signature="128:2466" ph="..." />
-                <marker date="1536506856461" expanded="true" signature="2486:2491" ph="..." />
-                <marker date="1536506856461" expanded="true" signature="3167:3173" ph="..." />
-                <marker date="1536506856461" expanded="true" signature="4920:5340" ph="..." />
-                <marker date="1536506856461" expanded="true" signature="6330:6968" ph="..." />
-                <marker date="1536506856461" expanded="true" signature="8472:9265" ph="..." />
-              </folding>
+              <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/node.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" selection-start-line="1" selection-end-line="1" />
-              <folding>
-                <element signature="e#24#55#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Blockchain/server.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="610">
-              <caret line="82" column="42" selection-start-line="82" selection-start-column="42" selection-end-line="82" selection-end-column="42" />
-              <folding>
-                <element signature="e#122#147#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_bundle/pydev_monkey_qt.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="221">
-              <caret line="101" selection-start-line="101" selection-end-line="101" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Blockchain/node.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
-              <folding>
-                <marker date="1536511254934" expanded="true" signature="2838:2844" ph="..." />
-                <marker date="1536511254934" expanded="true" signature="27499:27505" ph="..." />
-                <marker date="1536511254934" expanded="true" signature="38982:42618" ph="..." />
-                <marker date="1536511254934" expanded="true" signature="42374:42618" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Blockchain/transaction.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="168">
-              <caret line="21" selection-start-line="21" selection-end-line="21" />
-              <folding>
-                <marker date="1536485783474" expanded="true" signature="722:728" ph="..." />
-              </folding>
-            </state>
-          </provider>
+        <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/alias">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -279,14 +231,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>pdb</find>
-      <find>clean_ip</find>
-      <find>print</find>
-      <find>h11</find>
-      <find>192.168.5.</find>
-      <find>v9</find>
-      <find>ne</find>
-      <find>topo</find>
       <find>set</find>
       <find>r5</find>
       <find>accept p</find>
@@ -309,6 +253,14 @@
       <find>accept_</find>
       <find>unapproved_tx</find>
       <find>current_tx</find>
+      <find>start_net</find>
+      <find>net</find>
+      <find>traceroute</find>
+      <find>get_responding_routers</find>
+      <find>create</find>
+      <find>alias</find>
+      <find>create_virtual_topo_and_traces</find>
+      <find>lst</find>
     </findStrings>
     <replaceStrings>
       <replace>num_keep</replace>
@@ -356,6 +308,15 @@
         <option value="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/util.py" />
         <option value="$PROJECT_DIR$/Blockchain/node.py" />
         <option value="$PROJECT_DIR$/Experiments/UpAndDown/readme.md" />
+        <option value="$PROJECT_DIR$/Experiments/UpAndDown/start_net_and_sensor.py" />
+        <option value="$PROJECT_DIR$/Mininet/__init__.py" />
+        <option value="$PROJECT_DIR$/Sensor/__init__.py" />
+        <option value="$PROJECT_DIR$/Sensor/sensor.py" />
+        <option value="$PROJECT_DIR$/Mininet/readme.md" />
+        <option value="$PROJECT_DIR$/Blockchain/__init__.py" />
+        <option value="$PROJECT_DIR$/Topology/util.py" />
+        <option value="$PROJECT_DIR$/Tests/UpAndDown/start_net_and_sensor.py" />
+        <option value="$PROJECT_DIR$/Topology/build_virtual_topo.py" />
       </list>
     </option>
   </component>
@@ -381,33 +342,18 @@
             <path>
               <item name="network-inference-with-BlockchainNEW" type="b2602c69:ProjectViewProjectNode" />
               <item name="network-inference-with-BlockchainNEW" type="462c0819:PsiDirectoryNode" />
-              <item name="Experiments" type="462c0819:PsiDirectoryNode" />
+              <item name="Blockchain" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="network-inference-with-BlockchainNEW" type="b2602c69:ProjectViewProjectNode" />
               <item name="network-inference-with-BlockchainNEW" type="462c0819:PsiDirectoryNode" />
-              <item name="TOPOLOGIE_FUNZIONANTI" type="462c0819:PsiDirectoryNode" />
+              <item name="Tests" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="network-inference-with-BlockchainNEW" type="b2602c69:ProjectViewProjectNode" />
               <item name="network-inference-with-BlockchainNEW" type="462c0819:PsiDirectoryNode" />
-              <item name="TOPOLOGIE_FUNZIONANTI" type="462c0819:PsiDirectoryNode" />
-              <item name="esperimenti" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="network-inference-with-BlockchainNEW" type="b2602c69:ProjectViewProjectNode" />
-              <item name="network-inference-with-BlockchainNEW" type="462c0819:PsiDirectoryNode" />
-              <item name="TOPOLOGIE_FUNZIONANTI" type="462c0819:PsiDirectoryNode" />
-              <item name="esperimenti" type="462c0819:PsiDirectoryNode" />
-              <item name="e4" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="network-inference-with-BlockchainNEW" type="b2602c69:ProjectViewProjectNode" />
-              <item name="network-inference-with-BlockchainNEW" type="462c0819:PsiDirectoryNode" />
-              <item name="TOPOLOGIE_FUNZIONANTI" type="462c0819:PsiDirectoryNode" />
-              <item name="esperimenti" type="462c0819:PsiDirectoryNode" />
-              <item name="e4" type="462c0819:PsiDirectoryNode" />
-              <item name="prova_sensori" type="462c0819:PsiDirectoryNode" />
+              <item name="Tests" type="462c0819:PsiDirectoryNode" />
+              <item name="UpAndDown" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -421,11 +367,14 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Tests/UpAndDown" />
+      <recent name="$PROJECT_DIR$/Mininet" />
+      <recent name="$PROJECT_DIR$/Sensor" />
+      <recent name="$PROJECT_DIR$/Experiments/UpAndDown" />
       <recent name="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/file_config_prova" />
-      <recent name="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori" />
-      <recent name="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Miscellaneous" />
       <recent name="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/file_config_prova" />
       <recent name="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/file_config_prova" />
     </key>
@@ -749,94 +698,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/file_config_prova/server3_config.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/file_config_prova/server1_config.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e1/start.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="54" selection-start-line="14" selection-start-column="54" selection-end-line="14" selection-end-column="63" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/cmd line">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" column="43" lean-forward="true" selection-start-line="4" selection-end-line="4" selection-end-column="60" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/file_config_prova/server1_config.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-995" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/file_config_prova/clientR4_config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="20" selection-start-line="1" selection-start-column="20" selection-end-line="1" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/NRR">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/start_sensor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="195">
-          <caret line="14" column="28" selection-start-line="14" selection-start-column="28" selection-end-line="14" selection-end-column="28" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/file_config_prova/clientR1_config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="14" selection-start-line="6" selection-start-column="14" selection-end-line="6" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/file_config_prova/client1_config.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/file_config_prova/client2_config.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/hosts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="16" selection-start-column="16" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/clean.sh">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/build_topo3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2280">
-          <caret line="156" column="42" selection-start-line="156" selection-start-column="32" selection-end-line="156" selection-end-column="42" />
-          <folding>
-            <element signature="e#18#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/alias">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/blockchain.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="135">
-          <caret line="9" column="40" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/build_virtual_topo.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="705">
@@ -883,16 +744,6 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Blockchain/topo.json">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/start.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="405">
-          <caret line="49" column="30" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
-          <folding>
-            <element signature="e#19#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Blockchain/blockchain.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -953,16 +804,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Blockchain/util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="12" column="22" lean-forward="true" selection-start-line="12" selection-start-column="22" selection-end-line="12" selection-end-column="22" />
-          <folding>
-            <element signature="e#95#106#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/node.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
@@ -980,38 +821,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Blockchain/server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="610">
-          <caret line="82" column="42" selection-start-line="82" selection-start-column="42" selection-end-line="82" selection-end-column="42" />
-          <folding>
-            <element signature="e#122#147#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/sensor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="9" lean-forward="true" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-          <folding>
-            <marker date="1536506856461" expanded="true" signature="128:2466" ph="..." />
-            <marker date="1536506856461" expanded="true" signature="2486:2491" ph="..." />
-            <marker date="1536506856461" expanded="true" signature="3167:3173" ph="..." />
-            <marker date="1536506856461" expanded="true" signature="4920:5340" ph="..." />
-            <marker date="1536506856461" expanded="true" signature="6330:6968" ph="..." />
-            <marker date="1536506856461" expanded="true" signature="8472:9265" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Blockchain/transaction.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="168">
@@ -1022,10 +831,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Drawing_graph_tool/more_nodes.png">
+    <entry file="file://$PROJECT_DIR$/Miscellaneous/Drawing_graph_tool/more_nodes.png">
       <provider selected="true" editor-type-id="images" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Drawing_graph_tool/drawing.py">
+    <entry file="file://$PROJECT_DIR$/Miscellaneous/Drawing_graph_tool/drawing.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-75">
           <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
@@ -1045,33 +854,184 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/start.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-255">
-          <caret line="51" column="21" lean-forward="true" selection-start-line="51" selection-start-column="21" selection-end-line="51" selection-end-column="21" />
-          <folding>
-            <marker date="1536419996347" expanded="true" signature="1761:1998" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/start_interactive_with_sensors.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="250">
-          <caret line="24" column="13" selection-start-line="24" selection-start-column="13" selection-end-line="24" selection-end-column="13" />
-          <folding>
-            <element signature="e#16#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Experiments/UpAndDown/readme.md">
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
           <first_editor relative-caret-position="135">
             <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
           </first_editor>
           <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/sensor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-585">
+          <caret line="3" column="9" lean-forward="true" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+          <folding>
+            <marker date="1536506856461" expanded="true" signature="128:2466" ph="..." />
+            <marker date="1536506856461" expanded="true" signature="2486:2491" ph="..." />
+            <marker date="1536506856461" expanded="true" signature="3167:3173" ph="..." />
+            <marker date="1536506856461" expanded="true" signature="4920:5340" ph="..." />
+            <marker date="1536506856461" expanded="true" signature="6330:6968" ph="..." />
+            <marker date="1536506856461" expanded="true" signature="8472:9265" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Miscellaneous/test_sensore.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-199" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/clean.sh">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sensor/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Topology/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sensor/sensor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-2">
+          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" selection-start-line="6" selection-end-line="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Topology/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="150">
+            <caret line="10" column="57" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blockchain/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/start.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-110">
+          <caret line="49" column="30" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
+          <folding>
+            <element signature="e#19#30#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/start.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="580">
+          <caret line="83" column="31" lean-forward="true" selection-end-line="96" />
+          <folding>
+            <marker date="1536419996347" expanded="true" signature="1761:1998" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blockchain/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="66" column="75" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="75" />
+          <folding>
+            <element signature="e#122#147#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/start_interactive_with_sensors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="130">
+          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="18" selection-end-column="13" />
+          <folding>
+            <element signature="e#16#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/client1_config.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/sensor_config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/alias">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/hosts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Topology/create_compatibility_table.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Topology/build_topo3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
+          <folding>
+            <element signature="e#18#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/start_net_and_sensor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1455">
+          <caret line="97" column="19" selection-start-line="97" selection-start-column="19" selection-end-line="97" selection-end-column="19" />
+          <folding>
+            <element signature="e#16#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Topology/create_merge_topo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="e#19#51#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Topology/build_virtual_topo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Topology/util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-225">
+          <caret line="9" column="22" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="22" />
+          <folding>
+            <element signature="e#95#106#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blockchain/util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-345">
+          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
+          <folding>
+            <element signature="e#95#106#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
