@@ -163,3 +163,5 @@ def add_static_routes(net):
     net['r6'].cmd('ip route add 192.168.0.0/16 via 192.168.10.1 dev r6-eth2')
     net['r7'].cmd('ip route add 192.168.0.0/16 via 192.168.11.1 dev r7-eth2')
 
+
+

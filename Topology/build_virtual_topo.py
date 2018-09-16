@@ -1,6 +1,6 @@
 #!/us5/bin/python
 
-import os
+import os, pdb
 from random import randint
 
 def make_anonymous_and_blocking_routers(net):
@@ -17,7 +17,7 @@ def compute_distances(net, hosts):
             if h1 != h2:                    
             # For each host different from host1, add a line with the name of the host
             # and the distance from host1 (exploit TTL to derive the distance)
-                print "Starting ping from " + h1 + " ... "
+                #print "Starting ping from " + h1 + " ... "
                 os.system("touch distances/" + h1) 
                 os.system("echo -n '" + h2 + " '  >> distances/" + h1)
                 net[h1].cmd('ping -c 1 ' + net[h2].IP() + 
@@ -43,8 +43,12 @@ def create_traces(net, hosts):
             if h1 != h2:                    
             # For each host different from host1, add a line with the name of the host
             # and the distance from host1 (exploit TTL to derive the distance)
-                print "Starting collection of traces from " + h1 + " ... " 
-                net[h1].cmd('traceroute -n -w 0.5 ' + net[h2].IP() + ' > traceroute/' + h1 + h2)
+                print "Starting collection of traces from " + h1 + " ... "
+                #pdb.set_trace()
+                (o, e, ec) = net[h1].pexec('tcptraceroute -n ' + net[h2].IP())
+                with open("traceroute/"+h1+h2, "w") as f:
+                    f.write(o)
+            #net[h1].cmd('traceroute -n -I' + net[h2].IP() + ' > traceroute/' + h1 + h2)
 
 def create_alias():
     with open("alias", "r") as alias_file:
@@ -64,9 +68,8 @@ def create_virtual_topo_and_traces(alias, hosts):
         #pdb.set_trace()
         for h2 in hosts:
             if h1 != h2:
-                print 'h1 = ' + h1 + ', h2 =  ' + h2
-                print ('A' in topo)
-                #pdb.set_trace()
+                #print 'h1 = ' + h1 + ', h2 =  ' + h2
+                #print ('A' in topo)
                 traces[h1+h2] = []
                 if get_answer_from_dest(h1,h2): 
                 #Manage the cases in which no blocking router is found

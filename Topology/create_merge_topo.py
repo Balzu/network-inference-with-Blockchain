@@ -50,9 +50,9 @@ def trace_preservation(M, paths):
 def find_sources(traces): 
     sources = set()
     for path in traces:
-        print ' ------ '
-        print path
-        print traces[path]
+        #print ' ------ '
+        #print path
+        #print traces[path]
         if traces[path] != []: # Monitors could be directly connected ( don't pass via any router)
             sources.add(traces[path][0])
     return sources  
@@ -224,7 +224,7 @@ def get_new_types(e_i, e_j, C, topo):
 def replace_option(M, old_e, new_e):
     lst = M[old_e]
     del M[old_e]
-    print 'Deleted in replace_option ' + old_e
+    #print 'Deleted in replace_option ' + old_e
     M[new_e] = lst
     for e in M:
         if old_e in M[e]:
@@ -268,13 +268,13 @@ def update_endpoints(M, e_i, e_j):
 def merge_links(e_i, e_j, M, topo, C):
     '''Performs the merge, updating the topology; updates the merge options; updates the router classes'''
     types = get_new_types(e_i, e_j, C, topo) 
-    print 'Merge Links: e_i= '+ e_i + ', e_j = ' + e_j
+    #print 'Merge Links: e_i= '+ e_i + ', e_j = ' + e_j
     merge(e_i, e_j, topo, copy = False) #TODO check if correct
     to_remove = []    
     [to_remove.append(e) for e in M[e_i] if e not in M[e_j]]
     [M[e_i].remove(e) for e in to_remove]
     del M[e_j]
-    print 'deleted ' + e_j
+    #print 'deleted ' + e_j
     edges = M.keys()
     for e in edges: # TODO qui c'era solo M 
 # Could use just 2 conditions, leave 3 for readability

@@ -2,34 +2,46 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02de7c1e-3b13-46aa-8b6d-9f78c1447a4a" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/Blockchain/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Sensor/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Sensor/sensor.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/UpAndDown/alias" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/UpAndDown/client1_config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/UpAndDown/hosts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/UpAndDown/sensor_config.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Tests/UpAndDown/start_net_and_sensor.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Topology/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Topology/build_topo3.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Topology/build_virtual_topo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Topology/create_compatibility_table.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Topology/create_merge_topo.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Topology/readme.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Topology/util.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Drawing_graph_tool/drawing.py" beforeDir="false" afterPath="$PROJECT_DIR$/Miscellaneous/Drawing_graph_tool/drawing.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Drawing_graph_tool/mappa colori.pdf" beforeDir="false" afterPath="$PROJECT_DIR$/Miscellaneous/Drawing_graph_tool/mappa colori.pdf" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Drawing_graph_tool/more_nodes.png" beforeDir="false" afterPath="$PROJECT_DIR$/Miscellaneous/Drawing_graph_tool/more_nodes.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Experiments/UpAndDown/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UpAndDown/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/linuxroutermodified.py" beforeDir="false" afterPath="$PROJECT_DIR$/Miscellaneous/linuxroutermodified.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prove_aggiunte/solorouter.py" beforeDir="false" afterPath="$PROJECT_DIR$/Miscellaneous/prove_aggiunte/solorouter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prove_aggiunte/switcherouter.py" beforeDir="false" afterPath="$PROJECT_DIR$/Miscellaneous/prove_aggiunte/switcherouter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prove_aggiunte/treetopo.py" beforeDir="false" afterPath="$PROJECT_DIR$/Miscellaneous/prove_aggiunte/treetopo.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prove_aggiunte/treetopo.py.old" beforeDir="false" afterPath="$PROJECT_DIR$/Miscellaneous/prove_aggiunte/treetopo.py.old" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prove_aggiunte/treetopo_amano.py" beforeDir="false" afterPath="$PROJECT_DIR$/Miscellaneous/prove_aggiunte/treetopo_amano.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/prove_aggiunte/treetopo_controllers.py" beforeDir="false" afterPath="$PROJECT_DIR$/Miscellaneous/prove_aggiunte/treetopo_controllers.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/test_sensore.py" beforeDir="false" afterPath="$PROJECT_DIR$/Miscellaneous/test_sensore.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blockchain/file_config_prova/server1_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/Blockchain/file_config_prova/server1_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blockchain/file_config_prova/server2_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/Blockchain/file_config_prova/server2_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blockchain/file_config_prova/server3_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/Blockchain/file_config_prova/server3_config.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blockchain/node.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blockchain/node.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blockchain/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blockchain/server.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blockchain/util.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Sensor/sensor.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sensor/sensor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/distances/h11" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/distances/h31" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/distances/h41" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/distances/h61" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/distances/h71" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/m_topo_0" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UpAndDown/m_topo_0" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/m_topo_1" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UpAndDown/m_topo_1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/start_net_and_sensor.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UpAndDown/start_net_and_sensor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h11h31" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h11h31" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h11h41" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h11h41" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h11h61" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h11h61" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h11h71" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h11h71" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h31h11" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h31h11" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h31h41" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h31h41" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h31h61" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h31h61" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h31h71" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h31h71" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h41h11" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h41h11" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h41h31" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h41h31" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h41h61" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h41h61" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h41h71" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h41h71" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h61h11" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h61h11" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h61h31" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h61h31" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h61h41" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h61h41" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h61h71" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h61h71" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h71h11" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h71h11" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h71h31" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h71h31" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h71h41" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h71h41" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h71h61" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h71h61" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Topology/build_topo3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Topology/build_topo3.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Topology/build_virtual_topo.py" beforeDir="false" afterPath="$PROJECT_DIR$/Topology/build_virtual_topo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Topology/create_merge_topo.py" beforeDir="false" afterPath="$PROJECT_DIR$/Topology/create_merge_topo.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Topology/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/Topology/util.py" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -86,14 +98,44 @@
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="MD" value="1" />
-          <entry key="NRR" value="1" />
+          <entry key="NRR" value="2" />
           <entry key="alias" value="4" />
-          <entry key="cmd line" value="5" />
+          <entry key="cmd line" value="6" />
+          <entry key="h11h21" value="4" />
+          <entry key="h11h31" value="4" />
+          <entry key="h11h41" value="5" />
+          <entry key="h11h61" value="5" />
+          <entry key="h11h71" value="3" />
+          <entry key="h21h11" value="5" />
+          <entry key="h21h31" value="4" />
+          <entry key="h21h41" value="4" />
+          <entry key="h21h61" value="3" />
+          <entry key="h21h71" value="3" />
+          <entry key="h31h11" value="4" />
+          <entry key="h31h21" value="4" />
+          <entry key="h31h41" value="3" />
+          <entry key="h31h61" value="3" />
+          <entry key="h31h71" value="3" />
+          <entry key="h41h11" value="3" />
+          <entry key="h41h21" value="5" />
+          <entry key="h41h31" value="4" />
+          <entry key="h41h61" value="4" />
+          <entry key="h41h71" value="2" />
+          <entry key="h61h11" value="4" />
+          <entry key="h61h21" value="3" />
+          <entry key="h61h31" value="3" />
+          <entry key="h61h41" value="3" />
+          <entry key="h61h71" value="2" />
+          <entry key="h71h11" value="2" />
+          <entry key="h71h21" value="2" />
+          <entry key="h71h31" value="3" />
+          <entry key="h71h41" value="1" />
+          <entry key="h71h61" value="2" />
           <entry key="hosts" value="4" />
-          <entry key="json" value="19" />
+          <entry key="json" value="23" />
           <entry key="md" value="3" />
           <entry key="png" value="4" />
-          <entry key="py" value="119" />
+          <entry key="py" value="143" />
           <entry key="s1" value="2" />
           <entry key="sh" value="4" />
           <entry key="txt" value="1" />
@@ -102,10 +144,10 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Image" value="4" />
-          <entry key="JSON" value="19" />
+          <entry key="JSON" value="23" />
           <entry key="Markdown" value="4" />
-          <entry key="PLAIN_TEXT" value="21" />
-          <entry key="Python" value="119" />
+          <entry key="PLAIN_TEXT" value="123" />
+          <entry key="Python" value="143" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -113,111 +155,46 @@
           <entry key="cmd line" value="2" />
           <entry key="dummy" value="50" />
           <entry key="hosts" value="10" />
+          <entry key="json" value="39" />
           <entry key="md" value="1796" />
-          <entry key="py" value="16539" />
+          <entry key="py" value="18705" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
+          <entry key="JSON" value="39" />
           <entry key="Markdown" value="1796" />
           <entry key="PLAIN_TEXT" value="62" />
-          <entry key="Python" value="16539" />
+          <entry key="Python" value="18705" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Sensor/sensor.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="294">
+              <caret line="141" column="9" selection-start-line="141" selection-start-column="9" selection-end-line="141" selection-end-column="9" />
+              <folding>
+                <element signature="e#16#33#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/start_net_and_sensor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1455">
-              <caret line="97" column="19" selection-start-line="97" selection-start-column="19" selection-end-line="97" selection-end-column="19" />
+            <state relative-caret-position="339">
+              <caret line="108" column="22" lean-forward="true" selection-start-line="108" selection-start-column="22" selection-end-line="108" selection-end-column="22" />
               <folding>
                 <element signature="e#16#35#0" expanded="true" />
+                <marker date="1537090749474" expanded="true" signature="1937:2412" ph="..." />
               </folding>
             </state>
           </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Topology/create_merge_topo.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state>
-              <folding>
-                <element signature="e#19#51#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Topology/util.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-225">
-              <caret line="9" column="22" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="22" />
-              <folding>
-                <element signature="e#95#106#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Blockchain/util.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-345">
-              <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
-              <folding>
-                <element signature="e#95#106#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/hosts">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Topology/build_topo3.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-              <folding>
-                <element signature="e#18#47#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Topology/create_compatibility_table.py">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Topology/build_virtual_topo.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/sensor_config.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="45">
-              <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/alias">
-          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
     </leaf>
@@ -231,36 +208,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>set</find>
-      <find>r5</find>
-      <find>accept p</find>
-      <find>configure</find>
-      <find>accept_p</find>
-      <find>unappro</find>
-      <find>remove_al</find>
-      <find>reset_last_pos</find>
-      <find>self.my_pos</find>
-      <find>self.last_pos</find>
-      <find>update_my_proposal</find>
-      <find>unapproved</find>
-      <find>pdb.s</find>
-      <find>'D'</find>
-      <find>None</find>
-      <find>pdb.set_trace()</find>
-      <find>set_tr</find>
-      <find>self.my_pos.tx_set().remove(t)</find>
-      <find>tx_set().remove(t)</find>
-      <find>accept_</find>
-      <find>unapproved_tx</find>
-      <find>current_tx</find>
-      <find>start_net</find>
-      <find>net</find>
-      <find>traceroute</find>
       <find>get_responding_routers</find>
       <find>create</find>
-      <find>alias</find>
       <find>create_virtual_topo_and_traces</find>
+      <find>alias</find>
       <find>lst</find>
+      <find>anonymous_</find>
+      <find>verbose</find>
+      <find>ano</find>
+      <find>nh</find>
+      <find>print</find>
+      <find>2.2</find>
+      <find>r6</find>
+      <find>.11.</find>
+      <find>h11</find>
+      <find>contr</find>
+      <find>class s</find>
+      <find>create_new_ledger</find>
+      <find>topology</find>
+      <find>nrr</find>
+      <find>pdb.set</find>
+      <find>stop</find>
+      <find>tcpdu</find>
+      <find>itop</find>
+      <find>topology_</find>
+      <find>time.</find>
+      <find>ping</find>
+      <find>__banned</find>
+      <find>check_dead_nodes</find>
+      <find>known_ips</find>
+      <find>_banned</find>
     </findStrings>
     <replaceStrings>
       <replace>num_keep</replace>
@@ -268,6 +245,10 @@
       <replace>cmd</replace>
       <replace>/24</replace>
       <replace>/8</replace>
+      <replace>r7</replace>
+      <replace>11.1</replace>
+      <replace>r6</replace>
+      <replace>.10.</replace>
     </replaceStrings>
   </component>
   <component name="Git.Settings">
@@ -303,20 +284,25 @@
         <option value="$PROJECT_DIR$/Blockchain/threadTrials.py" />
         <option value="$PROJECT_DIR$/Blockchain/util.py" />
         <option value="$PROJECT_DIR$/Blockchain/transaction.py" />
-        <option value="$PROJECT_DIR$/Blockchain/server.py" />
         <option value="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/sensor.py" />
         <option value="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/util.py" />
-        <option value="$PROJECT_DIR$/Blockchain/node.py" />
         <option value="$PROJECT_DIR$/Experiments/UpAndDown/readme.md" />
         <option value="$PROJECT_DIR$/Experiments/UpAndDown/start_net_and_sensor.py" />
         <option value="$PROJECT_DIR$/Mininet/__init__.py" />
         <option value="$PROJECT_DIR$/Sensor/__init__.py" />
-        <option value="$PROJECT_DIR$/Sensor/sensor.py" />
         <option value="$PROJECT_DIR$/Mininet/readme.md" />
         <option value="$PROJECT_DIR$/Blockchain/__init__.py" />
-        <option value="$PROJECT_DIR$/Topology/util.py" />
-        <option value="$PROJECT_DIR$/Tests/UpAndDown/start_net_and_sensor.py" />
+        <option value="$PROJECT_DIR$/Topology/create_merge_topo.py" />
+        <option value="$PROJECT_DIR$/Topology/build_topo3.py" />
         <option value="$PROJECT_DIR$/Topology/build_virtual_topo.py" />
+        <option value="$PROJECT_DIR$/Topology/util.py" />
+        <option value="$PROJECT_DIR$/Blockchain/file_config_prova/server1_config.json" />
+        <option value="$PROJECT_DIR$/Blockchain/file_config_prova/server2_config.json" />
+        <option value="$PROJECT_DIR$/Blockchain/file_config_prova/server3_config.json" />
+        <option value="$PROJECT_DIR$/Blockchain/server.py" />
+        <option value="$PROJECT_DIR$/Blockchain/node.py" />
+        <option value="$PROJECT_DIR$/Tests/UpAndDown/start_net_and_sensor.py" />
+        <option value="$PROJECT_DIR$/Sensor/sensor.py" />
       </list>
     </option>
   </component>
@@ -347,6 +333,17 @@
             <path>
               <item name="network-inference-with-BlockchainNEW" type="b2602c69:ProjectViewProjectNode" />
               <item name="network-inference-with-BlockchainNEW" type="462c0819:PsiDirectoryNode" />
+              <item name="Blockchain" type="462c0819:PsiDirectoryNode" />
+              <item name="file_config_prova" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="network-inference-with-BlockchainNEW" type="b2602c69:ProjectViewProjectNode" />
+              <item name="network-inference-with-BlockchainNEW" type="462c0819:PsiDirectoryNode" />
+              <item name="Sensor" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="network-inference-with-BlockchainNEW" type="b2602c69:ProjectViewProjectNode" />
+              <item name="network-inference-with-BlockchainNEW" type="462c0819:PsiDirectoryNode" />
               <item name="Tests" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -354,6 +351,37 @@
               <item name="network-inference-with-BlockchainNEW" type="462c0819:PsiDirectoryNode" />
               <item name="Tests" type="462c0819:PsiDirectoryNode" />
               <item name="UpAndDown" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="network-inference-with-BlockchainNEW" type="b2602c69:ProjectViewProjectNode" />
+              <item name="network-inference-with-BlockchainNEW" type="462c0819:PsiDirectoryNode" />
+              <item name="TOPOLOGIE_FUNZIONANTI" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="network-inference-with-BlockchainNEW" type="b2602c69:ProjectViewProjectNode" />
+              <item name="network-inference-with-BlockchainNEW" type="462c0819:PsiDirectoryNode" />
+              <item name="TOPOLOGIE_FUNZIONANTI" type="462c0819:PsiDirectoryNode" />
+              <item name="esperimenti" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="network-inference-with-BlockchainNEW" type="b2602c69:ProjectViewProjectNode" />
+              <item name="network-inference-with-BlockchainNEW" type="462c0819:PsiDirectoryNode" />
+              <item name="TOPOLOGIE_FUNZIONANTI" type="462c0819:PsiDirectoryNode" />
+              <item name="esperimenti" type="462c0819:PsiDirectoryNode" />
+              <item name="e4" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="network-inference-with-BlockchainNEW" type="b2602c69:ProjectViewProjectNode" />
+              <item name="network-inference-with-BlockchainNEW" type="462c0819:PsiDirectoryNode" />
+              <item name="TOPOLOGIE_FUNZIONANTI" type="462c0819:PsiDirectoryNode" />
+              <item name="esperimenti" type="462c0819:PsiDirectoryNode" />
+              <item name="e4" type="462c0819:PsiDirectoryNode" />
+              <item name="prova_sensori" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="network-inference-with-BlockchainNEW" type="b2602c69:ProjectViewProjectNode" />
+              <item name="network-inference-with-BlockchainNEW" type="462c0819:PsiDirectoryNode" />
+              <item name="Topology" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -538,10 +566,10 @@
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="2" weight="0.3295964" />
       <window_info anchor="bottom" id="Message" order="3" />
-      <window_info anchor="bottom" id="Find" order="4" visible="true" weight="0.3286385" />
+      <window_info anchor="bottom" id="Find" order="4" visible="true" weight="0.20657277" />
       <window_info anchor="bottom" id="Version Control" order="5" weight="0.3295964" />
       <window_info anchor="bottom" id="Run" order="6" weight="0.33450705" />
-      <window_info anchor="bottom" id="Debug" order="7" visible="true" weight="0.34624413" />
+      <window_info anchor="bottom" id="Debug" order="7" weight="0.34624413" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="10" />
@@ -617,7 +645,7 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/Blockchain/node.py</url>
-          <line>697</line>
+          <line>696</line>
           <option name="timeStamp" value="81" />
         </line-breakpoint>
       </breakpoints>
@@ -698,176 +726,234 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/build_virtual_topo.py">
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e1/traceroute/h61h11">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e1/traceroute/h61h71">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e1/traceroute/h71h11">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e1/traceroute/h71h61">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Topology/__init__.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Topology/build_virtual_topo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="705">
-          <caret line="50" column="4" selection-start-line="50" selection-start-column="4" selection-end-line="50" selection-end-column="4" />
+        <state relative-caret-position="330">
+          <caret line="47" column="47" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
+          <folding>
+            <element signature="e#19#33#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Blockchain/sensor.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blockchain/start_interactive_with_sensors.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blockchain/start.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blockchain/prova_stdout_to_python.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blockchain/readme.MD">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/build_virtual_topo.py">
+    <entry file="file://$PROJECT_DIR$/Topology/build_topo3.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2730">
-          <caret line="59" column="23" selection-start-line="59" selection-start-column="19" selection-end-line="59" selection-end-column="23" />
+        <state relative-caret-position="-570">
+          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
+          <folding>
+            <element signature="e#18#47#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/threadTrials.py">
+    <entry file="file://$PROJECT_DIR$/Topology/util.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="120">
-          <caret line="253" selection-start-line="253" selection-end-line="260" selection-end-column="21" />
+          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
           <folding>
-            <marker date="1536395778689" expanded="true" signature="7694:7889" ph="..." />
+            <element signature="e#95#106#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Blockchain/topo.json">
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h41h11">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Blockchain/blockchain.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1650">
-          <caret line="110" column="23" selection-start-line="110" selection-start-column="19" selection-end-line="110" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blockchain/client.py">
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h71h61">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/client.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="105">
-          <caret line="7" column="6" selection-start-line="7" selection-start-column="6" selection-end-line="7" selection-end-column="6" />
-          <folding>
-            <element signature="e#125#160#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blockchain/start_sensor.py">
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h71h41">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Blockchain/more_nodes.png">
-      <provider selected="true" editor-type-id="images" />
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h71h21">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="90">
+          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
+        </state>
+      </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Blockchain/print_topo.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blockchain/server_config.json">
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h71h11">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Blockchain/ledger.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="585">
-          <caret line="61" column="38" selection-start-line="61" selection-start-column="23" selection-end-line="61" selection-end-column="38" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blockchain/threadTrials.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1050">
-          <caret line="321" column="23" lean-forward="true" selection-start-line="321" selection-start-column="23" selection-end-line="321" selection-end-column="23" />
-          <folding>
-            <element signature="e#25#50#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blockchain/proposal.py">
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h61h71">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Blockchain/cmd line">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" selection-start-line="2" selection-end-line="2" selection-end-column="60" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h61h41">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/node.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" selection-start-line="1" selection-end-line="1" />
-          <folding>
-            <element signature="e#24#55#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h61h31">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_bundle/pydev_monkey_qt.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="101" selection-start-line="101" selection-end-line="101" />
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h61h21">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h61h11">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h41h71">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h41h61">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h41h31">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h41h21">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h31h71">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Blockchain/transaction.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="168">
-          <caret line="21" selection-start-line="21" selection-end-line="21" />
+        <state>
           <folding>
             <marker date="1536485783474" expanded="true" signature="722:728" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Miscellaneous/Drawing_graph_tool/more_nodes.png">
-      <provider selected="true" editor-type-id="images" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Miscellaneous/Drawing_graph_tool/drawing.py">
+    <entry file="file://$PROJECT_DIR$/Blockchain/file_config_prova/server3_config.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-75">
-          <caret line="19" column="20" lean-forward="true" selection-start-line="19" selection-start-column="20" selection-end-line="19" selection-end-column="20" />
+        <state relative-caret-position="450">
+          <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blockchain/file_config_prova/server1_config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="2" lean-forward="true" selection-start-line="30" selection-start-column="2" selection-end-line="30" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blockchain/file_config_prova/server2_config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="450">
+          <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h11h71">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h11h61">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h11h41">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h11h31">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h11h21">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h21h11">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h21h31">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h21h41">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h21h61">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h21h71">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h31h61">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h31h41">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h31h21">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h31h11">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blockchain/threadTrials.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="150">
+          <caret line="246" column="14" lean-forward="true" selection-start-line="246" selection-start-column="14" selection-end-line="246" selection-end-column="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h71h31">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blockchain/server.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-606">
+          <caret line="29" column="50" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
+          <folding>
+            <element signature="e#122#147#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Blockchain/node.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="150">
-          <caret line="10" lean-forward="true" selection-start-line="10" selection-end-line="10" />
+        <state relative-caret-position="302">
+          <caret line="701" column="64" selection-start-line="701" selection-start-column="64" selection-end-line="701" selection-end-column="64" />
           <folding>
-            <marker date="1536511254934" expanded="true" signature="2838:2844" ph="..." />
-            <marker date="1536511254934" expanded="true" signature="27499:27505" ph="..." />
-            <marker date="1536511254934" expanded="true" signature="38982:42618" ph="..." />
-            <marker date="1536511254934" expanded="true" signature="42374:42618" ph="..." />
+            <marker date="1537084904178" expanded="true" signature="2849:2855" ph="..." />
+            <marker date="1537084904178" expanded="true" signature="27614:27620" ph="..." />
+            <marker date="1537084904178" expanded="true" signature="38776:42597" ph="..." />
+            <marker date="1537084904178" expanded="true" signature="42353:42597" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="135">
-            <caret line="9" column="9" lean-forward="true" selection-start-line="9" selection-start-column="9" selection-end-line="9" selection-end-column="9" />
-          </first_editor>
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/start_sensor.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/start_interactive_with_sensors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="24" column="17" lean-forward="true" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+          <folding>
+            <element signature="e#16#47#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/start.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-405">
+          <folding>
+            <marker date="1536419996347" expanded="true" signature="1761:1998" ph="..." />
+          </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/sensor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-585">
-          <caret line="3" column="9" lean-forward="true" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+        <state relative-caret-position="-1710">
           <folding>
             <marker date="1536506856461" expanded="true" signature="128:2466" ph="..." />
             <marker date="1536506856461" expanded="true" signature="2486:2491" ph="..." />
@@ -879,158 +965,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Miscellaneous/test_sensore.py">
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/start_net_and_sensor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-199" />
+        <state relative-caret-position="339">
+          <caret line="108" column="22" lean-forward="true" selection-start-line="108" selection-start-column="22" selection-end-line="108" selection-end-column="22" />
+          <folding>
+            <element signature="e#16#35#0" expanded="true" />
+            <marker date="1537090749474" expanded="true" signature="1937:2412" ph="..." />
+          </folding>
+        </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/clean.sh">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Sensor/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Topology/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Sensor/sensor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-2">
-          <caret line="3" column="9" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" selection-start-line="6" selection-end-line="6" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Topology/readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="150">
-            <caret line="10" column="57" selection-start-line="10" selection-start-column="57" selection-end-line="10" selection-end-column="57" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blockchain/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/start.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-110">
-          <caret line="49" column="30" selection-start-line="49" selection-start-column="30" selection-end-line="49" selection-end-column="30" />
+        <state relative-caret-position="294">
+          <caret line="141" column="9" selection-start-line="141" selection-start-column="9" selection-end-line="141" selection-end-column="9" />
           <folding>
-            <element signature="e#19#30#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/start.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="580">
-          <caret line="83" column="31" lean-forward="true" selection-end-line="96" />
-          <folding>
-            <marker date="1536419996347" expanded="true" signature="1761:1998" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blockchain/server.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="66" column="75" selection-start-line="66" selection-start-column="8" selection-end-line="66" selection-end-column="75" />
-          <folding>
-            <element signature="e#122#147#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/start_interactive_with_sensors.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="130">
-          <caret line="16" column="4" selection-start-line="16" selection-start-column="4" selection-end-line="18" selection-end-column="13" />
-          <folding>
-            <element signature="e#16#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/client1_config.json">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/sensor_config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="24" selection-start-line="3" selection-start-column="24" selection-end-line="3" selection-end-column="24" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/alias">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/hosts">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Topology/create_compatibility_table.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Topology/build_topo3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="14" selection-start-line="16" selection-start-column="14" selection-end-line="16" selection-end-column="14" />
-          <folding>
-            <element signature="e#18#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/start_net_and_sensor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1455">
-          <caret line="97" column="19" selection-start-line="97" selection-start-column="19" selection-end-line="97" selection-end-column="19" />
-          <folding>
-            <element signature="e#16#35#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Topology/create_merge_topo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <element signature="e#19#51#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Topology/build_virtual_topo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="9" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Topology/util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-225">
-          <caret line="9" column="22" selection-start-line="9" selection-start-column="4" selection-end-line="9" selection-end-column="22" />
-          <folding>
-            <element signature="e#95#106#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blockchain/util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-345">
-          <caret line="22" column="34" selection-start-line="22" selection-start-column="34" selection-end-line="22" selection-end-column="34" />
-          <folding>
-            <element signature="e#95#106#0" expanded="true" />
+            <element signature="e#16#33#0" expanded="true" />
           </folding>
         </state>
       </provider>

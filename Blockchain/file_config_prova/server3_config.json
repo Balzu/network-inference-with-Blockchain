@@ -27,5 +27,6 @@
     "stuck" : "60"
   },
   "ledger_min_consensus" : "10",
-  "ledger_max_consensus" : "30"
+  "ledger_max_consensus" : "30",
+  "non_responding_routers" : "False"
 }

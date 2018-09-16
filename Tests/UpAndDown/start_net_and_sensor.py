@@ -29,11 +29,9 @@ def start_net():
     net.start()
     return net
 
-def run(i, nh, hosts, lock, cv):
+def run(i, hosts, lock, cv):
     global count
     global nt
-    if len(hosts) == 0:
-        hosts = get_hosts(int(nh))
     alias = create_alias()
     lock.acquire()
     compute_distances(net, hosts)
@@ -46,7 +44,9 @@ def run(i, nh, hosts, lock, cv):
         cv.notify_all()
         cv.release()
     lock.acquire()
+    #pdb.set_trace()
     create_traces(net, hosts)
+    #net.interact()
     lock.release()
     (vtopo, traces) = create_virtual_topo_and_traces(alias, hosts)
     (M,C) = create_merge_options(vtopo, traces)
@@ -59,50 +59,66 @@ def run(i, nh, hosts, lock, cv):
     trans = get_transactions_from_topo(topo)
     c.send_transactions(trans)
 
-
-
 def parse_cmd_line():
     nt = sys.argv[1]
-    nh = 0
-    hosts = []
-    if sys.argv[2].startswith('h'):
-        hosts = sys.argv[2:]
-    else:
-        nh = sys.argv[2]
-    return (nt, nh, hosts)
+    hosts = sys.argv[2:]
+    return (nt, hosts)
 
-def startup(nt, nh, hosts):
+def startup(nt, hosts):
     threads = []
     for i in range(int(nt)):
-        thread = Thread(target=run, args=(i, nh, hosts, lock, cv))
+        thread = Thread(target=run, args=(i, hosts, lock, cv))
         threads.append(thread)
         thread.start()
     for t in threads:
         t.join()
     print 'Threads finished'
 
+def block_router(net, r):
+    cmd1 = 'iptables -P OUTPUT DROP'
+    cmd2 = 'iptables -P INPUT DROP'
+    cmd3 = 'iptables -P FORWARD DROP'
+    net[r].cmd(cmd1)
+    net[r].cmd(cmd2)
+    net[r].cmd(cmd3)
+    print '\nBlocked router ' + net[r].IP()
+
+def unblock_router(net, r):
+    cmd1 = 'iptables -P OUTPUT ACCEPT'
+    cmd2 = 'iptables -P INPUT ACCEPT'
+    cmd3 = 'iptables -P FORWARD ACCEPT'
+    net[r].cmd(cmd1)
+    net[r].cmd(cmd2)
+    net[r].cmd(cmd3)
+    print '\nUnBlocked router ' + net[r].IP()
+
 if __name__ == '__main__':
-    if len(sys.argv) < 3:
-        print """\nUsage: python start.py <nt> < nh | hosts >\n         
-        <nt> = number of threads to be used to collect traces\n 
-        <nh> = number of random hosts that each thread will use\n 
-        [hosts] = optional sequence of hosts, separated by whitespace, that
+    if len(sys.argv) < 2:
+        print """\nUsage: python start.py <nt> <hosts>\n         
+        <nt> = number of threads to be used to collect traces\n     
+        <hosts> = sequence of hosts, separated by whitespace, that
         each thread will use deterministically\n"""
         sys.exit()
     net = start_net()
     # Delete previously generated files..
     os.system('./init.sh')
-    (nt, nh, hosts) = parse_cmd_line()
+    (nt, hosts) = parse_cmd_line()
     # Spawn the threads that will run iTop and store the topology induced from each thread in the Blockchain
-    startup(nt, nh, hosts)
-    pdb.set_trace()
+    startup(nt, hosts)
     ips = get_responding_ips(hosts)
     # Start one sensor
-    s = sensor('h11', 5, net, 'sensor_config.json', max_fail=3,
-               known_ips=['192.168.1.4', '192.168.12.2', '192.168.1.2'], simulation=True, readmit=False) #TODO Ip li deve ottenere da iTop
+    s = sensor('r3', 5, net, 'sensor_config.json', max_fail=3,
+               known_ips=ips, simulation=True, verbose=False)
     s.start()
-    choice = raw_input("\nPress any key when you want to tear down R5\n")
-    net.delNode('R5')
+    raw_input("\n\nPress any key when you want to tear down R5\n\n")
+    print '\nTearing down router R5...\n'
+    block_router(net, 'r5')
+    raw_input("\n\nPress any key when you want to run again R5\n\n")
+    unblock_router(net, 'r5')
+    time.sleep(5)
+    net.pingAll()
+    raw_input("\n\nPress any key when you want to quit\n\n")
+    s.stop()
 
 
 

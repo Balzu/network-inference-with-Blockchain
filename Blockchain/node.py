@@ -3,7 +3,7 @@ from __future__ import division
 import threading
 import socket
 import thread
-import pickle
+import cPickle as pickle
 import rsa
 import time
 import pdb
@@ -314,7 +314,7 @@ class client(node):
 class server(client):
     """A server node of the blockchain network, running the consensus algorithm.
        It is also a client, because it both listens for incoming connections, and starts new connections."""
-    def __init__(self, ip_addr, port, q, lmc, lmcl, tval, ttimes, lminc, lmaxc, validators = [], unl = []):
+    def __init__(self, ip_addr, port, q, lmc, lmcl, tval, ttimes, lminc, lmaxc, nrr = True, validators = [], unl = []):
         super(server, self).__init__(ip_addr, port, validators)
         self.observers = [] # Observers are the nodes that inserted this node in their UNL plus the clients of this node
         self.unl = unl
@@ -330,6 +330,7 @@ class server(client):
         self.threshold_times = ttimes
         self.ledger_min_consensus = lminc
         self.ledger_max_consensus = lmaxc
+        self.nrr = nrr #True if the blockchain stores also info about non responding routers (A, B, NC and H) TODO Per ora cambia solo la stampa della topologia
         self.open = True
         self.establish = False
         self.accept = False
@@ -550,7 +551,6 @@ class server(client):
 
         def create_new_ledger():
             tx_list = self.my_pos.tx_set().transactions().values()
-            #pdb.set_trace()
             for t in tx_list:  #TODO controlla che my_pos contenga l' ultima proposal
                 if t.type() == 'I':
                     new_txset.add_transaction(t)
@@ -559,7 +559,6 @@ class server(client):
                     dst = t.dst()
                     removed = False
                     if dst is not None:
-                        pdb.set_trace()
                         removed = new_txset.remove_transaction(t)
                         tx_list.remove(t)
                         self.current_tx.remove(t)
@@ -700,7 +699,7 @@ class server(client):
             for t in self.unapproved_tx.keys():
                 if t in validated_trans_set or t.type() == 'D': #TODO pensa se è ok togliere transazioni 'D' senza controllare che siano state applicate
                     del self.unapproved_tx[t]
-                    if t.type() == 'D':  # TODO check
+                    if t.type() == 'D' and t in self.current_tx:
                         self.current_tx.remove(t)
                 else:
                     self.unapproved_tx[t] = self.unapproved_tx[t] + 1 # Age the transaction
@@ -824,16 +823,10 @@ class server(client):
         ins = 0
         tot = len(txset.transactions())
         for tx in txset.transactions().values():
-            #try:
             if tx not in self.unapproved_tx:
                 self.unapproved_tx[tx] = 0
                 ins += 1
-            '''except AttributeError: #TODO never hit, remove try/except
-                if tx.src() is not None and tx.dst() is None and tx.type() == 'D':
-                    print 'Special Delete Node transaction received'
-                    self.unapproved_tx[tx] = 0
-                  ins += 1
-            '''
+
         print 'Inserted ' + str(ins) + ' transactions out of ' + str(tot)
         return self.create_success_ack_msg({'inserted':ins, 'total' : tot})
 
@@ -904,7 +897,9 @@ class server(client):
         return message(header, payload)
 
     def draw_topology(self, collapse=True):
-        '''Draws the topology of the current ledger and stores it to file.'''
+        '''Draws the topology of the current ledger and stores it to file.
+           If self.nrr is False, draws only responding routers.
+        '''
         # Create data structure for the topology
         lgr = self.__blockchain.current_ledger()
         txset = lgr.transaction_set()
@@ -912,12 +907,13 @@ class server(client):
         for tx in txset.transactions().values():
             src = str(tx.src())
             dst = str(tx.dst())
-            if src not in topo:
-                topo[src] = [dst]
-            else:
-                topo[src].append(dst)
-            if dst not in topo:
-                topo[dst] = []
+            if ((self.nrr) or (src.split(':')[1] == 'R' and dst.split(':')[1] == 'R')):
+                if src not in topo:
+                    topo[src] = [dst]
+                else:
+                    topo[src].append(dst)
+                if dst not in topo:
+                    topo[dst] = []
         g = Graph()
         vprop_name = g.new_vertex_property("string")
         vprop_col = g.new_vertex_property("vector<float>")

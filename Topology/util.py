@@ -6,26 +6,33 @@ import json
 import os
 from build_topo3 import *
 from node import *
+#from pox import POX
 
 def get_responding_ips(hosts):
-    '''Returns the set of ips that appears in the traces of provided hosts'''
+    '''Returns the set of ips that appears in the traces of the provided hosts'''
     ips = set()
     for h1 in hosts:
         for h2 in hosts:
             if h1 != h2:
-                with open("traceroute/"+h1+h2, "r") as trace_file:
-                    trace_lines = trace_file.readlines()
-                    num_l = len(trace_lines)
-                    i = 0
-                    for line in trace_lines:
-                        i += 1
-                        l = line.split()
-                        if (l[1]=='*' and l[2]=='*' and l[3]=='*') or (i==num_l):
-                            return ips
-                        if l[0] != 'traceroute': # skip first line
-                            last = [e for e in l[1:] if e != '*'][0]
-                            ips.add(last)
-                    return lst
+                ips = ips.union(get_ips_from_trace(h1, h2))
+    return list(ips)
+
+def get_ips_from_trace(h1, h2):
+    '''Returns the set of ips that appears in the trace from h1 to h2'''
+    ips = set()
+    with open("traceroute/"+h1+h2, "r") as trace_file:
+        trace_lines = trace_file.readlines()
+        num_l = len(trace_lines)
+        i = 0
+        for line in trace_lines:
+            i += 1
+            l = line.split()
+            if (l[1]=='*' and l[2]=='*' and l[3]=='*') or (i==num_l):
+                return ips
+            if l[0] != 'traceroute': # skip first line
+                last = [e for e in l[1:] if e != '*'][0]
+                ips.add(last)
+        return ips
 
 def configure_client(config_file):
     '''Uses the parameters defined in the configuration file to create a client and return it.'''
@@ -122,7 +129,7 @@ def stop_net(net):
 def start_net():
     ''' Start Mininet Topology'''
     topo = NetworkTopo()
-    net = Mininet( topo=topo )
+    net = Mininet( topo=topo) #, controller=POX )
     add_static_routes(net)
     net.start()
     return net

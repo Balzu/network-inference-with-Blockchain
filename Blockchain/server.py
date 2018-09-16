@@ -28,10 +28,11 @@ def configure_server(config_file, init_unl = True):
             ttimes[t] = float(tmp[t])
         lminc = float(obj["ledger_min_consensus"])
         lmaxc = float(obj["ledger_max_consensus"])
+        nrr = False if str(obj["non_responding_routers"])=='False' else True
         if init_unl:
             unl = load_unl(obj)
-            return server(ip, port, q, lmc, lmcl, tval, ttimes, lminc, lmaxc, unl=unl)
-        return server(ip, port, q, lmc, lmcl, tval, ttimes, lminc, lmaxc)
+            return server(ip, port, q, lmc, lmcl, tval, ttimes, lminc, lmaxc, unl=unl, nrr=nrr)
+        return server(ip, port, q, lmc, lmcl, tval, ttimes, lminc, lmaxc, nrr=nrr)
 
 def load_unl(json_obj):
     unl = []

@@ -1,0 +1,3 @@
+traceroute to 192.168.8.2 (192.168.8.2), 30 hops max, 44 byte packets
+ 1  192.168.7.1  2.739 ms  2.209 ms  4.784 ms
+ 2  192.168.8.2 <rst,ack>  6.431 ms  9.901 ms  9.847 ms
