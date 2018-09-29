@@ -1,0 +1,4 @@
+traceroute to 192.168.5.2 (192.168.5.2), 30 hops max, 44 byte packets
+ 1  * * *
+ 2  * * *
+ 3  192.168.5.2 <rst,ack>  5.177 ms  7.017 ms  7.037 ms
