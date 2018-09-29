@@ -136,6 +136,26 @@ class sensor(object):
                 p.terminate()
                 break
 
+    def passive_sensor(self):
+        '''Runs passive sensor capabilities'''
+        # Limitazione sulla sottorete se topologia simulata su Mininet
+        cmd = ['sudo', 'tcpdump', '-l', '-i', 'any', 'net',  '192.168.0.0/16'] if self.__simulation \
+                else ['sudo', 'tcpdump', '-l', '-i', 'any']
+        p = subprocess.Popen(cmd, stdout=subprocess.PIPE)
+        print '------------------- START SNIFFING ----------------------'
+        for row in iter(p.stdout.readline, b''):
+            src_ip = row.split()[2]
+            dst_ip = row.split()[4]
+            s_match = re.match(r"^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}", src_ip)
+            d_match = re.match(r"^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}", dst_ip)
+            if s_match:
+                self.handle_match(self.clean_ip(src_ip))
+            if d_match:
+                self.handle_match(self.clean_ip(dst_ip))
+            if self.__end:
+                p.terminate()
+                break
+
     def handle_match(self, ip):
         if ip not in self.__banned:
             if ip not in self.__known_ips:

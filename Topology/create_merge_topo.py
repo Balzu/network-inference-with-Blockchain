@@ -45,16 +45,20 @@ def trace_preservation(M, paths):
             M[e].remove(r)
     return M
 
-
-
-def find_sources(traces): 
+def find_sources(traces, monitors=False):
+    '''For each collected trace, returns the first router of the topology in the trace.
+       If monitors = True, returns a pair containing also the associated monitor.'''
     sources = set()
-    for path in traces:
-        #print ' ------ '
-        #print path
-        #print traces[path]
-        if traces[path] != []: # Monitors could be directly connected ( don't pass via any router)
-            sources.add(traces[path][0])
+    if not monitors:
+        for path in traces:
+            if traces[path] != []: # Monitors could be directly connected (don't pass via any router)
+                sources.add(traces[path][0])
+    else:
+        for path in traces:
+            if traces[path] != []:
+                r = traces[path][0]
+                m = 'h' + path.split('h')[1]
+                sources.add((r,m))
     return sources  
 
 def copy_topo(topo):
@@ -123,9 +127,7 @@ def distance_preservation(topo, traces, M):
    for e_i in M:
        for e_j in M[e_i]:
            if e_i != e_j:
-              
                m_topo = merge(e_i, e_j, topo)
-
                if is_distance_preserved(monitors, shortest_dist, m_topo) == False:
                    M[e_i].remove(e_j)
 
@@ -139,7 +141,7 @@ def is_compatible(e_i, e_j, C, topo):
     R2 = (R2, topo[R2][0])
     R3 = (R3, topo[R3][0])
     R4 = (R4, topo[R4][0])
-# Check if e_j is a valid option for e_i. Return false if the types or R3 and R4 are not
+# Check if e_j is a valid option for e_i. Return false if the types for R3 and R4 are not
 # valid options for R1 and R3
     try:
         if R3[1] + '-' + R4[1] not in C[R1[1] + '-' + R2[1]]:
@@ -157,7 +159,6 @@ def is_compatible(e_i, e_j, C, topo):
 
 
 def endpoint_compatibility(M,C,topo):
-   
     for e_i in M:
         to_remove = []
         for e_j in M[e_i]:
@@ -172,19 +173,12 @@ def create_merge_options(topo, traces):
     # Merge option table. Initially, each link has the whole set of links as merge options
     M = {} 
     for e in paths:
-        M[e] = paths.keys() 
-    #print 'M with Full virtual topo'
-    #print_table(M)   
+        M[e] = paths.keys()
     trace_preservation(M, paths)
-    #print 'M after trace preservation'
-    #print_table(M)   
     distance_preservation(topo, traces, M)
-    #print 'M after distance preservation'
-    #print_table(M)   
     C = get_compatibility_table()
     endpoint_compatibility(M,C,topo) 
     return (M, C)
-
 
 def get_link_with_min_options(M):
     e_min = None
@@ -319,18 +313,14 @@ def create_merge_topology(M, topo, C):
 
 
 def compute_shortest_paths(topo, src):
-   
     dist = {}
     Q = []
     dist[src] = 0
-  
     for r in topo.keys():
         if r != src:
             dist[r] = maxint
         heappush(Q, (dist[r], r))
-  
     while (len(Q) > 0):
-       
         u = heappop(Q)
         for v in topo[u[1]][1]:
             alt = dist[u[1]] + 1    # weight = 1 for each edge   
@@ -338,7 +328,6 @@ def compute_shortest_paths(topo, src):
                 Q[Q.index((dist[v],v))] = (alt, v)
                 dist[v] = alt 
                 heapify(Q)
-
     return dist
                 
 

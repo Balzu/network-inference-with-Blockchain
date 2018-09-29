@@ -1,7 +1,6 @@
 # coding=utf-8
 
 import os, sys, pdb
-from threading import Thread, Lock, Condition
 topo_path = os.path.abspath(os.path.join('..', '..',  'Topology'))
 sen_path = os.path.abspath(os.path.join('..', '..',  'Sensor'))
 blk_path = os.path.abspath(os.path.join('..', '..',  'Blockchain'))
@@ -12,11 +11,103 @@ from create_merge_topo import *
 from sensor import *
 from client import *
 
-cv = Condition()
-lock = Lock()
-count = 0
-nt = None
-discovered_ips = []
+#TODO le funzioni seguenti spostale in Topology
+
+def previous_hosts():
+    ''' Retrieve the hosts used in the previous run of traceroute'''
+    os.system("ls traceroute | grep h | awk -F\"h\" '{ printf \"%s\\n%s\\n\",$2,$3 }' > traceroute/old")
+    hosts = set()
+    with open ('traceroute/old', 'r') as hfile:
+        for h in hfile:
+            hosts.add('h' + str(h).strip())
+    return list(hosts)
+
+def get_old_topo(hosts, alias):
+    (vtopo, traces) = create_virtual_topo_and_traces(alias, hosts)
+    (M, C) = create_merge_options(vtopo, traces)
+    (M, mtopo) = create_merge_topology(M, vtopo, C)
+    return (M, mtopo, traces)
+
+def shortest_paths_coverage(src, topo, monitors_pairs):
+    '''
+    Computes and returns the nodes of the topology covered from the shortest paths originated from node src.
+    The shortest paths from src to all other nodes are computed, but only the shortest paths to the monitors
+    are considered for the converage.
+    If there is a single shortest path towards a node, then all the nodes in the path are added to the coverage.
+    If there are multiple shortest paths towards a node, then only the nodes in the intersection of the shortest
+    paths are kept.
+    Each node is provided a set keeping the nodes in the intersection of the shortest paths towards this node.
+    The set is initially empty for all the nodes with the except of the source (it contains only itself).
+    The alg. maintains the invariant by updating the set every time a new shortest path is found. If the shortest
+    paths has lower cost, then we replace the set; if the shortest path has equal cost, then we update the set
+    to contain only the intersections of the two sets.
+    '''
+    dist = {} # Distances
+    C = {}    # Coverage
+    Q = []    # Priority queue
+    dist[src] = 0
+    for r in topo.keys():
+        if r != src:
+            dist[r] = maxint
+        heappush(Q, (dist[r], r))
+        C[r] = set()
+    C[src].add(src)
+    while (len(Q) > 0):
+        u = heappop(Q)
+        for v in topo[u[1]][1]:
+            alt = dist[u[1]] + 1  # weight = 1 for each edge
+            if alt < dist[v]:# Found a (new) shortest path
+                Q[Q.index((dist[v], v))] = (alt, v)
+                dist[v] = alt
+                heapify(Q)
+                C[v] = C[u[1]].copy()
+                C[v].add(v)
+            elif alt == dist[v]: # Found shortest path of equal cost
+                new = C[u[1]].copy()
+                C[v] = C[v].intersection(new)
+    tot_cov = set() # total coverage of node src
+    for (r, m) in monitors_pairs:
+        if r.startswith('r'):
+            tot_cov = tot_cov.union(C[r])
+    return tot_cov
+
+
+def compute_monitors_coverage(src_pairs, topo, monitors):
+    '''Computes and returns the coverage of the network nodes for each monitor.
+    @:param src_pairs: set of pairs (src_router, src_monitor). We need to keep both
+    because monitors do not belong to the network topology. Only the coverage of responding routers is considered.
+    '''
+    C = {}
+    for (r, m) in src_pairs:
+        if r.startswith('r'):
+            C[m] = shortest_paths_coverage(r, topo, src_pairs)
+    return C
+
+def monitors_selection(C, topo):
+    '''
+    Performs a greedy selection of the monitors, trying to discover the minimum set of monitors whose probes are
+    able to cover all the network nodes.
+    :param C: Coverage dictionary st key = monitor, value = set of nodes covered by that monitor
+    :param topo: Network topology
+    :return: List of selected monitors
+    '''
+    A = set() # Set of actually covered nodes
+    selection = []
+    nodes = topo.keys() # We want to cover only responding routers
+    for n in topo.keys():
+        if n.startswith('X'):
+            nodes.remove(n)
+    total = len(nodes)
+    while len(A) < total:
+        (num, mon) = 0, ''
+        for m in C:
+            if len(A.union(C[m]).difference(A)) > num:
+                num = len(A.union(C[m]).difference(A))
+                mon = m
+        A = A.union(C[mon])
+        selection.append(mon)
+        del C[mon]
+    return selection
 
 def stop_net(net):
     net.stop()
@@ -29,98 +120,47 @@ def start_net():
     net.start()
     return net
 
-def run(i, hosts, lock, cv):
-    global count
-    global nt
-    alias = create_alias()
-    lock.acquire()
-    compute_distances(net, hosts)
-    count += 1
-    lock.release()
-    cv.acquire()
-    if count < int(nt):
-        cv.wait()
-    else:
-        cv.notify_all()
-        cv.release()
-    lock.acquire()
-    #pdb.set_trace()
-    create_traces(net, hosts)
-    #net.interact()
-    lock.release()
-    (vtopo, traces) = create_virtual_topo_and_traces(alias, hosts)
-    (M,C) = create_merge_options(vtopo, traces)
-    (M, mtopo) = create_merge_topology(M, vtopo, C)
-    out = write_topo_to_file(i, mtopo, hosts)
-    c = configure_client("client1_config.json")
-    register_client(c)
-    #tfile = get_topo_filename("client1_config.json")
-    topo = get_topo_from_json(out)
-    trans = get_transactions_from_topo(topo)
-    c.send_transactions(trans)
+def compare_topologies(old_topo, new_topo, new_nodes=[]):
+    '''
+    Compares the new topology against the old one to decide whether the new topology, obtained with a reduced selection
+    of monitors, is sufficient.
+    :param old_topo: The topology inferred in previous iteration
+    :param new_topo: The topology inferred in current iteration, using a reduced number of monitors
+    :param new_nodes: New nodes discovered by the sensor, that are added to the old_topo
+    :return: True if the new topology inferred is satisfying, False if another run of iTop, using all the
+              monitors, has to be done.
+    '''
+    onodes = set(old_topo.keys())
+    nnodes = new_topo.keys()
+    for n in new_nodes:
+        onodes.add(n)
+    for n in nnodes:
+        if n.startswith('r'):
+            if n not in onodes:
+                return False
+    return True
 
-def parse_cmd_line():
-    nt = sys.argv[1]
-    hosts = sys.argv[2:]
-    return (nt, hosts)
-
-def startup(nt, hosts):
-    threads = []
-    for i in range(int(nt)):
-        thread = Thread(target=run, args=(i, hosts, lock, cv))
-        threads.append(thread)
-        thread.start()
-    for t in threads:
-        t.join()
-    print 'Threads finished'
-
-def block_router(net, r):
-    cmd1 = 'iptables -P OUTPUT DROP'
-    cmd2 = 'iptables -P INPUT DROP'
-    cmd3 = 'iptables -P FORWARD DROP'
-    net[r].cmd(cmd1)
-    net[r].cmd(cmd2)
-    net[r].cmd(cmd3)
-    print '\nBlocked router ' + net[r].IP()
-
-def unblock_router(net, r):
-    cmd1 = 'iptables -P OUTPUT ACCEPT'
-    cmd2 = 'iptables -P INPUT ACCEPT'
-    cmd3 = 'iptables -P FORWARD ACCEPT'
-    net[r].cmd(cmd1)
-    net[r].cmd(cmd2)
-    net[r].cmd(cmd3)
-    print '\nUnBlocked router ' + net[r].IP()
 
 if __name__ == '__main__':
-    if len(sys.argv) < 2:
-        print """\nUsage: python start.py <nt> <hosts>\n         
-        <nt> = number of threads to be used to collect traces\n     
-        <hosts> = sequence of hosts, separated by whitespace, that
-        each thread will use deterministically\n"""
-        sys.exit()
-    net = start_net()
-    # Delete previously generated files..
+    hosts = previous_hosts()
+    alias = create_alias()
+    #Reconstruct old topology
+    (M, old_topo, traces) = get_old_topo(hosts, alias)
+    # Reconstruct new_topo
+    src_pairs = find_sources(traces, monitors=True) # Returns a pair because the monitor does not belong to topology
+    C = compute_monitors_coverage(src_pairs, old_topo, hosts)
+    shosts = monitors_selection(C, old_topo)
+    # Infer the (new) topology using the (optimal ?) selection of probing stations
     os.system('./init.sh')
-    (nt, hosts) = parse_cmd_line()
-    # Spawn the threads that will run iTop and store the topology induced from each thread in the Blockchain
-    startup(nt, hosts)
-    ips = get_responding_ips(hosts)
-    # Start one sensor
-    s = sensor('r3', 5, net, 'sensor_config.json', max_fail=3,
-               known_ips=ips, simulation=True, verbose=False)
-    s.start()
-    raw_input("\n\nPress any key when you want to tear down R5\n\n")
-    print '\nTearing down router R5...\n'
-    block_router(net, 'r5')
-    raw_input("\n\nPress any key when you want to run again R5\n\n")
-    unblock_router(net, 'r5')
-    time.sleep(5)
-    net.pingAll()
-    raw_input("\n\nPress any key when you want to quit\n\n")
-    s.stop()
-
-
+    net = start_net()
+    compute_distances(net, hosts, src_hosts=shosts)
+    create_traces(net, hosts, src_hosts=shosts)
+    (vtopo, traces) = create_virtual_topo_and_traces(alias, hosts, src_hosts=shosts)
+    (M, C) = create_merge_options(vtopo, traces)
+    (M, new_topo) = create_merge_topology(M, vtopo, C)
+    # Compare the old topology against the new one, to see if the gathered traces are enough or all monitors must be used.
+    end = compare_topologies(old_topo, new_topo)
+    print end
 
 
 

@@ -1,0 +1,1604 @@
+01:57:02.717716 IP 192.168.4.2 > 192.168.4.1: ICMP echo request, id 26740, seq 1, length 64
+01:57:02.717727 IP 192.168.4.1 > 192.168.4.2: ICMP echo reply, id 26740, seq 1, length 64
+01:57:05.631142 ARP, Request who-has 192.168.3.1 tell 192.168.3.2, length 28
+01:57:05.631152 ARP, Reply 192.168.3.1 is-at de:58:f1:38:35:a5 (oui Unknown), length 28
+01:57:07.739371 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 26753, seq 1, length 64
+01:57:07.739386 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 26753, seq 1, length 64
+01:57:07.739532 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 26753, seq 1, length 64
+01:57:07.739538 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 26753, seq 1, length 64
+01:57:07.746414 IP 192.168.4.2 > 192.168.2.2: ICMP echo request, id 26756, seq 1, length 64
+01:57:07.746431 IP 192.168.2.2 > 192.168.4.2: ICMP echo reply, id 26756, seq 1, length 64
+01:57:07.752809 IP 192.168.4.2 > 192.168.3.1: ICMP echo request, id 26759, seq 1, length 64
+01:57:07.752826 IP 192.168.3.1 > 192.168.4.2: ICMP echo reply, id 26759, seq 1, length 64
+01:57:07.770770 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 26768, seq 1, length 64
+01:57:07.770784 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 26768, seq 1, length 64
+01:57:07.770901 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 26768, seq 1, length 64
+01:57:07.770906 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 26768, seq 1, length 64
+01:57:07.785993 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 26780, seq 1, length 64
+01:57:07.786000 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 26780, seq 1, length 64
+01:57:07.786153 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 26780, seq 1, length 64
+01:57:07.786156 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 26780, seq 1, length 64
+01:57:07.789478 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 26783, seq 1, length 64
+01:57:07.789483 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 26783, seq 1, length 64
+01:57:07.789541 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 26783, seq 1, length 64
+01:57:07.789543 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 26783, seq 1, length 64
+01:57:09.834130 IP 192.168.4.2 > 192.168.4.1: ICMP echo request, id 26818, seq 1, length 64
+01:57:09.834140 IP 192.168.4.1 > 192.168.4.2: ICMP echo reply, id 26818, seq 1, length 64
+01:57:14.846398 ARP, Request who-has 192.168.4.2 tell 192.168.4.1, length 28
+01:57:14.850474 ARP, Reply 192.168.4.2 is-at 16:db:37:6e:d2:c7 (oui Unknown), length 28
+01:57:14.855649 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 26839, seq 1, length 64
+01:57:14.855667 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 26839, seq 1, length 64
+01:57:14.855871 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 26839, seq 1, length 64
+01:57:14.855878 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 26839, seq 1, length 64
+01:57:14.867223 IP 192.168.4.2 > 192.168.2.2: ICMP echo request, id 26842, seq 1, length 64
+01:57:14.867244 IP 192.168.2.2 > 192.168.4.2: ICMP echo reply, id 26842, seq 1, length 64
+01:57:14.876401 IP 192.168.4.2 > 192.168.3.1: ICMP echo request, id 26845, seq 1, length 64
+01:57:14.876421 IP 192.168.3.1 > 192.168.4.2: ICMP echo reply, id 26845, seq 1, length 64
+01:57:14.892687 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 26854, seq 1, length 64
+01:57:14.892698 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 26854, seq 1, length 64
+01:57:14.892800 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 26854, seq 1, length 64
+01:57:14.892804 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 26854, seq 1, length 64
+01:57:14.913132 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 26866, seq 1, length 64
+01:57:14.913143 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 26866, seq 1, length 64
+01:57:14.913372 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 26866, seq 1, length 64
+01:57:14.913376 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 26866, seq 1, length 64
+01:57:14.920139 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 26869, seq 1, length 64
+01:57:14.920149 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 26869, seq 1, length 64
+01:57:14.920352 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 26869, seq 1, length 64
+01:57:14.920357 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 26869, seq 1, length 64
+01:57:17.001377 IP 192.168.4.2 > 192.168.4.1: ICMP echo request, id 26902, seq 1, length 64
+01:57:17.001396 IP 192.168.4.1 > 192.168.4.2: ICMP echo reply, id 26902, seq 1, length 64
+01:57:22.014646 ARP, Request who-has 192.168.4.1 tell 192.168.4.2, length 28
+01:57:22.014667 ARP, Reply 192.168.4.1 is-at 56:35:ab:88:19:d3 (oui Unknown), length 28
+01:57:22.030281 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 26913, seq 1, length 64
+01:57:22.030300 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 26913, seq 1, length 64
+01:57:22.030616 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 26913, seq 1, length 64
+01:57:22.030627 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 26913, seq 1, length 64
+01:57:22.040709 IP 192.168.4.2 > 192.168.2.2: ICMP echo request, id 26916, seq 1, length 64
+01:57:22.040728 IP 192.168.2.2 > 192.168.4.2: ICMP echo reply, id 26916, seq 1, length 64
+01:57:22.050027 IP 192.168.4.2 > 192.168.3.1: ICMP echo request, id 26919, seq 1, length 64
+01:57:22.050050 IP 192.168.3.1 > 192.168.4.2: ICMP echo reply, id 26919, seq 1, length 64
+01:57:22.073997 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 26928, seq 1, length 64
+01:57:22.074010 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 26928, seq 1, length 64
+01:57:22.074115 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 26928, seq 1, length 64
+01:57:22.074119 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 26928, seq 1, length 64
+01:57:22.095428 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 26940, seq 1, length 64
+01:57:22.095440 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 26940, seq 1, length 64
+01:57:22.095671 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 26940, seq 1, length 64
+01:57:22.095676 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 26940, seq 1, length 64
+01:57:22.101661 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 26943, seq 1, length 64
+01:57:22.101670 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 26943, seq 1, length 64
+01:57:22.101768 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 26943, seq 1, length 64
+01:57:22.101771 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 26943, seq 1, length 64
+01:57:23.153451 IP 192.168.4.2 > 192.168.4.1: ICMP echo request, id 26973, seq 1, length 64
+01:57:23.153463 IP 192.168.4.1 > 192.168.4.2: ICMP echo reply, id 26973, seq 1, length 64
+01:57:27.038626 ARP, Request who-has 192.168.2.1 tell 192.168.2.2, length 28
+01:57:27.038938 ARP, Request who-has 192.168.2.2 tell 192.168.2.1, length 28
+01:57:27.038960 ARP, Reply 192.168.2.2 is-at fe:c3:81:6b:fc:a1 (oui Unknown), length 28
+01:57:27.039122 ARP, Reply 192.168.2.1 is-at 4e:80:72:df:66:29 (oui Unknown), length 28
+01:57:27.086393 ARP, Request who-has 192.168.3.2 tell 192.168.3.1, length 28
+01:57:27.086846 ARP, Reply 192.168.3.2 is-at ae:87:e4:75:95:d6 (oui Unknown), length 28
+01:57:28.171360 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 26983, seq 1, length 64
+01:57:28.171373 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 26983, seq 1, length 64
+01:57:28.171474 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 26983, seq 1, length 64
+01:57:28.171478 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 26983, seq 1, length 64
+01:57:28.177797 IP 192.168.4.2 > 192.168.2.2: ICMP echo request, id 26986, seq 1, length 64
+01:57:28.177812 IP 192.168.2.2 > 192.168.4.2: ICMP echo reply, id 26986, seq 1, length 64
+01:57:28.183261 IP 192.168.4.2 > 192.168.3.1: ICMP echo request, id 26989, seq 1, length 64
+01:57:28.183276 IP 192.168.3.1 > 192.168.4.2: ICMP echo reply, id 26989, seq 1, length 64
+01:57:28.191770 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 26998, seq 1, length 64
+01:57:28.191777 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 26998, seq 1, length 64
+01:57:28.191828 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 26998, seq 1, length 64
+01:57:28.191830 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 26998, seq 1, length 64
+01:57:28.202917 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 27010, seq 1, length 64
+01:57:28.202926 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 27010, seq 1, length 64
+01:57:28.203046 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 27010, seq 1, length 64
+01:57:28.203048 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 27010, seq 1, length 64
+01:57:28.206139 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 27013, seq 1, length 64
+01:57:28.206143 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 27013, seq 1, length 64
+01:57:28.206189 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 27013, seq 1, length 64
+01:57:28.206191 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 27013, seq 1, length 64
+01:57:29.234933 IP 192.168.4.2 > 192.168.4.1: ICMP echo request, id 27040, seq 1, length 64
+01:57:29.234941 IP 192.168.4.1 > 192.168.4.2: ICMP echo reply, id 27040, seq 1, length 64
+
+01:57:39.339433 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 27120, seq 1, length 64
+01:57:39.339455 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 27120, seq 1, length 64
+01:57:39.339512 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 27120, seq 1, length 64
+01:57:39.339514 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 27120, seq 1, length 64
+01:57:39.343405 IP 192.168.4.2 > 192.168.2.2: ICMP echo request, id 27123, seq 1, length 64
+01:57:39.343417 IP 192.168.2.2 > 192.168.4.2: ICMP echo reply, id 27123, seq 1, length 64
+01:57:39.347521 IP 192.168.4.2 > 192.168.3.1: ICMP echo request, id 27126, seq 1, length 64
+01:57:39.347532 IP 192.168.3.1 > 192.168.4.2: ICMP echo reply, id 27126, seq 1, length 64
+01:57:39.362434 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 27135, seq 1, length 64
+01:57:39.362506 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 27135, seq 1, length 64
+01:57:39.363186 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 27135, seq 1, length 64
+01:57:39.363190 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 27135, seq 1, length 64
+01:57:39.381442 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 27147, seq 1, length 64
+01:57:39.381465 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 27147, seq 1, length 64
+01:57:39.381752 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 27147, seq 1, length 64
+01:57:39.381756 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 27147, seq 1, length 64
+01:57:39.393028 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 27150, seq 1, length 64
+01:57:39.393039 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 27150, seq 1, length 64
+01:57:39.393165 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 27150, seq 1, length 64
+01:57:39.393170 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 27150, seq 1, length 64
+01:57:39.429009 IP 192.168.4.2 > 192.168.4.1: ICMP echo request, id 27179, seq 1, length 64
+01:57:39.429019 IP 192.168.4.1 > 192.168.4.2: ICMP echo reply, id 27179, seq 1, length 64
+01:57:44.350525 ARP, Request who-has 192.168.4.2 tell 192.168.4.1, length 28
+01:57:44.350938 ARP, Reply 192.168.4.2 is-at 16:db:37:6e:d2:c7 (oui Unknown), length 28
+01:57:44.366857 ARP, Request who-has 192.168.3.1 tell 192.168.3.2, length 28
+01:57:44.366879 ARP, Reply 192.168.3.1 is-at de:58:f1:38:35:a5 (oui Unknown), length 28
+01:57:44.449521 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 27188, seq 1, length 64
+01:57:44.449539 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 27188, seq 1, length 64
+01:57:44.449763 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 27188, seq 1, length 64
+01:57:44.449773 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 27188, seq 1, length 64
+01:57:44.461387 IP 192.168.4.2 > 192.168.2.2: ICMP echo request, id 27191, seq 1, length 64
+01:57:44.461411 IP 192.168.2.2 > 192.168.4.2: ICMP echo reply, id 27191, seq 1, length 64
+01:57:44.472671 IP 192.168.4.2 > 192.168.3.1: ICMP echo request, id 27194, seq 1, length 64
+01:57:44.472697 IP 192.168.3.1 > 192.168.4.2: ICMP echo reply, id 27194, seq 1, length 64
+01:57:44.500168 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 27203, seq 1, length 64
+01:57:44.500186 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 27203, seq 1, length 64
+01:57:44.500354 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 27203, seq 1, length 64
+01:57:44.500361 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 27203, seq 1, length 64
+01:57:44.519918 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 27215, seq 1, length 64
+01:57:44.519927 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 27215, seq 1, length 64
+01:57:44.520068 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 27215, seq 1, length 64
+01:57:44.520071 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 27215, seq 1, length 64
+01:57:44.524670 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 27218, seq 1, length 64
+01:57:44.524676 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 27218, seq 1, length 64
+01:57:44.524754 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 27218, seq 1, length 64
+01:57:44.524757 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 27218, seq 1, length 64
+01:57:44.558511 IP 192.168.4.2 > 192.168.4.1: ICMP echo request, id 27245, seq 1, length 64
+01:57:44.558521 IP 192.168.4.1 > 192.168.4.2: ICMP echo reply, id 27245, seq 1, length 64
+01:57:49.577245 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 27268, seq 1, length 64
+01:57:49.577262 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 27268, seq 1, length 64
+01:57:49.577556 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 27268, seq 1, length 64
+01:57:49.577566 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 27268, seq 1, length 64
+01:57:49.587804 IP 192.168.4.2 > 192.168.2.2: ICMP echo request, id 27271, seq 1, length 64
+01:57:49.587879 IP 192.168.2.2 > 192.168.4.2: ICMP echo reply, id 27271, seq 1, length 64
+01:57:49.597358 IP 192.168.4.2 > 192.168.3.1: ICMP echo request, id 27274, seq 1, length 64
+01:57:49.597438 IP 192.168.3.1 > 192.168.4.2: ICMP echo reply, id 27274, seq 1, length 64
+01:57:49.614305 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 27283, seq 1, length 64
+01:57:49.614314 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 27283, seq 1, length 64
+01:57:49.614391 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 27283, seq 1, length 64
+01:57:49.614393 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 27283, seq 1, length 64
+01:57:49.630340 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 27295, seq 1, length 64
+01:57:49.630348 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 27295, seq 1, length 64
+01:57:49.630486 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 27295, seq 1, length 64
+01:57:49.630488 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 27295, seq 1, length 64
+01:57:49.634943 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 27298, seq 1, length 64
+01:57:49.634949 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 27298, seq 1, length 64
+01:57:49.635023 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 27298, seq 1, length 64
+01:57:49.635026 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 27298, seq 1, length 64
+01:57:49.674132 IP 192.168.4.2 > 192.168.4.1: ICMP echo request, id 27325, seq 1, length 64
+01:57:49.674144 IP 192.168.4.1 > 192.168.4.2: ICMP echo reply, id 27325, seq 1, length 64
+01:57:54.694769 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 27336, seq 1, length 64
+01:57:54.694789 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 27336, seq 1, length 64
+01:57:54.695049 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 27336, seq 1, length 64
+01:57:54.695057 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 27336, seq 1, length 64
+01:57:54.707158 IP 192.168.4.2 > 192.168.2.2: ICMP echo request, id 27339, seq 1, length 64
+01:57:54.707184 IP 192.168.2.2 > 192.168.4.2: ICMP echo reply, id 27339, seq 1, length 64
+01:57:54.712753 IP 192.168.4.2 > 192.168.3.1: ICMP echo request, id 27342, seq 1, length 64
+01:57:54.712767 IP 192.168.3.1 > 192.168.4.2: ICMP echo reply, id 27342, seq 1, length 64
+01:57:54.726702 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 27351, seq 1, length 64
+01:57:54.726714 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 27351, seq 1, length 64
+01:57:54.726834 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 27351, seq 1, length 64
+01:57:54.726839 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 27351, seq 1, length 64
+01:57:54.744381 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 27363, seq 1, length 64
+01:57:54.744389 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 27363, seq 1, length 64
+01:57:54.744532 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 27363, seq 1, length 64
+01:57:54.744535 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 27363, seq 1, length 64
+01:57:54.749296 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 27366, seq 1, length 64
+01:57:54.749304 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 27366, seq 1, length 64
+01:57:54.749438 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 27366, seq 1, length 64
+01:57:54.749441 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 27366, seq 1, length 64
+01:57:54.778608 IP 192.168.4.2 > 192.168.4.1: ICMP echo request, id 27393, seq 1, length 64
+01:57:54.778616 IP 192.168.4.1 > 192.168.4.2: ICMP echo reply, id 27393, seq 1, length 64
+01:57:59.694631 ARP, Request who-has 192.168.4.1 tell 192.168.4.2, length 28
+01:57:59.694654 ARP, Reply 192.168.4.1 is-at 56:35:ab:88:19:d3 (oui Unknown), length 28
+01:57:59.789468 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 27417, seq 1, length 64
+01:57:59.789483 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 27417, seq 1, length 64
+01:57:59.789644 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 27417, seq 1, length 64
+01:57:59.789649 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 27417, seq 1, length 64
+01:57:59.793089 IP 192.168.4.2 > 192.168.2.2: ICMP echo request, id 27420, seq 1, length 64
+01:57:59.793099 IP 192.168.2.2 > 192.168.4.2: ICMP echo reply, id 27420, seq 1, length 64
+01:57:59.796043 IP 192.168.4.2 > 192.168.3.1: ICMP echo request, id 27423, seq 1, length 64
+01:57:59.796051 IP 192.168.3.1 > 192.168.4.2: ICMP echo reply, id 27423, seq 1, length 64
+01:57:59.803498 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 27432, seq 1, length 64
+01:57:59.803517 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 27432, seq 1, length 64
+01:57:59.803569 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 27432, seq 1, length 64
+01:57:59.803570 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 27432, seq 1, length 64
+01:57:59.814112 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 27444, seq 1, length 64
+01:57:59.814117 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 27444, seq 1, length 64
+01:57:59.814203 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 27444, seq 1, length 64
+01:57:59.814205 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 27444, seq 1, length 64
+01:57:59.817119 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 27447, seq 1, length 64
+01:57:59.817123 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 27447, seq 1, length 64
+01:57:59.817170 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 27447, seq 1, length 64
+01:57:59.817172 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 27447, seq 1, length 64
+01:57:59.842388 IP 192.168.4.2 > 192.168.4.1: ICMP echo request, id 27474, seq 1, length 64
+01:57:59.842395 IP 192.168.4.1 > 192.168.4.2: ICMP echo reply, id 27474, seq 1, length 64
+
+01:58:09.870583 ARP, Request who-has 192.168.2.2 tell 192.168.2.1, length 28
+01:58:09.870607 ARP, Reply 192.168.2.2 is-at fe:c3:81:6b:fc:a1 (oui Unknown), length 28
+01:58:09.902487 ARP, Request who-has 192.168.3.2 tell 192.168.3.1, length 28
+01:58:09.902947 ARP, Reply 192.168.3.2 is-at ae:87:e4:75:95:d6 (oui Unknown), length 28
+01:58:09.994829 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 27555, seq 1, length 64
+01:58:09.994848 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 27555, seq 1, length 64
+01:58:09.994878 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 27555, seq 1, length 64
+01:58:09.994884 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 27555, seq 1, length 64
+01:58:10.004096 IP 192.168.4.2 > 192.168.2.2: ICMP echo request, id 27558, seq 1, length 64
+01:58:10.004114 IP 192.168.2.2 > 192.168.4.2: ICMP echo reply, id 27558, seq 1, length 64
+01:58:10.012893 IP 192.168.4.2 > 192.168.3.1: ICMP echo request, id 27561, seq 1, length 64
+01:58:10.012915 IP 192.168.3.1 > 192.168.4.2: ICMP echo reply, id 27561, seq 1, length 64
+01:58:10.041043 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 27570, seq 1, length 64
+01:58:10.041060 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 27570, seq 1, length 64
+01:58:10.041084 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 27570, seq 1, length 64
+01:58:10.041087 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 27570, seq 1, length 64
+01:58:10.056285 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 27582, seq 1, length 64
+01:58:10.056292 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 27582, seq 1, length 64
+01:58:10.056310 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 27582, seq 1, length 64
+01:58:10.056312 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 27582, seq 1, length 64
+01:58:10.059719 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 27585, seq 1, length 64
+01:58:10.059726 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 27585, seq 1, length 64
+01:58:10.059735 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 27585, seq 1, length 64
+01:58:10.059736 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 27585, seq 1, length 64
+01:58:10.090121 IP 192.168.4.2 > 192.168.4.1: ICMP echo request, id 27612, seq 1, length 64
+01:58:10.090131 IP 192.168.4.1 > 192.168.4.2: ICMP echo reply, id 27612, seq 1, length 64
+01:58:15.006273 ARP, Request who-has 192.168.4.2 tell 192.168.4.1, length 28
+01:58:15.006738 ARP, Reply 192.168.4.2 is-at 16:db:37:6e:d2:c7 (oui Unknown), length 28
+01:58:15.112444 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 27621, seq 1, length 64
+01:58:15.112462 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 27621, seq 1, length 64
+01:58:15.112574 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 27621, seq 1, length 64
+01:58:15.112583 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 27621, seq 1, length 64
+01:58:15.122064 IP 192.168.4.2 > 192.168.2.2: ICMP echo request, id 27624, seq 1, length 64
+01:58:15.122082 IP 192.168.2.2 > 192.168.4.2: ICMP echo reply, id 27624, seq 1, length 64
+01:58:15.130259 IP 192.168.4.2 > 192.168.3.1: ICMP echo request, id 27627, seq 1, length 64
+01:58:15.130274 IP 192.168.3.1 > 192.168.4.2: ICMP echo reply, id 27627, seq 1, length 64
+01:58:15.160637 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 27636, seq 1, length 64
+01:58:15.160647 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 27636, seq 1, length 64
+01:58:15.160662 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 27636, seq 1, length 64
+01:58:15.160664 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 27636, seq 1, length 64
+01:58:15.178748 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 27649, seq 1, length 64
+01:58:15.178757 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 27649, seq 1, length 64
+01:58:15.178782 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 27649, seq 1, length 64
+01:58:15.178783 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 27649, seq 1, length 64
+01:58:15.183311 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 27652, seq 1, length 64
+01:58:15.183318 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 27652, seq 1, length 64
+01:58:15.183332 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 27652, seq 1, length 64
+01:58:15.183333 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 27652, seq 1, length 64
+01:58:15.215229 IP 192.168.4.2 > 192.168.4.1: ICMP echo request, id 27679, seq 1, length 64
+01:58:15.215235 IP 192.168.4.1 > 192.168.4.2: ICMP echo reply, id 27679, seq 1, length 64
+01:58:20.230497 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 27690, seq 1, length 64
+01:58:20.230514 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 27690, seq 1, length 64
+01:58:20.230538 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 27690, seq 1, length 64
+01:58:20.230541 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 27690, seq 1, length 64
+01:58:20.239887 IP 192.168.4.2 > 192.168.2.2: ICMP echo request, id 27693, seq 1, length 64
+01:58:20.239909 IP 192.168.2.2 > 192.168.4.2: ICMP echo reply, id 27693, seq 1, length 64
+01:58:20.248317 IP 192.168.4.2 > 192.168.3.1: ICMP echo request, id 27696, seq 1, length 64
+01:58:20.248328 IP 192.168.3.1 > 192.168.4.2: ICMP echo reply, id 27696, seq 1, length 64
+01:58:20.258071 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 27705, seq 1, length 64
+01:58:20.258080 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 27705, seq 1, length 64
+01:58:20.258094 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 27705, seq 1, length 64
+01:58:20.258095 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 27705, seq 1, length 64
+01:58:20.271235 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 27717, seq 1, length 64
+01:58:20.271243 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 27717, seq 1, length 64
+01:58:20.271264 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 27717, seq 1, length 64
+01:58:20.271265 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 27717, seq 1, length 64
+01:58:20.274568 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 27720, seq 1, length 64
+01:58:20.274574 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 27720, seq 1, length 64
+01:58:20.274586 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 27720, seq 1, length 64
+01:58:20.274587 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 27720, seq 1, length 64
+01:58:20.299755 IP 192.168.4.2 > 192.168.4.1: ICMP echo request, id 27747, seq 1, length 64
+01:58:20.299763 IP 192.168.4.1 > 192.168.4.2: ICMP echo reply, id 27747, seq 1, length 64
+01:58:25.262757 ARP, Request who-has 192.168.3.1 tell 192.168.3.2, length 28
+01:58:25.262777 ARP, Reply 192.168.3.1 is-at de:58:f1:38:35:a5 (oui Unknown), length 28
+01:58:25.314773 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 27758, seq 1, length 64
+01:58:25.314783 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 27758, seq 1, length 64
+01:58:25.314865 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 27758, seq 1, length 64
+01:58:25.314868 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 27758, seq 1, length 64
+01:58:25.319295 IP 192.168.4.2 > 192.168.2.2: ICMP echo request, id 27761, seq 1, length 64
+01:58:25.319307 IP 192.168.2.2 > 192.168.4.2: ICMP echo reply, id 27761, seq 1, length 64
+01:58:25.322691 IP 192.168.4.2 > 192.168.3.1: ICMP echo request, id 27764, seq 1, length 64
+01:58:25.322701 IP 192.168.3.1 > 192.168.4.2: ICMP echo reply, id 27764, seq 1, length 64
+01:58:25.331851 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 27773, seq 1, length 64
+01:58:25.331869 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 27773, seq 1, length 64
+01:58:25.331949 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 27773, seq 1, length 64
+01:58:25.331952 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 27773, seq 1, length 64
+01:58:25.343835 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 27785, seq 1, length 64
+01:58:25.343842 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 27785, seq 1, length 64
+01:58:25.343927 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 27785, seq 1, length 64
+01:58:25.343929 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 27785, seq 1, length 64
+01:58:25.346966 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 27788, seq 1, length 64
+01:58:25.346971 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 27788, seq 1, length 64
+01:58:25.347077 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 27788, seq 1, length 64
+01:58:25.347080 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 27788, seq 1, length 64
+01:58:25.373415 IP 192.168.4.2 > 192.168.4.1: ICMP echo request, id 27815, seq 1, length 64
+01:58:25.373426 IP 192.168.4.1 > 192.168.4.2: ICMP echo reply, id 27815, seq 1, length 64
+
+01:58:40.478212 ARP, Request who-has 192.168.2.1 tell 192.168.2.2, length 28
+01:58:40.478677 ARP, Reply 192.168.2.1 is-at 4e:80:72:df:66:29 (oui Unknown), length 28
+01:58:40.562058 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 27976, seq 1, length 64
+01:58:40.562075 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 27976, seq 1, length 64
+01:58:40.562099 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 27976, seq 1, length 64
+01:58:40.562105 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 27976, seq 1, length 64
+01:58:40.570753 IP 192.168.4.2 > 192.168.2.2: ICMP echo request, id 27979, seq 1, length 64
+01:58:40.570778 IP 192.168.2.2 > 192.168.4.2: ICMP echo reply, id 27979, seq 1, length 64
+01:58:40.578695 IP 192.168.4.2 > 192.168.3.1: ICMP echo request, id 27982, seq 1, length 64
+01:58:40.578711 IP 192.168.3.1 > 192.168.4.2: ICMP echo reply, id 27982, seq 1, length 64
+01:58:40.601709 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 27991, seq 1, length 64
+01:58:40.601723 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 27991, seq 1, length 64
+01:58:40.601743 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 27991, seq 1, length 64
+01:58:40.601772 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 27991, seq 1, length 64
+01:58:40.629430 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 28003, seq 1, length 64
+01:58:40.629439 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 28003, seq 1, length 64
+01:58:40.629460 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 28003, seq 1, length 64
+01:58:40.629461 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 28003, seq 1, length 64
+01:58:40.632857 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 28006, seq 1, length 64
+01:58:40.632864 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 28006, seq 1, length 64
+01:58:40.632875 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 28006, seq 1, length 64
+01:58:40.632876 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 28006, seq 1, length 64
+01:58:40.660786 IP 192.168.4.2 > 192.168.4.1: ICMP echo request, id 28033, seq 1, length 64
+01:58:40.660793 IP 192.168.4.1 > 192.168.4.2: ICMP echo reply, id 28033, seq 1, length 64
+01:58:45.566600 ARP, Request who-has 192.168.4.2 tell 192.168.4.1, length 28
+01:58:45.567222 ARP, Reply 192.168.4.2 is-at 16:db:37:6e:d2:c7 (oui Unknown), length 28
+01:58:45.673521 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 28054, seq 1, length 64
+01:58:45.673538 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 28054, seq 1, length 64
+01:58:45.673566 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 28054, seq 1, length 64
+01:58:45.673569 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 28054, seq 1, length 64
+01:58:45.683318 IP 192.168.4.2 > 192.168.2.2: ICMP echo request, id 28057, seq 1, length 64
+01:58:45.683344 IP 192.168.2.2 > 192.168.4.2: ICMP echo reply, id 28057, seq 1, length 64
+01:58:45.692767 IP 192.168.4.2 > 192.168.3.1: ICMP echo request, id 28060, seq 1, length 64
+01:58:45.692787 IP 192.168.3.1 > 192.168.4.2: ICMP echo reply, id 28060, seq 1, length 64
+01:58:45.707740 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 28069, seq 1, length 64
+01:58:45.707750 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 28069, seq 1, length 64
+01:58:45.707764 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 28069, seq 1, length 64
+01:58:45.707766 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 28069, seq 1, length 64
+01:58:45.724477 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 28081, seq 1, length 64
+01:58:45.724485 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 28081, seq 1, length 64
+01:58:45.724532 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 28081, seq 1, length 64
+01:58:45.724535 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 28081, seq 1, length 64
+01:58:45.728223 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 28084, seq 1, length 64
+01:58:45.728228 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 28084, seq 1, length 64
+01:58:45.728236 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 28084, seq 1, length 64
+01:58:45.728237 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 28084, seq 1, length 64
+01:58:45.752940 IP 192.168.4.2 > 192.168.4.1: ICMP echo request, id 28111, seq 1, length 64
+01:58:45.752948 IP 192.168.4.1 > 192.168.4.2: ICMP echo reply, id 28111, seq 1, length 64
+01:58:50.686718 ARP, Request who-has 192.168.2.2 tell 192.168.2.1, length 28
+01:58:50.686738 ARP, Reply 192.168.2.2 is-at fe:c3:81:6b:fc:a1 (oui Unknown), length 28
+01:58:50.718206 ARP, Request who-has 192.168.3.2 tell 192.168.3.1, length 28
+01:58:50.718603 ARP, Reply 192.168.3.2 is-at ae:87:e4:75:95:d6 (oui Unknown), length 28
+01:58:50.769884 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 28122, seq 1, length 64
+01:58:50.769900 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 28122, seq 1, length 64
+01:58:50.769924 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 28122, seq 1, length 64
+01:58:50.769927 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 28122, seq 1, length 64
+01:58:50.778457 IP 192.168.4.2 > 192.168.2.2: ICMP echo request, id 28125, seq 1, length 64
+01:58:50.778474 IP 192.168.2.2 > 192.168.4.2: ICMP echo reply, id 28125, seq 1, length 64
+01:58:50.787946 IP 192.168.4.2 > 192.168.3.1: ICMP echo request, id 28128, seq 1, length 64
+01:58:50.787968 IP 192.168.3.1 > 192.168.4.2: ICMP echo reply, id 28128, seq 1, length 64
+01:58:50.808106 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 28137, seq 1, length 64
+01:58:50.808117 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 28137, seq 1, length 64
+01:58:50.808131 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 28137, seq 1, length 64
+01:58:50.808133 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 28137, seq 1, length 64
+01:58:50.827545 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 28149, seq 1, length 64
+01:58:50.827555 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 28149, seq 1, length 64
+01:58:50.827583 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 28149, seq 1, length 64
+01:58:50.827585 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 28149, seq 1, length 64
+01:58:50.830999 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 28152, seq 1, length 64
+01:58:50.831006 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 28152, seq 1, length 64
+01:58:50.831016 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 28152, seq 1, length 64
+01:58:50.831017 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 28152, seq 1, length 64
+01:58:50.853581 IP 192.168.4.2 > 192.168.4.1: ICMP echo request, id 28179, seq 1, length 64
+01:58:50.853589 IP 192.168.4.1 > 192.168.4.2: ICMP echo reply, id 28179, seq 1, length 64
+01:58:55.865492 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 28188, seq 1, length 64
+01:58:55.865518 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 28188, seq 1, length 64
+01:58:55.865531 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 28188, seq 1, length 64
+01:58:55.865533 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 28188, seq 1, length 64
+01:58:55.869244 IP 192.168.4.2 > 192.168.2.2: ICMP echo request, id 28191, seq 1, length 64
+01:58:55.869254 IP 192.168.2.2 > 192.168.4.2: ICMP echo reply, id 28191, seq 1, length 64
+01:58:55.872061 IP 192.168.4.2 > 192.168.3.1: ICMP echo request, id 28194, seq 1, length 64
+01:58:55.872069 IP 192.168.3.1 > 192.168.4.2: ICMP echo reply, id 28194, seq 1, length 64
+01:58:55.883168 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 28203, seq 1, length 64
+01:58:55.883176 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 28203, seq 1, length 64
+01:58:55.883186 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 28203, seq 1, length 64
+01:58:55.883187 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 28203, seq 1, length 64
+01:58:55.896793 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 28215, seq 1, length 64
+01:58:55.896800 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 28215, seq 1, length 64
+01:58:55.896819 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 28215, seq 1, length 64
+01:58:55.896820 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 28215, seq 1, length 64
+01:58:55.900523 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 28218, seq 1, length 64
+01:58:55.900528 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 28218, seq 1, length 64
+01:58:55.900537 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 28218, seq 1, length 64
+01:58:55.900538 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 28218, seq 1, length 64
+01:58:55.926099 IP 192.168.4.2 > 192.168.4.1: ICMP echo request, id 28245, seq 1, length 64
+01:58:55.926107 IP 192.168.4.1 > 192.168.4.2: ICMP echo reply, id 28245, seq 1, length 64
+
+01:59:05.966989 ARP, Request who-has 192.168.3.1 tell 192.168.3.2, length 28
+01:59:05.967000 ARP, Reply 192.168.3.1 is-at de:58:f1:38:35:a5 (oui Unknown), length 28
+01:59:05.999739 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 28325, seq 1, length 64
+01:59:05.999756 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 28325, seq 1, length 64
+01:59:05.999782 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 28325, seq 1, length 64
+01:59:05.999785 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 28325, seq 1, length 64
+01:59:06.009430 IP 192.168.4.2 > 192.168.2.2: ICMP echo request, id 28328, seq 1, length 64
+01:59:06.009448 IP 192.168.2.2 > 192.168.4.2: ICMP echo reply, id 28328, seq 1, length 64
+01:59:06.016571 IP 192.168.4.2 > 192.168.3.1: ICMP echo request, id 28331, seq 1, length 64
+01:59:06.016581 IP 192.168.3.1 > 192.168.4.2: ICMP echo reply, id 28331, seq 1, length 64
+01:59:06.028274 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 28340, seq 1, length 64
+01:59:06.028283 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 28340, seq 1, length 64
+01:59:06.028297 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 28340, seq 1, length 64
+01:59:06.028298 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 28340, seq 1, length 64
+01:59:06.045611 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 28352, seq 1, length 64
+01:59:06.045617 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 28352, seq 1, length 64
+01:59:06.045634 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 28352, seq 1, length 64
+01:59:06.045635 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 28352, seq 1, length 64
+01:59:06.048193 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 28355, seq 1, length 64
+01:59:06.048196 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 28355, seq 1, length 64
+01:59:06.048204 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 28355, seq 1, length 64
+01:59:06.048205 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 28355, seq 1, length 64
+01:59:06.069113 IP 192.168.4.2 > 192.168.4.1: ICMP echo request, id 28382, seq 1, length 64
+01:59:06.069120 IP 192.168.4.1 > 192.168.4.2: ICMP echo reply, id 28382, seq 1, length 64
+01:59:11.006558 ARP, Request who-has 192.168.4.1 tell 192.168.4.2, length 28
+01:59:11.006579 ARP, Reply 192.168.4.1 is-at 56:35:ab:88:19:d3 (oui Unknown), length 28
+01:59:11.087220 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 28393, seq 1, length 64
+01:59:11.087235 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 28393, seq 1, length 64
+01:59:11.087256 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 28393, seq 1, length 64
+01:59:11.087260 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 28393, seq 1, length 64
+01:59:11.093812 IP 192.168.4.2 > 192.168.2.2: ICMP echo request, id 28396, seq 1, length 64
+01:59:11.093827 IP 192.168.2.2 > 192.168.4.2: ICMP echo reply, id 28396, seq 1, length 64
+01:59:11.100479 IP 192.168.4.2 > 192.168.3.1: ICMP echo request, id 28399, seq 1, length 64
+01:59:11.100492 IP 192.168.3.1 > 192.168.4.2: ICMP echo reply, id 28399, seq 1, length 64
+01:59:11.123497 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 28408, seq 1, length 64
+01:59:11.123511 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 28408, seq 1, length 64
+01:59:11.123532 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 28408, seq 1, length 64
+01:59:11.123535 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 28408, seq 1, length 64
+01:59:11.151974 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 28420, seq 1, length 64
+01:59:11.152000 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 28420, seq 1, length 64
+01:59:11.152024 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 28420, seq 1, length 64
+01:59:11.152026 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 28420, seq 1, length 64
+01:59:11.155989 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 28423, seq 1, length 64
+01:59:11.155996 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 28423, seq 1, length 64
+01:59:11.156008 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 28423, seq 1, length 64
+01:59:11.156010 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 28423, seq 1, length 64
+01:59:11.189903 IP 192.168.4.2 > 192.168.4.1: ICMP echo request, id 28450, seq 1, length 64
+01:59:11.189911 IP 192.168.4.1 > 192.168.4.2: ICMP echo reply, id 28450, seq 1, length 64
+01:59:16.094239 ARP, Request who-has 192.168.2.1 tell 192.168.2.2, length 28
+01:59:16.094263 ARP, Request who-has 192.168.4.2 tell 192.168.4.1, length 28
+01:59:16.094768 ARP, Reply 192.168.4.2 is-at 16:db:37:6e:d2:c7 (oui Unknown), length 28
+01:59:16.094788 ARP, Reply 192.168.2.1 is-at 4e:80:72:df:66:29 (oui Unknown), length 28
+01:59:16.207806 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 28459, seq 1, length 64
+01:59:16.207822 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 28459, seq 1, length 64
+01:59:16.207844 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 28459, seq 1, length 64
+01:59:16.207847 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 28459, seq 1, length 64
+01:59:16.216269 IP 192.168.4.2 > 192.168.2.2: ICMP echo request, id 28462, seq 1, length 64
+01:59:16.216287 IP 192.168.2.2 > 192.168.4.2: ICMP echo reply, id 28462, seq 1, length 64
+01:59:16.222525 IP 192.168.4.2 > 192.168.3.1: ICMP echo request, id 28465, seq 1, length 64
+01:59:16.222536 IP 192.168.3.1 > 192.168.4.2: ICMP echo reply, id 28465, seq 1, length 64
+01:59:16.238252 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 28474, seq 1, length 64
+01:59:16.238263 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 28474, seq 1, length 64
+01:59:16.238278 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 28474, seq 1, length 64
+01:59:16.238281 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 28474, seq 1, length 64
+01:59:16.256596 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 28486, seq 1, length 64
+01:59:16.256605 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 28486, seq 1, length 64
+01:59:16.256628 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 28486, seq 1, length 64
+01:59:16.256630 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 28486, seq 1, length 64
+01:59:16.261030 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 28489, seq 1, length 64
+01:59:16.261037 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 28489, seq 1, length 64
+01:59:16.261051 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 28489, seq 1, length 64
+01:59:16.261052 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 28489, seq 1, length 64
+01:59:16.290525 IP 192.168.4.2 > 192.168.4.1: ICMP echo request, id 28516, seq 1, length 64
+01:59:16.290532 IP 192.168.4.1 > 192.168.4.2: ICMP echo reply, id 28516, seq 1, length 64
+01:59:21.305912 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 28539, seq 1, length 64
+01:59:21.305928 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 28539, seq 1, length 64
+01:59:21.305950 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 28539, seq 1, length 64
+01:59:21.305953 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 28539, seq 1, length 64
+01:59:21.314698 IP 192.168.4.2 > 192.168.2.2: ICMP echo request, id 28542, seq 1, length 64
+01:59:21.314716 IP 192.168.2.2 > 192.168.4.2: ICMP echo reply, id 28542, seq 1, length 64
+01:59:21.323402 IP 192.168.4.2 > 192.168.3.1: ICMP echo request, id 28545, seq 1, length 64
+01:59:21.323420 IP 192.168.3.1 > 192.168.4.2: ICMP echo reply, id 28545, seq 1, length 64
+01:59:21.352603 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 28554, seq 1, length 64
+01:59:21.352618 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 28554, seq 1, length 64
+01:59:21.352723 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 28554, seq 1, length 64
+01:59:21.352728 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 28554, seq 1, length 64
+01:59:21.371762 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 28566, seq 1, length 64
+01:59:21.371774 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 28566, seq 1, length 64
+01:59:21.371938 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 28566, seq 1, length 64
+01:59:21.371942 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 28566, seq 1, length 64
+01:59:21.376992 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 28569, seq 1, length 64
+01:59:21.377001 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 28569, seq 1, length 64
+01:59:21.377090 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 28569, seq 1, length 64
+01:59:21.377093 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 28569, seq 1, length 64
+01:59:21.405808 IP 192.168.4.2 > 192.168.4.1: ICMP echo request, id 28596, seq 1, length 64
+01:59:21.405816 IP 192.168.4.1 > 192.168.4.2: ICMP echo reply, id 28596, seq 1, length 64
+01:59:26.419480 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 28605, seq 1, length 64
+01:59:26.419489 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 28605, seq 1, length 64
+01:59:26.419563 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 28605, seq 1, length 64
+01:59:26.419565 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 28605, seq 1, length 64
+01:59:26.423164 IP 192.168.4.2 > 192.168.2.2: ICMP echo request, id 28608, seq 1, length 64
+01:59:26.423172 IP 192.168.2.2 > 192.168.4.2: ICMP echo reply, id 28608, seq 1, length 64
+01:59:26.425764 IP 192.168.4.2 > 192.168.3.1: ICMP echo request, id 28611, seq 1, length 64
+01:59:26.425770 IP 192.168.3.1 > 192.168.4.2: ICMP echo reply, id 28611, seq 1, length 64
+01:59:26.433014 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 28620, seq 1, length 64
+01:59:26.433021 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 28620, seq 1, length 64
+01:59:26.433030 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 28620, seq 1, length 64
+01:59:26.433031 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 28620, seq 1, length 64
+01:59:26.444785 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 28632, seq 1, length 64
+01:59:26.444806 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 28632, seq 1, length 64
+01:59:26.444824 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 28632, seq 1, length 64
+01:59:26.444825 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 28632, seq 1, length 64
+01:59:26.447287 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 28635, seq 1, length 64
+01:59:26.447292 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 28635, seq 1, length 64
+01:59:26.447301 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 28635, seq 1, length 64
+01:59:26.447302 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 28635, seq 1, length 64
+01:59:26.469503 IP 192.168.4.2 > 192.168.4.1: ICMP echo request, id 28662, seq 1, length 64
+01:59:26.469513 IP 192.168.4.1 > 192.168.4.2: ICMP echo reply, id 28662, seq 1, length 64
+
+01:59:36.590160 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 28754, seq 1, length 64
+01:59:36.590178 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 28754, seq 1, length 64
+01:59:36.590203 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 28754, seq 1, length 64
+01:59:36.590206 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 28754, seq 1, length 64
+01:59:36.599080 IP 192.168.4.2 > 192.168.2.2: ICMP echo request, id 28757, seq 1, length 64
+01:59:36.599099 IP 192.168.2.2 > 192.168.4.2: ICMP echo reply, id 28757, seq 1, length 64
+01:59:36.607253 IP 192.168.4.2 > 192.168.3.1: ICMP echo request, id 28760, seq 1, length 64
+01:59:36.607271 IP 192.168.3.1 > 192.168.4.2: ICMP echo reply, id 28760, seq 1, length 64
+01:59:36.628678 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 28769, seq 1, length 64
+01:59:36.628688 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 28769, seq 1, length 64
+01:59:36.628702 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 28769, seq 1, length 64
+01:59:36.628704 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 28769, seq 1, length 64
+01:59:36.644236 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 28781, seq 1, length 64
+01:59:36.644244 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 28781, seq 1, length 64
+01:59:36.644265 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 28781, seq 1, length 64
+01:59:36.644267 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 28781, seq 1, length 64
+01:59:36.648068 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 28784, seq 1, length 64
+01:59:36.648075 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 28784, seq 1, length 64
+01:59:36.648087 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 28784, seq 1, length 64
+01:59:36.648089 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 28784, seq 1, length 64
+01:59:36.672037 IP 192.168.4.2 > 192.168.4.1: ICMP echo request, id 28811, seq 1, length 64
+01:59:36.672043 IP 192.168.4.1 > 192.168.4.2: ICMP echo reply, id 28811, seq 1, length 64
+01:59:41.598296 ARP, Request who-has 192.168.2.1 tell 192.168.2.2, length 28
+01:59:41.598656 ARP, Reply 192.168.2.1 is-at 4e:80:72:df:66:29 (oui Unknown), length 28
+01:59:41.686532 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 28822, seq 1, length 64
+01:59:41.686547 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 28822, seq 1, length 64
+01:59:41.686569 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 28822, seq 1, length 64
+01:59:41.686572 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 28822, seq 1, length 64
+01:59:41.694748 IP 192.168.4.2 > 192.168.2.2: ICMP echo request, id 28825, seq 1, length 64
+01:59:41.694765 IP 192.168.2.2 > 192.168.4.2: ICMP echo reply, id 28825, seq 1, length 64
+01:59:41.700329 IP 192.168.4.2 > 192.168.3.1: ICMP echo request, id 28828, seq 1, length 64
+01:59:41.700339 IP 192.168.3.1 > 192.168.4.2: ICMP echo reply, id 28828, seq 1, length 64
+01:59:41.714534 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 28837, seq 1, length 64
+01:59:41.714543 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 28837, seq 1, length 64
+01:59:41.714558 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 28837, seq 1, length 64
+01:59:41.714560 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 28837, seq 1, length 64
+01:59:41.730500 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 28849, seq 1, length 64
+01:59:41.730505 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 28849, seq 1, length 64
+01:59:41.730520 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 28849, seq 1, length 64
+01:59:41.730521 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 28849, seq 1, length 64
+01:59:41.732612 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 28852, seq 1, length 64
+01:59:41.732617 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 28852, seq 1, length 64
+01:59:41.732623 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 28852, seq 1, length 64
+01:59:41.732624 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 28852, seq 1, length 64
+01:59:41.753408 IP 192.168.4.2 > 192.168.4.1: ICMP echo request, id 28879, seq 1, length 64
+01:59:41.753416 IP 192.168.4.1 > 192.168.4.2: ICMP echo reply, id 28879, seq 1, length 64
+01:59:46.771396 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 28888, seq 1, length 64
+01:59:46.771407 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 28888, seq 1, length 64
+01:59:46.771423 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 28888, seq 1, length 64
+01:59:46.771425 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 28888, seq 1, length 64
+01:59:46.776469 IP 192.168.4.2 > 192.168.2.2: ICMP echo request, id 28891, seq 1, length 64
+01:59:46.776482 IP 192.168.2.2 > 192.168.4.2: ICMP echo reply, id 28891, seq 1, length 64
+01:59:46.781731 IP 192.168.4.2 > 192.168.3.1: ICMP echo request, id 28894, seq 1, length 64
+01:59:46.781746 IP 192.168.3.1 > 192.168.4.2: ICMP echo reply, id 28894, seq 1, length 64
+01:59:46.797345 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 28903, seq 1, length 64
+01:59:46.797357 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 28903, seq 1, length 64
+01:59:46.797458 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 28903, seq 1, length 64
+01:59:46.797467 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 28903, seq 1, length 64
+01:59:46.817950 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 28915, seq 1, length 64
+01:59:46.817961 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 28915, seq 1, length 64
+01:59:46.817990 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 28915, seq 1, length 64
+01:59:46.817993 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 28915, seq 1, length 64
+01:59:46.823212 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 28918, seq 1, length 64
+01:59:46.823222 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 28918, seq 1, length 64
+01:59:46.823238 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 28918, seq 1, length 64
+01:59:46.823240 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 28918, seq 1, length 64
+01:59:46.855471 IP 192.168.4.2 > 192.168.4.1: ICMP echo request, id 28945, seq 1, length 64
+01:59:46.855481 IP 192.168.4.1 > 192.168.4.2: ICMP echo reply, id 28945, seq 1, length 64
+01:59:51.806627 ARP, Request who-has 192.168.3.1 tell 192.168.3.2, length 28
+01:59:51.806647 ARP, Reply 192.168.3.1 is-at de:58:f1:38:35:a5 (oui Unknown), length 28
+01:59:51.872614 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 28956, seq 1, length 64
+01:59:51.872625 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 28956, seq 1, length 64
+01:59:51.872642 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 28956, seq 1, length 64
+01:59:51.872644 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 28956, seq 1, length 64
+01:59:51.878028 IP 192.168.4.2 > 192.168.2.2: ICMP echo request, id 28959, seq 1, length 64
+01:59:51.878041 IP 192.168.2.2 > 192.168.4.2: ICMP echo reply, id 28959, seq 1, length 64
+01:59:51.883528 IP 192.168.4.2 > 192.168.3.1: ICMP echo request, id 28962, seq 1, length 64
+01:59:51.883542 IP 192.168.3.1 > 192.168.4.2: ICMP echo reply, id 28962, seq 1, length 64
+01:59:51.899690 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 28971, seq 1, length 64
+01:59:51.899701 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 28971, seq 1, length 64
+01:59:51.899743 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 28971, seq 1, length 64
+01:59:51.899746 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 28971, seq 1, length 64
+01:59:51.914572 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 28983, seq 1, length 64
+01:59:51.914580 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 28983, seq 1, length 64
+01:59:51.914601 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 28983, seq 1, length 64
+01:59:51.914602 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 28983, seq 1, length 64
+01:59:51.917661 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 28986, seq 1, length 64
+01:59:51.917668 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 28986, seq 1, length 64
+01:59:51.917678 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 28986, seq 1, length 64
+01:59:51.917679 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 28986, seq 1, length 64
+01:59:51.941736 IP 192.168.4.2 > 192.168.4.1: ICMP echo request, id 29013, seq 1, length 64
+01:59:51.941744 IP 192.168.4.1 > 192.168.4.2: ICMP echo reply, id 29013, seq 1, length 64
+01:59:56.878557 ARP, Request who-has 192.168.4.2 tell 192.168.4.1, length 28
+01:59:56.878916 ARP, Request who-has 192.168.4.1 tell 192.168.4.2, length 28
+01:59:56.878944 ARP, Reply 192.168.4.1 is-at 56:35:ab:88:19:d3 (oui Unknown), length 28
+01:59:56.879139 ARP, Reply 192.168.4.2 is-at 16:db:37:6e:d2:c7 (oui Unknown), length 28
+01:59:56.953280 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 29022, seq 1, length 64
+01:59:56.953289 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 29022, seq 1, length 64
+01:59:56.953302 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 29022, seq 1, length 64
+01:59:56.953304 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 29022, seq 1, length 64
+01:59:56.956615 IP 192.168.4.2 > 192.168.2.2: ICMP echo request, id 29025, seq 1, length 64
+01:59:56.956624 IP 192.168.2.2 > 192.168.4.2: ICMP echo reply, id 29025, seq 1, length 64
+01:59:56.959826 IP 192.168.4.2 > 192.168.3.1: ICMP echo request, id 29028, seq 1, length 64
+01:59:56.959834 IP 192.168.3.1 > 192.168.4.2: ICMP echo reply, id 29028, seq 1, length 64
+01:59:56.969618 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 29037, seq 1, length 64
+01:59:56.969626 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 29037, seq 1, length 64
+01:59:56.969638 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 29037, seq 1, length 64
+01:59:56.969640 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 29037, seq 1, length 64
+01:59:56.983097 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 29049, seq 1, length 64
+01:59:56.983105 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 29049, seq 1, length 64
+01:59:56.983125 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 29049, seq 1, length 64
+01:59:56.983126 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 29049, seq 1, length 64
+01:59:56.986660 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 29052, seq 1, length 64
+01:59:56.986691 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 29052, seq 1, length 64
+01:59:56.986708 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 29052, seq 1, length 64
+01:59:56.986710 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 29052, seq 1, length 64
+01:59:57.012932 IP 192.168.4.2 > 192.168.4.1: ICMP echo request, id 29079, seq 1, length 64
+01:59:57.012939 IP 192.168.4.1 > 192.168.4.2: ICMP echo reply, id 29079, seq 1, length 64
+
+02:00:07.038390 ARP, Request who-has 192.168.2.1 tell 192.168.2.2, length 28
+02:00:07.038549 ARP, Reply 192.168.2.1 is-at 4e:80:72:df:66:29 (oui Unknown), length 28
+02:00:07.091578 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 29177, seq 1, length 64
+02:00:07.091592 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 29177, seq 1, length 64
+02:00:07.091613 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 29177, seq 1, length 64
+02:00:07.091615 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 29177, seq 1, length 64
+02:00:07.098643 IP 192.168.4.2 > 192.168.2.2: ICMP echo request, id 29180, seq 1, length 64
+02:00:07.098657 IP 192.168.2.2 > 192.168.4.2: ICMP echo reply, id 29180, seq 1, length 64
+02:00:07.105249 IP 192.168.4.2 > 192.168.3.1: ICMP echo request, id 29183, seq 1, length 64
+02:00:07.105265 IP 192.168.3.1 > 192.168.4.2: ICMP echo reply, id 29183, seq 1, length 64
+02:00:07.121842 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 29192, seq 1, length 64
+02:00:07.121851 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 29192, seq 1, length 64
+02:00:07.121863 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 29192, seq 1, length 64
+02:00:07.121865 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 29192, seq 1, length 64
+02:00:07.140010 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 29204, seq 1, length 64
+02:00:07.140019 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 29204, seq 1, length 64
+02:00:07.140041 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 29204, seq 1, length 64
+02:00:07.140042 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 29204, seq 1, length 64
+02:00:07.143957 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 29207, seq 1, length 64
+02:00:07.143964 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 29207, seq 1, length 64
+02:00:07.143974 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 29207, seq 1, length 64
+02:00:07.143976 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 29207, seq 1, length 64
+02:00:07.171233 IP 192.168.4.2 > 192.168.4.1: ICMP echo request, id 29234, seq 1, length 64
+02:00:07.171242 IP 192.168.4.1 > 192.168.4.2: ICMP echo reply, id 29234, seq 1, length 64
+02:00:12.126376 ARP, Request who-has 192.168.3.2 tell 192.168.3.1, length 28
+02:00:12.126928 ARP, Reply 192.168.3.2 is-at ae:87:e4:75:95:d6 (oui Unknown), length 28
+02:00:12.191159 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 29245, seq 1, length 64
+02:00:12.191176 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 29245, seq 1, length 64
+02:00:12.191203 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 29245, seq 1, length 64
+02:00:12.191207 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 29245, seq 1, length 64
+02:00:12.200241 IP 192.168.4.2 > 192.168.2.2: ICMP echo request, id 29248, seq 1, length 64
+02:00:12.200263 IP 192.168.2.2 > 192.168.4.2: ICMP echo reply, id 29248, seq 1, length 64
+02:00:12.208602 IP 192.168.4.2 > 192.168.3.1: ICMP echo request, id 29251, seq 1, length 64
+02:00:12.208622 IP 192.168.3.1 > 192.168.4.2: ICMP echo reply, id 29251, seq 1, length 64
+02:00:12.231151 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 29260, seq 1, length 64
+02:00:12.231164 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 29260, seq 1, length 64
+02:00:12.231184 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 29260, seq 1, length 64
+02:00:12.231187 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 29260, seq 1, length 64
+02:00:12.253781 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 29272, seq 1, length 64
+02:00:12.253789 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 29272, seq 1, length 64
+02:00:12.253811 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 29272, seq 1, length 64
+02:00:12.253813 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 29272, seq 1, length 64
+02:00:12.257357 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 29275, seq 1, length 64
+02:00:12.257363 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 29275, seq 1, length 64
+02:00:12.257375 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 29275, seq 1, length 64
+02:00:12.257410 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 29275, seq 1, length 64
+02:00:12.285659 IP 192.168.4.2 > 192.168.4.1: ICMP echo request, id 29302, seq 1, length 64
+02:00:12.285665 IP 192.168.4.1 > 192.168.4.2: ICMP echo reply, id 29302, seq 1, length 64
+02:00:17.303049 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 29323, seq 1, length 64
+02:00:17.303068 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 29323, seq 1, length 64
+02:00:17.303093 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 29323, seq 1, length 64
+02:00:17.303096 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 29323, seq 1, length 64
+02:00:17.311543 IP 192.168.4.2 > 192.168.2.2: ICMP echo request, id 29326, seq 1, length 64
+02:00:17.311563 IP 192.168.2.2 > 192.168.4.2: ICMP echo reply, id 29326, seq 1, length 64
+02:00:17.320099 IP 192.168.4.2 > 192.168.3.1: ICMP echo request, id 29329, seq 1, length 64
+02:00:17.320119 IP 192.168.3.1 > 192.168.4.2: ICMP echo reply, id 29329, seq 1, length 64
+02:00:17.334993 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 29338, seq 1, length 64
+02:00:17.335003 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 29338, seq 1, length 64
+02:00:17.335018 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 29338, seq 1, length 64
+02:00:17.335020 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 29338, seq 1, length 64
+02:00:17.352673 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 29350, seq 1, length 64
+02:00:17.352679 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 29350, seq 1, length 64
+02:00:17.352694 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 29350, seq 1, length 64
+02:00:17.352695 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 29350, seq 1, length 64
+02:00:17.355026 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 29353, seq 1, length 64
+02:00:17.355031 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 29353, seq 1, length 64
+02:00:17.355040 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 29353, seq 1, length 64
+02:00:17.355041 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 29353, seq 1, length 64
+02:00:17.375731 IP 192.168.4.2 > 192.168.4.1: ICMP echo request, id 29380, seq 1, length 64
+02:00:17.375739 IP 192.168.4.1 > 192.168.4.2: ICMP echo reply, id 29380, seq 1, length 64
+02:00:22.409048 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 29391, seq 1, length 64
+02:00:22.409095 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 29391, seq 1, length 64
+02:00:22.409596 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 29391, seq 1, length 64
+02:00:22.409607 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 29391, seq 1, length 64
+02:00:22.427028 IP 192.168.4.2 > 192.168.2.2: ICMP echo request, id 29394, seq 1, length 64
+02:00:22.427041 IP 192.168.2.2 > 192.168.4.2: ICMP echo reply, id 29394, seq 1, length 64
+02:00:22.432572 IP 192.168.4.2 > 192.168.3.1: ICMP echo request, id 29397, seq 1, length 64
+02:00:22.432586 IP 192.168.3.1 > 192.168.4.2: ICMP echo reply, id 29397, seq 1, length 64
+02:00:22.446327 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 29406, seq 1, length 64
+02:00:22.446338 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 29406, seq 1, length 64
+02:00:22.446429 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 29406, seq 1, length 64
+02:00:22.446432 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 29406, seq 1, length 64
+02:00:22.460642 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 29418, seq 1, length 64
+02:00:22.460651 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 29418, seq 1, length 64
+02:00:22.460764 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 29418, seq 1, length 64
+02:00:22.460766 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 29418, seq 1, length 64
+02:00:22.463751 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 29421, seq 1, length 64
+02:00:22.463758 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 29421, seq 1, length 64
+02:00:22.463811 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 29421, seq 1, length 64
+02:00:22.463813 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 29421, seq 1, length 64
+02:00:22.490300 IP 192.168.4.2 > 192.168.4.1: ICMP echo request, id 29448, seq 1, length 64
+02:00:22.490309 IP 192.168.4.1 > 192.168.4.2: ICMP echo reply, id 29448, seq 1, length 64
+02:00:27.503232 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 29459, seq 1, length 64
+02:00:27.503246 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 29459, seq 1, length 64
+02:00:27.503303 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 29459, seq 1, length 64
+02:00:27.503307 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 29459, seq 1, length 64
+02:00:27.508060 IP 192.168.4.2 > 192.168.2.2: ICMP echo request, id 29462, seq 1, length 64
+02:00:27.508070 IP 192.168.2.2 > 192.168.4.2: ICMP echo reply, id 29462, seq 1, length 64
+02:00:27.512818 IP 192.168.4.2 > 192.168.3.1: ICMP echo request, id 29465, seq 1, length 64
+02:00:27.512829 IP 192.168.3.1 > 192.168.4.2: ICMP echo reply, id 29465, seq 1, length 64
+02:00:27.526639 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 29474, seq 1, length 64
+02:00:27.526646 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 29474, seq 1, length 64
+02:00:27.526657 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 29474, seq 1, length 64
+02:00:27.526658 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 29474, seq 1, length 64
+02:00:27.538584 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 29486, seq 1, length 64
+02:00:27.538592 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 29486, seq 1, length 64
+02:00:27.538611 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 29486, seq 1, length 64
+02:00:27.538612 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 29486, seq 1, length 64
+02:00:27.541468 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 29489, seq 1, length 64
+02:00:27.541473 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 29489, seq 1, length 64
+02:00:27.541484 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 29489, seq 1, length 64
+02:00:27.541486 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 29489, seq 1, length 64
+02:00:27.571492 IP 192.168.4.2 > 192.168.4.1: ICMP echo request, id 29519, seq 1, length 64
+02:00:27.571501 IP 192.168.4.1 > 192.168.4.2: ICMP echo reply, id 29519, seq 1, length 64
+
+02:00:37.598221 ARP, Request who-has 192.168.4.2 tell 192.168.4.1, length 28
+02:00:37.598693 ARP, Reply 192.168.4.2 is-at 16:db:37:6e:d2:c7 (oui Unknown), length 28
+02:00:37.646727 ARP, Request who-has 192.168.3.1 tell 192.168.3.2, length 28
+02:00:37.646787 ARP, Reply 192.168.3.1 is-at de:58:f1:38:35:a5 (oui Unknown), length 28
+02:00:37.732700 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 29599, seq 1, length 64
+02:00:37.732716 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 29599, seq 1, length 64
+02:00:37.732740 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 29599, seq 1, length 64
+02:00:37.732743 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 29599, seq 1, length 64
+02:00:37.739577 IP 192.168.4.2 > 192.168.2.2: ICMP echo request, id 29602, seq 1, length 64
+02:00:37.739593 IP 192.168.2.2 > 192.168.4.2: ICMP echo reply, id 29602, seq 1, length 64
+02:00:37.752500 IP 192.168.4.2 > 192.168.3.1: ICMP echo request, id 29605, seq 1, length 64
+02:00:37.752520 IP 192.168.3.1 > 192.168.4.2: ICMP echo reply, id 29605, seq 1, length 64
+02:00:37.768954 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 29614, seq 1, length 64
+02:00:37.768963 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 29614, seq 1, length 64
+02:00:37.768977 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 29614, seq 1, length 64
+02:00:37.768979 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 29614, seq 1, length 64
+02:00:37.789339 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 29626, seq 1, length 64
+02:00:37.789346 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 29626, seq 1, length 64
+02:00:37.789366 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 29626, seq 1, length 64
+02:00:37.789368 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 29626, seq 1, length 64
+02:00:37.792829 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 29629, seq 1, length 64
+02:00:37.792837 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 29629, seq 1, length 64
+02:00:37.792848 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 29629, seq 1, length 64
+02:00:37.792849 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 29629, seq 1, length 64
+02:00:37.822430 IP 192.168.4.2 > 192.168.4.1: ICMP echo request, id 29656, seq 1, length 64
+02:00:37.822437 IP 192.168.4.1 > 192.168.4.2: ICMP echo reply, id 29656, seq 1, length 64
+02:00:38.570441 IP 192.168.1.2 > 192.168.12.1: ICMP echo request, id 29665, seq 1, length 64
+02:00:38.570461 IP 192.168.1.2 > 192.168.12.1: ICMP echo request, id 29665, seq 1, length 64
+02:00:38.586502 IP 192.168.12.1 > 192.168.1.2: ICMP echo reply, id 29665, seq 1, length 64
+02:00:38.586515 IP 192.168.12.1 > 192.168.1.2: ICMP echo reply, id 29665, seq 1, length 64
+02:00:38.598323 IP 192.168.10.2 > 192.168.1.2: ICMP echo request, id 29666, seq 1, length 64
+02:00:38.598330 IP 192.168.10.2 > 192.168.1.2: ICMP echo request, id 29666, seq 1, length 64
+02:00:38.601664 IP 192.168.1.2 > 192.168.10.2: ICMP echo reply, id 29666, seq 1, length 64
+02:00:38.601670 IP 192.168.1.2 > 192.168.10.2: ICMP echo reply, id 29666, seq 1, length 64
+02:00:39.609084 IP 192.168.1.2 > 192.168.12.1: ICMP echo request, id 29669, seq 1, length 64
+02:00:39.609095 IP 192.168.1.2 > 192.168.12.1: ICMP echo request, id 29669, seq 1, length 64
+02:00:39.613563 IP 192.168.12.1 > 192.168.1.2: ICMP echo reply, id 29669, seq 1, length 64
+02:00:39.613570 IP 192.168.12.1 > 192.168.1.2: ICMP echo reply, id 29669, seq 1, length 64
+02:00:39.618896 IP 192.168.10.2 > 192.168.1.2: ICMP echo request, id 29670, seq 1, length 64
+02:00:39.618905 IP 192.168.10.2 > 192.168.1.2: ICMP echo request, id 29670, seq 1, length 64
+02:00:39.619091 IP 192.168.1.2 > 192.168.10.2: ICMP echo reply, id 29670, seq 1, length 64
+02:00:39.619095 IP 192.168.1.2 > 192.168.10.2: ICMP echo reply, id 29670, seq 1, length 64
+02:00:40.629381 IP 192.168.1.2 > 192.168.12.1: ICMP echo request, id 29671, seq 1, length 64
+02:00:40.629396 IP 192.168.1.2 > 192.168.12.1: ICMP echo request, id 29671, seq 1, length 64
+02:00:40.630086 IP 192.168.12.1 > 192.168.1.2: ICMP echo reply, id 29671, seq 1, length 64
+02:00:40.630093 IP 192.168.12.1 > 192.168.1.2: ICMP echo reply, id 29671, seq 1, length 64
+02:00:40.639352 IP 192.168.10.2 > 192.168.1.2: ICMP echo request, id 29672, seq 1, length 64
+02:00:40.639359 IP 192.168.10.2 > 192.168.1.2: ICMP echo request, id 29672, seq 1, length 64
+02:00:40.639389 IP 192.168.1.2 > 192.168.10.2: ICMP echo reply, id 29672, seq 1, length 64
+02:00:40.639391 IP 192.168.1.2 > 192.168.10.2: ICMP echo reply, id 29672, seq 1, length 64
+02:00:41.650708 IP 192.168.1.2 > 192.168.12.1: ICMP echo request, id 29677, seq 1, length 64
+02:00:41.650713 IP 192.168.1.2 > 192.168.12.1: ICMP echo request, id 29677, seq 1, length 64
+02:00:41.650739 IP 192.168.12.1 > 192.168.1.2: ICMP echo reply, id 29677, seq 1, length 64
+02:00:41.650740 IP 192.168.12.1 > 192.168.1.2: ICMP echo reply, id 29677, seq 1, length 64
+02:00:41.654573 IP 192.168.10.2 > 192.168.1.2: ICMP echo request, id 29678, seq 1, length 64
+02:00:41.654576 IP 192.168.10.2 > 192.168.1.2: ICMP echo request, id 29678, seq 1, length 64
+02:00:41.654587 IP 192.168.1.2 > 192.168.10.2: ICMP echo reply, id 29678, seq 1, length 64
+02:00:41.654601 IP 192.168.1.2 > 192.168.10.2: ICMP echo reply, id 29678, seq 1, length 64
+02:00:42.662156 IP 192.168.1.2 > 192.168.12.1: ICMP echo request, id 29679, seq 1, length 64
+02:00:42.662160 IP 192.168.1.2 > 192.168.12.1: ICMP echo request, id 29679, seq 1, length 64
+02:00:42.662186 IP 192.168.12.1 > 192.168.1.2: ICMP echo reply, id 29679, seq 1, length 64
+02:00:42.662188 IP 192.168.12.1 > 192.168.1.2: ICMP echo reply, id 29679, seq 1, length 64
+02:00:42.666468 IP 192.168.10.2 > 192.168.1.2: ICMP echo request, id 29680, seq 1, length 64
+02:00:42.666471 IP 192.168.10.2 > 192.168.1.2: ICMP echo request, id 29680, seq 1, length 64
+02:00:42.666481 IP 192.168.1.2 > 192.168.10.2: ICMP echo reply, id 29680, seq 1, length 64
+02:00:42.666482 IP 192.168.1.2 > 192.168.10.2: ICMP echo reply, id 29680, seq 1, length 64
+02:00:42.734277 ARP, Request who-has 192.168.4.1 tell 192.168.4.2, length 28
+02:00:42.734284 ARP, Reply 192.168.4.1 is-at 56:35:ab:88:19:d3 (oui Unknown), length 28
+02:00:42.836211 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 29681, seq 1, length 64
+02:00:42.836218 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 29681, seq 1, length 64
+02:00:42.836269 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 29681, seq 1, length 64
+02:00:42.836271 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 29681, seq 1, length 64
+02:00:42.843484 IP 192.168.4.2 > 192.168.2.2: ICMP echo request, id 29684, seq 1, length 64
+02:00:42.843491 IP 192.168.2.2 > 192.168.4.2: ICMP echo reply, id 29684, seq 1, length 64
+02:00:42.850468 IP 192.168.4.2 > 192.168.3.1: ICMP echo request, id 29687, seq 1, length 64
+02:00:42.850475 IP 192.168.3.1 > 192.168.4.2: ICMP echo reply, id 29687, seq 1, length 64
+02:00:42.868378 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 29696, seq 1, length 64
+02:00:42.868385 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 29696, seq 1, length 64
+02:00:42.868498 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 29696, seq 1, length 64
+02:00:42.868501 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 29696, seq 1, length 64
+02:00:42.896191 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 29708, seq 1, length 64
+02:00:42.896197 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 29708, seq 1, length 64
+02:00:42.896348 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 29708, seq 1, length 64
+02:00:42.896351 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 29708, seq 1, length 64
+02:00:42.904883 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 29711, seq 1, length 64
+02:00:42.904894 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 29711, seq 1, length 64
+02:00:42.904961 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 29711, seq 1, length 64
+02:00:42.904963 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 29711, seq 1, length 64
+02:00:42.968351 IP 192.168.4.2 > 192.168.4.1: ICMP echo request, id 29738, seq 1, length 64
+02:00:42.968380 IP 192.168.4.1 > 192.168.4.2: ICMP echo reply, id 29738, seq 1, length 64
+02:00:43.675133 IP 192.168.1.2 > 192.168.12.1: ICMP echo request, id 29756, seq 1, length 64
+02:00:43.675138 IP 192.168.1.2 > 192.168.12.1: ICMP echo request, id 29756, seq 1, length 64
+02:00:43.675288 IP 192.168.12.1 > 192.168.1.2: ICMP echo reply, id 29756, seq 1, length 64
+02:00:43.675290 IP 192.168.12.1 > 192.168.1.2: ICMP echo reply, id 29756, seq 1, length 64
+02:00:43.683213 IP 192.168.10.2 > 192.168.1.2: ICMP echo request, id 29757, seq 1, length 64
+02:00:43.683215 IP 192.168.10.2 > 192.168.1.2: ICMP echo request, id 29757, seq 1, length 64
+02:00:43.683284 IP 192.168.1.2 > 192.168.10.2: ICMP echo reply, id 29757, seq 1, length 64
+02:00:43.683286 IP 192.168.1.2 > 192.168.10.2: ICMP echo reply, id 29757, seq 1, length 64
+02:00:44.690926 IP 192.168.1.2 > 192.168.12.1: ICMP echo request, id 29758, seq 1, length 64
+02:00:44.690931 IP 192.168.1.2 > 192.168.12.1: ICMP echo request, id 29758, seq 1, length 64
+02:00:44.690957 IP 192.168.12.1 > 192.168.1.2: ICMP echo reply, id 29758, seq 1, length 64
+02:00:44.690958 IP 192.168.12.1 > 192.168.1.2: ICMP echo reply, id 29758, seq 1, length 64
+02:00:44.694772 IP 192.168.10.2 > 192.168.1.2: ICMP echo request, id 29759, seq 1, length 64
+02:00:44.694775 IP 192.168.10.2 > 192.168.1.2: ICMP echo request, id 29759, seq 1, length 64
+02:00:44.694784 IP 192.168.1.2 > 192.168.10.2: ICMP echo reply, id 29759, seq 1, length 64
+02:00:44.694785 IP 192.168.1.2 > 192.168.10.2: ICMP echo reply, id 29759, seq 1, length 64
+02:00:45.702854 IP 192.168.1.2 > 192.168.12.1: ICMP echo request, id 29760, seq 1, length 64
+02:00:45.702859 IP 192.168.1.2 > 192.168.12.1: ICMP echo request, id 29760, seq 1, length 64
+02:00:45.702885 IP 192.168.12.1 > 192.168.1.2: ICMP echo reply, id 29760, seq 1, length 64
+02:00:45.702886 IP 192.168.12.1 > 192.168.1.2: ICMP echo reply, id 29760, seq 1, length 64
+02:00:45.706689 IP 192.168.10.2 > 192.168.1.2: ICMP echo request, id 29761, seq 1, length 64
+02:00:45.706692 IP 192.168.10.2 > 192.168.1.2: ICMP echo request, id 29761, seq 1, length 64
+02:00:45.706701 IP 192.168.1.2 > 192.168.10.2: ICMP echo reply, id 29761, seq 1, length 64
+02:00:45.706702 IP 192.168.1.2 > 192.168.10.2: ICMP echo reply, id 29761, seq 1, length 64
+02:00:45.810697 IP 192.168.1.2 > 192.168.3.2: ICMP echo request, id 29765, seq 1, length 64
+02:00:45.810716 IP 192.168.1.2 > 192.168.3.2: ICMP echo request, id 29765, seq 1, length 64
+02:00:45.811560 IP 192.168.3.2 > 192.168.1.2: ICMP echo reply, id 29765, seq 1, length 64
+02:00:45.811564 IP 192.168.3.2 > 192.168.1.2: ICMP echo reply, id 29765, seq 1, length 64
+02:00:45.825558 IP 192.168.1.2 > 192.168.5.2: ICMP echo request, id 29772, seq 1, length 64
+02:00:45.825564 IP 192.168.1.2 > 192.168.5.2: ICMP echo request, id 29772, seq 1, length 64
+02:00:45.827432 IP 192.168.5.2 > 192.168.1.2: ICMP echo reply, id 29772, seq 1, length 64
+02:00:45.827436 IP 192.168.5.2 > 192.168.1.2: ICMP echo reply, id 29772, seq 1, length 64
+02:00:45.840952 IP 192.168.1.2 > 192.168.8.2: ICMP echo request, id 29779, seq 1, length 64
+02:00:45.840958 IP 192.168.1.2 > 192.168.8.2: ICMP echo request, id 29779, seq 1, length 64
+02:00:45.844210 IP 192.168.8.2 > 192.168.1.2: ICMP echo reply, id 29779, seq 1, length 64
+02:00:45.844215 IP 192.168.8.2 > 192.168.1.2: ICMP echo reply, id 29779, seq 1, length 64
+02:00:45.860043 IP 192.168.1.2 > 192.168.7.2: ICMP echo request, id 29786, seq 1, length 64
+02:00:45.860050 IP 192.168.1.2 > 192.168.7.2: ICMP echo request, id 29786, seq 1, length 64
+02:00:45.863009 IP 192.168.7.2 > 192.168.1.2: ICMP echo reply, id 29786, seq 1, length 64
+02:00:45.863012 IP 192.168.7.2 > 192.168.1.2: ICMP echo reply, id 29786, seq 1, length 64
+02:00:45.878961 IP 192.168.1.2 > 192.168.12.2: ICMP echo request, id 29793, seq 1, length 64
+02:00:45.878967 IP 192.168.1.2 > 192.168.12.2: ICMP echo request, id 29793, seq 1, length 64
+02:00:45.883816 IP 192.168.12.2 > 192.168.1.2: ICMP echo reply, id 29793, seq 1, length 64
+02:00:45.883820 IP 192.168.12.2 > 192.168.1.2: ICMP echo reply, id 29793, seq 1, length 64
+02:00:45.898839 IP 192.168.1.2 > 192.168.12.3: ICMP echo request, id 29800, seq 1, length 64
+02:00:45.898845 IP 192.168.1.2 > 192.168.12.3: ICMP echo request, id 29800, seq 1, length 64
+02:00:45.904314 IP 192.168.12.3 > 192.168.1.2: ICMP echo reply, id 29800, seq 1, length 64
+02:00:45.904319 IP 192.168.12.3 > 192.168.1.2: ICMP echo reply, id 29800, seq 1, length 64
+02:00:45.923143 IP 192.168.1.2 > 192.168.13.2: ICMP echo request, id 29807, seq 1, length 64
+02:00:45.923150 IP 192.168.1.2 > 192.168.13.2: ICMP echo request, id 29807, seq 1, length 64
+02:00:45.928754 IP 192.168.13.2 > 192.168.1.2: ICMP echo reply, id 29807, seq 1, length 64
+02:00:45.928761 IP 192.168.13.2 > 192.168.1.2: ICMP echo reply, id 29807, seq 1, length 64
+02:00:45.945787 IP 192.168.1.2.45975 > 192.168.3.2.http: Flags [S], seq 1119315815, win 5840, options [mss 1460], length 0
+02:00:45.945799 IP 192.168.2.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:45.948970 IP 192.168.1.2.41574 > 192.168.3.2.http: Flags [S], seq 1265215685, win 5840, options [mss 1460], length 0
+02:00:45.948992 IP 192.168.2.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:45.949033 IP 192.168.1.2.46593 > 192.168.3.2.http: Flags [S], seq 4210704162, win 5840, options [mss 1460], length 0
+02:00:45.949037 IP 192.168.2.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:45.949065 IP 192.168.1.2.34063 > 192.168.3.2.http: Flags [S], seq 4157521299, win 5840, options [mss 1460], length 0
+02:00:45.949067 IP 192.168.1.2.34063 > 192.168.3.2.http: Flags [S], seq 4157521299, win 5840, options [mss 1460], length 0
+02:00:45.949094 IP 192.168.1.2.51491 > 192.168.3.2.http: Flags [S], seq 2056113444, win 5840, options [mss 1460], length 0
+02:00:45.949095 IP 192.168.1.2.51491 > 192.168.3.2.http: Flags [S], seq 2056113444, win 5840, options [mss 1460], length 0
+02:00:45.949119 IP 192.168.1.2.41699 > 192.168.3.2.http: Flags [S], seq 3859397352, win 5840, options [mss 1460], length 0
+02:00:45.949120 IP 192.168.1.2.41699 > 192.168.3.2.http: Flags [S], seq 3859397352, win 5840, options [mss 1460], length 0
+02:00:45.949149 IP 192.168.1.2.42300 > 192.168.3.2.http: Flags [S], seq 413126945, win 5840, options [mss 1460], length 0
+02:00:45.949150 IP 192.168.1.2.42300 > 192.168.3.2.http: Flags [S], seq 413126945, win 5840, options [mss 1460], length 0
+02:00:45.951703 IP 192.168.1.2.45962 > 192.168.3.2.http: Flags [S], seq 425394701, win 5840, options [mss 1460], length 0
+02:00:45.951705 IP 192.168.1.2.45962 > 192.168.3.2.http: Flags [S], seq 425394701, win 5840, options [mss 1460], length 0
+02:00:45.951729 IP 192.168.1.2.55485 > 192.168.3.2.http: Flags [S], seq 2667480534, win 5840, options [mss 1460], length 0
+02:00:45.951731 IP 192.168.1.2.55485 > 192.168.3.2.http: Flags [S], seq 2667480534, win 5840, options [mss 1460], length 0
+02:00:45.951754 IP 192.168.1.2.49231 > 192.168.3.2.http: Flags [S], seq 2200027008, win 5840, options [mss 1460], length 0
+02:00:45.951755 IP 192.168.1.2.49231 > 192.168.3.2.http: Flags [S], seq 2200027008, win 5840, options [mss 1460], length 0
+02:00:45.951779 IP 192.168.1.2.52108 > 192.168.3.2.http: Flags [S], seq 483125927, win 5840, options [mss 1460], length 0
+02:00:45.951780 IP 192.168.1.2.52108 > 192.168.3.2.http: Flags [S], seq 483125927, win 5840, options [mss 1460], length 0
+02:00:45.951803 IP 192.168.1.2.52835 > 192.168.3.2.http: Flags [S], seq 325410660, win 5840, options [mss 1460], length 0
+02:00:45.951804 IP 192.168.1.2.52835 > 192.168.3.2.http: Flags [S], seq 325410660, win 5840, options [mss 1460], length 0
+02:00:45.951827 IP 192.168.1.2.41387 > 192.168.3.2.http: Flags [S], seq 2568753471, win 5840, options [mss 1460], length 0
+02:00:45.951828 IP 192.168.1.2.41387 > 192.168.3.2.http: Flags [S], seq 2568753471, win 5840, options [mss 1460], length 0
+02:00:45.951856 IP 192.168.1.2.36865 > 192.168.3.2.http: Flags [S], seq 520200330, win 5840, options [mss 1460], length 0
+02:00:45.951858 IP 192.168.1.2.36865 > 192.168.3.2.http: Flags [S], seq 520200330, win 5840, options [mss 1460], length 0
+02:00:45.953949 IP 192.168.3.2.http > 192.168.1.2.34063: Flags [R.], seq 0, ack 4157521300, win 0, length 0
+02:00:45.953952 IP 192.168.3.2.http > 192.168.1.2.34063: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:45.953993 IP 192.168.3.2.http > 192.168.1.2.51491: Flags [R.], seq 0, ack 2056113445, win 0, length 0
+02:00:45.953994 IP 192.168.3.2.http > 192.168.1.2.51491: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:45.954022 IP 192.168.3.2.http > 192.168.1.2.41699: Flags [R.], seq 0, ack 3859397353, win 0, length 0
+02:00:45.954024 IP 192.168.3.2.http > 192.168.1.2.41699: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:45.954049 IP 192.168.3.2.http > 192.168.1.2.42300: Flags [R.], seq 0, ack 413126946, win 0, length 0
+02:00:45.954050 IP 192.168.3.2.http > 192.168.1.2.42300: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:45.954286 IP 192.168.1.2.56848 > 192.168.3.2.http: Flags [S], seq 1937218906, win 5840, options [mss 1460], length 0
+02:00:45.954288 IP 192.168.1.2.56848 > 192.168.3.2.http: Flags [S], seq 1937218906, win 5840, options [mss 1460], length 0
+02:00:45.957829 IP 192.168.3.2.http > 192.168.1.2.45962: Flags [R.], seq 0, ack 425394702, win 0, length 0
+02:00:45.957833 IP 192.168.3.2.http > 192.168.1.2.45962: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:45.957942 IP 192.168.3.2.http > 192.168.1.2.55485: Flags [R.], seq 0, ack 2667480535, win 0, length 0
+02:00:45.957945 IP 192.168.3.2.http > 192.168.1.2.55485: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:45.957973 IP 192.168.3.2.http > 192.168.1.2.49231: Flags [R.], seq 0, ack 2200027009, win 0, length 0
+02:00:45.957975 IP 192.168.3.2.http > 192.168.1.2.49231: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:45.958000 IP 192.168.3.2.http > 192.168.1.2.52108: Flags [R.], seq 0, ack 483125928, win 0, length 0
+02:00:45.958001 IP 192.168.3.2.http > 192.168.1.2.52108: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:45.958025 IP 192.168.3.2.http > 192.168.1.2.52835: Flags [R.], seq 0, ack 325410661, win 0, length 0
+02:00:45.958027 IP 192.168.3.2.http > 192.168.1.2.52835: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:45.958050 IP 192.168.3.2.http > 192.168.1.2.41387: Flags [R.], seq 0, ack 2568753472, win 0, length 0
+02:00:45.958052 IP 192.168.3.2.http > 192.168.1.2.41387: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:45.958075 IP 192.168.3.2.http > 192.168.1.2.36865: Flags [R.], seq 0, ack 520200331, win 0, length 0
+02:00:45.958076 IP 192.168.3.2.http > 192.168.1.2.36865: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:45.958161 IP 192.168.1.2.58209 > 192.168.3.2.http: Flags [S], seq 1969183932, win 5840, options [mss 1460], length 0
+02:00:45.958163 IP 192.168.1.2.58209 > 192.168.3.2.http: Flags [S], seq 1969183932, win 5840, options [mss 1460], length 0
+02:00:45.958190 IP 192.168.1.2.40491 > 192.168.3.2.http: Flags [S], seq 308202331, win 5840, options [mss 1460], length 0
+02:00:45.958192 IP 192.168.1.2.40491 > 192.168.3.2.http: Flags [S], seq 308202331, win 5840, options [mss 1460], length 0
+02:00:45.961306 IP 192.168.3.2.http > 192.168.1.2.56848: Flags [R.], seq 0, ack 1937218907, win 0, length 0
+02:00:45.961309 IP 192.168.3.2.http > 192.168.1.2.56848: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:45.961535 IP 192.168.1.2.34653 > 192.168.3.2.http: Flags [S], seq 3256051149, win 5840, options [mss 1460], length 0
+02:00:45.961537 IP 192.168.1.2.34653 > 192.168.3.2.http: Flags [S], seq 3256051149, win 5840, options [mss 1460], length 0
+02:00:45.961565 IP 192.168.1.2.34527 > 192.168.3.2.http: Flags [S], seq 3876467568, win 5840, options [mss 1460], length 0
+02:00:45.961566 IP 192.168.1.2.34527 > 192.168.3.2.http: Flags [S], seq 3876467568, win 5840, options [mss 1460], length 0
+02:00:45.963469 IP 192.168.3.2.http > 192.168.1.2.58209: Flags [R.], seq 0, ack 1969183933, win 0, length 0
+02:00:45.963475 IP 192.168.3.2.http > 192.168.1.2.58209: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:45.964683 IP 192.168.3.2.http > 192.168.1.2.40491: Flags [R.], seq 0, ack 308202332, win 0, length 0
+02:00:45.964687 IP 192.168.3.2.http > 192.168.1.2.40491: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:45.966090 IP 192.168.3.2.http > 192.168.1.2.34653: Flags [R.], seq 0, ack 3256051150, win 0, length 0
+02:00:45.966093 IP 192.168.3.2.http > 192.168.1.2.34653: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:45.966137 IP 192.168.3.2.http > 192.168.1.2.34527: Flags [R.], seq 0, ack 3876467569, win 0, length 0
+02:00:45.966138 IP 192.168.3.2.http > 192.168.1.2.34527: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:45.981669 IP 192.168.1.2.53220 > 192.168.5.2.http: Flags [S], seq 250332275, win 5840, options [mss 1460], length 0
+02:00:45.981680 IP 192.168.2.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:45.984864 IP 192.168.1.2.40860 > 192.168.5.2.http: Flags [S], seq 1383117975, win 5840, options [mss 1460], length 0
+02:00:45.984871 IP 192.168.1.2.40860 > 192.168.5.2.http: Flags [S], seq 1383117975, win 5840, options [mss 1460], length 0
+02:00:45.984914 IP 192.168.1.2.41833 > 192.168.5.2.http: Flags [S], seq 2989081824, win 5840, options [mss 1460], length 0
+02:00:45.984922 IP 192.168.2.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:45.984956 IP 192.168.1.2.50205 > 192.168.5.2.http: Flags [S], seq 1453488964, win 5840, options [mss 1460], length 0
+02:00:45.984958 IP 192.168.1.2.50205 > 192.168.5.2.http: Flags [S], seq 1453488964, win 5840, options [mss 1460], length 0
+02:00:45.984990 IP 192.168.1.2.60958 > 192.168.5.2.http: Flags [S], seq 2475542623, win 5840, options [mss 1460], length 0
+02:00:45.984991 IP 192.168.1.2.60958 > 192.168.5.2.http: Flags [S], seq 2475542623, win 5840, options [mss 1460], length 0
+02:00:45.987744 IP 192.168.1.2.50824 > 192.168.5.2.http: Flags [S], seq 879296933, win 5840, options [mss 1460], length 0
+02:00:45.987748 IP 192.168.1.2.50824 > 192.168.5.2.http: Flags [S], seq 879296933, win 5840, options [mss 1460], length 0
+02:00:45.987775 IP 192.168.1.2.54846 > 192.168.5.2.http: Flags [S], seq 1632331013, win 5840, options [mss 1460], length 0
+02:00:45.987776 IP 192.168.1.2.54846 > 192.168.5.2.http: Flags [S], seq 1632331013, win 5840, options [mss 1460], length 0
+02:00:45.987800 IP 192.168.1.2.44798 > 192.168.5.2.http: Flags [S], seq 1960875704, win 5840, options [mss 1460], length 0
+02:00:45.987801 IP 192.168.1.2.44798 > 192.168.5.2.http: Flags [S], seq 1960875704, win 5840, options [mss 1460], length 0
+02:00:45.987824 IP 192.168.1.2.56857 > 192.168.5.2.http: Flags [S], seq 1576223386, win 5840, options [mss 1460], length 0
+02:00:45.987830 IP 192.168.2.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:45.987855 IP 192.168.1.2.43359 > 192.168.5.2.http: Flags [S], seq 3939292685, win 5840, options [mss 1460], length 0
+02:00:45.987856 IP 192.168.1.2.43359 > 192.168.5.2.http: Flags [S], seq 3939292685, win 5840, options [mss 1460], length 0
+02:00:45.987879 IP 192.168.1.2.45460 > 192.168.5.2.http: Flags [S], seq 1583341115, win 5840, options [mss 1460], length 0
+02:00:45.987881 IP 192.168.1.2.45460 > 192.168.5.2.http: Flags [S], seq 1583341115, win 5840, options [mss 1460], length 0
+02:00:45.987903 IP 192.168.1.2.37231 > 192.168.5.2.http: Flags [S], seq 974778665, win 5840, options [mss 1460], length 0
+02:00:45.987904 IP 192.168.1.2.37231 > 192.168.5.2.http: Flags [S], seq 974778665, win 5840, options [mss 1460], length 0
+02:00:45.987932 IP 192.168.1.2.54928 > 192.168.5.2.http: Flags [S], seq 2123044814, win 5840, options [mss 1460], length 0
+02:00:45.987933 IP 192.168.1.2.54928 > 192.168.5.2.http: Flags [S], seq 2123044814, win 5840, options [mss 1460], length 0
+02:00:45.990919 IP 192.168.1.2.39556 > 192.168.5.2.http: Flags [S], seq 154109412, win 5840, options [mss 1460], length 0
+02:00:45.990921 IP 192.168.1.2.39556 > 192.168.5.2.http: Flags [S], seq 154109412, win 5840, options [mss 1460], length 0
+02:00:45.990985 IP 192.168.1.2.54512 > 192.168.5.2.http: Flags [S], seq 3917601032, win 5840, options [mss 1460], length 0
+02:00:45.991001 IP 192.168.1.2.54512 > 192.168.5.2.http: Flags [S], seq 3917601032, win 5840, options [mss 1460], length 0
+02:00:45.993974 IP 192.168.4.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:45.993977 IP 192.168.4.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:45.994011 IP 192.168.4.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:45.994013 IP 192.168.4.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:45.994849 IP 192.168.1.2.41616 > 192.168.5.2.http: Flags [S], seq 1229593397, win 5840, options [mss 1460], length 0
+02:00:45.994851 IP 192.168.1.2.41616 > 192.168.5.2.http: Flags [S], seq 1229593397, win 5840, options [mss 1460], length 0
+02:00:45.995220 IP 192.168.1.2.46288 > 192.168.5.2.http: Flags [S], seq 2963735279, win 5840, options [mss 1460], length 0
+02:00:45.995224 IP 192.168.1.2.46288 > 192.168.5.2.http: Flags [S], seq 2963735279, win 5840, options [mss 1460], length 0
+02:00:45.998521 IP 192.168.4.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:45.998528 IP 192.168.4.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:45.998572 IP 192.168.5.2.http > 192.168.1.2.40860: Flags [R.], seq 0, ack 1383117976, win 0, length 0
+02:00:45.998574 IP 192.168.5.2.http > 192.168.1.2.40860: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:45.998603 IP 192.168.5.2.http > 192.168.1.2.50205: Flags [R.], seq 0, ack 1453488965, win 0, length 0
+02:00:45.998605 IP 192.168.5.2.http > 192.168.1.2.50205: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:45.998693 IP 192.168.5.2.http > 192.168.1.2.60958: Flags [R.], seq 0, ack 2475542624, win 0, length 0
+02:00:45.998695 IP 192.168.5.2.http > 192.168.1.2.60958: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:45.998995 IP 192.168.1.2.43133 > 192.168.5.2.http: Flags [S], seq 2663118009, win 5840, options [mss 1460], length 0
+02:00:45.998997 IP 192.168.1.2.43133 > 192.168.5.2.http: Flags [S], seq 2663118009, win 5840, options [mss 1460], length 0
+02:00:46.001392 IP 192.168.5.2.http > 192.168.1.2.54846: Flags [R.], seq 0, ack 1632331014, win 0, length 0
+02:00:46.001396 IP 192.168.5.2.http > 192.168.1.2.54846: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:46.001438 IP 192.168.5.2.http > 192.168.1.2.44798: Flags [R.], seq 0, ack 1960875705, win 0, length 0
+02:00:46.001441 IP 192.168.5.2.http > 192.168.1.2.44798: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:46.001468 IP 192.168.5.2.http > 192.168.1.2.45460: Flags [R.], seq 0, ack 1583341116, win 0, length 0
+02:00:46.001470 IP 192.168.5.2.http > 192.168.1.2.45460: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:46.001495 IP 192.168.5.2.http > 192.168.1.2.37231: Flags [R.], seq 0, ack 974778666, win 0, length 0
+02:00:46.001496 IP 192.168.5.2.http > 192.168.1.2.37231: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:46.001520 IP 192.168.5.2.http > 192.168.1.2.54928: Flags [R.], seq 0, ack 2123044815, win 0, length 0
+02:00:46.001522 IP 192.168.5.2.http > 192.168.1.2.54928: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:46.001546 IP 192.168.5.2.http > 192.168.1.2.54512: Flags [R.], seq 0, ack 3917601033, win 0, length 0
+02:00:46.001547 IP 192.168.5.2.http > 192.168.1.2.54512: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:46.001880 IP 192.168.1.2.37255 > 192.168.5.2.http: Flags [S], seq 911742409, win 5840, options [mss 1460], length 0
+02:00:46.001882 IP 192.168.1.2.37255 > 192.168.5.2.http: Flags [S], seq 911742409, win 5840, options [mss 1460], length 0
+02:00:46.001906 IP 192.168.1.2.54707 > 192.168.5.2.http: Flags [S], seq 1114041011, win 5840, options [mss 1460], length 0
+02:00:46.001908 IP 192.168.1.2.54707 > 192.168.5.2.http: Flags [S], seq 1114041011, win 5840, options [mss 1460], length 0
+02:00:46.001932 IP 192.168.1.2.52605 > 192.168.5.2.http: Flags [S], seq 1085785637, win 5840, options [mss 1460], length 0
+02:00:46.001933 IP 192.168.1.2.52605 > 192.168.5.2.http: Flags [S], seq 1085785637, win 5840, options [mss 1460], length 0
+02:00:46.006242 IP 192.168.5.2.http > 192.168.1.2.41616: Flags [R.], seq 0, ack 1229593398, win 0, length 0
+02:00:46.006244 IP 192.168.5.2.http > 192.168.1.2.41616: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:46.006281 IP 192.168.5.2.http > 192.168.1.2.46288: Flags [R.], seq 0, ack 2963735280, win 0, length 0
+02:00:46.006283 IP 192.168.5.2.http > 192.168.1.2.46288: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:46.008178 IP 192.168.5.2.http > 192.168.1.2.43133: Flags [R.], seq 0, ack 2663118010, win 0, length 0
+02:00:46.008182 IP 192.168.5.2.http > 192.168.1.2.43133: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:46.009811 IP 192.168.5.2.http > 192.168.1.2.37255: Flags [R.], seq 0, ack 911742410, win 0, length 0
+02:00:46.009814 IP 192.168.5.2.http > 192.168.1.2.37255: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:46.009852 IP 192.168.5.2.http > 192.168.1.2.54707: Flags [R.], seq 0, ack 1114041012, win 0, length 0
+02:00:46.009854 IP 192.168.5.2.http > 192.168.1.2.54707: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:46.009885 IP 192.168.5.2.http > 192.168.1.2.52605: Flags [R.], seq 0, ack 1085785638, win 0, length 0
+02:00:46.009887 IP 192.168.5.2.http > 192.168.1.2.52605: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:46.009973 IP 192.168.1.2.53065 > 192.168.5.2.http: Flags [S], seq 4205187198, win 5840, options [mss 1460], length 0
+02:00:46.009975 IP 192.168.1.2.53065 > 192.168.5.2.http: Flags [S], seq 4205187198, win 5840, options [mss 1460], length 0
+02:00:46.013964 IP 192.168.5.2.http > 192.168.1.2.53065: Flags [R.], seq 0, ack 4205187199, win 0, length 0
+02:00:46.013969 IP 192.168.5.2.http > 192.168.1.2.53065: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:46.026382 IP 192.168.1.2.39028 > 192.168.8.2.http: Flags [S], seq 1027102971, win 5840, options [mss 1460], length 0
+02:00:46.027373 IP 192.168.1.2.58609 > 192.168.8.2.http: Flags [S], seq 1549244201, win 5840, options [mss 1460], length 0
+02:00:46.029751 IP 192.168.1.2.52837 > 192.168.8.2.http: Flags [S], seq 3831361693, win 5840, options [mss 1460], length 0
+02:00:46.029768 IP 192.168.1.2.49679 > 192.168.8.2.http: Flags [S], seq 427251176, win 5840, options [mss 1460], length 0
+02:00:46.029769 IP 192.168.1.2.49679 > 192.168.8.2.http: Flags [S], seq 427251176, win 5840, options [mss 1460], length 0
+02:00:46.029805 IP 192.168.1.2.54496 > 192.168.8.2.http: Flags [S], seq 1434548092, win 5840, options [mss 1460], length 0
+02:00:46.029807 IP 192.168.1.2.54496 > 192.168.8.2.http: Flags [S], seq 1434548092, win 5840, options [mss 1460], length 0
+02:00:46.029833 IP 192.168.1.2.34207 > 192.168.8.2.http: Flags [S], seq 3338198682, win 5840, options [mss 1460], length 0
+02:00:46.029834 IP 192.168.1.2.34207 > 192.168.8.2.http: Flags [S], seq 3338198682, win 5840, options [mss 1460], length 0
+02:00:46.029859 IP 192.168.1.2.38758 > 192.168.8.2.http: Flags [S], seq 3354760244, win 5840, options [mss 1460], length 0
+02:00:46.029860 IP 192.168.1.2.38758 > 192.168.8.2.http: Flags [S], seq 3354760244, win 5840, options [mss 1460], length 0
+02:00:46.029889 IP 192.168.1.2.54542 > 192.168.8.2.http: Flags [S], seq 3038669587, win 5840, options [mss 1460], length 0
+02:00:46.029890 IP 192.168.1.2.54542 > 192.168.8.2.http: Flags [S], seq 3038669587, win 5840, options [mss 1460], length 0
+02:00:46.031088 IP 192.168.1.2.44716 > 192.168.8.2.http: Flags [S], seq 3166756564, win 5840, options [mss 1460], length 0
+02:00:46.031091 IP 192.168.1.2.44716 > 192.168.8.2.http: Flags [S], seq 3166756564, win 5840, options [mss 1460], length 0
+02:00:46.031117 IP 192.168.1.2.53665 > 192.168.8.2.http: Flags [S], seq 2477959066, win 5840, options [mss 1460], length 0
+02:00:46.031118 IP 192.168.1.2.53665 > 192.168.8.2.http: Flags [S], seq 2477959066, win 5840, options [mss 1460], length 0
+02:00:46.031142 IP 192.168.1.2.50032 > 192.168.8.2.http: Flags [S], seq 1297927759, win 5840, options [mss 1460], length 0
+02:00:46.031143 IP 192.168.1.2.50032 > 192.168.8.2.http: Flags [S], seq 1297927759, win 5840, options [mss 1460], length 0
+02:00:46.031166 IP 192.168.1.2.56291 > 192.168.8.2.http: Flags [S], seq 3989770962, win 5840, options [mss 1460], length 0
+02:00:46.031168 IP 192.168.1.2.56291 > 192.168.8.2.http: Flags [S], seq 3989770962, win 5840, options [mss 1460], length 0
+02:00:46.031195 IP 192.168.1.2.44092 > 192.168.8.2.http: Flags [S], seq 2967049938, win 5840, options [mss 1460], length 0
+02:00:46.031197 IP 192.168.1.2.44092 > 192.168.8.2.http: Flags [S], seq 2967049938, win 5840, options [mss 1460], length 0
+02:00:46.031870 IP 192.168.4.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:46.031873 IP 192.168.4.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:46.031910 IP 192.168.4.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:46.031912 IP 192.168.4.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:46.031989 IP 192.168.4.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:46.031992 IP 192.168.4.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:46.035769 IP 192.168.6.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:46.035772 IP 192.168.6.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:46.036076 IP 192.168.6.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:46.036079 IP 192.168.6.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:46.036107 IP 192.168.6.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:46.036108 IP 192.168.6.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:46.036523 IP 192.168.1.2.50441 > 192.168.8.2.http: Flags [S], seq 717175158, win 5840, options [mss 1460], length 0
+02:00:46.036525 IP 192.168.1.2.50441 > 192.168.8.2.http: Flags [S], seq 717175158, win 5840, options [mss 1460], length 0
+02:00:46.036558 IP 192.168.1.2.48310 > 192.168.8.2.http: Flags [S], seq 3771520560, win 5840, options [mss 1460], length 0
+02:00:46.036560 IP 192.168.1.2.48310 > 192.168.8.2.http: Flags [S], seq 3771520560, win 5840, options [mss 1460], length 0
+02:00:46.036687 IP 192.168.1.2.55589 > 192.168.8.2.http: Flags [S], seq 2985411112, win 5840, options [mss 1460], length 0
+02:00:46.036689 IP 192.168.1.2.55589 > 192.168.8.2.http: Flags [S], seq 2985411112, win 5840, options [mss 1460], length 0
+02:00:46.038471 IP 192.168.8.2.http > 192.168.1.2.38758: Flags [R.], seq 0, ack 3354760245, win 0, length 0
+02:00:46.038474 IP 192.168.8.2.http > 192.168.1.2.38758: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:46.038508 IP 192.168.8.2.http > 192.168.1.2.54542: Flags [R.], seq 0, ack 3038669588, win 0, length 0
+02:00:46.038510 IP 192.168.8.2.http > 192.168.1.2.54542: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:46.038534 IP 192.168.8.2.http > 192.168.1.2.44716: Flags [R.], seq 0, ack 3166756565, win 0, length 0
+02:00:46.038536 IP 192.168.8.2.http > 192.168.1.2.44716: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:46.038559 IP 192.168.8.2.http > 192.168.1.2.50032: Flags [R.], seq 0, ack 1297927760, win 0, length 0
+02:00:46.038561 IP 192.168.8.2.http > 192.168.1.2.50032: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:46.041645 IP 192.168.1.2.52666 > 192.168.8.2.http: Flags [S], seq 803726651, win 5840, options [mss 1460], length 0
+02:00:46.041650 IP 192.168.1.2.52666 > 192.168.8.2.http: Flags [S], seq 803726651, win 5840, options [mss 1460], length 0
+02:00:46.042901 IP 192.168.1.2.47920 > 192.168.8.2.http: Flags [S], seq 3559036100, win 5840, options [mss 1460], length 0
+02:00:46.042904 IP 192.168.1.2.47920 > 192.168.8.2.http: Flags [S], seq 3559036100, win 5840, options [mss 1460], length 0
+02:00:46.042935 IP 192.168.1.2.35862 > 192.168.8.2.http: Flags [S], seq 899597730, win 5840, options [mss 1460], length 0
+02:00:46.042937 IP 192.168.1.2.35862 > 192.168.8.2.http: Flags [S], seq 899597730, win 5840, options [mss 1460], length 0
+02:00:46.044191 IP 192.168.8.2.http > 192.168.1.2.50441: Flags [R.], seq 0, ack 717175159, win 0, length 0
+02:00:46.044193 IP 192.168.8.2.http > 192.168.1.2.50441: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:46.045651 IP 192.168.8.2.http > 192.168.1.2.48310: Flags [R.], seq 0, ack 3771520561, win 0, length 0
+02:00:46.045654 IP 192.168.8.2.http > 192.168.1.2.48310: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:46.045822 IP 192.168.8.2.http > 192.168.1.2.55589: Flags [R.], seq 0, ack 2985411113, win 0, length 0
+02:00:46.045825 IP 192.168.8.2.http > 192.168.1.2.55589: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:46.047424 IP 192.168.8.2.http > 192.168.1.2.52666: Flags [R.], seq 0, ack 803726652, win 0, length 0
+02:00:46.047428 IP 192.168.8.2.http > 192.168.1.2.52666: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:46.048712 IP 192.168.8.2.http > 192.168.1.2.47920: Flags [R.], seq 0, ack 3559036101, win 0, length 0
+02:00:46.048715 IP 192.168.8.2.http > 192.168.1.2.47920: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:46.048748 IP 192.168.8.2.http > 192.168.1.2.35862: Flags [R.], seq 0, ack 899597731, win 0, length 0
+02:00:46.048750 IP 192.168.8.2.http > 192.168.1.2.35862: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:46.713400 IP 192.168.1.2 > 192.168.12.1: ICMP echo request, id 29817, seq 1, length 64
+02:00:46.713413 IP 192.168.1.2 > 192.168.12.1: ICMP echo request, id 29817, seq 1, length 64
+02:00:46.714056 IP 192.168.12.1 > 192.168.1.2: ICMP echo reply, id 29817, seq 1, length 64
+02:00:46.714062 IP 192.168.12.1 > 192.168.1.2: ICMP echo reply, id 29817, seq 1, length 64
+02:00:46.724393 IP 192.168.10.2 > 192.168.1.2: ICMP echo request, id 29818, seq 1, length 64
+02:00:46.724402 IP 192.168.10.2 > 192.168.1.2: ICMP echo request, id 29818, seq 1, length 64
+02:00:46.724640 IP 192.168.1.2 > 192.168.10.2: ICMP echo reply, id 29818, seq 1, length 64
+02:00:46.724684 IP 192.168.1.2 > 192.168.10.2: ICMP echo reply, id 29818, seq 1, length 64
+02:00:47.057104 IP 192.168.1.2.54830 > 192.168.7.2.http: Flags [S], seq 1902929414, win 5840, options [mss 1460], length 0
+02:00:47.057116 IP 192.168.1.2.54830 > 192.168.7.2.http: Flags [S], seq 1902929414, win 5840, options [mss 1460], length 0
+02:00:47.061171 IP 192.168.1.2.39009 > 192.168.7.2.http: Flags [S], seq 106581316, win 5840, options [mss 1460], length 0
+02:00:47.061179 IP 192.168.1.2.39009 > 192.168.7.2.http: Flags [S], seq 106581316, win 5840, options [mss 1460], length 0
+02:00:47.061360 IP 192.168.1.2.48331 > 192.168.7.2.http: Flags [S], seq 2358405418, win 5840, options [mss 1460], length 0
+02:00:47.061377 IP 192.168.2.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:47.061485 IP 192.168.1.2.35086 > 192.168.7.2.http: Flags [S], seq 3046507965, win 5840, options [mss 1460], length 0
+02:00:47.061490 IP 192.168.1.2.35086 > 192.168.7.2.http: Flags [S], seq 3046507965, win 5840, options [mss 1460], length 0
+02:00:47.061561 IP 192.168.1.2.36964 > 192.168.7.2.http: Flags [S], seq 2261189922, win 5840, options [mss 1460], length 0
+02:00:47.061566 IP 192.168.1.2.36964 > 192.168.7.2.http: Flags [S], seq 2261189922, win 5840, options [mss 1460], length 0
+02:00:47.061668 IP 192.168.1.2.37739 > 192.168.7.2.http: Flags [S], seq 2120049916, win 5840, options [mss 1460], length 0
+02:00:47.061675 IP 192.168.1.2.37739 > 192.168.7.2.http: Flags [S], seq 2120049916, win 5840, options [mss 1460], length 0
+02:00:47.061799 IP 192.168.1.2.34718 > 192.168.7.2.http: Flags [S], seq 2531538605, win 5840, options [mss 1460], length 0
+02:00:47.061807 IP 192.168.1.2.34718 > 192.168.7.2.http: Flags [S], seq 2531538605, win 5840, options [mss 1460], length 0
+02:00:47.061927 IP 192.168.1.2.35072 > 192.168.7.2.http: Flags [S], seq 2697560751, win 5840, options [mss 1460], length 0
+02:00:47.061934 IP 192.168.1.2.35072 > 192.168.7.2.http: Flags [S], seq 2697560751, win 5840, options [mss 1460], length 0
+02:00:47.062003 IP 192.168.1.2.40776 > 192.168.7.2.http: Flags [S], seq 875260817, win 5840, options [mss 1460], length 0
+02:00:47.062008 IP 192.168.1.2.40776 > 192.168.7.2.http: Flags [S], seq 875260817, win 5840, options [mss 1460], length 0
+02:00:47.062218 IP 192.168.1.2.55139 > 192.168.7.2.http: Flags [S], seq 3665366939, win 5840, options [mss 1460], length 0
+02:00:47.062226 IP 192.168.1.2.55139 > 192.168.7.2.http: Flags [S], seq 3665366939, win 5840, options [mss 1460], length 0
+02:00:47.062382 IP 192.168.1.2.47956 > 192.168.7.2.http: Flags [S], seq 3693556601, win 5840, options [mss 1460], length 0
+02:00:47.062431 IP 192.168.1.2.37527 > 192.168.7.2.http: Flags [S], seq 1637635753, win 5840, options [mss 1460], length 0
+02:00:47.062435 IP 192.168.1.2.37527 > 192.168.7.2.http: Flags [S], seq 1637635753, win 5840, options [mss 1460], length 0
+02:00:47.062556 IP 192.168.1.2.40723 > 192.168.7.2.http: Flags [S], seq 638911126, win 5840, options [mss 1460], length 0
+02:00:47.062563 IP 192.168.1.2.40723 > 192.168.7.2.http: Flags [S], seq 638911126, win 5840, options [mss 1460], length 0
+02:00:47.062683 IP 192.168.1.2.40843 > 192.168.7.2.http: Flags [S], seq 3799969915, win 5840, options [mss 1460], length 0
+02:00:47.075026 IP 192.168.4.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:47.075039 IP 192.168.4.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:47.079282 IP 192.168.6.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:47.079291 IP 192.168.6.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:47.079971 IP 192.168.6.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:47.079978 IP 192.168.6.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:47.080053 IP 192.168.6.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:47.080057 IP 192.168.6.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:47.080127 IP 192.168.7.2.http > 192.168.1.2.54830: Flags [R.], seq 0, ack 1902929415, win 0, length 0
+02:00:47.080132 IP 192.168.7.2.http > 192.168.1.2.54830: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:47.081482 IP 192.168.1.2.44861 > 192.168.7.2.http: Flags [S], seq 2504471192, win 5840, options [mss 1460], length 0
+02:00:47.081490 IP 192.168.1.2.44861 > 192.168.7.2.http: Flags [S], seq 2504471192, win 5840, options [mss 1460], length 0
+02:00:47.087420 IP 192.168.7.2.http > 192.168.1.2.37739: Flags [R.], seq 0, ack 2120049917, win 0, length 0
+02:00:47.087428 IP 192.168.7.2.http > 192.168.1.2.37739: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:47.087508 IP 192.168.7.2.http > 192.168.1.2.34718: Flags [R.], seq 0, ack 2531538606, win 0, length 0
+02:00:47.087512 IP 192.168.7.2.http > 192.168.1.2.34718: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:47.087579 IP 192.168.7.2.http > 192.168.1.2.55139: Flags [R.], seq 0, ack 3665366940, win 0, length 0
+02:00:47.087583 IP 192.168.7.2.http > 192.168.1.2.55139: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:47.087742 IP 192.168.7.2.http > 192.168.1.2.37527: Flags [R.], seq 0, ack 1637635754, win 0, length 0
+02:00:47.087749 IP 192.168.7.2.http > 192.168.1.2.37527: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:47.092771 IP 192.168.1.2.48843 > 192.168.7.2.http: Flags [S], seq 3766541679, win 5840, options [mss 1460], length 0
+02:00:47.092780 IP 192.168.1.2.48843 > 192.168.7.2.http: Flags [S], seq 3766541679, win 5840, options [mss 1460], length 0
+02:00:47.092882 IP 192.168.1.2.43567 > 192.168.7.2.http: Flags [S], seq 938592044, win 5840, options [mss 1460], length 0
+02:00:47.092886 IP 192.168.1.2.43567 > 192.168.7.2.http: Flags [S], seq 938592044, win 5840, options [mss 1460], length 0
+02:00:47.092962 IP 192.168.1.2.36346 > 192.168.7.2.http: Flags [S], seq 582814198, win 5840, options [mss 1460], length 0
+02:00:47.092966 IP 192.168.1.2.36346 > 192.168.7.2.http: Flags [S], seq 582814198, win 5840, options [mss 1460], length 0
+02:00:47.093052 IP 192.168.1.2.37966 > 192.168.7.2.http: Flags [S], seq 134687363, win 5840, options [mss 1460], length 0
+02:00:47.093056 IP 192.168.1.2.37966 > 192.168.7.2.http: Flags [S], seq 134687363, win 5840, options [mss 1460], length 0
+02:00:47.103700 IP 192.168.7.2.http > 192.168.1.2.44861: Flags [R.], seq 0, ack 2504471193, win 0, length 0
+02:00:47.103709 IP 192.168.7.2.http > 192.168.1.2.44861: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:47.107181 IP 192.168.7.2.http > 192.168.1.2.48843: Flags [R.], seq 0, ack 3766541680, win 0, length 0
+02:00:47.107190 IP 192.168.7.2.http > 192.168.1.2.48843: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:47.107640 IP 192.168.7.2.http > 192.168.1.2.43567: Flags [R.], seq 0, ack 938592045, win 0, length 0
+02:00:47.107648 IP 192.168.7.2.http > 192.168.1.2.43567: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:47.107728 IP 192.168.7.2.http > 192.168.1.2.36346: Flags [R.], seq 0, ack 582814199, win 0, length 0
+02:00:47.107733 IP 192.168.7.2.http > 192.168.1.2.36346: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:47.107801 IP 192.168.7.2.http > 192.168.1.2.37966: Flags [R.], seq 0, ack 134687364, win 0, length 0
+02:00:47.107805 IP 192.168.7.2.http > 192.168.1.2.37966: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:47.737128 IP 192.168.1.2 > 192.168.12.1: ICMP echo request, id 29821, seq 1, length 64
+02:00:47.737143 IP 192.168.1.2 > 192.168.12.1: ICMP echo request, id 29821, seq 1, length 64
+02:00:47.737720 IP 192.168.12.1 > 192.168.1.2: ICMP echo reply, id 29821, seq 1, length 64
+02:00:47.737727 IP 192.168.12.1 > 192.168.1.2: ICMP echo reply, id 29821, seq 1, length 64
+02:00:47.750306 IP 192.168.10.2 > 192.168.1.2: ICMP echo request, id 29822, seq 1, length 64
+02:00:47.750315 IP 192.168.10.2 > 192.168.1.2: ICMP echo request, id 29822, seq 1, length 64
+02:00:47.750638 IP 192.168.1.2 > 192.168.10.2: ICMP echo reply, id 29822, seq 1, length 64
+02:00:47.750646 IP 192.168.1.2 > 192.168.10.2: ICMP echo reply, id 29822, seq 1, length 64
+02:00:48.016594 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 29827, seq 1, length 64
+02:00:48.016601 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 29827, seq 1, length 64
+02:00:48.016665 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 29827, seq 1, length 64
+02:00:48.016667 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 29827, seq 1, length 64
+02:00:48.020090 IP 192.168.4.2 > 192.168.2.2: ICMP echo request, id 29830, seq 1, length 64
+02:00:48.020106 IP 192.168.2.2 > 192.168.4.2: ICMP echo reply, id 29830, seq 1, length 64
+02:00:48.023395 IP 192.168.4.2 > 192.168.3.1: ICMP echo request, id 29833, seq 1, length 64
+02:00:48.023403 IP 192.168.3.1 > 192.168.4.2: ICMP echo reply, id 29833, seq 1, length 64
+02:00:48.031365 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 29842, seq 1, length 64
+02:00:48.031372 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 29842, seq 1, length 64
+02:00:48.031490 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 29842, seq 1, length 64
+02:00:48.031498 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 29842, seq 1, length 64
+02:00:48.042022 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 29854, seq 1, length 64
+02:00:48.042030 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 29854, seq 1, length 64
+02:00:48.042238 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 29854, seq 1, length 64
+02:00:48.042241 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 29854, seq 1, length 64
+02:00:48.045791 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 29857, seq 1, length 64
+02:00:48.045796 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 29857, seq 1, length 64
+02:00:48.045903 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 29857, seq 1, length 64
+02:00:48.045905 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 29857, seq 1, length 64
+02:00:48.077945 IP 192.168.1.2.41748 > 192.168.12.2.http: Flags [S], seq 1895399992, win 5840, options [mss 1460], length 0
+02:00:48.077954 IP 192.168.2.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:48.081364 IP 192.168.1.2.50363 > 192.168.12.2.http: Flags [S], seq 1754105789, win 5840, options [mss 1460], length 0
+02:00:48.081367 IP 192.168.1.2.50363 > 192.168.12.2.http: Flags [S], seq 1754105789, win 5840, options [mss 1460], length 0
+02:00:48.081398 IP 192.168.1.2.35901 > 192.168.12.2.http: Flags [S], seq 2913320617, win 5840, options [mss 1460], length 0
+02:00:48.081400 IP 192.168.1.2.35901 > 192.168.12.2.http: Flags [S], seq 2913320617, win 5840, options [mss 1460], length 0
+02:00:48.081425 IP 192.168.1.2.38718 > 192.168.12.2.http: Flags [S], seq 2881798816, win 5840, options [mss 1460], length 0
+02:00:48.081427 IP 192.168.1.2.38718 > 192.168.12.2.http: Flags [S], seq 2881798816, win 5840, options [mss 1460], length 0
+02:00:48.081451 IP 192.168.1.2.48829 > 192.168.12.2.http: Flags [S], seq 1371621868, win 5840, options [mss 1460], length 0
+02:00:48.081452 IP 192.168.1.2.48829 > 192.168.12.2.http: Flags [S], seq 1371621868, win 5840, options [mss 1460], length 0
+02:00:48.081475 IP 192.168.1.2.57519 > 192.168.12.2.http: Flags [S], seq 3116099421, win 5840, options [mss 1460], length 0
+02:00:48.081477 IP 192.168.1.2.57519 > 192.168.12.2.http: Flags [S], seq 3116099421, win 5840, options [mss 1460], length 0
+02:00:48.081500 IP 192.168.1.2.48340 > 192.168.12.2.http: Flags [S], seq 996717988, win 5840, options [mss 1460], length 0
+02:00:48.081511 IP 192.168.1.2.37725 > 192.168.12.2.http: Flags [S], seq 1457191023, win 5840, options [mss 1460], length 0
+02:00:48.081512 IP 192.168.1.2.37725 > 192.168.12.2.http: Flags [S], seq 1457191023, win 5840, options [mss 1460], length 0
+02:00:48.081535 IP 192.168.1.2.32938 > 192.168.12.2.http: Flags [S], seq 3298538702, win 5840, options [mss 1460], length 0
+02:00:48.081536 IP 192.168.1.2.32938 > 192.168.12.2.http: Flags [S], seq 3298538702, win 5840, options [mss 1460], length 0
+02:00:48.081559 IP 192.168.1.2.47948 > 192.168.12.2.http: Flags [S], seq 191400953, win 5840, options [mss 1460], length 0
+02:00:48.081560 IP 192.168.1.2.47948 > 192.168.12.2.http: Flags [S], seq 191400953, win 5840, options [mss 1460], length 0
+02:00:48.081583 IP 192.168.1.2.38897 > 192.168.12.2.http: Flags [S], seq 1492039844, win 5840, options [mss 1460], length 0
+02:00:48.081592 IP 192.168.1.2.41008 > 192.168.12.2.http: Flags [S], seq 844320876, win 5840, options [mss 1460], length 0
+02:00:48.081593 IP 192.168.1.2.41008 > 192.168.12.2.http: Flags [S], seq 844320876, win 5840, options [mss 1460], length 0
+02:00:48.081616 IP 192.168.1.2.38866 > 192.168.12.2.http: Flags [S], seq 2263942454, win 5840, options [mss 1460], length 0
+02:00:48.081617 IP 192.168.1.2.38866 > 192.168.12.2.http: Flags [S], seq 2263942454, win 5840, options [mss 1460], length 0
+02:00:48.081698 IP 192.168.1.2.56686 > 192.168.12.2.http: Flags [S], seq 3840283760, win 5840, options [mss 1460], length 0
+02:00:48.081715 IP 192.168.1.2.56686 > 192.168.12.2.http: Flags [S], seq 3840283760, win 5840, options [mss 1460], length 0
+02:00:48.084495 IP 192.168.4.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:48.084499 IP 192.168.4.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:48.084565 IP 192.168.1.2.54208 > 192.168.12.2.http: Flags [S], seq 115168569, win 5840, options [mss 1460], length 0
+02:00:48.084567 IP 192.168.1.2.54208 > 192.168.12.2.http: Flags [S], seq 115168569, win 5840, options [mss 1460], length 0
+02:00:48.087389 IP 192.168.6.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:48.087392 IP 192.168.6.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:48.087423 IP 192.168.6.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:48.087425 IP 192.168.6.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:48.092843 IP 192.168.9.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:48.092848 IP 192.168.9.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:48.092878 IP 192.168.9.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:48.092880 IP 192.168.9.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:48.092911 IP 192.168.9.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:48.092912 IP 192.168.9.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:48.094334 IP 192.168.1.2.38781 > 192.168.12.2.http: Flags [S], seq 1192100373, win 5840, options [mss 1460], length 0
+02:00:48.094337 IP 192.168.1.2.38781 > 192.168.12.2.http: Flags [S], seq 1192100373, win 5840, options [mss 1460], length 0
+02:00:48.095334 IP 192.168.10.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:48.095336 IP 192.168.10.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:48.095370 IP 192.168.10.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:48.095371 IP 192.168.10.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:48.095428 IP 192.168.1.2.52052 > 192.168.12.2.http: Flags [S], seq 3636525452, win 5840, options [mss 1460], length 0
+02:00:48.095430 IP 192.168.1.2.52052 > 192.168.12.2.http: Flags [S], seq 3636525452, win 5840, options [mss 1460], length 0
+02:00:48.095458 IP 192.168.1.2.58012 > 192.168.12.2.http: Flags [S], seq 3877140974, win 5840, options [mss 1460], length 0
+02:00:48.095460 IP 192.168.1.2.58012 > 192.168.12.2.http: Flags [S], seq 3877140974, win 5840, options [mss 1460], length 0
+02:00:48.098219 IP 192.168.10.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:48.098223 IP 192.168.10.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:48.100608 IP 192.168.4.2 > 192.168.4.1: ICMP echo request, id 29888, seq 1, length 64
+02:00:48.100615 IP 192.168.4.1 > 192.168.4.2: ICMP echo reply, id 29888, seq 1, length 64
+02:00:48.100817 IP 192.168.1.2.51752 > 192.168.12.2.http: Flags [S], seq 1903533042, win 5840, options [mss 1460], length 0
+02:00:48.100819 IP 192.168.1.2.51752 > 192.168.12.2.http: Flags [S], seq 1903533042, win 5840, options [mss 1460], length 0
+02:00:48.100845 IP 192.168.1.2.49803 > 192.168.12.2.http: Flags [S], seq 870942000, win 5840, options [mss 1460], length 0
+02:00:48.100846 IP 192.168.1.2.49803 > 192.168.12.2.http: Flags [S], seq 870942000, win 5840, options [mss 1460], length 0
+02:00:48.100875 IP 192.168.1.2.34387 > 192.168.12.2.http: Flags [S], seq 3782249580, win 5840, options [mss 1460], length 0
+02:00:48.100877 IP 192.168.1.2.34387 > 192.168.12.2.http: Flags [S], seq 3782249580, win 5840, options [mss 1460], length 0
+02:00:48.103337 IP 192.168.1.2.34548 > 192.168.12.2.http: Flags [S], seq 2921497099, win 5840, options [mss 1460], length 0
+02:00:48.103341 IP 192.168.1.2.34548 > 192.168.12.2.http: Flags [S], seq 2921497099, win 5840, options [mss 1460], length 0
+02:00:48.103384 IP 192.168.1.2.35496 > 192.168.12.2.http: Flags [S], seq 2841584545, win 5840, options [mss 1460], length 0
+02:00:48.103386 IP 192.168.1.2.35496 > 192.168.12.2.http: Flags [S], seq 2841584545, win 5840, options [mss 1460], length 0
+02:00:48.104793 IP 192.168.1.2.50031 > 192.168.12.2.http: Flags [S], seq 3609415504, win 5840, options [mss 1460], length 0
+02:00:48.104795 IP 192.168.1.2.50031 > 192.168.12.2.http: Flags [S], seq 3609415504, win 5840, options [mss 1460], length 0
+02:00:48.110216 IP 192.168.12.2.http > 192.168.1.2.38781: Flags [R.], seq 0, ack 1192100374, win 0, length 0
+02:00:48.110220 IP 192.168.12.2.http > 192.168.1.2.38781: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:48.111407 IP 192.168.12.2.http > 192.168.1.2.52052: Flags [R.], seq 0, ack 3636525453, win 0, length 0
+02:00:48.111409 IP 192.168.12.2.http > 192.168.1.2.52052: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:48.111439 IP 192.168.12.2.http > 192.168.1.2.58012: Flags [R.], seq 0, ack 3877140975, win 0, length 0
+02:00:48.111440 IP 192.168.12.2.http > 192.168.1.2.58012: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:48.116148 IP 192.168.12.2.http > 192.168.1.2.51752: Flags [R.], seq 0, ack 1903533043, win 0, length 0
+02:00:48.116151 IP 192.168.12.2.http > 192.168.1.2.51752: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:48.116181 IP 192.168.12.2.http > 192.168.1.2.49803: Flags [R.], seq 0, ack 870942001, win 0, length 0
+02:00:48.116182 IP 192.168.12.2.http > 192.168.1.2.49803: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:48.116212 IP 192.168.12.2.http > 192.168.1.2.34387: Flags [R.], seq 0, ack 3782249581, win 0, length 0
+02:00:48.116214 IP 192.168.12.2.http > 192.168.1.2.34387: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:48.118582 IP 192.168.12.2.http > 192.168.1.2.34548: Flags [R.], seq 0, ack 2921497100, win 0, length 0
+02:00:48.118587 IP 192.168.12.2.http > 192.168.1.2.34548: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:48.118629 IP 192.168.12.2.http > 192.168.1.2.35496: Flags [R.], seq 0, ack 2841584546, win 0, length 0
+02:00:48.118631 IP 192.168.12.2.http > 192.168.1.2.35496: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:48.119405 IP 192.168.12.2.http > 192.168.1.2.50031: Flags [R.], seq 0, ack 3609415505, win 0, length 0
+02:00:48.119408 IP 192.168.12.2.http > 192.168.1.2.50031: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:49.120182 IP 192.168.1.2.40053 > 192.168.12.3.http: Flags [S], seq 489449731, win 5840, options [mss 1460], length 0
+02:00:49.120197 IP 192.168.1.2.40053 > 192.168.12.3.http: Flags [S], seq 489449731, win 5840, options [mss 1460], length 0
+02:00:49.120331 IP 192.168.1.2.39191 > 192.168.12.3.http: Flags [S], seq 2659722037, win 5840, options [mss 1460], length 0
+02:00:49.120336 IP 192.168.1.2.39191 > 192.168.12.3.http: Flags [S], seq 2659722037, win 5840, options [mss 1460], length 0
+02:00:49.127450 IP 192.168.1.2.51821 > 192.168.12.3.http: Flags [S], seq 3595481907, win 5840, options [mss 1460], length 0
+02:00:49.127462 IP 192.168.1.2.51821 > 192.168.12.3.http: Flags [S], seq 3595481907, win 5840, options [mss 1460], length 0
+02:00:49.127577 IP 192.168.1.2.56369 > 192.168.12.3.http: Flags [S], seq 4099335792, win 5840, options [mss 1460], length 0
+02:00:49.127597 IP 192.168.2.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:49.127696 IP 192.168.1.2.49129 > 192.168.12.3.http: Flags [S], seq 628126397, win 5840, options [mss 1460], length 0
+02:00:49.127731 IP 192.168.1.2.58965 > 192.168.12.3.http: Flags [S], seq 1006220201, win 5840, options [mss 1460], length 0
+02:00:49.127735 IP 192.168.1.2.58965 > 192.168.12.3.http: Flags [S], seq 1006220201, win 5840, options [mss 1460], length 0
+02:00:49.127821 IP 192.168.1.2.45374 > 192.168.12.3.http: Flags [S], seq 3686263304, win 5840, options [mss 1460], length 0
+02:00:49.127827 IP 192.168.1.2.45374 > 192.168.12.3.http: Flags [S], seq 3686263304, win 5840, options [mss 1460], length 0
+02:00:49.127988 IP 192.168.1.2.42535 > 192.168.12.3.http: Flags [S], seq 2813891024, win 5840, options [mss 1460], length 0
+02:00:49.127998 IP 192.168.1.2.42535 > 192.168.12.3.http: Flags [S], seq 2813891024, win 5840, options [mss 1460], length 0
+02:00:49.128085 IP 192.168.1.2.35216 > 192.168.12.3.http: Flags [S], seq 3287021532, win 5840, options [mss 1460], length 0
+02:00:49.128091 IP 192.168.1.2.35216 > 192.168.12.3.http: Flags [S], seq 3287021532, win 5840, options [mss 1460], length 0
+02:00:49.128175 IP 192.168.1.2.34482 > 192.168.12.3.http: Flags [S], seq 1729384672, win 5840, options [mss 1460], length 0
+02:00:49.128180 IP 192.168.1.2.34482 > 192.168.12.3.http: Flags [S], seq 1729384672, win 5840, options [mss 1460], length 0
+02:00:49.128263 IP 192.168.1.2.46514 > 192.168.12.3.http: Flags [S], seq 3231077387, win 5840, options [mss 1460], length 0
+02:00:49.128298 IP 192.168.1.2.49810 > 192.168.12.3.http: Flags [S], seq 2332380848, win 5840, options [mss 1460], length 0
+02:00:49.128302 IP 192.168.1.2.49810 > 192.168.12.3.http: Flags [S], seq 2332380848, win 5840, options [mss 1460], length 0
+02:00:49.128456 IP 192.168.1.2.59625 > 192.168.12.3.http: Flags [S], seq 820477690, win 5840, options [mss 1460], length 0
+02:00:49.128465 IP 192.168.1.2.59625 > 192.168.12.3.http: Flags [S], seq 820477690, win 5840, options [mss 1460], length 0
+02:00:49.128580 IP 192.168.1.2.54644 > 192.168.12.3.http: Flags [S], seq 18987353, win 5840, options [mss 1460], length 0
+02:00:49.128586 IP 192.168.1.2.54644 > 192.168.12.3.http: Flags [S], seq 18987353, win 5840, options [mss 1460], length 0
+02:00:49.147947 IP 192.168.4.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:49.147959 IP 192.168.4.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:49.148081 IP 192.168.6.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:49.148087 IP 192.168.6.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:49.156146 IP 192.168.1.2.40049 > 192.168.12.3.http: Flags [S], seq 3510276223, win 5840, options [mss 1460], length 0
+02:00:49.156153 IP 192.168.1.2.40049 > 192.168.12.3.http: Flags [S], seq 3510276223, win 5840, options [mss 1460], length 0
+02:00:49.159103 IP 192.168.9.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:49.159108 IP 192.168.9.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:49.159163 IP 192.168.9.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:49.159199 IP 192.168.9.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:49.159271 IP 192.168.9.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:49.159274 IP 192.168.9.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:49.159334 IP 192.168.10.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:49.159337 IP 192.168.10.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:49.160224 IP 192.168.1.2.35380 > 192.168.12.3.http: Flags [S], seq 1754176745, win 5840, options [mss 1460], length 0
+02:00:49.160231 IP 192.168.1.2.35380 > 192.168.12.3.http: Flags [S], seq 1754176745, win 5840, options [mss 1460], length 0
+02:00:49.160527 IP 192.168.1.2.46329 > 192.168.12.3.http: Flags [S], seq 3053694078, win 5840, options [mss 1460], length 0
+02:00:49.160531 IP 192.168.1.2.46329 > 192.168.12.3.http: Flags [S], seq 3053694078, win 5840, options [mss 1460], length 0
+02:00:49.164541 IP 192.168.10.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:49.164546 IP 192.168.10.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:49.169595 IP 192.168.1.2.44889 > 192.168.12.3.http: Flags [S], seq 2401972120, win 5840, options [mss 1460], length 0
+02:00:49.169601 IP 192.168.1.2.44889 > 192.168.12.3.http: Flags [S], seq 2401972120, win 5840, options [mss 1460], length 0
+02:00:49.169723 IP 192.168.1.2.57835 > 192.168.12.3.http: Flags [S], seq 1592022874, win 5840, options [mss 1460], length 0
+02:00:49.169729 IP 192.168.1.2.57835 > 192.168.12.3.http: Flags [S], seq 1592022874, win 5840, options [mss 1460], length 0
+02:00:49.169791 IP 192.168.1.2.52156 > 192.168.12.3.http: Flags [S], seq 3393586594, win 5840, options [mss 1460], length 0
+02:00:49.169794 IP 192.168.1.2.52156 > 192.168.12.3.http: Flags [S], seq 3393586594, win 5840, options [mss 1460], length 0
+02:00:49.169843 IP 192.168.1.2.53529 > 192.168.12.3.http: Flags [S], seq 2336583482, win 5840, options [mss 1460], length 0
+02:00:49.169846 IP 192.168.1.2.53529 > 192.168.12.3.http: Flags [S], seq 2336583482, win 5840, options [mss 1460], length 0
+02:00:49.169906 IP 192.168.1.2.46122 > 192.168.12.3.http: Flags [S], seq 4139049726, win 5840, options [mss 1460], length 0
+02:00:49.169909 IP 192.168.1.2.46122 > 192.168.12.3.http: Flags [S], seq 4139049726, win 5840, options [mss 1460], length 0
+02:00:49.177773 IP 192.168.10.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:49.177777 IP 192.168.10.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:49.184634 IP 192.168.12.3.http > 192.168.1.2.35380: Flags [R.], seq 0, ack 1754176746, win 0, length 0
+02:00:49.184641 IP 192.168.12.3.http > 192.168.1.2.35380: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:49.184706 IP 192.168.12.3.http > 192.168.1.2.46329: Flags [R.], seq 0, ack 3053694079, win 0, length 0
+02:00:49.184709 IP 192.168.12.3.http > 192.168.1.2.46329: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:49.185308 IP 192.168.1.2.45676 > 192.168.12.3.http: Flags [S], seq 3801558066, win 5840, options [mss 1460], length 0
+02:00:49.185313 IP 192.168.1.2.45676 > 192.168.12.3.http: Flags [S], seq 3801558066, win 5840, options [mss 1460], length 0
+02:00:49.191311 IP 192.168.12.3.http > 192.168.1.2.44889: Flags [R.], seq 0, ack 2401972121, win 0, length 0
+02:00:49.191318 IP 192.168.12.3.http > 192.168.1.2.44889: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:49.191379 IP 192.168.12.3.http > 192.168.1.2.57835: Flags [R.], seq 0, ack 1592022875, win 0, length 0
+02:00:49.191382 IP 192.168.12.3.http > 192.168.1.2.57835: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:49.191434 IP 192.168.12.3.http > 192.168.1.2.52156: Flags [R.], seq 0, ack 3393586595, win 0, length 0
+02:00:49.191438 IP 192.168.12.3.http > 192.168.1.2.52156: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:49.191538 IP 192.168.12.3.http > 192.168.1.2.53529: Flags [R.], seq 0, ack 2336583483, win 0, length 0
+02:00:49.191545 IP 192.168.12.3.http > 192.168.1.2.53529: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:49.191639 IP 192.168.12.3.http > 192.168.1.2.46122: Flags [R.], seq 0, ack 4139049727, win 0, length 0
+02:00:49.191642 IP 192.168.12.3.http > 192.168.1.2.46122: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:49.197928 IP 192.168.12.3.http > 192.168.1.2.45676: Flags [R.], seq 0, ack 3801558067, win 0, length 0
+02:00:49.197934 IP 192.168.12.3.http > 192.168.1.2.45676: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:50.163863 IP 192.168.1.2.47888 > 192.168.13.2.http: Flags [S], seq 1468502288, win 5840, options [mss 1460], length 0
+02:00:50.163882 IP 192.168.1.2.47888 > 192.168.13.2.http: Flags [S], seq 1468502288, win 5840, options [mss 1460], length 0
+02:00:50.165495 IP 192.168.1.2.36686 > 192.168.13.2.http: Flags [S], seq 441705517, win 5840, options [mss 1460], length 0
+02:00:50.165509 IP 192.168.1.2.36686 > 192.168.13.2.http: Flags [S], seq 441705517, win 5840, options [mss 1460], length 0
+02:00:50.165687 IP 192.168.1.2.37350 > 192.168.13.2.http: Flags [S], seq 991207330, win 5840, options [mss 1460], length 0
+02:00:50.165698 IP 192.168.1.2.37350 > 192.168.13.2.http: Flags [S], seq 991207330, win 5840, options [mss 1460], length 0
+02:00:50.165816 IP 192.168.1.2.55660 > 192.168.13.2.http: Flags [S], seq 558421790, win 5840, options [mss 1460], length 0
+02:00:50.165822 IP 192.168.1.2.55660 > 192.168.13.2.http: Flags [S], seq 558421790, win 5840, options [mss 1460], length 0
+02:00:50.165913 IP 192.168.1.2.56129 > 192.168.13.2.http: Flags [S], seq 3428520478, win 5840, options [mss 1460], length 0
+02:00:50.165918 IP 192.168.1.2.56129 > 192.168.13.2.http: Flags [S], seq 3428520478, win 5840, options [mss 1460], length 0
+02:00:50.166008 IP 192.168.1.2.34643 > 192.168.13.2.http: Flags [S], seq 2799157256, win 5840, options [mss 1460], length 0
+02:00:50.166013 IP 192.168.1.2.34643 > 192.168.13.2.http: Flags [S], seq 2799157256, win 5840, options [mss 1460], length 0
+02:00:50.166189 IP 192.168.1.2.50930 > 192.168.13.2.http: Flags [S], seq 2817679734, win 5840, options [mss 1460], length 0
+02:00:50.166217 IP 192.168.2.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:50.166372 IP 192.168.1.2.34716 > 192.168.13.2.http: Flags [S], seq 1140738073, win 5840, options [mss 1460], length 0
+02:00:50.166409 IP 192.168.1.2.60428 > 192.168.13.2.http: Flags [S], seq 2425640578, win 5840, options [mss 1460], length 0
+02:00:50.166413 IP 192.168.1.2.60428 > 192.168.13.2.http: Flags [S], seq 2425640578, win 5840, options [mss 1460], length 0
+02:00:50.166505 IP 192.168.1.2.58504 > 192.168.13.2.http: Flags [S], seq 816033583, win 5840, options [mss 1460], length 0
+02:00:50.166511 IP 192.168.1.2.58504 > 192.168.13.2.http: Flags [S], seq 816033583, win 5840, options [mss 1460], length 0
+02:00:50.166673 IP 192.168.1.2.54170 > 192.168.13.2.http: Flags [S], seq 3759737964, win 5840, options [mss 1460], length 0
+02:00:50.166683 IP 192.168.1.2.54170 > 192.168.13.2.http: Flags [S], seq 3759737964, win 5840, options [mss 1460], length 0
+02:00:50.166827 IP 192.168.1.2.50797 > 192.168.13.2.http: Flags [S], seq 1303226156, win 5840, options [mss 1460], length 0
+02:00:50.166833 IP 192.168.1.2.50797 > 192.168.13.2.http: Flags [S], seq 1303226156, win 5840, options [mss 1460], length 0
+02:00:50.166947 IP 192.168.1.2.41897 > 192.168.13.2.http: Flags [S], seq 3094690413, win 5840, options [mss 1460], length 0
+02:00:50.171944 IP 192.168.1.2.40187 > 192.168.13.2.http: Flags [S], seq 939485373, win 5840, options [mss 1460], length 0
+02:00:50.171948 IP 192.168.1.2.40187 > 192.168.13.2.http: Flags [S], seq 939485373, win 5840, options [mss 1460], length 0
+02:00:50.176773 IP 192.168.4.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:50.176781 IP 192.168.4.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:50.189333 IP 192.168.6.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:50.189342 IP 192.168.6.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:50.190308 IP 192.168.1.2.49052 > 192.168.13.2.http: Flags [S], seq 2249569710, win 5840, options [mss 1460], length 0
+02:00:50.190317 IP 192.168.1.2.49052 > 192.168.13.2.http: Flags [S], seq 2249569710, win 5840, options [mss 1460], length 0
+02:00:50.194436 IP 192.168.9.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:50.194493 IP 192.168.9.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:50.194596 IP 192.168.9.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:50.194600 IP 192.168.9.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:50.195278 IP 192.168.1.2.47066 > 192.168.13.2.http: Flags [S], seq 1033187085, win 5840, options [mss 1460], length 0
+02:00:50.195284 IP 192.168.1.2.47066 > 192.168.13.2.http: Flags [S], seq 1033187085, win 5840, options [mss 1460], length 0
+02:00:50.200456 IP 192.168.11.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:50.200460 IP 192.168.11.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:50.200674 IP 192.168.1.2.47146 > 192.168.13.2.http: Flags [S], seq 2674970161, win 5840, options [mss 1460], length 0
+02:00:50.200677 IP 192.168.1.2.47146 > 192.168.13.2.http: Flags [S], seq 2674970161, win 5840, options [mss 1460], length 0
+02:00:50.204196 IP 192.168.11.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:50.204199 IP 192.168.11.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:50.204386 IP 192.168.1.2.45980 > 192.168.13.2.http: Flags [S], seq 529699567, win 5840, options [mss 1460], length 0
+02:00:50.204407 IP 192.168.1.2.45980 > 192.168.13.2.http: Flags [S], seq 529699567, win 5840, options [mss 1460], length 0
+02:00:50.204450 IP 192.168.1.2.52678 > 192.168.13.2.http: Flags [S], seq 2871342597, win 5840, options [mss 1460], length 0
+02:00:50.204452 IP 192.168.1.2.52678 > 192.168.13.2.http: Flags [S], seq 2871342597, win 5840, options [mss 1460], length 0
+02:00:50.206459 IP 192.168.1.2.44577 > 192.168.13.2.http: Flags [S], seq 52007634, win 5840, options [mss 1460], length 0
+02:00:50.206462 IP 192.168.1.2.44577 > 192.168.13.2.http: Flags [S], seq 52007634, win 5840, options [mss 1460], length 0
+02:00:50.208765 IP 192.168.11.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:50.208768 IP 192.168.11.2 > 192.168.1.2: ICMP time exceeded in-transit, length 52
+02:00:50.209007 IP 192.168.1.2.45467 > 192.168.13.2.http: Flags [S], seq 2782421799, win 5840, options [mss 1460], length 0
+02:00:50.209010 IP 192.168.1.2.45467 > 192.168.13.2.http: Flags [S], seq 2782421799, win 5840, options [mss 1460], length 0
+02:00:50.213215 IP 192.168.13.2.http > 192.168.1.2.47066: Flags [R.], seq 0, ack 1033187086, win 0, length 0
+02:00:50.213218 IP 192.168.13.2.http > 192.168.1.2.47066: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:50.213457 IP 192.168.1.2.48256 > 192.168.13.2.http: Flags [S], seq 2856665468, win 5840, options [mss 1460], length 0
+02:00:50.213460 IP 192.168.1.2.48256 > 192.168.13.2.http: Flags [S], seq 2856665468, win 5840, options [mss 1460], length 0
+02:00:50.215024 IP 192.168.13.2.http > 192.168.1.2.47146: Flags [R.], seq 0, ack 2674970162, win 0, length 0
+02:00:50.215027 IP 192.168.13.2.http > 192.168.1.2.47146: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:50.216916 IP 192.168.13.2.http > 192.168.1.2.45980: Flags [R.], seq 0, ack 529699568, win 0, length 0
+02:00:50.216919 IP 192.168.13.2.http > 192.168.1.2.45980: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:50.217066 IP 192.168.13.2.http > 192.168.1.2.52678: Flags [R.], seq 0, ack 2871342598, win 0, length 0
+02:00:50.217069 IP 192.168.13.2.http > 192.168.1.2.52678: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:50.218494 IP 192.168.13.2.http > 192.168.1.2.44577: Flags [R.], seq 0, ack 52007635, win 0, length 0
+02:00:50.218498 IP 192.168.13.2.http > 192.168.1.2.44577: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:50.219638 IP 192.168.13.2.http > 192.168.1.2.45467: Flags [R.], seq 0, ack 2782421800, win 0, length 0
+02:00:50.219641 IP 192.168.13.2.http > 192.168.1.2.45467: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:50.220771 IP 192.168.13.2.http > 192.168.1.2.48256: Flags [R.], seq 0, ack 2856665469, win 0, length 0
+02:00:50.220774 IP 192.168.13.2.http > 192.168.1.2.48256: Flags [R.], seq 0, ack 1, win 0, length 0
+02:00:53.038417 ARP, Request who-has 192.168.3.2 tell 192.168.3.1, length 28
+02:00:53.038720 ARP, Reply 192.168.3.2 is-at ae:87:e4:75:95:d6 (oui Unknown), length 28
+02:00:53.141516 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 29926, seq 1, length 64
+02:00:53.141536 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 29926, seq 1, length 64
+02:00:53.141835 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 29926, seq 1, length 64
+02:00:53.141844 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 29926, seq 1, length 64
+02:00:53.151788 IP 192.168.4.2 > 192.168.2.2: ICMP echo request, id 29929, seq 1, length 64
+02:00:53.151810 IP 192.168.2.2 > 192.168.4.2: ICMP echo reply, id 29929, seq 1, length 64
+02:00:53.157526 IP 192.168.4.2 > 192.168.3.1: ICMP echo request, id 29932, seq 1, length 64
+02:00:53.157539 IP 192.168.3.1 > 192.168.4.2: ICMP echo reply, id 29932, seq 1, length 64
+02:00:53.170866 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 29941, seq 1, length 64
+02:00:53.170875 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 29941, seq 1, length 64
+02:00:53.170966 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 29941, seq 1, length 64
+02:00:53.170969 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 29941, seq 1, length 64
+02:00:53.187514 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 29953, seq 1, length 64
+02:00:53.187520 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 29953, seq 1, length 64
+02:00:53.187612 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 29953, seq 1, length 64
+02:00:53.187614 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 29953, seq 1, length 64
+02:00:53.190362 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 29956, seq 1, length 64
+02:00:53.190367 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 29956, seq 1, length 64
+02:00:53.190451 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 29956, seq 1, length 64
+02:00:53.190455 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 29956, seq 1, length 64
+02:00:53.215678 IP 192.168.4.2 > 192.168.4.1: ICMP echo request, id 29983, seq 1, length 64
+02:00:53.215686 IP 192.168.4.1 > 192.168.4.2: ICMP echo reply, id 29983, seq 1, length 64
+02:00:58.142382 ARP, Request who-has 192.168.2.1 tell 192.168.2.2, length 28
+02:00:58.142760 ARP, Reply 192.168.2.1 is-at 4e:80:72:df:66:29 (oui Unknown), length 28
+02:00:58.240009 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 30003, seq 1, length 64
+02:00:58.240024 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 30003, seq 1, length 64
+02:00:58.240050 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 30003, seq 1, length 64
+02:00:58.240052 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 30003, seq 1, length 64
+02:00:58.249239 IP 192.168.4.2 > 192.168.2.2: ICMP echo request, id 30006, seq 1, length 64
+02:00:58.249257 IP 192.168.2.2 > 192.168.4.2: ICMP echo reply, id 30006, seq 1, length 64
+02:00:58.257374 IP 192.168.4.2 > 192.168.3.1: ICMP echo request, id 30009, seq 1, length 64
+02:00:58.257390 IP 192.168.3.1 > 192.168.4.2: ICMP echo reply, id 30009, seq 1, length 64
+02:00:58.282730 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 30018, seq 1, length 64
+02:00:58.282746 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 30018, seq 1, length 64
+02:00:58.282768 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 30018, seq 1, length 64
+02:00:58.282771 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 30018, seq 1, length 64
+02:00:58.297183 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 30030, seq 1, length 64
+02:00:58.297190 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 30030, seq 1, length 64
+02:00:58.297210 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 30030, seq 1, length 64
+02:00:58.297212 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 30030, seq 1, length 64
+02:00:58.300294 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 30033, seq 1, length 64
+02:00:58.300299 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 30033, seq 1, length 64
+02:00:58.300308 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 30033, seq 1, length 64
+02:00:58.300309 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 30033, seq 1, length 64
+02:00:58.325748 IP 192.168.4.2 > 192.168.4.1: ICMP echo request, id 30060, seq 1, length 64
+02:00:58.325756 IP 192.168.4.1 > 192.168.4.2: ICMP echo reply, id 30060, seq 1, length 64
+
+02:01:08.468950 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 30160, seq 1, length 64
+02:01:08.468970 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 30160, seq 1, length 64
+02:01:08.469251 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 30160, seq 1, length 64
+02:01:08.469263 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 30160, seq 1, length 64
+02:01:08.480972 IP 192.168.4.2 > 192.168.2.2: ICMP echo request, id 30163, seq 1, length 64
+02:01:08.480995 IP 192.168.2.2 > 192.168.4.2: ICMP echo reply, id 30163, seq 1, length 64
+02:01:08.489401 IP 192.168.4.2 > 192.168.3.1: ICMP echo request, id 30166, seq 1, length 64
+02:01:08.489411 IP 192.168.3.1 > 192.168.4.2: ICMP echo reply, id 30166, seq 1, length 64
+02:01:08.499276 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 30175, seq 1, length 64
+02:01:08.499286 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 30175, seq 1, length 64
+02:01:08.499358 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 30175, seq 1, length 64
+02:01:08.499361 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 30175, seq 1, length 64
+02:01:08.512758 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 30187, seq 1, length 64
+02:01:08.512766 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 30187, seq 1, length 64
+02:01:08.512921 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 30187, seq 1, length 64
+02:01:08.512924 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 30187, seq 1, length 64
+02:01:08.516771 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 30190, seq 1, length 64
+02:01:08.516780 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 30190, seq 1, length 64
+02:01:08.516882 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 30190, seq 1, length 64
+02:01:08.516886 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 30190, seq 1, length 64
+02:01:08.546549 IP 192.168.4.2 > 192.168.4.1: ICMP echo request, id 30217, seq 1, length 64
+02:01:08.546558 IP 192.168.4.1 > 192.168.4.2: ICMP echo reply, id 30217, seq 1, length 64
+02:01:13.565127 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 30234, seq 1, length 64
+02:01:13.565141 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 30234, seq 1, length 64
+02:01:13.565160 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 30234, seq 1, length 64
+02:01:13.565163 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 30234, seq 1, length 64
+02:01:13.569152 IP 192.168.4.2 > 192.168.2.2: ICMP echo request, id 30237, seq 1, length 64
+02:01:13.569172 IP 192.168.2.2 > 192.168.4.2: ICMP echo reply, id 30237, seq 1, length 64
+02:01:13.572356 IP 192.168.4.2 > 192.168.3.1: ICMP echo request, id 30240, seq 1, length 64
+02:01:13.572363 IP 192.168.3.1 > 192.168.4.2: ICMP echo reply, id 30240, seq 1, length 64
+02:01:13.580309 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 30249, seq 1, length 64
+02:01:13.580315 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 30249, seq 1, length 64
+02:01:13.580324 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 30249, seq 1, length 64
+02:01:13.580325 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 30249, seq 1, length 64
+02:01:13.589717 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 30261, seq 1, length 64
+02:01:13.589722 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 30261, seq 1, length 64
+02:01:13.589738 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 30261, seq 1, length 64
+02:01:13.589740 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 30261, seq 1, length 64
+02:01:13.592143 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 30264, seq 1, length 64
+02:01:13.592147 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 30264, seq 1, length 64
+02:01:13.592155 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 30264, seq 1, length 64
+02:01:13.592156 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 30264, seq 1, length 64
+02:01:13.613527 IP 192.168.4.2 > 192.168.4.1: ICMP echo request, id 30291, seq 1, length 64
+02:01:13.613534 IP 192.168.4.1 > 192.168.4.2: ICMP echo reply, id 30291, seq 1, length 64
+02:01:18.574655 ARP, Request who-has 192.168.4.2 tell 192.168.4.1, length 28
+02:01:18.575048 ARP, Reply 192.168.4.2 is-at 16:db:37:6e:d2:c7 (oui Unknown), length 28
+02:01:18.633592 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 30306, seq 1, length 64
+02:01:18.633610 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 30306, seq 1, length 64
+02:01:18.633633 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 30306, seq 1, length 64
+02:01:18.633636 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 30306, seq 1, length 64
+02:01:18.642110 IP 192.168.4.2 > 192.168.2.2: ICMP echo request, id 30309, seq 1, length 64
+02:01:18.642126 IP 192.168.2.2 > 192.168.4.2: ICMP echo reply, id 30309, seq 1, length 64
+02:01:18.650361 IP 192.168.4.2 > 192.168.3.1: ICMP echo request, id 30312, seq 1, length 64
+02:01:18.650378 IP 192.168.3.1 > 192.168.4.2: ICMP echo reply, id 30312, seq 1, length 64
+02:01:18.668883 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 30321, seq 1, length 64
+02:01:18.668892 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 30321, seq 1, length 64
+02:01:18.668906 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 30321, seq 1, length 64
+02:01:18.668908 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 30321, seq 1, length 64
+02:01:18.684148 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 30333, seq 1, length 64
+02:01:18.684156 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 30333, seq 1, length 64
+02:01:18.684178 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 30333, seq 1, length 64
+02:01:18.684180 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 30333, seq 1, length 64
+02:01:18.687837 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 30336, seq 1, length 64
+02:01:18.687843 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 30336, seq 1, length 64
+02:01:18.687854 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 30336, seq 1, length 64
+02:01:18.687856 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 30336, seq 1, length 64
+02:01:18.721670 IP 192.168.4.2 > 192.168.4.1: ICMP echo request, id 30363, seq 1, length 64
+02:01:18.721682 IP 192.168.4.1 > 192.168.4.2: ICMP echo reply, id 30363, seq 1, length 64
+02:01:23.646084 ARP, Request who-has 192.168.2.1 tell 192.168.2.2, length 28
+02:01:23.646603 ARP, Reply 192.168.2.1 is-at 4e:80:72:df:66:29 (oui Unknown), length 28
+02:01:23.678678 ARP, Request who-has 192.168.3.1 tell 192.168.3.2, length 28
+02:01:23.678748 ARP, Reply 192.168.3.1 is-at de:58:f1:38:35:a5 (oui Unknown), length 28
+02:01:23.743378 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 30380, seq 1, length 64
+02:01:23.743389 IP 192.168.4.2 > 192.168.2.1: ICMP echo request, id 30380, seq 1, length 64
+02:01:23.743409 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 30380, seq 1, length 64
+02:01:23.743411 IP 192.168.2.1 > 192.168.4.2: ICMP echo reply, id 30380, seq 1, length 64
+02:01:23.749936 IP 192.168.4.2 > 192.168.2.2: ICMP echo request, id 30383, seq 1, length 64
+02:01:23.749950 IP 192.168.2.2 > 192.168.4.2: ICMP echo reply, id 30383, seq 1, length 64
+02:01:23.756140 IP 192.168.4.2 > 192.168.3.1: ICMP echo request, id 30386, seq 1, length 64
+02:01:23.756154 IP 192.168.3.1 > 192.168.4.2: ICMP echo reply, id 30386, seq 1, length 64
+02:01:23.768994 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 30395, seq 1, length 64
+02:01:23.768999 IP 192.168.4.2 > 192.168.3.2: ICMP echo request, id 30395, seq 1, length 64
+02:01:23.769009 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 30395, seq 1, length 64
+02:01:23.769010 IP 192.168.3.2 > 192.168.4.2: ICMP echo reply, id 30395, seq 1, length 64
+02:01:23.778454 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 30407, seq 1, length 64
+02:01:23.778458 IP 192.168.4.2 > 192.168.1.2: ICMP echo request, id 30407, seq 1, length 64
+02:01:23.778473 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 30407, seq 1, length 64
+02:01:23.778474 IP 192.168.1.2 > 192.168.4.2: ICMP echo reply, id 30407, seq 1, length 64
+02:01:23.780848 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 30410, seq 1, length 64
+02:01:23.780851 IP 192.168.4.2 > 192.168.1.1: ICMP echo request, id 30410, seq 1, length 64
+02:01:23.780858 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 30410, seq 1, length 64
+02:01:23.780859 IP 192.168.1.1 > 192.168.4.2: ICMP echo reply, id 30410, seq 1, length 64
+02:01:23.802268 IP 192.168.4.2 > 192.168.4.1: ICMP echo request, id 30437, seq 1, length 64
+02:01:23.802274 IP 192.168.4.1 > 192.168.4.2: ICMP echo reply, id 30437, seq 1, length 64
+02:01:28.750766 ARP, Request who-has 192.168.4.1 tell 192.168.4.2, length 28
+02:01:28.750786 ARP, Reply 192.168.4.1 is-at 56:35:ab:88:19:d3 (oui Unknown), length 28
+

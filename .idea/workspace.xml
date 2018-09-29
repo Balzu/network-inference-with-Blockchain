@@ -2,43 +2,376 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02de7c1e-3b13-46aa-8b6d-9f78c1447a4a" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/Tests/MaliciousNodes/readme.md" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blockchain/file_config_prova/server1_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/Blockchain/file_config_prova/server1_config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blockchain/file_config_prova/server2_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/Blockchain/file_config_prova/server2_config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blockchain/file_config_prova/server3_config.json" beforeDir="false" afterPath="$PROJECT_DIR$/Blockchain/file_config_prova/server3_config.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blockchain/node.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blockchain/node.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blockchain/server.py" beforeDir="false" afterPath="$PROJECT_DIR$/Blockchain/server.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Blockchain/util.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Blockchain/print_topo.png" beforeDir="false" afterPath="$PROJECT_DIR$/Blockchain/print_topo.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Miscellaneous/GUI/prova_gui.py" beforeDir="false" afterPath="$PROJECT_DIR$/Miscellaneous/GUI/prova_gui.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Sensor/sensor.py" beforeDir="false" afterPath="$PROJECT_DIR$/Sensor/sensor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/distances/h11" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/distances/h31" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/distances/h41" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/distances/h61" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/distances/h71" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/m_topo_0" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UpAndDown/m_topo_0" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/m_topo_1" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UpAndDown/m_topo_1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/alias" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/distances/h11" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/distances/h21" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/distances/h31" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/distances/h41" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/distances/h42" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/distances/h61" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/distances/h62" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/distances/h71" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/readme" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/test_topo3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h11h21" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h11h31" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h11h41" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h11h42" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h11h61" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h11h62" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h11h71" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h21h11" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h21h31" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h21h41" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h21h42" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h21h61" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h21h62" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h21h71" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h31h11" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h31h21" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h31h41" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h31h42" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h31h61" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h31h62" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h31h71" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h41h11" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h41h21" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h41h31" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h41h42" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h41h61" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h41h62" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h41h71" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h42h11" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h42h21" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h42h31" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h42h41" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h42h61" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h42h62" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h42h71" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h61h11" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h61h21" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h61h31" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h61h41" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h61h42" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h61h62" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h61h71" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h62h11" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h62h21" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h62h31" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h62h41" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h62h42" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h62h61" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h62h71" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h71h11" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h71h21" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h71h31" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h71h41" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h71h42" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h71h61" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e2_OLD/traceroute/h71h62" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e3_OLD/.test_topo3_new.py.swp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e3_OLD/alias" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e3_OLD/distances/h11" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e3_OLD/distances/h34" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e3_OLD/distances/h61" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e3_OLD/distances/h71" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e3_OLD/hosts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e3_OLD/output_virt_topo/out_all_hosts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e3_OLD/readme" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e3_OLD/test_topo3_new.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e3_OLD/traceroute/h11h61" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e3_OLD/traceroute/h11h71" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e3_OLD/traceroute/h61h11" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e3_OLD/traceroute/h61h71" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e3_OLD/traceroute/h71h11" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/OLD/e3_OLD/traceroute/h71h61" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/TODO" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e1/NRR" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e1/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e1/alias" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e1/build_topo3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e1/build_virtual_topo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e1/clean.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e1/create_merge_topo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e1/create_merge_topo_OLD.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e1/distances/h11" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e1/distances/h61" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e1/distances/h71" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e1/hosts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e1/start.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e1/traceroute/h11h61" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e1/traceroute/h11h71" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e1/traceroute/h61h11" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e1/traceroute/h61h71" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e1/traceroute/h71h11" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e1/traceroute/h71h61" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e2/.create_merge_topo.py.swp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e2/NRR" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e2/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e2/alias" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e2/build_topo3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e2/build_virtual_topo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e2/clean.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e2/create_compatibility_table.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e2/create_merge_topo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e2/create_merge_topo_OLD.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e2/distances/h11" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e2/distances/h61" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e2/distances/h71" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e2/hosts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e2/start.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e2/traceroute/h11h61" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e2/traceroute/h11h71" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e2/traceroute/h61h11" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e2/traceroute/h61h71" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e2/traceroute/h71h11" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e2/traceroute/h71h61" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/NRR" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/alias" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/build_topo3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/build_virtual_topo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/clean.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/create_compatibility_table.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/create_merge_topo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/distances/h21" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/distances/h31" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/distances/h41" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/distances/h42" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/distances/h61" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/distances/h62" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/distances/h71" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/hosts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/m_topo_0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/m_topo_1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/out" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/prova_thread.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/start.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/traceroute/h21h41" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/traceroute/h21h42" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/traceroute/h21h62" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/traceroute/h21h71" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/traceroute/h31h41" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/traceroute/h31h61" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/traceroute/h31h62" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/traceroute/h31h71" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/traceroute/h41h21" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/traceroute/h41h31" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/traceroute/h41h42" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/traceroute/h41h61" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/traceroute/h41h62" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/traceroute/h41h71" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/traceroute/h42h21" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/traceroute/h42h41" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/traceroute/h42h62" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/traceroute/h42h71" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/traceroute/h61h31" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/traceroute/h61h41" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/traceroute/h61h62" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/traceroute/h61h71" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/traceroute/h62h21" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/traceroute/h62h31" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/traceroute/h62h41" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/traceroute/h62h42" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/traceroute/h62h61" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/traceroute/h62h71" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/traceroute/h71h21" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/traceroute/h71h31" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/traceroute/h71h41" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/traceroute/h71h42" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/traceroute/h71h61" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e3/traceroute/h71h62" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/.start.py.swp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/NRR" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/README" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/__init__.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/alias" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/blockchain.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/build_topo3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/build_virtual_topo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/clean.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/client.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/client_config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/cmd line" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/create_compatibility_table.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/create_merge_topo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/distances/h11" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/distances/h21" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/distances/h31" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/distances/h41" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/distances/h71" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/file_config_prova/client1_config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/file_config_prova/client2_config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/file_config_prova/server1_config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/file_config_prova/server2_config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/file_config_prova/server3_config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/hosts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/ledger.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/m_topo_0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/m_topo_1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/m_topo_2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/message.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/node.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/proposal.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/NRR" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/alias" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/blockchain.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/build_topo3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/build_virtual_topo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/clean.sh" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/client.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/comandi sensori.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/create_compatibility_table.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/create_merge_topo.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/distances/h11" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/distances/h21" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/distances/h31" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/distances/h41" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/distances/h61" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/distances/h71" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/file_config_prova/client1_config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/file_config_prova/client2_config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/file_config_prova/clientR1_config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/file_config_prova/clientR4_config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/file_config_prova/server1_config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/file_config_prova/server2_config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/file_config_prova/server3_config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/hosts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/ledger.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/m_topo_0" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/m_topo_1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/m_topo_2" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/m_topo_h11" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/m_topo_s4" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/message.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/node.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/proposal.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/prova_stdout_to_python.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/sensor.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/start.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/start_interactive_with_sensors.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/start_sensor.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h11h31" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h11h41" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h11h61" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h11h71" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h21h31" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h21h41" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h21h61" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h21h71" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h31h11" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h31h21" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h31h41" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h31h61" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h31h71" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h41h11" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h41h21" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h41h31" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h41h61" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h41h71" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h61h11" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h61h21" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h61h31" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h61h41" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h61h71" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h71h11" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h71h21" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h71h31" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h71h41" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/traceroute/h71h61" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/transaction.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/util.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/server.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/server_config.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/start.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/threadTrials.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/topo.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h11h21" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h11h41" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h21h11" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h21h31" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h21h41" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h21h71" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h31h21" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h31h71" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h41h11" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h41h21" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h71h21" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/traceroute/h71h31" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/transaction.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/util.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/test_topo1.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/test_topo2.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/test_topo3.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/init.sh" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/init.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/readme.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/start.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/start.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/test_on_sensor.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/test_on_sensor.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h11h21" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h11h21" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h11h31" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h11h31" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h11h41" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h11h41" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h11h42" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h11h42" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h11h61" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h11h61" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h11h62" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h11h62" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h11h71" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h11h71" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h21h11" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h21h11" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h21h31" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h21h31" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h21h41" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h21h41" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h21h42" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h21h42" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h21h61" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h21h61" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h21h62" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h21h62" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h21h71" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h21h71" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h31h11" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h31h11" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h31h21" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h31h21" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h31h41" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h31h41" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h31h42" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h31h42" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h31h61" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h31h61" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h31h62" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h31h62" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h31h71" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h31h71" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h41h11" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h41h11" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h41h21" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h41h21" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h41h31" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h41h31" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h41h42" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h41h42" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h41h61" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h41h61" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h41h62" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h41h62" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h41h71" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h41h71" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h42h11" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h42h11" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h42h21" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h42h21" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h42h31" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h42h31" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h42h41" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h42h41" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h42h61" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h42h61" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h42h62" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h42h62" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h42h71" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h42h71" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h61h11" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h61h11" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h61h21" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h61h21" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h61h31" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h61h31" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h61h41" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h61h41" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h61h42" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h61h42" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h61h62" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h61h62" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h61h71" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h61h71" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h62h11" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h62h11" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h62h21" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h62h21" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h62h31" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h62h31" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h62h41" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h62h41" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h62h42" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h62h42" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h62h61" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h62h61" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h62h71" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h62h71" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h71h11" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h71h11" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h71h21" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h71h21" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h71h31" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h71h31" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h71h41" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h71h41" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h71h42" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h71h42" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h71h61" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h71h61" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h71h62" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h71h62" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/start_net_and_sensor.py" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UpAndDown/start_net_and_sensor.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h11h31" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h11h31" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h11h41" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h11h41" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h11h61" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h11h61" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h11h71" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h11h71" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h31h11" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h31h11" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h31h41" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h31h41" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h31h61" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h31h61" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h31h71" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h31h71" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h41h11" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h41h11" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h41h31" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h41h31" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h41h61" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h41h61" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h41h71" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h41h71" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h61h11" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h61h11" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h61h31" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h61h31" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h61h41" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h61h41" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h61h71" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h61h71" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h71h11" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h71h11" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h71h31" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h71h31" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h71h41" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h71h41" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h71h61" beforeDir="false" afterPath="$PROJECT_DIR$/Tests/UpAndDown/traceroute/h71h61" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Topology/build_topo3.py" beforeDir="false" afterPath="$PROJECT_DIR$/Topology/build_topo3.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Topology/build_virtual_topo.py" beforeDir="false" afterPath="$PROJECT_DIR$/Topology/build_virtual_topo.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Topology/create_merge_topo.py" beforeDir="false" afterPath="$PROJECT_DIR$/Topology/create_merge_topo.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Topology/util.py" beforeDir="false" afterPath="$PROJECT_DIR$/Topology/util.py" afterDir="false" />
@@ -87,33 +420,33 @@
       <usages-collector id="statistics.lifecycle.project">
         <counts>
           <entry key="project.closed" value="3" />
-          <entry key="project.open.time.19" value="1" />
+          <entry key="project.open.time.19" value="2" />
           <entry key="project.open.time.2" value="1" />
           <entry key="project.open.time.21" value="1" />
           <entry key="project.open.time.23" value="1" />
           <entry key="project.open.time.27" value="1" />
-          <entry key="project.opened" value="5" />
+          <entry key="project.opened" value="6" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.open">
         <counts>
           <entry key="MD" value="1" />
           <entry key="NRR" value="2" />
-          <entry key="alias" value="4" />
-          <entry key="cmd line" value="6" />
-          <entry key="h11h21" value="4" />
-          <entry key="h11h31" value="4" />
-          <entry key="h11h41" value="5" />
-          <entry key="h11h61" value="5" />
-          <entry key="h11h71" value="3" />
-          <entry key="h21h11" value="5" />
-          <entry key="h21h31" value="4" />
-          <entry key="h21h41" value="4" />
-          <entry key="h21h61" value="3" />
-          <entry key="h21h71" value="3" />
-          <entry key="h31h11" value="4" />
-          <entry key="h31h21" value="4" />
-          <entry key="h31h41" value="3" />
+          <entry key="alias" value="5" />
+          <entry key="cmd line" value="7" />
+          <entry key="h11h21" value="9" />
+          <entry key="h11h31" value="5" />
+          <entry key="h11h41" value="6" />
+          <entry key="h11h61" value="6" />
+          <entry key="h11h71" value="4" />
+          <entry key="h21h11" value="6" />
+          <entry key="h21h31" value="5" />
+          <entry key="h21h41" value="5" />
+          <entry key="h21h61" value="4" />
+          <entry key="h21h71" value="4" />
+          <entry key="h31h11" value="5" />
+          <entry key="h31h21" value="5" />
+          <entry key="h31h41" value="4" />
           <entry key="h31h61" value="3" />
           <entry key="h31h71" value="3" />
           <entry key="h41h11" value="3" />
@@ -125,29 +458,29 @@
           <entry key="h61h21" value="3" />
           <entry key="h61h31" value="3" />
           <entry key="h61h41" value="3" />
-          <entry key="h61h71" value="2" />
-          <entry key="h71h11" value="2" />
-          <entry key="h71h21" value="2" />
-          <entry key="h71h31" value="3" />
-          <entry key="h71h41" value="1" />
-          <entry key="h71h61" value="2" />
-          <entry key="hosts" value="4" />
-          <entry key="json" value="23" />
-          <entry key="md" value="3" />
+          <entry key="h61h71" value="3" />
+          <entry key="h71h11" value="3" />
+          <entry key="h71h21" value="3" />
+          <entry key="h71h31" value="4" />
+          <entry key="h71h41" value="2" />
+          <entry key="h71h61" value="3" />
+          <entry key="hosts" value="5" />
+          <entry key="json" value="25" />
+          <entry key="md" value="7" />
           <entry key="png" value="4" />
-          <entry key="py" value="143" />
+          <entry key="py" value="171" />
           <entry key="s1" value="2" />
-          <entry key="sh" value="4" />
+          <entry key="sh" value="6" />
           <entry key="txt" value="1" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Image" value="4" />
-          <entry key="JSON" value="23" />
-          <entry key="Markdown" value="4" />
-          <entry key="PLAIN_TEXT" value="123" />
-          <entry key="Python" value="143" />
+          <entry key="JSON" value="25" />
+          <entry key="Markdown" value="8" />
+          <entry key="PLAIN_TEXT" value="151" />
+          <entry key="Python" value="171" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
@@ -156,30 +489,64 @@
           <entry key="dummy" value="50" />
           <entry key="hosts" value="10" />
           <entry key="json" value="39" />
-          <entry key="md" value="1796" />
-          <entry key="py" value="18705" />
+          <entry key="md" value="6916" />
+          <entry key="py" value="27994" />
+          <entry key="sh" value="50" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="39" />
-          <entry key="Markdown" value="1796" />
-          <entry key="PLAIN_TEXT" value="62" />
-          <entry key="Python" value="18705" />
+          <entry key="Markdown" value="6916" />
+          <entry key="PLAIN_TEXT" value="112" />
+          <entry key="Python" value="27994" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Sensor/sensor.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Topology/util.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="294">
-              <caret line="141" column="9" selection-start-line="141" selection-start-column="9" selection-end-line="141" selection-end-column="9" />
+            <state relative-caret-position="-915">
+              <caret line="167" column="21" lean-forward="true" selection-start-line="167" selection-start-column="21" selection-end-line="167" selection-end-column="21" />
               <folding>
-                <element signature="e#16#33#0" expanded="true" />
+                <element signature="e#63#74#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/init.sh">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" column="15" lean-forward="true" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="26" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Blockchain/node.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="226">
+              <caret line="247" column="17" lean-forward="true" selection-start-line="247" selection-start-column="17" selection-end-line="247" selection-end-column="17" />
+              <folding>
+                <marker date="1537084904178" expanded="true" signature="2849:2855" ph="..." />
+                <marker date="1537084904178" expanded="true" signature="27614:27620" ph="..." />
+                <marker date="1537084904178" expanded="true" signature="38776:42597" ph="..." />
+                <marker date="1537084904178" expanded="true" signature="42353:42597" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Blockchain/cmd line">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="60">
+              <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="60" />
             </state>
           </provider>
         </entry>
@@ -187,11 +554,73 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/start_net_and_sensor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="339">
-              <caret line="108" column="22" lean-forward="true" selection-start-line="108" selection-start-column="22" selection-end-line="108" selection-end-column="22" />
+            <state relative-caret-position="-210">
+              <caret line="60" column="9" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="20" />
               <folding>
                 <element signature="e#16#35#0" expanded="true" />
-                <marker date="1537090749474" expanded="true" signature="1937:2412" ph="..." />
+                <marker date="1537780380397" expanded="true" signature="1896:2371" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Sensor/sensor.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="300">
+              <caret line="35" column="70" selection-start-line="35" selection-start-column="70" selection-end-line="35" selection-end-column="70" />
+              <folding>
+                <element signature="e#16#33#0" expanded="true" />
+                <marker date="1538211266893" expanded="true" signature="7829:7834" ph="..." />
+                <marker date="1538211266893" expanded="true" signature="12873:14740" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/test_on_sensor.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="615">
+              <caret line="86" column="15" selection-start-line="86" selection-start-column="15" selection-end-line="86" selection-end-column="15" />
+              <folding>
+                <element signature="e#16#35#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/readme.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="676">
+                <caret line="48" column="84" selection-start-line="48" selection-start-column="84" selection-end-line="48" selection-end-column="84" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodes/readme.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="285">
+                <caret line="19" column="74" selection-start-line="19" selection-start-column="74" selection-end-line="19" selection-end-column="74" />
+              </first_editor>
+              <second_editor />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Topology/build_virtual_topo.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="-239">
+              <caret line="64" column="15" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="15" />
+              <folding>
+                <element signature="e#19#33#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -208,36 +637,36 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>get_responding_routers</find>
-      <find>create</find>
-      <find>create_virtual_topo_and_traces</find>
-      <find>alias</find>
-      <find>lst</find>
-      <find>anonymous_</find>
-      <find>verbose</find>
-      <find>ano</find>
-      <find>nh</find>
-      <find>print</find>
-      <find>2.2</find>
-      <find>r6</find>
-      <find>.11.</find>
-      <find>h11</find>
-      <find>contr</find>
-      <find>class s</find>
-      <find>create_new_ledger</find>
-      <find>topology</find>
-      <find>nrr</find>
-      <find>pdb.set</find>
-      <find>stop</find>
-      <find>tcpdu</find>
-      <find>itop</find>
-      <find>topology_</find>
-      <find>time.</find>
+      <find>write_topo</find>
+      <find>write_t</find>
+      <find>iTop</find>
+      <find>write_topo_to_file</find>
       <find>ping</find>
+      <find>write</find>
+      <find>set_tr</find>
+      <find>hosts</find>
+      <find>print</find>
+      <find>get_res</find>
+      <find>disco</find>
       <find>__banned</find>
-      <find>check_dead_nodes</find>
-      <find>known_ips</find>
-      <find>_banned</find>
+      <find>parse</find>
+      <find>pdb</find>
+      <find>does not belo</find>
+      <find>os.</find>
+      <find>net</find>
+      <find>fastiT</find>
+      <find>loggin</find>
+      <find>fastiTop</find>
+      <find>alias[</find>
+      <find>self.__full</find>
+      <find>check_dead</find>
+      <find>create_virt</find>
+      <find>process</find>
+      <find>open</find>
+      <find>logging</find>
+      <find>compare</find>
+      <find>thread</find>
+      <find>set_tra</find>
     </findStrings>
     <replaceStrings>
       <replace>num_keep</replace>
@@ -257,9 +686,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Blockchain/client.py" />
-        <option value="$PROJECT_DIR$/Blockchain/file_config_prova/blockchain.py" />
-        <option value="$PROJECT_DIR$/Blockchain/proposal.py" />
         <option value="$PROJECT_DIR$/Blockchain/message.py" />
         <option value="$PROJECT_DIR$/Blockchain/blockchain.py" />
         <option value="$PROJECT_DIR$/Blockchain/ledger.py" />
@@ -292,17 +718,25 @@
         <option value="$PROJECT_DIR$/Sensor/__init__.py" />
         <option value="$PROJECT_DIR$/Mininet/readme.md" />
         <option value="$PROJECT_DIR$/Blockchain/__init__.py" />
-        <option value="$PROJECT_DIR$/Topology/create_merge_topo.py" />
         <option value="$PROJECT_DIR$/Topology/build_topo3.py" />
-        <option value="$PROJECT_DIR$/Topology/build_virtual_topo.py" />
-        <option value="$PROJECT_DIR$/Topology/util.py" />
         <option value="$PROJECT_DIR$/Blockchain/file_config_prova/server1_config.json" />
         <option value="$PROJECT_DIR$/Blockchain/file_config_prova/server2_config.json" />
         <option value="$PROJECT_DIR$/Blockchain/file_config_prova/server3_config.json" />
         <option value="$PROJECT_DIR$/Blockchain/server.py" />
         <option value="$PROJECT_DIR$/Blockchain/node.py" />
+        <option value="$PROJECT_DIR$/Topology/create_merge_topo.py" />
         <option value="$PROJECT_DIR$/Tests/UpAndDown/start_net_and_sensor.py" />
+        <option value="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/start.py" />
+        <option value="$PROJECT_DIR$/Topology/build_virtual_topo.py" />
+        <option value="$PROJECT_DIR$/Miscellaneous/GUI/prova_gui.py" />
+        <option value="$PROJECT_DIR$/Miscellaneous/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/sensor.py" />
+        <option value="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/sensor_on_mininet_host.py" />
+        <option value="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/init.sh" />
+        <option value="$PROJECT_DIR$/Topology/util.py" />
         <option value="$PROJECT_DIR$/Sensor/sensor.py" />
+        <option value="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/test_on_sensor.py" />
+        <option value="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/readme.md" />
+        <option value="$PROJECT_DIR$/Tests/MaliciousNodes/readme.md" />
       </list>
     </option>
   </component>
@@ -312,12 +746,14 @@
     <option name="width" value="1855" />
     <option name="height" value="952" />
   </component>
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectView">
     <navigator proportions="" version="1">
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -333,50 +769,13 @@
             <path>
               <item name="network-inference-with-BlockchainNEW" type="b2602c69:ProjectViewProjectNode" />
               <item name="network-inference-with-BlockchainNEW" type="462c0819:PsiDirectoryNode" />
-              <item name="Blockchain" type="462c0819:PsiDirectoryNode" />
-              <item name="file_config_prova" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="network-inference-with-BlockchainNEW" type="b2602c69:ProjectViewProjectNode" />
-              <item name="network-inference-with-BlockchainNEW" type="462c0819:PsiDirectoryNode" />
-              <item name="Sensor" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="network-inference-with-BlockchainNEW" type="b2602c69:ProjectViewProjectNode" />
-              <item name="network-inference-with-BlockchainNEW" type="462c0819:PsiDirectoryNode" />
               <item name="Tests" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="network-inference-with-BlockchainNEW" type="b2602c69:ProjectViewProjectNode" />
               <item name="network-inference-with-BlockchainNEW" type="462c0819:PsiDirectoryNode" />
               <item name="Tests" type="462c0819:PsiDirectoryNode" />
-              <item name="UpAndDown" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="network-inference-with-BlockchainNEW" type="b2602c69:ProjectViewProjectNode" />
-              <item name="network-inference-with-BlockchainNEW" type="462c0819:PsiDirectoryNode" />
-              <item name="TOPOLOGIE_FUNZIONANTI" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="network-inference-with-BlockchainNEW" type="b2602c69:ProjectViewProjectNode" />
-              <item name="network-inference-with-BlockchainNEW" type="462c0819:PsiDirectoryNode" />
-              <item name="TOPOLOGIE_FUNZIONANTI" type="462c0819:PsiDirectoryNode" />
-              <item name="esperimenti" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="network-inference-with-BlockchainNEW" type="b2602c69:ProjectViewProjectNode" />
-              <item name="network-inference-with-BlockchainNEW" type="462c0819:PsiDirectoryNode" />
-              <item name="TOPOLOGIE_FUNZIONANTI" type="462c0819:PsiDirectoryNode" />
-              <item name="esperimenti" type="462c0819:PsiDirectoryNode" />
-              <item name="e4" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="network-inference-with-BlockchainNEW" type="b2602c69:ProjectViewProjectNode" />
-              <item name="network-inference-with-BlockchainNEW" type="462c0819:PsiDirectoryNode" />
-              <item name="TOPOLOGIE_FUNZIONANTI" type="462c0819:PsiDirectoryNode" />
-              <item name="esperimenti" type="462c0819:PsiDirectoryNode" />
-              <item name="e4" type="462c0819:PsiDirectoryNode" />
-              <item name="prova_sensori" type="462c0819:PsiDirectoryNode" />
+              <item name="OptimalProbingStationsNumber" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="network-inference-with-BlockchainNEW" type="b2602c69:ProjectViewProjectNode" />
@@ -387,6 +786,7 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -394,17 +794,17 @@
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/Tests/UpAndDown" />
-      <recent name="$PROJECT_DIR$/Mininet" />
-      <recent name="$PROJECT_DIR$/Sensor" />
-      <recent name="$PROJECT_DIR$/Experiments/UpAndDown" />
-      <recent name="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/file_config_prova" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/Miscellaneous" />
       <recent name="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/file_config_prova" />
       <recent name="$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/file_config_prova" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/Tests/MaliciousNodes" />
+      <recent name="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber" />
+      <recent name="$PROJECT_DIR$/Tests/UpAndDown" />
+      <recent name="$PROJECT_DIR$/Mininet" />
+      <recent name="$PROJECT_DIR$/Sensor" />
     </key>
   </component>
   <component name="RunDashboard">
@@ -419,7 +819,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="Python.server">
+  <component name="RunManager" selected="Python.start">
     <configuration name="prova_stdout_to_python" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="network-inference-with-Blockchain" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -483,6 +883,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="start" type="PythonConfigurationType" factoryName="Python" temporary="true">
+      <module name="network-inference-with-Blockchain" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/start.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="test_sensore" type="PythonConfigurationType" factoryName="Python" temporary="true">
       <module name="network-inference-with-Blockchain" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -504,41 +925,20 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
-    <configuration name="threadTrials" type="PythonConfigurationType" factoryName="Python" temporary="true">
-      <module name="network-inference-with-Blockchain" />
-      <option name="INTERPRETER_OPTIONS" value="" />
-      <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/Blockchain" />
-      <option name="IS_MODULE_SDK" value="true" />
-      <option name="ADD_CONTENT_ROOTS" value="true" />
-      <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/Blockchain/threadTrials.py" />
-      <option name="PARAMETERS" value="" />
-      <option name="SHOW_COMMAND_LINE" value="false" />
-      <option name="EMULATE_TERMINAL" value="false" />
-      <option name="MODULE_MODE" value="false" />
-      <option name="REDIRECT_INPUT" value="false" />
-      <option name="INPUT_FILE" value="" />
-      <method v="2" />
-    </configuration>
     <list>
-      <item itemvalue="Python.threadTrials" />
       <item itemvalue="Python.server" />
       <item itemvalue="Python.prova_stdout_to_python" />
       <item itemvalue="Python.sensor" />
       <item itemvalue="Python.test_sensore" />
+      <item itemvalue="Python.start" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.start" />
         <item itemvalue="Python.server" />
         <item itemvalue="Python.sensor" />
         <item itemvalue="Python.test_sensore" />
         <item itemvalue="Python.prova_stdout_to_python" />
-        <item itemvalue="Python.threadTrials" />
       </list>
     </recent_temporary>
   </component>
@@ -556,20 +956,20 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1855" height="980" extended-state="6" />
+    <frame x="65" y="-4" width="1855" height="1020" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.16812228" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.15447599" />
       <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.3295964" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="2" weight="0.3295964" />
       <window_info anchor="bottom" id="Message" order="3" />
-      <window_info anchor="bottom" id="Find" order="4" visible="true" weight="0.20657277" />
+      <window_info anchor="bottom" id="Find" order="4" weight="0.20657277" />
       <window_info anchor="bottom" id="Version Control" order="5" weight="0.3295964" />
       <window_info anchor="bottom" id="Run" order="6" weight="0.33450705" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.34624413" />
+      <window_info anchor="bottom" id="Debug" order="7" visible="true" weight="0.34624413" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="10" />
@@ -577,25 +977,6 @@
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
       <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.2498618" />
     </layout>
-    <layout-to-restore>
-      <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" visible="true" weight="0.17467248" />
-      <window_info id="Structure" order="2" side_tool="true" weight="0.25" />
-      <window_info anchor="bottom" id="Terminal" order="0" weight="0.3295964" />
-      <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
-      <window_info anchor="bottom" id="Python Console" order="2" weight="0.3295964" />
-      <window_info anchor="bottom" id="Message" order="3" />
-      <window_info anchor="bottom" id="Find" order="4" visible="true" weight="0.3286385" />
-      <window_info anchor="bottom" id="Version Control" order="5" weight="0.3295964" />
-      <window_info anchor="bottom" id="Run" order="6" weight="0.33450705" />
-      <window_info anchor="bottom" id="Debug" order="7" weight="0.34624413" />
-      <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
-      <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
-      <window_info anchor="bottom" id="TODO" order="10" />
-      <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
-      <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
-      <window_info anchor="right" content_ui="combo" id="Hierarchy" order="2" weight="0.2498618" />
-    </layout-to-restore>
   </component>
   <component name="VcsContentAnnotationSettings">
     <option name="myLimit" value="2678400000" />
@@ -647,6 +1028,11 @@
           <url>file://$PROJECT_DIR$/Blockchain/node.py</url>
           <line>696</line>
           <option name="timeStamp" value="81" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
+          <url>file://$PROJECT_DIR$/Topology/util.py</url>
+          <line>4</line>
+          <option name="timeStamp" value="82" />
         </line-breakpoint>
       </breakpoints>
       <breakpoints-dialog>
@@ -726,175 +1112,8 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e1/traceroute/h61h11">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e1/traceroute/h61h71">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e1/traceroute/h71h11">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e1/traceroute/h71h61">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Topology/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Topology/build_virtual_topo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="47" column="47" selection-start-line="47" selection-start-column="47" selection-end-line="47" selection-end-column="47" />
-          <folding>
-            <element signature="e#19#33#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Topology/build_topo3.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-570">
-          <caret line="10" column="11" selection-start-line="10" selection-start-column="11" selection-end-line="10" selection-end-column="11" />
-          <folding>
-            <element signature="e#18#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Topology/util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="8" column="1" selection-start-line="8" selection-start-column="1" selection-end-line="8" selection-end-column="1" />
-          <folding>
-            <element signature="e#95#106#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h41h11">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h71h61">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h71h41">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h71h21">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="90">
-          <caret line="6" column="19" selection-start-line="6" selection-start-column="19" selection-end-line="6" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h71h11">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h61h71">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h61h41">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h61h31">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h61h21">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h61h11">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h41h71">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h41h61">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h41h31">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h41h21">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h31h71">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blockchain/transaction.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <folding>
-            <marker date="1536485783474" expanded="true" signature="722:728" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blockchain/file_config_prova/server3_config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blockchain/file_config_prova/server1_config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="2" lean-forward="true" selection-start-line="30" selection-start-column="2" selection-end-line="30" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blockchain/file_config_prova/server2_config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="450">
-          <caret line="30" column="36" selection-start-line="30" selection-start-column="36" selection-end-line="30" selection-end-column="36" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h11h71">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h11h61">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h11h41">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h11h31">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h11h21">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h21h11">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h21h31">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h21h41">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h21h61">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h21h71">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h31h61">
       <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h31h41">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h31h21">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h31h11">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="75">
-          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
-        </state>
-      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Blockchain/threadTrials.py">
       <provider selected="true" editor-type-id="text-editor">
@@ -910,16 +1129,206 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-606">
           <caret line="29" column="50" selection-start-line="29" selection-start-column="50" selection-end-line="29" selection-end-column="50" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/start_sensor.py" />
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/start_interactive_with_sensors.py" />
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/start.py" />
+    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/sensor.py" />
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h11h31">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h11h41">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h31h41">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h31h21">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h31h11">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="75">
+          <caret line="5" lean-forward="true" selection-start-line="5" selection-end-line="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h21h71">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h21h61">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h21h41">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h21h31">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h21h11">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h11h71">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/traceroute/h11h61">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$APPLICATION_HOME_DIR$/helpers/pydev/_pydev_bundle/pydev_monkey_qt.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="806">
+          <caret line="101" selection-start-line="101" selection-end-line="101" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/alias">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h71h61">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h71h41">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h71h31">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h71h21">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h61h71">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h71h11">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Topology/create_compatibility_table.py">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Topology/build_topo3.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1560">
+          <caret line="1" selection-start-line="1" selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Topology/create_merge_topo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="158">
+          <caret line="97" column="11" selection-start-line="97" selection-start-column="11" selection-end-line="97" selection-end-column="11" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/traceroute/h11h21">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/sensor_config.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/sensor_config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret selection-end-line="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Miscellaneous/GUI/prova_gui.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="315">
+          <caret line="21" column="15" selection-start-line="21" selection-start-column="15" selection-end-line="21" selection-end-column="15" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Miscellaneous/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/sensor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="265">
+          <caret line="156" column="21" selection-start-line="156" selection-start-column="21" selection-end-line="156" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/sensor_on_mininet_host.py" />
+    <entry file="file://$PROJECT_DIR$/Miscellaneous/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/start_interactive_with_sensors.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="480">
+          <caret line="35" column="8" selection-start-line="35" selection-start-column="8" selection-end-line="35" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Miscellaneous/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/start.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="635">
+          <caret line="91" column="8" selection-start-line="91" selection-start-column="8" selection-end-line="91" selection-end-column="91" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/hosts">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/start.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="715">
+          <caret line="162" column="13" selection-start-line="162" selection-start-column="13" selection-end-line="162" selection-end-column="13" />
           <folding>
-            <element signature="e#122#147#0" expanded="true" />
+            <marker date="1537774777133" expanded="true" signature="4465:5532" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blockchain/cmd line">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" selection-start-line="4" selection-end-line="4" selection-end-column="60" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/start_net_and_sensor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-210">
+          <caret line="60" column="9" selection-start-line="60" selection-start-column="9" selection-end-line="60" selection-end-column="20" />
+          <folding>
+            <element signature="e#16#35#0" expanded="true" />
+            <marker date="1537780380397" expanded="true" signature="1896:2371" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Topology/build_virtual_topo.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-239">
+          <caret line="64" column="15" selection-start-line="64" selection-start-column="4" selection-end-line="64" selection-end-column="15" />
+          <folding>
+            <element signature="e#19#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/init.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="60">
+          <caret line="4" column="15" lean-forward="true" selection-start-line="4" selection-start-column="15" selection-end-line="4" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Topology/util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-915">
+          <caret line="167" column="21" lean-forward="true" selection-start-line="167" selection-start-column="21" selection-end-line="167" selection-end-column="21" />
+          <folding>
+            <element signature="e#63#74#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Blockchain/node.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="302">
-          <caret line="701" column="64" selection-start-line="701" selection-start-column="64" selection-end-line="701" selection-end-column="64" />
+        <state relative-caret-position="226">
+          <caret line="247" column="17" lean-forward="true" selection-start-line="247" selection-start-column="17" selection-end-line="247" selection-end-column="17" />
           <folding>
             <marker date="1537084904178" expanded="true" signature="2849:2855" ph="..." />
             <marker date="1537084904178" expanded="true" signature="27614:27620" ph="..." />
@@ -929,60 +1338,45 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/start_sensor.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/start_interactive_with_sensors.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="315">
-          <caret line="24" column="17" lean-forward="true" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
-          <folding>
-            <element signature="e#16#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/start.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-405">
-          <folding>
-            <marker date="1536419996347" expanded="true" signature="1761:1998" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/prova_sensori/sensor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1710">
-          <folding>
-            <marker date="1536506856461" expanded="true" signature="128:2466" ph="..." />
-            <marker date="1536506856461" expanded="true" signature="2486:2491" ph="..." />
-            <marker date="1536506856461" expanded="true" signature="3167:3173" ph="..." />
-            <marker date="1536506856461" expanded="true" signature="4920:5340" ph="..." />
-            <marker date="1536506856461" expanded="true" signature="6330:6968" ph="..." />
-            <marker date="1536506856461" expanded="true" signature="8472:9265" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/UpAndDown/start_net_and_sensor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="339">
-          <caret line="108" column="22" lean-forward="true" selection-start-line="108" selection-start-column="22" selection-end-line="108" selection-end-column="22" />
-          <folding>
-            <element signature="e#16#35#0" expanded="true" />
-            <marker date="1537090749474" expanded="true" signature="1937:2412" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Sensor/sensor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="294">
-          <caret line="141" column="9" selection-start-line="141" selection-start-column="9" selection-end-line="141" selection-end-column="9" />
+        <state relative-caret-position="300">
+          <caret line="35" column="70" selection-start-line="35" selection-start-column="70" selection-end-line="35" selection-end-column="70" />
           <folding>
             <element signature="e#16#33#0" expanded="true" />
+            <marker date="1538211266893" expanded="true" signature="7829:7834" ph="..." />
+            <marker date="1538211266893" expanded="true" signature="12873:14740" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/test_on_sensor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="86" column="15" selection-start-line="86" selection-start-column="15" selection-end-line="86" selection-end-column="15" />
+          <folding>
+            <element signature="e#16#35#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="676">
+            <caret line="48" column="84" selection-start-line="48" selection-start-column="84" selection-end-line="48" selection-end-column="84" />
+          </first_editor>
+          <second_editor />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodes/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="285">
+            <caret line="19" column="74" selection-start-line="19" selection-start-column="74" selection-end-line="19" selection-end-column="74" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

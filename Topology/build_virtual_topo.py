@@ -10,9 +10,11 @@ def make_anonymous_and_blocking_routers(net):
             net[r[0]].cmd(r[1])
        
     
-def compute_distances(net, hosts):
+def compute_distances(net, hosts, src_hosts=[]):
+    ''' Compute distances between hosts. If src_hosts is specified, use only those routers as source.'''
     distances = {}
-    for h1 in hosts:
+    shosts = src_hosts if len(src_hosts) > 0 else hosts
+    for h1 in shosts:
         for h2 in hosts:
             if h1 != h2:                    
             # For each host different from host1, add a line with the name of the host
@@ -20,7 +22,7 @@ def compute_distances(net, hosts):
                 #print "Starting ping from " + h1 + " ... "
                 os.system("touch distances/" + h1) 
                 os.system("echo -n '" + h2 + " '  >> distances/" + h1)
-                net[h1].cmd('ping -c 1 ' + net[h2].IP() + 
+                net[h1].cmd('ping -c 1 -W 1 ' + net[h2].IP() +
                 " | grep from | awk '{split($6,a,\"=\"); print 64 - a[2]}'>> distances/" + 
                 h1)
                 os.system("echo  '---'  >>distances/" + h1) #TODO check
@@ -37,15 +39,16 @@ def get_hosts(num):
         return r_hosts
 
 
-def create_traces(net, hosts):
-    for h1 in hosts:
+def create_traces(net, hosts, src_hosts = []): #TODO rename in store_traces?
+    shosts = src_hosts if len(src_hosts) > 0 else hosts
+    for h1 in shosts:
         for h2 in hosts:
             if h1 != h2:                    
             # For each host different from host1, add a line with the name of the host
             # and the distance from host1 (exploit TTL to derive the distance)
                 print "Starting collection of traces from " + h1 + " ... "
                 #pdb.set_trace()
-                (o, e, ec) = net[h1].pexec('tcptraceroute -n ' + net[h2].IP())
+                (o, e, ec) = net[h1].pexec('tcptraceroute -n -w 1 ' + net[h2].IP()) #TODO added -w 2
                 with open("traceroute/"+h1+h2, "w") as f:
                     f.write(o)
             #net[h1].cmd('traceroute -n -I' + net[h2].IP() + ' > traceroute/' + h1 + h2)
@@ -59,17 +62,15 @@ def create_alias():
                 alias[address]=(l[0]) #l[0] is the router name
         return alias
 
-def create_virtual_topo_and_traces(alias, hosts):
+def create_virtual_topo_and_traces(alias, hosts, src_hosts = []):
     topo = {}
     x = [0]  # Incremental identifier for non responding routers. x is a list used as single value
     done = set() # Insert hosts already visited (in case a blocking router is found)
     traces = {}
-    for h1 in hosts:
-        #pdb.set_trace()
+    shosts = src_hosts if len(src_hosts) > 0 else hosts
+    for h1 in shosts:
         for h2 in hosts:
             if h1 != h2:
-                #print 'h1 = ' + h1 + ', h2 =  ' + h2
-                #print ('A' in topo)
                 traces[h1+h2] = []
                 if get_answer_from_dest(h1,h2): 
                 #Manage the cases in which no blocking router is found
