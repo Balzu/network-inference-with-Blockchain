@@ -16,7 +16,8 @@ class ledger(object):
 
     def __eq__(self, other):
         if isinstance(other, ledger):
-            return self.__seq == other.sequence_number() and self.transaction_set_id() == other.transaction_set_id()
+            return self.__seq == other.sequence_number() and self.transaction_set().has_same_transactions(other.transaction_set())
+            #self.transaction_set_id() == other.transaction_set_id() TODO era vecchia condizione, controlla
         raise TypeError('The comparison must be done among two objects of class "ledger" ')
 
     def __ne__(self, other):
@@ -29,6 +30,10 @@ class ledger(object):
         return self.__id
 
     def transaction_set_id(self):
+        pass
+
+    #TODO check
+    def transaction_set(self):
         pass
 
     def set_previous(self, ledger):
@@ -77,6 +82,7 @@ class full_ledger(ledger):
         other_trans = other.transaction_set().transactions().values()
         for t in other_trans:
             self.transaction_set().add_transaction(t)
+        return self #TODO check
 
 
 class light_ledger(ledger):

@@ -12,7 +12,10 @@ down the consensus process, while when malicios nodes are above a given threshol
  ### Tests
  
 Initially 100 'honest' transactions are inserted into the Blockchain.
-The UNL of each Blockchain server is made of 5 other servers.
+There are 10 Blockchain servers:
+ * For Servers 1 to 6, the UNL of each Blockchain server is made of the other 5 servers.
+  * For Servers 7 to 10, the UNL of each Blockchain server is made of 5 random servers.
+  
 Three possible attacks that a malicious server can carry out are assessed:
 
 1. A malicious server does not express its vote 

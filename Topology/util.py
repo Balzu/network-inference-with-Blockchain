@@ -3,7 +3,9 @@
 This module contains utility functions.
 """
 import json
+import math
 import os
+import matplotlib.pyplot as plt
 from build_topo3 import *
 from node import *
 from create_merge_topo import *
@@ -287,3 +289,41 @@ def compare_topologies(old_topo, new_topo, new_nodes=[]):
             if n not in onodes:
                 return False
     return True
+
+def setup_logger(logger_name, log_file, level=logging.INFO):
+    l = logging.getLogger(logger_name)
+    formatter = logging.Formatter('%(message)s')
+    fileHandler = logging.FileHandler(log_file, mode='a')
+    fileHandler.setFormatter(formatter)
+    streamHandler = logging.StreamHandler()
+    streamHandler.setFormatter(formatter)
+
+    l.setLevel(level)
+    l.addHandler(fileHandler)
+    l.addHandler(streamHandler)
+
+def plot_histogram(times, filename, show=False):
+    '''
+    Plots the histogram of the completion times of the various phases
+    :param times: list of times. The times must be sorted: [open, establish, accept, total]
+    :param name: The filename of the plot on disk
+    '''
+    #pdb.set_trace()
+    xvals = range(int(4))
+    xnames=["Open","Establish","Accept","Total"]
+    yvals = times
+    width = 0.25
+    yinterval = 10
+
+    figure = plt.figure()
+    plt.grid(True)
+    plt.xlabel('Phases')
+    plt.ylabel('Average Completion Times')
+
+    plt.bar(xvals, yvals, width=width, align='center')
+    plt.xticks(xvals, xnames)
+    plt.yticks(range(0, int(math.ceil(max(yvals))),yinterval))
+    plt.xlim([min(xvals) - 0.5, max(xvals) + 0.5])
+
+    figure.savefig(filename,format="png")
+    if show: plt.show()

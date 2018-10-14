@@ -26,7 +26,7 @@ class blockchain(object):
         else:
             raise ValueError('Incorrect values of parameters')
 
-
+    #TODO uguale a current_ledger
     def ledgers(self):
         return self.__ledgers
 
@@ -66,6 +66,9 @@ class blockchain(object):
 
     def current_ledger_id(self):
         return self.__ledgers.id() if self.__ledgers is not None else 0 # If no ledgers are present, return default value 0
+
+    def current_ledger_seq_num(self):
+        return self.__ledgers.sequence_number() if self.__ledgers is not None else 0
 
 class light_blockchain(blockchain):
 

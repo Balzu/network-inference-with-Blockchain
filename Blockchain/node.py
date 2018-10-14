@@ -1,13 +1,20 @@
 # -*- coding: utf-8 -*-
 from __future__ import division
 import threading
+from threading import Lock
 import socket
 import thread
 import cPickle as pickle
 import rsa
-import time
+import time, datetime
+import os
+import sys
+import logging
 import pdb
 from transaction import *
+topo_path = os.path.abspath(os.path.join('..', '..', 'Topology'))
+sys.path.insert(0, topo_path)
+from util import *
 from graph_tool.all import *
 from message import *
 from blockchain import *
@@ -37,6 +44,7 @@ class server_socket(threading.Thread):
 
     def run(self):
         server = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+        server.setsockopt(socket.SOL_SOCKET, socket.SO_REUSEADDR, 1)
         server.settimeout(5.0)
         server.bind((self.ip_addr, self.port))
         server.listen(5)  # max backlog of connections
@@ -44,8 +52,8 @@ class server_socket(threading.Thread):
         self.start_listening(server)
 
     def handle_client_connection(self, client_socket):
-        msg = client_socket.recv(16384)
-        #print 'Received {}'.format(pickle.loads(msg)) #TODO controlla dove mettere pickle
+        msg = client_socket.recv(32768) #16384 insufficiente
+        #self.server.logger().info('\nMsg length: ' + str(len(msg)) + '\n')
         msg = pickle.loads(msg)
         ack_msg = self.server.handle_message(msg)
         ack_msg = pickle.dumps(ack_msg)
@@ -70,6 +78,8 @@ class server_socket(threading.Thread):
                 client_handler.start()
             except socket.timeout:
                 pass
+        server.shutdown(socket.SHUT_RDWR)
+        server.close()
 
 
 
@@ -99,7 +109,7 @@ class topology_node(object):
 class node(object):
     """Interface for a node of the blockchain network"""
     def __init__(self, ip_addr, port):
-        self._id = str(ip_addr) + ':' + str(port)   #TODO per ora l' id è praticamente il socket. Potrebbe essere ricavato da chiave pubblica
+        self._id = str(ip_addr) + ':' + str(port) #TODO per ora l' id è il socket. Potrebbe essere ricavato da chiave pubblica
         self._ip = ip_addr
         self._port = port
         (self._pubkey, self._privkey) = rsa.newkeys(512)
@@ -170,6 +180,7 @@ class client(node):
     def __init__(self, ip_addr, port, validators = []):
         super(client, self).__init__( ip_addr, port)
         self.validators = validators #TODO must be a list of type node
+        self.socketLock = Lock() #TODO controlla (anche nome)
 
     def add_validator(self, node_id):
         self.validators.append(node_id)
@@ -231,6 +242,7 @@ class client(node):
         dest = self.validators
         if len(servers) > 0:
             dest = servers
+        #pdb.set_trace()
         for d in dest:
             t = threading.Thread(
                 target=self.send,
@@ -252,23 +264,32 @@ class client(node):
         '''Different handling done whether a single message is sent or a list of messages'''
         ip_addr = node_id.split(':')[0]
         port = int(node_id.split(':')[1])
-        sender = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
-        sender.connect((ip_addr, port))
         if not list:
-            pmsg = pickle.dumps(msg)
-            sender.sendall(pmsg) # No need for lock on msg, it is just read
-            ack = sender.recv(1024)
-            ack = pickle.loads(ack)
-            self.handle_response(msg.type(), ack)
-            sender.close()
-        else:
-            for m in msg:
-                pmsg = pickle.dumps(m)
+            try:
+                sender = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                sender.connect((ip_addr, port))
+                pmsg = pickle.dumps(msg)
                 sender.sendall(pmsg) # No need for lock on msg, it is just read
                 ack = sender.recv(1024)
                 ack = pickle.loads(ack)
-                self.handle_response(m.type(), ack)
-            sender.close()
+                self.handle_response(msg.type(), ack)
+                sender.close()
+            except (EOFError, socket.error):
+                sender.close()
+        else:
+            for m in msg:
+                try:
+                    sender = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+                    sender.connect((ip_addr, port))
+                    pmsg = pickle.dumps(m)
+                    sender.sendall(pmsg) # No need for lock on msg, it is just read
+                    ack = sender.recv(1024)
+                    ack = pickle.loads(ack)
+                    self.handle_response(m.type(), ack)
+                    sender.shutdown(socket.SHUT_RDWR)
+                    sender.close()
+                except (EOFError, socket.error):
+                    sender.close()
 
 
     #TODO: aggiungi un handler per ogni possibile tipo di messaggio
@@ -314,7 +335,25 @@ class client(node):
 class server(client):
     """A server node of the blockchain network, running the consensus algorithm.
        It is also a client, because it both listens for incoming connections, and starts new connections."""
-    def __init__(self, ip_addr, port, q, lmc, lmcl, tval, ttimes, lminc, lmaxc, nrr = True, validators = [], unl = []):
+    def __init__(self, ip_addr, port, q, lmc, lmcl, tval, ttimes, lminc, lmaxc, nrr = True, validators = [], unl = [],
+                 stop_on_consensus = False, verbose = False):
+        '''
+
+        :param ip_addr:
+        :param port:
+        :param q:
+        :param lmc:
+        :param lmcl:
+        :param tval:
+        :param ttimes:
+        :param lminc:
+        :param lmaxc:
+        :param nrr:
+        :param validators:
+        :param unl:
+        :param stop_on_consensus: True if the node should stop its execution as soon as a consensus is reached.
+        :param verbose: If true, logs to file info about completion times of the various phases and on consensus
+        '''
         super(server, self).__init__(ip_addr, port, validators)
         self.observers = [] # Observers are the nodes that inserted this node in their UNL plus the clients of this node
         self.unl = unl
@@ -344,6 +383,11 @@ class server(client):
             self.unl_ledgers[u] = (False, None)
         self.last_pos[self.id()] = None
         self.__blockchain = full_blockchain()
+        self.__stop_on_consensus = stop_on_consensus
+        self.__verbose = verbose
+        if verbose:
+            setup_logger('s' + self.id(), 's' + str(ip_addr) + '_' + str(port) + ".log")
+            self.__logger = logging.getLogger('s' + self.id())
 
     def start(self):
         '''Start this server in a separate thread of execution'''
@@ -355,7 +399,6 @@ class server(client):
             self.establish_phase()            
             self.accept_phase()            
         print 'end'
-        #self.stop()
 
     def open_phase(self):
         '''In the open phase, the node simply collects transactions.
@@ -381,6 +424,8 @@ class server(client):
         # Only the transactions already received will be part of the current round of consensus
         for t in self.unapproved_tx:
             self.current_tx.append(t)
+        if self.__verbose:
+            self.__logger.info('Open phase time ' + str(time.time()-start) + ' , ledger ' + str(self.__blockchain.current_ledger_seq_num()))
         self.open = False
 
 
@@ -398,7 +443,8 @@ class server(client):
             elapsed = time.time() - start
             c1 = elapsed > self.ledger_min_consensus
             c2 = len(self.in_establish_phase) > (0.7 * len(self.unl)) or elapsed > self.ledger_max_consensus
-            c3 = self.same_proposal() > (self.quorum * len(self.unl))
+            #pdb.set_trace()
+            c3 = self.same_proposal() >= (self.quorum * len(self.unl))
             return c1 and c2 and c3
 
         # Init
@@ -411,6 +457,7 @@ class server(client):
 
         while not next_phase():
             time.sleep(sleep_time)
+            #self.__logger.info('Same Proposals: ' + str(self.same_proposal()) + '\nQuorum = ' + str(self.quorum * len(self.unl)))
             if self.new_proposals():
                 self.update_last_proposals()
                 if self.update_my_proposal(time.time()- start, r):
@@ -419,6 +466,8 @@ class server(client):
         # Phase finalization
         self.in_establish_phase = []
         self.reset_last_pos()
+        if self.__verbose:
+            self.__logger.info('Establish phase time ' + str(time.time()-start) + ' , ledger ' + str(self.__blockchain.current_ledger_seq_num()))
         self.establish = False
 
     def same_proposal(self):
@@ -446,11 +495,12 @@ class server(client):
                 max = 0
                 last_prop = None
                 for prop in self.unl_pos[n]:
-                    if prop.round() > max:
+                    if prop.complete() and prop.round() > max:
                         max = prop.round()
                         last_prop = prop
-                self.last_pos[last_prop.proposer()] = last_prop
-                self.unl_pos[n] = []
+                if last_prop is not None: # Could have found only uncomplete proposals..
+                    self.last_pos[last_prop.proposer()] = last_prop
+                    self.unl_pos[n] = []
 
 
     # Ogni mia transazione è testata contro l' ultima proposta di ciascun nodo della unl.
@@ -503,7 +553,7 @@ class server(client):
             tmp = transactions[0:45]
             header = message_header(self.id(), self.signature(), 'id', 1, message_type.proposal)
             txset = transaction_set(tmp)
-            payload = message_payload(proposal(self.id(), r[0], txset, self.__blockchain.current_ledger_id()))
+            payload = message_payload(proposal(self.id(), r[0], txset, self.__blockchain.current_ledger_id(), complete=False))
             msgs.append(message(header, payload))
             transactions = transactions[45:]
             num = len(transactions)
@@ -528,12 +578,23 @@ class server(client):
               '\n\n\n             Accept Phase                  \n\n\n' \
               '................................................\n'
         self.accept = True
-
+        start = time.time()
+        #pdb.set_trace()
         consensus = self.validate_ledger()
         self.reset_unl_ledgers()
         self.update_unapproved_tx(consensus)
-        #print '\n current_tx length ' + str(len(self.current_tx)) + '\n' #TODO remove line
+        if self.__verbose:
+            self.__logger.info('Accept phase time ' + str(time.time()-start) +
+                               ' , ledger ' + str(self.__blockchain.current_ledger_seq_num()))
+            self.__logger.info('Consensus Reached: ' + str(consensus))
+
+            #self.__logger.info('Transactions in the Blockchain: ')
+            #for t in self.__blockchain.current_ledger().transaction_set():
+            #    self.__logger.info(str(t))
         self.accept = False
+        if self.__stop_on_consensus:
+            if consensus:
+                self.stop()
 
 
     def validate_ledger(self):
@@ -575,6 +636,11 @@ class server(client):
                 else full_ledger(1, new_txset) # Prev pointer added when ledger inserted in the blockchain
 
         def reached_consensus():
+            '''
+            Checks whether the consensus was reached
+            :return: a pair (bool, ledger), where bool indicates wheterd the consensus was reached and ledger is the
+            ledger that results drom consensus process (may be mine or one of my unl nodes). If bool is False, then ledger is None
+            '''
             ledgers = []
             for n in self.unl_ledgers:
                 if self.unl_ledgers[n][1] is not None:
@@ -584,22 +650,20 @@ class server(client):
             for l in ledgers:
                 if new_ledger == l:
                     share += 1
-            if share > self.quorum * len(self.unl):
+            if share >= self.quorum * len(self.unl):
                 print '\nReached consensus with my ledger\n'
-                return True
+                return (True, new_ledger)
             # Otherwise, if a quorum of nodes share the same ledger, use it as new ledger
-            share = {}
-            for l in ledgers:
-                if l.id() not in share:
-                    share[l] = 1
-                else:
-                    share[l] = share[l] + 1
-            for l in share:
-                if share[l] > self.quorum * len(self.unl):
+            for i1 in range(len(ledgers)-1):
+                share = 0
+                for i2 in range(i1+1, len(ledgers)):
+                    if ledgers[i1] == ledgers[i2]:
+                        share += 1
+                if share >= self.quorum * len(self.unl):
                     print '\nReached consensus with unl ledger\n'
-                    return True
+                    return (True, ledgers[i1])
             print '\nNot reached consensus\n'
-            return False
+            return (False, None)
 
         #TODO check
         def check_seq_number():
@@ -623,7 +687,7 @@ class server(client):
         new_ledger = create_new_ledger()
         self.send_ledger(new_txset.transactions().values(), new_ledger.sequence_number())
         wait_unl_ledgers()
-        consensus = reached_consensus()
+        (consensus, new_ledger) = reached_consensus()
         if not consensus:
             if check_seq_number():
                 seq_num = last_ledger.sequence_number() if last_ledger is not None else 1
@@ -663,6 +727,7 @@ class server(client):
     def create_ledger_messages(self, transactions, seq):
         msgs = []
         num = len(transactions)
+        #pdb.set_trace()
         while num > 40:
             tmp = transactions[0:40]
             header = message_header(self.id(), self.signature(), 'id', 1, message_type.ledger)
@@ -718,8 +783,11 @@ class server(client):
         print '\n....................................................\n'
 
     def add_node_to_unl(self, node_id):
-        self.unl.append(node_id)
-        self.unl_pos[node_id] = []
+        if node_id not in self.unl:
+            self.unl.append(node_id)
+            self.unl_pos[node_id] = []
+            self.last_pos[node_id] = None
+            self.unl_ledgers[node_id] = (False, None)
 
     def remove_node_from_unl(self, node_id):
         try:
@@ -732,8 +800,8 @@ class server(client):
     # TODO usa lock per strutture dati condivise. Capisci dove possono nascere race conditions.
     # Usare > 1 lock può essere opportuno, altrimenti blocchi thread che lavorano su Strut. Dati diverse!
     def handle_message(self, msg):
-        ack_msg = None
         type = msg.type()
+        #pdb.set_trace()
         if not self.verify_signature(msg, type):
             return self.create_unsuccess_ack_msg("Unrecognized signature")
         if type == message_type.client_registration:
@@ -838,18 +906,22 @@ class server(client):
         if self.unl_ledgers[sid][1] is None:
             self.unl_ledgers[sid] = (all, l)
         else:
+            #self.logger().info('Prima: ' + str(self.unl_ledgers[sid][1] ) + ' , ' + str(len(self.unl_ledgers[sid][1].transaction_set().transactions())))  # TODO
             self.unl_ledgers[sid] = (all, self.unl_ledgers[sid][1].merge(l))
+            #self.logger().info('Dopo: ' + str(self.unl_ledgers[sid][1] ) + ' , ' + str(len(self.unl_ledgers[sid][1].transaction_set().transactions())))  # TODO
         return self.create_success_ack_msg("Ledger correctly received")
 
     def handle_proposal(self, msg):
         print 'received proposal from ' + msg.sender()
         prop = msg.content()
         sid = msg.sender()
+        #self.logger().info('Prop seq num: ' + str(msg.sequence_number()) +
+        #                   ' Proposals received from ' + sid + ' ' + str(len(self.unl_pos[sid])) + ' time: ' + str(datetime.datetime.now()))
         self.update_establish_phase_list(sid)
         if len(self.unl_pos[sid]) == 0:
             self.unl_pos[sid].append(prop)
         else:
-            self.manage_unempty_list(prop, sid)
+            self.manage_unempty_list(prop, sid, msg.sequence_number())
         return self.create_success_ack_msg("Proposal correctly received")
 
     def update_establish_phase_list(self, id):
@@ -858,17 +930,22 @@ class server(client):
                 return # Node already included in the list, nothing to do
         self.in_establish_phase.append(id) # Otherwise include the node in the list
 
-    def manage_unempty_list(self, prop, sid):
+    def manage_unempty_list(self, prop, sid, seq_num):
         '''If the list is not empty, it means that some proposals is already arrived that was not managed yet.
         If it exists a proposal in the list with the same sequence number of the new one, it means that the proposal
         was fragmented when it was sent. In this case, we merge the two proposals into one. If instead the new proposal
-        is not the newest, we don't insert it (if some transactions are lost, the next round of consensus will fix it)'''
+        is not the newest, we don't insert it (if some transactions are lost, the next round of consensus will fix it)
+        If seq_num = 1 then other transactions have to come to make the proposal complete.
+        '''
         r = prop.round()
         max_r = 0
         greater = True
         for p in self.unl_pos[sid]:
             if p.round() == r:
-                p.merge(prop)
+                if seq_num == 1:
+                    p.merge(prop, complete = False)
+                else:
+                    p.merge(prop)
                 return
             if prop.round() < p.round():
                 return
@@ -978,6 +1055,9 @@ class server(client):
                 if e.target() == v2:
                     return True
         return False
+
+    def logger(self):
+        return self.__logger
 
 
     # TODO send de-registration message to unl, end message to observers, and stop sockets?

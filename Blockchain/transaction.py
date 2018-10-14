@@ -62,7 +62,8 @@ class transaction_set:
 
     def __eq__(self, other):
         if isinstance(other, transaction_set):
-            return self._id == other.id()
+            return self.has_same_transactions(other)
+            #return self._id == other.id() #TODO old test, replaced
         raise TypeError('The comparison must be done among two objects of class "transaction_set" ')
 
     def __ne__(self, other):
@@ -75,10 +76,11 @@ class transaction_set:
        return self._transactions
 
     def add_transaction(self, tx):
-        self._transactions[tx.id()] = tx
+        self._transactions[tx.id()] = tx.copy()
         # Every time a transaction is added the id must be updated, because it is used as fingerprint for the transactions
         sha = hashlib.sha256()
-        for id in sorted(self._transactions.keys()):
+        trans = sorted(self._transactions.keys()) #TODO
+        for id in trans:
             sha.update(id)
         self._id = sha.digest
 
