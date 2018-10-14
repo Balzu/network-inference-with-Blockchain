@@ -110,7 +110,7 @@
           <entry key="hosts" value="5" />
           <entry key="json" value="45" />
           <entry key="log" value="1" />
-          <entry key="md" value="8" />
+          <entry key="md" value="9" />
           <entry key="png" value="4" />
           <entry key="py" value="227" />
           <entry key="s1" value="2" />
@@ -122,7 +122,7 @@
         <counts>
           <entry key="Image" value="4" />
           <entry key="JSON" value="45" />
-          <entry key="Markdown" value="9" />
+          <entry key="Markdown" value="10" />
           <entry key="PLAIN_TEXT" value="152" />
           <entry key="Python" value="227" />
         </counts>
@@ -133,32 +133,44 @@
           <entry key="dummy" value="62" />
           <entry key="hosts" value="10" />
           <entry key="json" value="66" />
-          <entry key="md" value="7002" />
-          <entry key="py" value="41406" />
+          <entry key="md" value="7356" />
+          <entry key="py" value="41412" />
           <entry key="sh" value="50" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="66" />
-          <entry key="Markdown" value="7002" />
+          <entry key="Markdown" value="7356" />
           <entry key="PLAIN_TEXT" value="124" />
-          <entry key="Python" value="41406" />
+          <entry key="Python" value="41412" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodes/start_simulation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="620">
-              <caret line="158" column="1" selection-start-line="158" selection-start-column="1" selection-end-line="158" selection-end-column="1" />
+            <state relative-caret-position="605">
+              <caret line="157" column="18" selection-start-line="157" selection-start-column="18" selection-end-line="157" selection-end-column="18" />
               <folding>
                 <element signature="e#25#56#0" expanded="true" />
-                <marker date="1539520437946" expanded="true" signature="2511:2698" ph="..." />
+                <marker date="1539526062237" expanded="true" signature="2511:2698" ph="..." />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodes/readme.md">
+          <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+            <state split_layout="SPLIT">
+              <first_editor relative-caret-position="420">
+                <caret line="28" column="76" selection-start-line="28" selection-start-column="76" selection-end-line="28" selection-end-column="76" />
+              </first_editor>
+              <second_editor />
             </state>
           </provider>
         </entry>
@@ -322,7 +334,6 @@
         <option value="$PROJECT_DIR$/Tests/MaliciousNodes/server_configuration/server10_config.json" />
         <option value="$PROJECT_DIR$/Tests/MaliciousNodes/server_configuration/client1_config.json" />
         <option value="$PROJECT_DIR$/Miscellaneous/TOPOLOGIE_FUNZIONANTI/esperimenti/e4/client.py" />
-        <option value="$PROJECT_DIR$/Tests/MaliciousNodes/readme.md" />
         <option value="$PROJECT_DIR$/Tests/MaliciousNodes/start.py" />
         <option value="$PROJECT_DIR$/Blockchain/proposal.py" />
         <option value="$PROJECT_DIR$/Blockchain/blockchain.py" />
@@ -343,6 +354,7 @@
         <option value="$PROJECT_DIR$/Tests/MaliciousNodes/run.py" />
         <option value="$PROJECT_DIR$/Tests/MaliciousNodes/transactions_creation.py" />
         <option value="$PROJECT_DIR$/Tests/MaliciousNodes/start_simulation.py" />
+        <option value="$PROJECT_DIR$/Tests/MaliciousNodes/readme.md" />
       </list>
     </option>
   </component>
@@ -371,27 +383,6 @@
               <item name="network-inference-with-BlockchainNEW" type="b2602c69:ProjectViewProjectNode" />
               <item name="network-inference-with-BlockchainNEW" type="462c0819:PsiDirectoryNode" />
               <item name="Miscellaneous" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="network-inference-with-BlockchainNEW" type="b2602c69:ProjectViewProjectNode" />
-              <item name="network-inference-with-BlockchainNEW" type="462c0819:PsiDirectoryNode" />
-              <item name="Miscellaneous" type="462c0819:PsiDirectoryNode" />
-              <item name="TOPOLOGIE_FUNZIONANTI" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="network-inference-with-BlockchainNEW" type="b2602c69:ProjectViewProjectNode" />
-              <item name="network-inference-with-BlockchainNEW" type="462c0819:PsiDirectoryNode" />
-              <item name="Miscellaneous" type="462c0819:PsiDirectoryNode" />
-              <item name="TOPOLOGIE_FUNZIONANTI" type="462c0819:PsiDirectoryNode" />
-              <item name="esperimenti" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="network-inference-with-BlockchainNEW" type="b2602c69:ProjectViewProjectNode" />
-              <item name="network-inference-with-BlockchainNEW" type="462c0819:PsiDirectoryNode" />
-              <item name="Miscellaneous" type="462c0819:PsiDirectoryNode" />
-              <item name="TOPOLOGIE_FUNZIONANTI" type="462c0819:PsiDirectoryNode" />
-              <item name="esperimenti" type="462c0819:PsiDirectoryNode" />
-              <item name="e4" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="network-inference-with-BlockchainNEW" type="b2602c69:ProjectViewProjectNode" />
@@ -594,12 +585,12 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1855" height="980" extended-state="6" />
+    <frame x="65" y="-4" width="1831" height="962" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.6373239" visible="true" weight="0.16484717" />
-      <window_info id="Structure" order="2" sideWeight="0.36267605" side_tool="true" visible="true" weight="0.16484717" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.6366907" visible="true" weight="0.1670354" />
+      <window_info id="Structure" order="2" sideWeight="0.36330935" side_tool="true" visible="true" weight="0.1670354" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.3295964" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" />
       <window_info anchor="bottom" id="Python Console" order="2" weight="0.3295964" />
@@ -875,16 +866,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodes/readme.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor relative-caret-position="255">
-            <caret line="17" column="2" selection-start-line="17" selection-start-column="2" selection-end-line="17" selection-end-column="2" />
-          </first_editor>
-          <second_editor />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Tests/OptimalProbingStationsNumber/test_on_sensor.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="1290">
@@ -1117,12 +1098,22 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodes/start_simulation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="620">
-          <caret line="158" column="1" selection-start-line="158" selection-start-column="1" selection-end-line="158" selection-end-column="1" />
+        <state relative-caret-position="605">
+          <caret line="157" column="18" selection-start-line="157" selection-start-column="18" selection-end-line="157" selection-end-column="18" />
           <folding>
             <element signature="e#25#56#0" expanded="true" />
-            <marker date="1539520437946" expanded="true" signature="2511:2698" ph="..." />
+            <marker date="1539526062237" expanded="true" signature="2511:2698" ph="..." />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodes/readme.md">
+      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
+        <state split_layout="SPLIT">
+          <first_editor relative-caret-position="420">
+            <caret line="28" column="76" selection-start-line="28" selection-start-column="76" selection-end-line="28" selection-end-column="76" />
+          </first_editor>
+          <second_editor />
         </state>
       </provider>
     </entry>

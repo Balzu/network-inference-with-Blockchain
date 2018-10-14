@@ -152,13 +152,8 @@ def simulation_four(num_exp, num_mal, num_tx):
     plot_avg_group_times(open, est, acc, 'second', 6, 'c4_g2_n' + str(num_mal) + '_tx' + str(num_tx)  + '.png')
 
 
-#simulation_one(20)
-#simulation_two(20,2)
-#simulation_three(2, 1, 10000)
-
-#simulation_four(5, 1, 10)
-simulation_four(5, 1, 100)
-simulation_four(20, 5, 100)
-simulation_four(20, 5, 10)
-#prova_tx()
+simulation_one(20)
+simulation_two(20,1)
+simulation_three(20, 1, 10)
+simulation_four(20, 1, 10)
 
