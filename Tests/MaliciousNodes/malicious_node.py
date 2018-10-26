@@ -22,6 +22,7 @@ from message import *
 from blockchain import *
 from proposal import *
 from node import *
+from transactions_creation import *
 
 
 class malicious_server1(client):
@@ -49,6 +50,7 @@ class malicious_server1(client):
         :param stop_on_consensus: True if the node should stop its execution as soon as a consensus is reached.
         :param verbose: If true, logs to file info about completion times of the various phases and on consensus
         :param fraudolent_tx: Number of fraudolent transactions to be inserted by this node during the consensus process
+
         '''
         super(malicious_server1, self).__init__(ip_addr, port, validators)
         self.observers = [] # Observers are the nodes that inserted this node in their UNL plus the clients of this node
@@ -782,7 +784,7 @@ class malicious_server2(client):
     """
 
     def __init__(self, ip_addr, port, q, lmc, lmcl, tval, ttimes, lminc, lmaxc, nrr=True, validators=[], unl=[],
-                 stop_on_consensus=False, verbose=False, dropped_tx=10):
+                 stop_on_consensus=False, verbose=False, dropped_tx=10, tree_tx= False):
         '''
 
         :param ip_addr:
@@ -800,6 +802,7 @@ class malicious_server2(client):
         :param stop_on_consensus: True if the node should stop its execution as soon as a consensus is reached.
         :param verbose: If true, logs to file info about completion times of the various phases and on consensus
         :param dropped_tx: Number of honest transactions to be removed by this node during the consensus process
+        :param tree_tx: True if the inserted transactions are the ones to build a tree
         '''
         super(malicious_server2, self).__init__(ip_addr, port, validators)
         self.observers = []  # Observers are the nodes that inserted this node in their UNL plus the clients of this node
@@ -833,6 +836,7 @@ class malicious_server2(client):
         self.__stop_on_consensus = stop_on_consensus
         self.__verbose = verbose
         self.num_dropped_tx = dropped_tx
+        self.tree_trans = tree_tx
         if verbose:
             setup_logger('s' + self.id(), 's' + str(ip_addr) + '_' + str(port) + ".log")
             self.__logger = logging.getLogger('s' + self.id())
@@ -1000,19 +1004,10 @@ class malicious_server2(client):
         Creates a list of transactions to be removed and returns it
         '''
         num = self.num_dropped_tx
-        routers = {}
-        for i in range(1, 61):
-            routers['r' + str(i)] = topology_node('r' + str(i), 'R')
-        trans = []
-        # Add orizzontal transactions
-        for i in range(1, 60):
-            if i % 10 != 0:  # Add orizontal edge
-                trans.append(transaction(routers['r' + str(i)], routers['r' + str(i + 1)]))
-                if len(trans) == num: return trans
-            if i <= 50:  # Add vertical edge
-                trans.append(transaction(routers['r' + str(i)], routers['r' + str(i + 10)]))
-                if len(trans) == num: return trans
-        return trans
+        if self.tree_trans:
+            return get_honest_transactions_tree(num)
+        trans = get_honest_transactions()
+        return trans[:num]
 
 
         routers = {}

@@ -1,0 +1,14 @@
+Open phase time 55.0393929482 , ledger 0
+Same Proposals: 0
+Quorum = 4.0
+
+ Threshold: 3.25
+
+
+ Added transactions: 1000
+
+Same Proposals: 5
+Quorum = 4.0
+Establish phase time 55.7167000771 , ledger 0
+Accept phase time 29.8925051689 , ledger 1
+Consensus Reached: True

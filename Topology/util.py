@@ -146,9 +146,15 @@ def write_topo_to_file(id, mtopo, hosts):
 def stop_net(net):
     net.stop()
 
-def start_net():
-    ''' Start Mininet Topology'''
-    topo = NetworkTopo()
+def start_net(num=0):
+    '''
+    Start Mininet Topology
+    :param num: Number of network to be setup
+    '''
+    if num == 0:
+        topo = NetworkTopo()
+    elif num == 1:
+        topo = NetworkTopo1()
     net = Mininet( topo=topo) #, controller=POX )
     add_static_routes(net)
     net.start()

@@ -28,3 +28,22 @@ Run the simulation with `sudo python start_simulation.py`.
 It will run the four simulations defined in the file "start_simulation.py". Each simulation is made of 20 indipendent experiments
 run with the same parameters. It is possible to define different parameters providing different arguments 
 to the functions that start the simulations.
+ 
+ 
+ ### Notes
+ In order to handle a big number of transactions sent in the same round, we have to stretch the times
+ of the various phases. For example: to hold up to 500 transactions no modification is needed, while if
+ we wish to validate 1000 transactions in a single round, sufficient values of time parameters in the configuration
+ files are:
+ 
+      "ledger_min_close" : "40"
+  
+      "ledger_max_close" : "60"
+  
+                 ...
+ 
+      "ledger_min_consensus" : "20"
+  
+      "ledger_max_consensus" : "60"
+ 
+ That is, the double of default times.

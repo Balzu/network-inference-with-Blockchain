@@ -443,7 +443,6 @@ class server(client):
             elapsed = time.time() - start
             c1 = elapsed > self.ledger_min_consensus
             c2 = len(self.in_establish_phase) > (0.7 * len(self.unl)) or elapsed > self.ledger_max_consensus
-            #pdb.set_trace()
             c3 = self.same_proposal() >= (self.quorum * len(self.unl))
             return c1 and c2 and c3
 
@@ -457,7 +456,7 @@ class server(client):
 
         while not next_phase():
             time.sleep(sleep_time)
-            #self.__logger.info('Same Proposals: ' + str(self.same_proposal()) + '\nQuorum = ' + str(self.quorum * len(self.unl)))
+            self.__logger.info('Same Proposals: ' + str(self.same_proposal()) + '\nQuorum = ' + str(self.quorum * len(self.unl)))
             if self.new_proposals():
                 self.update_last_proposals()
                 if self.update_my_proposal(time.time()- start, r):
@@ -519,9 +518,11 @@ class server(client):
                     else:
                         votes[tx.id()] = (tx, votes[tx.id()][1] + 1)
         self.current_tx = []
+        self.__logger.info('\n Threshold: ' + str(threshold) + '\n')
         for (t,v) in votes.values():
             if v > threshold:
                 self.current_tx.append(t)
+        self.__logger.info('\n Added transactions: ' + str(len(self.current_tx)) + '\n') #TODO elimina riga
         return self.create_my_proposal(r)
 
 
@@ -540,6 +541,11 @@ class server(client):
             previous one was created, False otherwise.'''
         txset = transaction_set(self.current_tx)
         new_prop = proposal(self.id(), r[0], txset, self.__blockchain.current_ledger_id())
+        #
+        #self.__logger.info('\n New prop length: ' + str(len(new_prop.tx_set().transactions())) + '\n')
+        #if self.last_pos[self.id()] is not None:
+        #    self.__logger.info('\n My prop length: ' + str(len(self.last_pos[self.id()].tx_set().transactions())) + '\n')
+        #
         if self.last_pos[self.id()] is None or new_prop.tx_set() != self.last_pos[self.id()].tx_set():
             self.last_pos[self.id()] = new_prop
             r[0] = r[0] + 1 # Updates the round
@@ -587,7 +593,6 @@ class server(client):
             self.__logger.info('Accept phase time ' + str(time.time()-start) +
                                ' , ledger ' + str(self.__blockchain.current_ledger_seq_num()))
             self.__logger.info('Consensus Reached: ' + str(consensus))
-
             #self.__logger.info('Transactions in the Blockchain: ')
             #for t in self.__blockchain.current_ledger().transaction_set():
             #    self.__logger.info(str(t))
@@ -1043,7 +1048,7 @@ class server(client):
             g.set_vertex_filter(removed, inverted=True)
         g.vertex_properties["name"] = vprop_name
         g.vertex_properties["color"] = vprop_col
-        graph_draw(g, vertex_text=g.vertex_properties["name"], vertex_font_size=18, output_size=(1000, 1000),
+        graph_draw(g, vertex_text=g.vertex_properties["name"], vertex_font_size=18, output_size=(5000, 5000),
                    vertex_fill_color=g.vertex_properties["color"], edge_pen_width=3.5,
                    edge_color=[0, 0, 0, 1], vertex_color=g.vertex_properties["color"], vertex_pen_width=3,
                    output="print_topo.png")

@@ -12,7 +12,7 @@ def get_servers_id():
     return ["127.0.0.100:10000", "127.0.0.101:10000", "127.0.0.102:10000", "127.0.0.103:10000", "127.0.0.104:10000",
             "127.0.0.105:10000", "127.0.0.106:10000", "127.0.0.107:10000", "127.0.0.108:10000", "127.0.0.109:10000"]
 
-def configure_server(config_file, unl_from_file = True, stop=False, verbose=False, malicious = 0, num_tx = 10):
+def configure_server(config_file, unl_from_file = True, stop=False, verbose=False, malicious = 0, num_tx = 10, tree_tx = False):
     '''Uses the parameters defined in the configuration file to create a server and return it.'''
     with open(config_file, 'r') as file:
         obj = json.load(file)
@@ -42,7 +42,7 @@ def configure_server(config_file, unl_from_file = True, stop=False, verbose=Fals
                                      stop_on_consensus=stop, verbose=verbose, fraudolent_tx = num_tx)
         elif malicious==2:
             return malicious_server2(ip, port, q, lmc, lmcl, tval, ttimes, lminc, lmaxc, unl=unl, nrr=nrr,
-                                     stop_on_consensus=stop, verbose=verbose, dropped_tx=num_tx)
+                                     stop_on_consensus=stop, verbose=verbose, dropped_tx=num_tx, tree_tx=tree_tx)
         return server(ip, port, q, lmc, lmcl, tval, ttimes, lminc, lmaxc, unl=unl, nrr=nrr,
                       stop_on_consensus=stop, verbose=verbose)
 
@@ -92,14 +92,17 @@ def parse_cmd_args():
     parser.add_argument("-n", "--number",
                         dest="number", default = 1,
                         help="Number of malicious nodes. If omitted, defaults to one.")
-    parser.add_argument("-nt", "--number_transactions",
-                        dest="number_transactions", default=10,
+    parser.add_argument("-nft", "--fraudolent_transactions",
+                        dest="fraudolent_transactions", default=10,
                         help="Number of fraudolent transactions inserted or dropped by malicious nodes."
                              "If omitted, defaults to 10.")
+    parser.add_argument("-nht", "--honest_transactions",
+                        dest="honest_transactions", default=0,
+                        help="Number of honest transactions sent to blockchain nodes. If 0, use default transactions.")
     return  parser.parse_args()
 
 
-def experiment_one():
+def experiment_one(num_htx):
     '''
     Configure and run servers for experiment one. Servers from 1 to 6 have each other in their UNL.
     Servers from 7 to 10 have an UNL made of random servers. All servers are honest.
@@ -115,7 +118,7 @@ def experiment_one():
     for s in servers:
         register_observer(s)
     # Create transactions and send them to servers
-    trans = get_honest_transactions()
+    trans = get_honest_transactions() if num_htx == 0 else get_honest_transactions_tree(num_htx)
     c = configure_client('configuration/client_config.json')
     register_client(c)
     c.send_transactions(trans)
@@ -123,7 +126,7 @@ def experiment_one():
         s.start()
 
 
-def experiment_two(num):
+def experiment_two(num_htx, num):
     '''
     Runs experiment 2, in which some servers do not participate actively in the consensus process.
     :param num: Number of servers that do not participate in the consensus process. Only the servers belonging to
@@ -140,7 +143,7 @@ def experiment_two(num):
     for s in servers:
         register_observer(s)
     # Create transactions and send them to servers
-    trans = get_honest_transactions()
+    trans = get_honest_transactions() if num_htx == 0 else get_honest_transactions_tree(num_htx)
     c = configure_client('configuration/client_config.json')
     register_client(c)
     #pdb.set_trace()
@@ -153,7 +156,7 @@ def experiment_two(num):
     for i in range(0, num):
         servers[i].finalize() # Server socket was started anyway, so have to close it
 
-def experiment_three(num, num_tx):
+def experiment_three(num_htx, num, num_ftx):
     '''
     Configure and run servers for experiment three. Servers from 1 to 6 have each other in their UNL.
     Servers from 7 to 10 have an UNL made of random servers.
@@ -167,7 +170,7 @@ def experiment_three(num, num_tx):
     for i in range(1, 7):
         if num_mal > 0:
             servers.append(configure_server('configuration/server' + str(i) + '_config.json', stop=True,
-                                            verbose=True, malicious=1, num_tx=num_tx))
+                                            verbose=True, malicious=1, num_tx=num_ftx))
             num_mal -= 1
         else:
             servers.append(
@@ -179,7 +182,7 @@ def experiment_three(num, num_tx):
     for s in servers:
         register_observer(s)
     # Create transactions and send them to servers
-    trans = get_honest_transactions()
+    trans = get_honest_transactions() if num_htx == 0 else get_honest_transactions_tree(num_htx)
     c = configure_client('configuration/client_config.json')
     register_client(c)
     c.send_transactions(trans)
@@ -187,21 +190,25 @@ def experiment_three(num, num_tx):
         s.start()
 
 
-def experiment_four(num, num_tx):
+def experiment_four(num_htx, num, num_ftx):
     '''
     Configure and run servers for experiment three. Servers from 1 to 6 have each other in their UNL.
     Servers from 7 to 10 have an UNL made of random servers.
     :param num: Number of malicious servers that participate in the consensus process dropping honest transactions.
     Only the servers belonging to the first group (from 1 to 6) are considered. num must be <= |group 1|
-    :param num_tx: Number of honest transactions (the same!) dropped by each malicious node
+    :param num_ftx: Number of honest transactions (the same!) dropped by each malicious node
     '''
     print '\n----------------- Experiment four ------------------\n'
     servers = []
     num_mal = num
     for i in range(1, 7):
         if num_mal > 0:
-            servers.append(configure_server('configuration/server' + str(i) + '_config.json', stop=True,
-                                            verbose=True, malicious=2, num_tx=num_tx))
+            if num_htx == 0:
+                servers.append(configure_server('configuration/server' + str(i) + '_config.json', stop=True,
+                                            verbose=True, malicious=2, num_tx=num_ftx))
+            else:
+                servers.append(configure_server('configuration/server' + str(i) + '_config.json', stop=True,
+                                                verbose=True, malicious=2, num_tx=num_ftx, tree_tx = True))
             num_mal -= 1
         else:
             servers.append(
@@ -213,7 +220,7 @@ def experiment_four(num, num_tx):
     for s in servers:
         register_observer(s)
     # Create transactions and send them to servers
-    trans = get_honest_transactions()
+    trans = get_honest_transactions() if num_htx == 0 else get_honest_transactions_tree(num_htx)
     c = configure_client('configuration/client_config.json')
     register_client(c)
     c.send_transactions(trans)
@@ -224,15 +231,16 @@ if __name__=='__main__':
     args = parse_cmd_args()
     t = args.type
     n = int(args.number)
-    nt = int(args.number_transactions)
+    nft = int(args.fraudolent_transactions)
+    nht = int(args.honest_transactions)
     if t == '1':
-        experiment_one()
+        experiment_one(nht)
     elif t == '2':
-        experiment_two(n)
+        experiment_two(nht, n)
     elif t == '3':
-        experiment_three(n, nt)
+        experiment_three(nht, n, nft)
     elif t == '4':
-        experiment_four(n, nt)
+        experiment_four(nht, n, nft)
     else:
         print '\nSpecify an integer type t : 0 < t < 5\n'
 

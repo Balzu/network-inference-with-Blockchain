@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from __future__ import division
+import random
 from run import *
 import os, pdb, glob, time
 
@@ -46,7 +47,7 @@ def plot_avg_group_times(open, establish, accepted, part, limit, filename):
     '''
     Plots the histogram of the completion times of the various phases plus the total completion time.
     It is assumed that the nodes belonging to the first group are in the first part of the list (that's why we sort),
-    while the second group is in the second part.
+    while the second group is in the second part. The second group also contains one random node from the first group.
     :param open: Dictionary of open phase completion times
     :param establish: Dictionary of establish phase completion times
     :param accepted: Dictionary of accepted phase completion times
@@ -62,6 +63,12 @@ def plot_avg_group_times(open, establish, accepted, part, limit, filename):
             for t in dict[keys[i]]:
                 sum += t
                 num += 1
+        if part == 'second': #In the second group insert one random node of the first group to always have an intersection
+            for t in dict[keys[random.randint(lower, upper-1)]]:
+                sum += t
+                num += 1
+            #sum += dict[keys[random.randint(lower, upper-1)]]
+            #num += 1
         return sum / num
 
     keys = open.keys() # keys are the same for all the dictionaries
@@ -81,15 +88,16 @@ def plot_avg_group_times(open, establish, accepted, part, limit, filename):
     plot_histogram(times, filename)
 
 
-def simulation_one(num_exp):
+def simulation_one(num_exp, num_htx=0):
     '''
     Runs a simulation for the first case.
-    :param num_exp: Number of experiments that comprise the simulation
+    :param num_exp: Number of experiments that comprise the simulation.
+    :param num_htx: Number of honest transactions sent to the blockchain nodes. If 0, use default transactions (104)
     '''
     os.system("rm *.log")
     for i in range(0, num_exp):
         # Run one experiment of the simulation
-        os.system("python run.py --type 1")
+        os.system("python run.py --type 1 --honest_transactions " + str(num_htx))
         # Kill the processes that still use the sockets (if any). Returns usage message if nothing to kill
         os.system("kill $(sudo netstat -pltn | grep 10000 | awk '{print $7}' | awk -F'/' '{print $1}')")
         #time.sleep(5)
@@ -98,34 +106,36 @@ def simulation_one(num_exp):
     plot_avg_group_times(open, est, acc, 'second', 6, 'c1_g2.png')
 
 
-def simulation_two(num_exp, num_mal):
+def simulation_two(num_exp, num_mal, num_htx=0):
     '''
     Runs a simulation for the second case.
     :param num_exp: Number of experiments that comprise the simulation
     :param num_mal: Number of malicious nodes
+    :param num_htx: Number of honest transactions sent to the blockchain nodes. If 0, use default transactions (104)
     '''
     os.system("rm *.log")
     for i in range(0, num_exp):
         # Run one experiment of the simulation
-        os.system("python run.py --type 2 --number " + str(num_mal))
+        os.system("python run.py --type 2 --number " + str(num_mal) + " --honest_transactions " + str(num_htx))
         # Kill the processes that still use the sockets (if any). Returns usage message if nothing to kill
         os.system("kill $(sudo netstat -pltn | grep 10000 | awk '{print $7}' | awk -F'/' '{print $1}')")
-        #time.sleep(5)
     open, est, acc = retrieve_times()
     plot_avg_group_times(open, est, acc, 'first', 6, 'c2_g1_n' + str(num_mal) + '.png')
     plot_avg_group_times(open, est, acc, 'second', 6, 'c2_g2_n' + str(num_mal) + '.png')
 
-def simulation_three(num_exp, num_mal, num_tx):
+def simulation_three(num_exp, num_mal, num_tx, num_htx=0):
     '''
     Runs a simulation for the third case.
     :param num_exp: Number of experiments that comprise the simulation
     :param num_mal: Number of malicious nodes
     :param num_tx: Number of fraudolent transactions inserted by malicious nodes
+    :param num_htx: Number of honest transactions sent to the blockchain nodes. If 0, use default transactions (104)
     '''
     os.system("rm *.log")
     for i in range(0, num_exp):
         # Run one experiment of the simulation
-        os.system("python run.py --type 3 --number " + str(num_mal) + ' --number_transactions ' + str(num_tx))
+        os.system("python run.py --type 3 --number " + str(num_mal) + ' --fraudolent_transactions ' + str(num_tx)
+                  + " --honest_transactions " + str(num_htx))
         # Kill the processes that still use the sockets (if any). Returns usage message if nothing to kill
         os.system("kill $(sudo netstat -pltn | grep 10000 | awk '{print $7}' | awk -F'/' '{print $1}')")
         # time.sleep(5)
@@ -133,17 +143,19 @@ def simulation_three(num_exp, num_mal, num_tx):
     plot_avg_group_times(open, est, acc, 'first', 6, 'c3_g1_n' + str(num_mal) + '_tx' + str(num_tx) + '.png')
     plot_avg_group_times(open, est, acc, 'second', 6, 'c3_g2_n' + str(num_mal) + '_tx' + str(num_tx)  + '.png')
 
-def simulation_four(num_exp, num_mal, num_tx):
+def simulation_four(num_exp, num_mal, num_tx, num_htx=0):
     '''
     Runs a simulation for the third case.
     :param num_exp: Number of experiments that comprise the simulation
     :param num_mal: Number of malicious nodes
     :param num_tx: Number of honest transactions dropped by malicious nodes
+    :param num_htx: Number of honest transactions sent to the blockchain nodes. If 0, use default transactions (104)
     '''
     os.system("rm *.log")
     for i in range(0, num_exp):
         # Run one experiment of the simulation
-        os.system("python run.py --type 4 --number " + str(num_mal) + ' --number_transactions ' + str(num_tx))
+        os.system("python run.py --type 4 --number " + str(num_mal) + ' --fraudolent_transactions ' + str(num_tx)
+                  + " --honest_transactions " + str(num_htx))
         # Kill the processes that still use the sockets (if any). Returns usage message if nothing to kill
         os.system("kill $(sudo netstat -pltn | grep 10000 | awk '{print $7}' | awk -F'/' '{print $1}')")
         # time.sleep(5)
@@ -152,8 +164,9 @@ def simulation_four(num_exp, num_mal, num_tx):
     plot_avg_group_times(open, est, acc, 'second', 6, 'c4_g2_n' + str(num_mal) + '_tx' + str(num_tx)  + '.png')
 
 
-simulation_one(20)
-simulation_two(20,1)
-simulation_three(20, 1, 10)
-simulation_four(20, 1, 10)
+
+#simulation_one(20, num_htx=1000)
+#simulation_two(20,1, num_htx=1000)
+#simulation_three(20, 1, 1000, num_htx=1000)
+simulation_four(1, 1, 900, num_htx=1000)
 

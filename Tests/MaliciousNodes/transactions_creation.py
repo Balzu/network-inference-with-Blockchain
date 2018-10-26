@@ -32,3 +32,24 @@ def get_honest_transactions():
 
 
 
+def get_honest_transactions_tree(num):
+    '''
+    Returns a list of transactions arranged as directed binary tree (arrows from father to children)
+    :param num: Number of transactions to be created, representing the edges in the tree
+    :return: list of transactions
+    '''
+    i = 1 # Incremental ID for the routers
+    t = 0 # Number of inserted transactions
+    routers = {}
+    trans = []
+    while (t < num):
+        routers['r' + str(i)] = topology_node('r' + str(i), 'R')
+        routers['r' + str(2*i)] = topology_node('r' + str(2*i), 'R')
+        routers['r' + str(2*i+1)] = topology_node('r' + str(2*i+1), 'R')
+        trans.append(transaction(routers['r' + str(i)], routers['r' + str(2*i)]))
+        trans.append(transaction(routers['r' + str(i)], routers['r' + str(2*i + 1)]))
+        i += 1
+        t += 2
+    if i == num+1:
+        del trans[len(trans)-1]
+    return trans
