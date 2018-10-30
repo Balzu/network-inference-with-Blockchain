@@ -97,12 +97,12 @@ if __name__ == '__main__':
         <hosts> = sequence of hosts, separated by whitespace, that
         each thread will use deterministically\n"""
         sys.exit()
-    net = start_net()
+    (net,topo) = start_network_number(1)
     # Delete previously generated files..
     os.system('./init.sh')
     (nt, hosts) = parse_cmd_line()
     # Spawn the threads that will run iTop and store the topology induced from each thread in the Blockchain
-    startup(nt, hosts)
+    startup(nt, topo.sensors)
     ips = get_responding_ips(hosts)
     # Start one sensor
     s = sensor('r3', 5, net, 'sensor_config.json', max_fail=3,

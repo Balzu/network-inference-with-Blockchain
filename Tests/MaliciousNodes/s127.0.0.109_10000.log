@@ -1,4 +1,4 @@
-Open phase time 55.03937006 , ledger 0
+Open phase time 55.0407760143 , ledger 0
 Same Proposals: 0
 Quorum = 4.0
 
@@ -9,6 +9,6 @@ Quorum = 4.0
 
 Same Proposals: 5
 Quorum = 4.0
-Establish phase time 55.5408658981 , ledger 0
-Accept phase time 29.6197547913 , ledger 1
+Establish phase time 55.5509359837 , ledger 0
+Accept phase time 29.0764780045 , ledger 1
 Consensus Reached: True

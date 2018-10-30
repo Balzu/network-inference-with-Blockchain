@@ -1,2 +1,2 @@
 traceroute to 192.168.12.2 (192.168.12.2), 30 hops max, 44 byte packets
- 1  192.168.12.2 <rst,ack>  4.140 ms  13.163 ms  12.483 ms
+ 1  192.168.12.2 <rst,ack>  1.402 ms  0.853 ms  1.506 ms

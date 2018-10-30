@@ -9,6 +9,7 @@ import matplotlib.pyplot as plt
 from build_topo3 import *
 from node import *
 from create_merge_topo import *
+from build_topo_test1 import *
 
 
 def get_responding_ips(hosts):
@@ -146,19 +147,33 @@ def write_topo_to_file(id, mtopo, hosts):
 def stop_net(net):
     net.stop()
 
-def start_net(num=0):
+def start_net():
     '''
     Start Mininet Topology
-    :param num: Number of network to be setup
+    This method is kept for backward compatibility with first experiments.
+    '''
+    topo = NetworkTopo()
+    net = Mininet( topo=topo)
+    topo.add_static_routes(net)
+    net.start()
+    return net
+
+def start_network_number(num, nh, ns):
+    '''
+    Start Mininet Topology
+    :param num: Number of the network to be setup
+    :param nh: Number of hosts to be inserted in the network
+    :param ns: Number of sensors to be inserted in the network
+    :returns The pair (Mininet Network, Topology)
     '''
     if num == 0:
         topo = NetworkTopo()
     elif num == 1:
-        topo = NetworkTopo1()
-    net = Mininet( topo=topo) #, controller=POX )
-    add_static_routes(net)
+        topo = NetworkTopo1(num_host=nh, num_sensor=ns)
+    net = Mininet(topo=topo)
+    topo.add_static_routes(net)
     net.start()
-    return net
+    return (net,topo)
 
 def compare_topologies(old_topo, new_topo, new_nodes=[]):
     '''
@@ -199,7 +214,7 @@ def shortest_paths_coverage(src, topo, monitors_pairs):
     '''
     Computes and returns the nodes of the topology covered from the shortest paths originated from node src.
     The shortest paths from src to all other nodes are computed, but only the shortest paths to the monitors
-    are considered for the converage.
+    are considered for the coverage.
     If there is a single shortest path towards a node, then all the nodes in the path are added to the coverage.
     If there are multiple shortest paths towards a node, then only the nodes in the intersection of the shortest
     paths are kept.

@@ -12,16 +12,6 @@ from create_merge_topo import *
 from sensor import *
 from client import *
 
-def stop_net(net):
-    net.stop()
-
-def start_net():
-    ''' Start Mininet Topology'''
-    topo = NetworkTopo()
-    net = Mininet( topo=topo )
-    add_static_routes(net)
-    net.start()
-    return net
 
 def run(hosts):
     #pdb.set_trace()
@@ -68,8 +58,8 @@ if __name__ == '__main__':
     ips = get_responding_ips(hosts)
     # Start one sensor
     ignored = get_hosts_ips_from_traces(hosts)
-    s = sensor('r3', 5, net, 'sensor_config.json', max_fail=3, ignored_ips = ignored,
-               known_ips=ips, simulation=True, verbose=False)
+    s = sensor('r3', 5, net, 'sensor_config.json', max_fail=3, ignored_ips = ignored, #In sensor.py era hard coded 'r2'
+               known_ips=ips, simulation=True, verbose=False, active = False)
     s.start()
     raw_input("\n\nPress any key when you want to run R6\n\n")
     unblock_router(net, 'r6')

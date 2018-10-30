@@ -14,7 +14,8 @@ import logging
 
 class sensor(object):
     def __init__(self, id, nh, net, config_file, hosts=[], active = True, passive = True, full = False, ignored_ips=[],
-                 known_ips = [], max_fail = 5, simulation=False, readmit=True, verbose=False, interactive=False):
+                 known_ips = [], max_fail = 5, simulation=False, readmit=True, verbose=False, interactive=False,
+                 asid=None, msid=None):
         '''
         :param id: the id of this sensor. It must be the ID of the node on which the sensor is placed.
         :param nh: the number of hosts (monitors) to be used when they are chosen randomly to run iTop(if hosts=[])
@@ -32,6 +33,11 @@ class sensor(object):
                'dead'. Set to False when the sensor is used in Mininet. Default: 'True'.
         :param verbose: Set True if you wish to print verbose information
         :param interactive: If the sensor is run in interactive mode, the stop signal can be sent via user input.
+        :param asid: Active Sensor ID. Used when the simulation is run on Mininet. In that case, the active and the
+                passive sensor capabilities may be run on two different hosts. This happens if asid is different from None.
+        :param msid: Monitor Sensor ID. Used when the simulation is run on Mininet. In that case, the sensor uses a
+                third, dedicated host to run the topology inference algorithm (only one command at a time can be run on
+                Mininet hosts..)
         '''
         logging.basicConfig(filename='sensor.log', level=logging.INFO)
         self.__id = id
@@ -54,6 +60,8 @@ class sensor(object):
         self.__hosts = hosts
         self.__net = net
         self.__interactive = interactive
+        self.__asid = asid if asid is not None else id
+        self.__msid = msid # If msid is different from None, run iTop using only this (monitor) sensor as source
         self.__alias = create_alias()
         self.__c = configure_client(config_file)
         register_client(self.__c)
@@ -62,16 +70,16 @@ class sensor(object):
 
     def start(self):
         ''' Starts the sensor.'''
-        if self.__active:
-            if self.__simulation:
-                threading.Thread(target=self.active_sensor_on_mininet).start()
-            else:
-                threading.Thread(target=self.active_sensor).start()
         if self.__passive:
             if self.__simulation:
                 threading.Thread(target=self.passive_sensor_on_Mininet).start()
             else:
                 threading.Thread(target=self.passive_sensor).start()
+        if self.__active:
+            if self.__simulation:
+                threading.Thread(target=self.active_sensor_on_mininet).start()
+            else:
+                threading.Thread(target=self.active_sensor).start()
         threading.Thread(target=self.run).start()
         if self.__interactive: threading.Thread(target=self.wait_user_input).start()
 
@@ -104,8 +112,8 @@ class sensor(object):
         '''Runs active sensor capabilities on a Mininet host'''
         while not self.__end:
             for ip in self.__known_ips:
-                s = self.__net[self.__id]
-                result = s.cmd('ping -c 1 -W 1 ' + ip + ' | grep received |  awk \'{print $4}\'')
+                s = self.__net[self.__asid]
+                result = s.cmd('ping -c 1 -W 1 ' + ip + ' | grep received |  awk \'{print $4}\'') #TODO cmd and not sendCmd
                 if self.__verbose: print 'PING ' + s.IP() + ' -> ' + ip + ' : ' + result.rstrip() + '/1 pacchetti ricevuti correttamente\n'
                 try:
                     if int(result) != 1: # Not received the correct packet back
@@ -132,8 +140,8 @@ class sensor(object):
         '''Runs passive sensor capabilities'''
         # Limitazione sulla sottorete se topologia simulata su Mininet. Problema: tcpdump non filtra sia dst che dst network
         tcpdump_cmd = ['sudo', 'timeout', '30', 'tcpdump', '-l', '-i', 'any', 'net', '192.168.0.0/16 >> tcpdump_out'] if self.__simulation \
-                else ['sudo', 'timeout', '30', 'tcpdump', '-l', '-i', 'any >> tcpdump_out'] #TODO TWEAK TIMEOUT
-        s = self.__net['r2'] #TODO self.__id
+                else ['sudo', 'timeout', '30', 'tcpdump', '-l', '-i', 'any >> tcpdump_out'] #TODO TWEAK TIMEOUT '-i', self.__id + '-eth0
+        s = self.__net[self.__id] #TODO perchè era 'r2'?
         threading.Thread(target=self.blocking_cmd_on_Mininet_host, args=(tcpdump_cmd, s,)).start()
         with open('tcpdump_out', 'r') as file:
             while not self.__end:
@@ -251,10 +259,16 @@ class sensor(object):
         Runs iTop on the existing topology with all available monitors and returns the filename of the induced topology.
         '''
         os.system('./init.sh') # Clean traces
+        logging.info('Run full iTop')
         hosts = self.__hosts
         if len(self.__hosts) == 0:
             hosts = get_hosts(int(self.__nh))
-        (vtopo, traces) = create_virtual_topo_and_traces(self.__alias, hosts)
+        create_traces(self.__net, hosts, src_hosts=[self.__msid]) if self.__msid is not None else \
+            create_traces(self.__net, hosts) # TODO: Non c'era create traces prima
+        if self.__msid is not None:
+            (vtopo, traces) = create_virtual_topo_and_traces(self.__alias, hosts, src_hosts=[self.__msid])
+        else:
+            (vtopo, traces) = create_virtual_topo_and_traces(self.__alias, hosts)
         (M, C) = create_merge_options(vtopo, traces)
         (M, mtopo) = create_merge_topology(M, vtopo, C)
         out = write_topo_to_file(self.__id, mtopo, hosts)

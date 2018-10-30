@@ -12,7 +12,7 @@ import sys
 import logging
 import pdb
 from transaction import *
-topo_path = os.path.abspath(os.path.join('..', '..', 'Topology'))
+topo_path = os.path.abspath(os.path.join('..', 'Topology'))
 sys.path.insert(0, topo_path)
 from util import *
 from graph_tool.all import *
@@ -456,7 +456,8 @@ class server(client):
 
         while not next_phase():
             time.sleep(sleep_time)
-            self.__logger.info('Same Proposals: ' + str(self.same_proposal()) + '\nQuorum = ' + str(self.quorum * len(self.unl)))
+            if self.__verbose:
+                self.__logger.info('Same Proposals: ' + str(self.same_proposal()) + '\nQuorum = ' + str(self.quorum * len(self.unl)))
             if self.new_proposals():
                 self.update_last_proposals()
                 if self.update_my_proposal(time.time()- start, r):
@@ -518,11 +519,11 @@ class server(client):
                     else:
                         votes[tx.id()] = (tx, votes[tx.id()][1] + 1)
         self.current_tx = []
-        self.__logger.info('\n Threshold: ' + str(threshold) + '\n')
+        #self.__logger.info('\n Threshold: ' + str(threshold) + '\n')
         for (t,v) in votes.values():
             if v > threshold:
                 self.current_tx.append(t)
-        self.__logger.info('\n Added transactions: ' + str(len(self.current_tx)) + '\n') #TODO elimina riga
+        #self.__logger.info('\n Added transactions: ' + str(len(self.current_tx)) + '\n') #TODO elimina riga
         return self.create_my_proposal(r)
 
 
@@ -1048,7 +1049,7 @@ class server(client):
             g.set_vertex_filter(removed, inverted=True)
         g.vertex_properties["name"] = vprop_name
         g.vertex_properties["color"] = vprop_col
-        graph_draw(g, vertex_text=g.vertex_properties["name"], vertex_font_size=18, output_size=(5000, 5000),
+        graph_draw(g, vertex_text=g.vertex_properties["name"], vertex_font_size=18, output_size=(1000, 1000),
                    vertex_fill_color=g.vertex_properties["color"], edge_pen_width=3.5,
                    edge_color=[0, 0, 0, 1], vertex_color=g.vertex_properties["color"], vertex_pen_width=3,
                    output="print_topo.png")

@@ -25,7 +25,7 @@ def compute_distances(net, hosts, src_hosts=[]):
                 net[h1].cmd('ping -c 1 -W 1 ' + net[h2].IP() +
                 " | grep from | awk '{split($6,a,\"=\"); print 64 - a[2]}'>> distances/" + 
                 h1)
-                os.system("echo  '---'  >>distances/" + h1) #TODO check
+                os.system("echo  '---'  >>distances/" + h1)
 
 
 def get_hosts(num):
