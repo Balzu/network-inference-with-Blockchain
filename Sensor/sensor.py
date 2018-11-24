@@ -1,21 +1,25 @@
 # coding=utf-8
 
 import subprocess
-import re, os, sys, pdb
+import re, os, sys, pdb, time
 topo_path = os.path.abspath(os.path.join('..', '..', 'Topology'))
 sys.path.insert(0, topo_path)
 from util import *
 from create_merge_topo import *
 from build_virtual_topo import *
 import logging
-
-
+from threading import Lock
+from datetime import datetime
 
 
 class sensor(object):
+
+    lock=Lock()
+
     def __init__(self, id, nh, net, config_file, hosts=[], active = True, passive = True, full = False, ignored_ips=[],
                  known_ips = [], max_fail = 5, simulation=False, readmit=True, verbose=False, interactive=False,
-                 asid=None, msid=None):
+                 include_hosts=False, asid=None, msid=None, intf = 'any', clean_cmd = [], sleep_time = 10,
+                 subnets = '192.168.0.0/16'):
         '''
         :param id: the id of this sensor. It must be the ID of the node on which the sensor is placed.
         :param nh: the number of hosts (monitors) to be used when they are chosen randomly to run iTop(if hosts=[])
@@ -24,7 +28,7 @@ class sensor(object):
         :param hosts: the list of hosts (monitors) to be used to run iTop
         :param active: tell whether the sensor should have active capabilities (e.g. ping)
         :param passive: tell whether the sensor should have passive capabilities (sniff traffic)
-        :param full: if True, run iTop with reduced monitors selection; else run iTop with all available monitors
+        :param full: if False, run iTop with reduced monitors selection; else run iTop with all available monitors
         :param ignored_ips: list of ips that the sensor should ignore (ex.: the hosts that do not belong to topology)
         :param known_ips: list of known ips. Could even start a sensor with empty list
         :param max_fail: maximum number of consecutive PING failures that is tollerated before declaring a node dead
@@ -33,23 +37,30 @@ class sensor(object):
                'dead'. Set to False when the sensor is used in Mininet. Default: 'True'.
         :param verbose: Set True if you wish to print verbose information
         :param interactive: If the sensor is run in interactive mode, the stop signal can be sent via user input.
+        :param include_hosts: When collecting traces, consider also final hosts
         :param asid: Active Sensor ID. Used when the simulation is run on Mininet. In that case, the active and the
                 passive sensor capabilities may be run on two different hosts. This happens if asid is different from None.
         :param msid: Monitor Sensor ID. Used when the simulation is run on Mininet. In that case, the sensor uses a
                 third, dedicated host to run the topology inference algorithm (only one command at a time can be run on
                 Mininet hosts..)
+        :param intf: Capture interface. Default: any.
+        :param clean_cmd: List of commands to be executed by this sensor to clean previously generated traces
+        :param sleep_time: time to wait before the next cycle of alive/dead nodes checks is started from the sensor
+        :param subnets: The network or combination of networks to which packet sniffing is restricted to (only applies if simulation=True)
         '''
-        logging.basicConfig(filename='sensor.log', level=logging.INFO)
+        setup_logger('sensor ' + id + '.log', 'sensor ' + id + '.log')
+        self.__logger = logging.getLogger('sensor ' + id + '.log')
         self.__id = id
         self.__active = active
         self.__passive = passive
         self.__full = full
-        self.__known_ips = known_ips
+        self.__known_ips = list(known_ips)
         self.__fail_count = {} # Counts the number of unsuccessful, consecutive ping replies for each known ip
         for ip in known_ips:
             self.__fail_count[ip] = 0
         self.__max_fail = max_fail
-        self.__end = False
+        self.__end = False # Flag to tell sensor to end
+        self.__ended = False # Flag set to True when the sensor really ended
         self.__simulation = simulation
         self.__verbose = verbose
         self.__readmit = readmit
@@ -60,9 +71,14 @@ class sensor(object):
         self.__hosts = hosts
         self.__net = net
         self.__interactive = interactive
+        self.__with_hosts = include_hosts
         self.__asid = asid if asid is not None else id
         self.__msid = msid # If msid is different from None, run iTop using only this (monitor) sensor as source
         self.__alias = create_alias()
+        self.__intf = intf
+        self.__clean_cmd = clean_cmd
+        self.__intercycles_time = sleep_time
+        self.__subnets = subnets
         self.__c = configure_client(config_file)
         register_client(self.__c)
 #TODO conviene avere metodi synchronized per accedere in scrittura a S.D. condivise
@@ -90,7 +106,8 @@ class sensor(object):
                 self.check_dead_nodes()
             if self.__passive:
                 self.check_new_nodes()
-            time.sleep(10)
+            time.sleep(self.__intercycles_time)
+        self.__ended = True
 
     def active_sensor(self):
         '''Runs active sensor capabilities'''
@@ -126,38 +143,43 @@ class sensor(object):
             time.sleep(5)
 
     def handle_unsuccessful_ping(self, ip):
-        self.__fail_count[ip] = self.__fail_count[ip] + 1
-        if self.__verbose:  print '\nFail count for ' + ip + ' = ' + str(self.__fail_count[ip])
-        if self.__fail_count[ip] > self.__max_fail:
-            self.__dead.append(ip)
-            if not self.__readmit:
-                self.__banned.append(ip)
-                print '\nBanned ' + ip
-            self.__known_ips.remove(ip)
-            del self.__fail_count[ip]
+        #pdb.set_trace()
+        try:
+            self.__fail_count[ip] = self.__fail_count[ip] + 1
+            if self.__verbose:  print '\nFail count for ' + ip + ' = ' + str(self.__fail_count[ip])
+            if self.__fail_count[ip] > self.__max_fail:
+                self.__dead.append(ip)
+                if not self.__readmit:
+                    self.__banned.append(ip)
+                    print '\nBanned ' + ip
+                self.__known_ips.remove(ip)
+                del self.__fail_count[ip]
+        except KeyError:
+            self.__logger.info('Key error due to ip ' + ip)
 
     def passive_sensor_on_Mininet(self):
         '''Runs passive sensor capabilities'''
         # Limitazione sulla sottorete se topologia simulata su Mininet. Problema: tcpdump non filtra sia dst che dst network
-        tcpdump_cmd = ['sudo', 'timeout', '30', 'tcpdump', '-l', '-i', 'any', 'net', '192.168.0.0/16 >> tcpdump_out'] if self.__simulation \
-                else ['sudo', 'timeout', '30', 'tcpdump', '-l', '-i', 'any >> tcpdump_out'] #TODO TWEAK TIMEOUT '-i', self.__id + '-eth0
-        s = self.__net[self.__id] #TODO perchè era 'r2'?
+        tcpdump_cmd = 'sudo timeout 30 tcpdump -l -i ' + self.__intf + ' net ' + self.__subnets + ' >> tcpdump_out'+ self.__id if self.__simulation \
+                else 'sudo timeout 30 tcpdump -l -i ' + self.__intf + ' >> tcpdump_out'+ self.__id #TODO TWEAK TIMEOUT '-i', self.__id + '-eth0
+        s = self.__net[self.__id]
         threading.Thread(target=self.blocking_cmd_on_Mininet_host, args=(tcpdump_cmd, s,)).start()
-        with open('tcpdump_out', 'r') as file:
+        time.sleep(3)
+        with open('tcpdump_out'+self.__id, 'r') as file:
             while not self.__end:
                 line = file.readline()
                 while line != '': # Sensor wrote something there..
                     try:
                         src_ip = line.split()[2]
-                        dst_ip = line.split()[4]
+                        #dst_ip = line.split()[4]
                         s_match = re.match(r"^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}", src_ip)
-                        d_match = re.match(r"^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}", dst_ip)
+                        #d_match = re.match(r"^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}", dst_ip)
                         if s_match:
                             self.handle_match(self.clean_ip(src_ip))
-                        if d_match:
-                            self.handle_match(self.clean_ip(dst_ip))
+                        #if d_match:
+                        #    self.handle_match(self.clean_ip(dst_ip))
                     except IndexError:
-                        print 'Invalid output from tcpdump'
+                        pass # 'Invalid output from tcpdump'
                     line = file.readline()
                 time.sleep(2)
 
@@ -167,6 +189,7 @@ class sensor(object):
         Runs a blocking command (with a TIMEOUT) on a Mininet host using a separate thread of execution.
         Must use if the non blocking sendCmd() causes assertion error.
         '''
+        self.__logger.info('Cmd: ' + command)
         while not self.__end:
             host.cmd(command)
         print '\n\nEXITING PASSIVE THREAD\n\n'
@@ -182,13 +205,13 @@ class sensor(object):
         for row in iter(p.stdout.readline, b''):
             try:
                 src_ip = row.split()[2]
-                dst_ip = row.split()[4]
+                #dst_ip = row.split()[4] #TODO tolto indirizzo IP destinazione: non è detto che quell' host esista/sia raggiungibile
                 s_match = re.match(r"^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}", src_ip)
-                d_match = re.match(r"^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}", dst_ip)
+                #d_match = re.match(r"^\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3}", dst_ip)
                 if s_match:
                     self.handle_match(self.clean_ip(src_ip))
-                if d_match:
-                    self.handle_match(self.clean_ip(dst_ip))
+                #if d_match:
+                #    self.handle_match(self.clean_ip(dst_ip))
             except IndexError:
                 print 'Invalid output from tcpdump'
             if self.__end:
@@ -199,11 +222,13 @@ class sensor(object):
         if ip not in self.__banned:
             if ip not in self.__known_ips:
                 # Further check, only in case of simulation (limited to subnet 192.168)
-                if (not self.__simulation or (int(ip.split('.')[0])==192 and int(ip.split('.')[1])==168)):
-                    print '\nNew IP discovered: ' + ip
-                    self.__new.append(ip)
-                    self.__known_ips.append(ip)
-                    self.__fail_count[ip] = 0
+                #TODO nei precedenti test c'era l' if, controlla se è sempre ok
+                #if (not self.__simulation or (int(ip.split('.')[0])==192 and int(ip.split('.')[1])==168)):
+                print '\nNew IP discovered: ' + ip
+                self.__new.append(ip)
+                self.__known_ips.append(ip)
+                self.__fail_count[ip] = 0
+                self.__logger.info(datetime.now().strftime("%Y-%m-%d %H:%M:%S") + ' : New IP discovered by ' + self.__id + ' : ' + ip)
             #TODO The passive sensor could be used to reset the fail count. It is sufficient to move the last line
             #of the function after the second if (not inside). (now this functionality is disabled, because
             # MIninet has switches that send IP packets but do not respond to ping, and that definetely should not
@@ -212,16 +237,18 @@ class sensor(object):
     def check_new_nodes(self):
         '''Checks whether the passive sensor found traffic dealing with a new, unknown host.
         In such a case, run a new instance of iTop and update the topology in the ledger.'''
-        if (len(self.__new)) != 0:
-            #out = ''
-            if not self.__full:
+        new = list(self.__new)
+        if (len(new)) != 0:
+            res = False
+            if (not self.__full) and (not self.__with_hosts): # fastiTop was tested to work only with routers
                 (res, out) = self.fastiTop(self.__new)
-            if self.__full or res == False:
+            if self.__full or res == False: # if fastiTop is not run it is guaranteed that full iTop is run
                 out = self.fulliTop()
             topo = get_topo_from_json(out)
             trans = get_transactions_from_topo(topo)
             self.__c.send_transactions(trans)
-        self.__new = []
+        self.__new = list(set(self.__new) - set(new)) # In the meantime some new IP could have arrived..
+
 
     def check_dead_nodes(self):
         '''Checks whether the active sensor discovered a dead node (ip address non responding to ping for more
@@ -258,21 +285,28 @@ class sensor(object):
         '''
         Runs iTop on the existing topology with all available monitors and returns the filename of the induced topology.
         '''
-        os.system('./init.sh') # Clean traces
-        logging.info('Run full iTop')
+        # If a simulation involves final hosts, the commands on the hosts must be executed sequentially
+        if self.__simulation and self.__with_hosts: sensor.lock.acquire()
+        self.clean_traces()
+        self.__logger.info('Run full iTop')
         hosts = self.__hosts
         if len(self.__hosts) == 0:
             hosts = get_hosts(int(self.__nh))
-        create_traces(self.__net, hosts, src_hosts=[self.__msid]) if self.__msid is not None else \
-            create_traces(self.__net, hosts) # TODO: Non c'era create traces prima
+        if self.__with_hosts: hosts = self.ips_alias(hosts)
+        self.__logger.info('full iTop hosts: ')
+        for h in hosts:
+            self.__logger.info(h)
+        create_traces(self.__net, hosts, src_hosts=[self.__msid], suffix=self.__msid+'/') if self.__msid is not None else \
+            create_traces(self.__net, hosts, suffix=self.__msid+'/') # TODO: Non c'era create traces prima
         if self.__msid is not None:
-            (vtopo, traces) = create_virtual_topo_and_traces(self.__alias, hosts, src_hosts=[self.__msid])
+            (vtopo, traces) = create_virtual_topo_and_traces(self.__alias, hosts, src_hosts=[self.__msid], include_host=self.__with_hosts, suffix=self.__msid+'/')
         else:
-            (vtopo, traces) = create_virtual_topo_and_traces(self.__alias, hosts)
+            (vtopo, traces) = create_virtual_topo_and_traces(self.__alias, hosts, include_host=self.__with_hosts, suffix=self.__msid+'/')
         (M, C) = create_merge_options(vtopo, traces)
         (M, mtopo) = create_merge_topology(M, vtopo, C)
         out = write_topo_to_file(self.__id, mtopo, hosts)
         self.__full = False
+        if sensor.lock.locked(): sensor.lock.release()
         return out
 
     def fastiTop(self, nnodes):
@@ -281,10 +315,12 @@ class sensor(object):
         :return: a pair (result, topology_filename). result is True if the inferred topology is considered satisfying,
          False if a full run of iTop has instead to be done. (Some already known nodes were not discovered..)
         '''
+        if self.__simulation and self.__with_hosts: sensor.lock.acquire()
         hosts = previous_hosts()
         alias = create_alias()
         # Reconstruct old topology
-        (M, old_topo, traces) = get_old_topo(hosts, alias)
+        #src_hosts = [self.__msid] if self.__msid is not None else []
+        (M, old_topo, traces) = get_old_topo(hosts, alias) #, src_hosts = src_hosts, include_host=self.__with_hosts)
         # Reconstruct new_topo
         src_pairs = find_sources(traces,
                                  monitors=True)  # Returns a pair because the monitor does not belong to topology
@@ -292,12 +328,18 @@ class sensor(object):
         shosts = monitors_selection(C, old_topo)
         # Infer the (new) topology using the (optimal ?) selection of probing stations
         compute_distances(self.__net, hosts, src_hosts=shosts)
-        create_traces(self.__net, hosts, src_hosts=shosts)
-        (vtopo, traces) = create_virtual_topo_and_traces(alias, hosts, src_hosts=shosts)
+        create_traces(self.__net, hosts, src_hosts=shosts, suffix=self.__msid+'/')
+        (vtopo, traces) = create_virtual_topo_and_traces(alias, hosts, src_hosts=shosts, suffix=self.__msid+'/')
+        '''
+        if self.__msid is not None: #TODO CHECK!!!
+            (vtopo, traces) = create_virtual_topo_and_traces(self.__alias, hosts, src_hosts=[self.__msid], include_host=self.__with_hosts)
+        else:
+            (vtopo, traces) = create_virtual_topo_and_traces(self.__alias, hosts, include_host=self.__with_hosts)
+        '''
         (M, C) = create_merge_options(vtopo, traces)
         (M, new_topo) = create_merge_topology(M, vtopo, C)
+        if sensor.lock.locked(): sensor.lock.release() #Run of iTop ended
         # Compare the old topology against the new one, to see if the gathered traces are enough or all monitors must be used.
-        #pdb.set_trace()
         nnalias = []
         for n in nnodes:
             try:
@@ -307,13 +349,41 @@ class sensor(object):
         end = compare_topologies(old_topo, new_topo, new_nodes = nnalias)
         if end:
             out = write_topo_to_file(self.__id, new_topo, shosts)
-            logging.info('Fast iTop successfully used')
+            self.__logger.info('Fast iTop successfully used')
             return (True, out)
         return (False, None)
 
+    def ips_alias(self, hosts):
+        '''
+        Scans the known_ips + host list to create a list of alias. If an IP has no known alias, it does not insert that
+        IP in the returned list.
+        '''
+        alias = create_alias()
+        shosts = set()
+        for ip in self.__known_ips:
+            try:
+                a = alias[ip]
+                shosts.add(a)
+            except KeyError:
+                pass # If an IP has no alias, we simply do not return it
+        shosts.union(set(hosts)) # Hosts are already aliased
+        return list(shosts)
+
+    def clean_traces(self):
+        '''
+        Runs commands to clean the previously generated traces.
+        '''
+        if self.__clean_cmd == []:
+            os.system('./init.sh')  # Clean traces: use default script
+        else:
+            for c in self.__clean_cmd:
+                os.system(c)
 
     #TODO lo stoppi in questo modo? Considera se devi proteggere variabili con lock o no
     def stop(self):
         self.__end = True
 
- 
+    def wait_end(self):
+        while not self.__ended:
+            time.sleep(5)
+

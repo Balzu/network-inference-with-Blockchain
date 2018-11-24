@@ -1,0 +1,3 @@
+traceroute to 12.10.5.4 (12.10.5.4), 30 hops max, 60 byte packets
+ 1  192.168.1.1  1.117 ms  0.721 ms  0.768 ms
+ 2  12.10.5.4  6.665 ms  6.690 ms *

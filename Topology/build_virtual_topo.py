@@ -39,7 +39,7 @@ def get_hosts(num):
         return r_hosts
 
 
-def create_traces(net, hosts, src_hosts = []): #TODO rename in store_traces?
+def create_traces(net, hosts, src_hosts = [], suffix = ''): #TODO rename in store_traces?
     shosts = src_hosts if len(src_hosts) > 0 else hosts
     for h1 in shosts:
         for h2 in hosts:
@@ -47,9 +47,9 @@ def create_traces(net, hosts, src_hosts = []): #TODO rename in store_traces?
             # For each host different from host1, add a line with the name of the host
             # and the distance from host1 (exploit TTL to derive the distance)
                 print "Starting collection of traces from " + h1 + " ... "
-                #pdb.set_trace()
-                (o, e, ec) = net[h1].pexec('tcptraceroute -n -w 1 ' + net[h2].IP()) #TODO added -w 2
-                with open("traceroute/"+h1+h2, "w") as f:
+                #(o, e, ec) = net[h1].pexec('traceroute -n' + net[h2].IP()) #TODO tcptraceroute -n -w 1
+                o = net[h1].cmd('traceroute -n ' + net[h2].IP())
+                with open("traceroute/" + suffix + h1 + h2, "w") as f:
                     f.write(o)
             #net[h1].cmd('traceroute -n -I' + net[h2].IP() + ' > traceroute/' + h1 + h2)
 
@@ -62,7 +62,8 @@ def create_alias():
                 alias[address]=(l[0]) #l[0] is the router name
         return alias
 
-def create_virtual_topo_and_traces(alias, hosts, src_hosts = []):
+ #TODO The capability of adding also the final host to the topology has to be tested in the blocking case
+def create_virtual_topo_and_traces(alias, hosts, src_hosts = [], include_host=False, suffix = ''):
     topo = {}
     x = [0]  # Incremental identifier for non responding routers. x is a list used as single value
     done = set() # Insert hosts already visited (in case a blocking router is found)
@@ -72,48 +73,51 @@ def create_virtual_topo_and_traces(alias, hosts, src_hosts = []):
         for h2 in hosts:
             if h1 != h2:
                 traces[h1+h2] = []
-                if get_answer_from_dest(h1,h2): 
+                if get_answer_from_dest(h1,h2,suffix=suffix):
                 #Manage the cases in which no blocking router is found
                 # could find one or more anonymouse router
-                    add_routers(topo, h1, h2, x, alias, traces, 100, False)                            
+                    add_routers(topo, h1, h2, x, alias, traces, 100, False, include_host=include_host,suffix=suffix)
                 else:
-                    #Manage the case in which you find at least one blocking router  
-                    traces[h1+h2].extend(get_responding_routers(h1,h2,alias))
-                    numr_h1 = num_responding_routers(h1, h2)
-                    numr_h2 = num_responding_routers(h2, h1)
-                    num_r = get_real_distance(h1,h2)
-                    # Add the the responding routers on the path before the block and save the last  
-                    last_h1 = add_routers(topo, h1, h2, x, alias, traces, numr_h1, True)
-                    last_h2 = get_last_responding_router(h2, h1, alias)
-                    unobserved = num_r - numr_h1 - numr_h2
-                    if unobserved == 1: # Case 1: only one blocking router
-                        if last_h1 != None:
-                            next = add_router(topo, x, last_h1, 'B') 
-                            traces[h1+h2].append(next)                          
-                        elif last_h2 != None:
-                            next = add_router(topo, x, last_h2, 'B')
-                            traces[h1+h2].append(next)                          
-                        else:
-                            add_only_router(topo, x, 'B')
-                        last_h1h2 = get_responding_routers(h2,h1,alias)[::-1]
-                        traces[h1+h2].extend(last_h1h2)                            
-                    elif unobserved > 1:
-                        if last_h1 != None: 
-                            last = add_router(topo, x, last_h1, 'NC')
-                            traces[h1+h2].append(last)
-                        else:
-                            last = add_only_router(topo, x, 'NC')    
-                            traces[h1+h2].append(last)
-                        for i in range(unobserved - 2):
-                            last = add_router(topo, x, last, 'H')
-                            traces[h1+h2].append(last)
-                        ncr_h2 = add_router(topo, x, last, 'NC')
-                        traces[h1+h2].append(ncr_h2)
-                        if last_h2 != None:
-                            add_router(topo, x, last_h2, 'NC', new=False)    
-# Complete the traces from h1 to h2 by adding the reverse path (known!) from h2                        
-                        last_h1h2 = get_responding_routers(h2,h1,alias)[::-1]
-                        traces[h1+h2].extend(last_h1h2)        
+                    try:
+                        #Manage the case in which you find at least one blocking router
+                        traces[h1+h2].extend(get_responding_routers(h1,h2,alias,suffix=suffix))
+                        numr_h1 = num_responding_routers(h1, h2, suffix=suffix)
+                        numr_h2 = num_responding_routers(h2, h1, suffix=suffix)
+                        num_r = get_real_distance(h1,h2)
+                        # Add the the responding routers on the path before the block and save the last
+                        last_h1 = add_routers(topo, h1, h2, x, alias, traces, numr_h1, True,suffix=suffix)
+                        last_h2 = get_last_responding_router(h2, h1, alias, suffix=suffix)
+                        unobserved = num_r - numr_h1 - numr_h2
+                        if unobserved == 1: # Case 1: only one blocking router
+                            if last_h1 != None:
+                                next = add_router(topo, x, last_h1, 'B')
+                                traces[h1+h2].append(next)
+                            elif last_h2 != None:
+                                next = add_router(topo, x, last_h2, 'B')
+                                traces[h1+h2].append(next)
+                            else:
+                                add_only_router(topo, x, 'B')
+                            last_h1h2 = get_responding_routers(h2,h1,alias,suffix=suffix)[::-1]
+                            traces[h1+h2].extend(last_h1h2)
+                        elif unobserved > 1:
+                            if last_h1 != None:
+                                last = add_router(topo, x, last_h1, 'NC')
+                                traces[h1+h2].append(last)
+                            else:
+                                last = add_only_router(topo, x, 'NC')
+                                traces[h1+h2].append(last)
+                            for i in range(unobserved - 2):
+                                last = add_router(topo, x, last, 'H')
+                                traces[h1+h2].append(last)
+                            ncr_h2 = add_router(topo, x, last, 'NC')
+                            traces[h1+h2].append(ncr_h2)
+                            if last_h2 != None:
+                                add_router(topo, x, last_h2, 'NC', new=False)
+    # Complete the traces from h1 to h2 by adding the reverse path (known!) from h2
+                            last_h1h2 = get_responding_routers(h2,h1,alias,suffix=suffix)[::-1]
+                            traces[h1+h2].extend(last_h1h2)
+                    except IOError:
+                        pass # If you don't have the traces you can't infer anything for this pair of hosts
     return (topo,traces)
 
 
@@ -138,19 +142,22 @@ def add_router(topo, x, r, _type, new=True):
     return r_x
    
 
-def num_responding_routers(h1,h2):
-    num = 0
-    with open ("traceroute/"+h1+h2, "r") as trace_file:
-        for line in trace_file.readlines():
-            l = line.split()
-            if (l[1]=='*' and l[2]=='*' and l[3]=='*'):
-                return num-1 #Don't count first line because is not referred to a router, but to the host itself
-            num += 1
-        return 100 # An impossible number, since max number of routers is 30  
+def num_responding_routers(h1,h2, suffix=''):
+    try:
+        num = 0
+        with open ("traceroute/" + suffix +h1+h2, "r") as trace_file:
+            for line in trace_file.readlines():
+                l = line.split()
+                if (l[1]=='*' and l[2]=='*' and l[3]=='*'):
+                    return num-1 #Don't count first line because is not referred to a router, but to the host itself
+                num += 1
+            return 100 # An impossible number, since max number of routers is 30
+    except IOError: #TODO blocco try aggiunto dopo. Se non esistono tracce, si considerano zero routers rispondenti
+        return 0
 
-def get_responding_routers(h1,h2,alias):
+def get_responding_routers(h1,h2,alias, suffix=''):
     lst = []
-    with open ("traceroute/"+h1+h2, "r") as trace_file:
+    with open ("traceroute/"+ suffix + h1 + h2, "r") as trace_file:
         trace_lines = trace_file.readlines()
         num_l = len(trace_lines)
         i = 0
@@ -164,9 +171,9 @@ def get_responding_routers(h1,h2,alias):
                 lst.append(alias[last])
         return lst  
 
-def get_last_responding_router(h1,h2,alias):
+def get_last_responding_router(h1,h2,alias, suffix = ''):
     last = None
-    with open ("traceroute/"+h1+h2, "r") as trace_file:
+    with open ("traceroute/" + suffix +h1+h2, "r") as trace_file:
         trace_lines = trace_file.readlines()
         num_l = len(trace_lines)
         i = 0
@@ -187,8 +194,8 @@ def get_real_distance(h1,h2):
             return 100 # Impossible distance
 
 
-def get_answer_from_dest(host1,host2):
-    count = len(open("traceroute/"+host1+host2).readlines())
+def get_answer_from_dest(host1,host2, suffix = ''):
+    count = len(open("traceroute/" + suffix + host1 + host2).readlines())
     if count <= 30:
         return True
     else:
@@ -197,21 +204,25 @@ def get_answer_from_dest(host1,host2):
 # Adds to the virtual topology the routers found in the traces and returns the last added router
 # Works by scanning a trace line by line. If this method is not invoked in the blocking case,
 # It also takes care of creating the traces from host1 to host2
-def add_routers(topo, host1, host2, x, alias, traces, max_iter, blocking_case):
-    with open("traceroute/"+host1+host2) as trace:
+def add_routers(topo, host1, host2, x, alias, traces, max_iter, blocking_case, include_host=False, suffix = ''):
+    with open("traceroute/"+ suffix +host1+host2) as trace:
         lines = trace.readlines()        
         src = None
         dst = None
         if max_iter == 100:
             num_lines = len(lines)
-            max_iter = num_lines -2 #skip first and last line (don't consider hosts)
-        if max_iter == 1: # Only add the router to the virtual topo and return it
+            max_iter = num_lines - 1 if include_host else num_lines -2 #skip first and last line if include_host = False
+        if max_iter == 1: # Only add the router to the virtual topo and return it (if hosts are not included)
             dst = find_router(lines[1].split(), alias)
             if dst not in topo:
                 if dst == 'A':
                     dst = add_only_router(topo, x, dst)
                 else:
                     topo[dst] = ('R', set())
+                    if include_host: # If we also considers border hosts, we must add the host to the topology #TODO controlla questo if!
+                        (src, dst) = add_link(topo, (host1, dst), x, max_iter)
+                        traces[host1 + host2].append(src)
+                        traces[host1 + host2].append(dst)
             if not blocking_case: #TODO Questo if era annidato, ma credo sia giusto ora. Controlloa
                 traces[host1+host2].append(dst)
         for i in range(1, max_iter):

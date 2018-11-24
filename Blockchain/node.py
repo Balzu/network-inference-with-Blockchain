@@ -979,9 +979,11 @@ class server(client):
         payload = message_payload(self.public_key())
         return message(header, payload)
 
-    def draw_topology(self, collapse=True):
+    def draw_topology(self, collapse=True, prefix = '', suffix = ''):
         '''Draws the topology of the current ledger and stores it to file.
            If self.nrr is False, draws only responding routers.
+           A prefix is specified if the image must be saved at a given path.
+           A suffix is specified to discriminate different executions.
         '''
         # Create data structure for the topology
         lgr = self.__blockchain.current_ledger()
@@ -1052,7 +1054,7 @@ class server(client):
         graph_draw(g, vertex_text=g.vertex_properties["name"], vertex_font_size=18, output_size=(1000, 1000),
                    vertex_fill_color=g.vertex_properties["color"], edge_pen_width=3.5,
                    edge_color=[0, 0, 0, 1], vertex_color=g.vertex_properties["color"], vertex_pen_width=3,
-                   output="print_topo.png")
+                   output= prefix + "print_topo" + suffix + ".png")
 
     def edge_from_v2(self, v1, v2):
         'Returns True IFF vertex v1 has only one incoming edge coming from v2'
@@ -1065,6 +1067,24 @@ class server(client):
     def logger(self):
         return self.__logger
 
+    def store_topo_to_file(self, filename, prefix = '', suffix = ''):
+        '''Draws the topology of the current ledger and stores it to file.
+           If self.nrr is False, draws only responding routers.
+           A prefix is specified if the image must be saved at a given path.
+           A suffix is specified to discriminate different executions.
+        '''
+        # Create data structure for the topology
+        lgr = self.__blockchain.current_ledger()
+        txset = lgr.transaction_set()
+        topo = {} #Key = str(node), values = number of occurrences
+        for tx in txset.transactions().values():
+            src = str(tx.src())
+            dst = str(tx.dst())
+            if ((self.nrr) or (src.split(':')[1] == 'R' and dst.split(':')[1] == 'R')):
+                if src not in topo:
+                    topo[src] = 1
+                else:
+                    topo[src] = topo[src] + 1
 
     # TODO send de-registration message to unl, end message to observers, and stop sockets?
     def finalize(self):

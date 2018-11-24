@@ -1,0 +1,46 @@
+{
+  "ip" : "127.0.0.100",
+  "port" : "10000",
+  "unl" : [
+    {
+      "ip" : "127.0.0.101",
+      "port" : "10000"
+    },
+    {
+      "ip" : "127.0.0.102",
+      "port" : "10000"
+    },
+    {
+      "ip" : "127.0.0.103",
+      "port" : "10000"
+    },
+    {
+      "ip" : "127.0.0.104",
+      "port" : "10000"
+    },
+    {
+      "ip" : "127.0.0.105",
+      "port" : "10000"
+    }
+  ],
+  "quorum" : "0.8",
+  "ledger_min_close" : "20",
+  "ledger_max_close" : "30",
+  "threshold_values" : {
+    "init" : "0.50",
+    "mid" : "0.65",
+    "late" : "0.75",
+    "stuck" : "0.95"
+  },
+  "threshold_times" : {
+    "init" : "10",
+    "mid" : "20",
+    "late" : "30",
+    "stuck" : "60"
+  },
+  "ledger_min_consensus" : "10",
+  "ledger_max_consensus" : "30",
+  "non_responding_routers" : "True"
+}
+
+

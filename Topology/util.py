@@ -158,9 +158,9 @@ def start_net():
     net.start()
     return net
 
-def start_network_number(num, nh, ns):
+def start_network_number(num, **params):
     '''
-    Start Mininet Topology
+    Start Mininet Topology.
     :param num: Number of the network to be setup
     :param nh: Number of hosts to be inserted in the network
     :param ns: Number of sensors to be inserted in the network
@@ -169,11 +169,47 @@ def start_network_number(num, nh, ns):
     if num == 0:
         topo = NetworkTopo()
     elif num == 1:
-        topo = NetworkTopo1(num_host=nh, num_sensor=ns)
+        sensor1 = params['sensor1']
+        sensor2 = params['sensor2']
+        topo = NetworkTopo1(sensor1=sensor1, sensor2=sensor2)
+    elif num == 2:
+        sensor1 = params['sensor1']
+        sensor2 = params['sensor2']
+        topo = NetworkTopo2(sensor1=sensor1, sensor2=sensor2)
+    elif num == 3:
+        sensor1 = params['sensor1']
+        sensor2 = params['sensor2']
+        topo = NetworkTopo3(sensor1=sensor1, sensor2=sensor2)
+    elif num==4:
+        sensor1 = params['sensor1']
+        sensor2 = params['sensor2']
+        sensor3 = params['sensor3']
+        sensor4 = params['sensor4']
+        topo = NetworkTopo4(sensor1=sensor1, sensor2=sensor2, sensor3=sensor3, sensor4=sensor4)
+    elif num==5:
+        sensor1 = params['sensor1']
+        sensor2 = params['sensor2']
+        sensor3 = params['sensor3']
+        sensor4 = params['sensor4']
+        topo = NetworkTopo5(sensor1=sensor1, sensor2=sensor2, sensor3=sensor3, sensor4=sensor4)
+    elif num == 6:
+        sensor1 = params['sensor1']
+        sensor2 = params['sensor2']
+        sensor3 = params['sensor3']
+        topo = NetworkTopo6(sensor1=sensor1, sensor2=sensor2, sensor3=sensor3)
+    elif num == 7:
+        sensor1 = params['sensor1']
+        sensor2 = params['sensor2']
+        sensor3 = params['sensor3']
+        topo = NetworkTopo7(sensor1=sensor1, sensor2=sensor2, sensor3=sensor3)
+    else:
+        print 'Invalid network number specified' #TODO throw exception?
+        return
     net = Mininet(topo=topo)
     topo.add_static_routes(net)
     net.start()
     return (net,topo)
+
 
 def compare_topologies(old_topo, new_topo, new_nodes=[]):
     '''
@@ -204,8 +240,9 @@ def previous_hosts():
             hosts.add('h' + str(h).strip())
     return list(hosts)
 
-def get_old_topo(hosts, alias):
-    (vtopo, traces) = create_virtual_topo_and_traces(alias, hosts)
+#TODO ok con selezione ridotta di src hosts?
+def get_old_topo(hosts, alias, src_hosts = [], include_host=False):
+    (vtopo, traces) = create_virtual_topo_and_traces(alias, hosts, src_hosts = src_hosts, include_host=include_host)
     (M, C) = create_merge_options(vtopo, traces)
     (M, mtopo) = create_merge_topology(M, vtopo, C)
     return (M, mtopo, traces)
