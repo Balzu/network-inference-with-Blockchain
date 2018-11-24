@@ -378,9 +378,9 @@ def experiment_seven(id, sensors, subfolder):
                               intf=topo.interface_name[i]))
     [s.start() for s in sensors]
     hosts = [net['h1'], net['h2'], net['h3'], net['h4'], net['h5'], net['h6'], net['h7'], net['h8'], net['h9']]
-    net['h7'].cmd('ping -c 1 -W 1 ' + net['h1'].IP())
-    net['h8'].cmd('ping -c 1 -W 1 ' + net['h1'].IP())
-    net['h9'].cmd('ping -c 1 -W 1 ' + net['h1'].IP())
+    #net['h7'].cmd('ping -c 1 -W 1 ' + net['h1'].IP())
+    #net['h8'].cmd('ping -c 1 -W 1 ' + net['h1'].IP())
+    #net['h9'].cmd('ping -c 1 -W 1 ' + net['h1'].IP())
     time.sleep(10)
     print '\n\n ...............  PINGING   .............. \n\n'
     net.ping(hosts=hosts)
@@ -388,6 +388,82 @@ def experiment_seven(id, sensors, subfolder):
     [s.stop() for s in sensors]
     [s.wait_end() for s in sensors]
     servers[3].draw_topology(prefix='topo_exp7/' + subfolder + '/', suffix=str(id))
+    stop_blockchain(servers)
+
+def experiment_eight(id, sensors, subfolder):
+    '''
+    Sets up NetworkTopo8.
+    :param id: (Incremental) Identifier of the experiment
+    :param sensors: list of boolean values telling which sensors have to be used
+    :return: Saves the topology stored in the ledger in a file called print_topo[id].png
+    '''
+    servers = start_blockchain()
+    (net, topo) = start_network_number(8, sensor1=sensors[0], sensor2=sensors[1], sensor3=sensors[2], sensor4=sensors[3])
+    os.system('./init.sh')
+    topo.create_alias_file()
+    asnames = topo.active_sensors
+    psnames = topo.passive_sensors
+    msnames = topo.monitor_sensors
+    sensors = []
+    startup(len(msnames), msnames, net)
+    ips = get_responding_ips(msnames)
+    topo.add_firewall_rules(net)
+    clean_cmd_base = 'rm -rf traceroute/'
+    for i in range(len(psnames)):
+        clean_cmd = [clean_cmd_base + msnames[i] + '/*']
+        os.system('mkdir traceroute/' + msnames[i])
+        sensors.append(sensor(psnames[i], len(msnames), net, 'configuration/sensor_config' + str(i + 1) + '.json',
+                              hosts=msnames, max_fail=3, clean_cmd=clean_cmd, known_ips=ips, simulation=True,
+                              sleep_time=30, subnets = '192.168.0.0/16 or 12.0.0.0/8',
+                              verbose=False, asid=asnames[i], msid=msnames[i], include_hosts=True,
+                              intf=topo.interface_name[i]))
+    [s.start() for s in sensors]
+    hosts = [net['h1'], net['h2'], net['h3'], net['h4'], net['h5'], net['h6'], net['h7'], net['h8']]
+    time.sleep(10)
+    print '\n\n ...............  PINGING   .............. \n\n'
+    net.ping(hosts=hosts)
+    time.sleep(200)
+    [s.stop() for s in sensors]
+    [s.wait_end() for s in sensors]
+    servers[3].draw_topology(prefix='topo_exp8/' + subfolder + '/', suffix=str(id))
+    stop_blockchain(servers)
+
+def experiment_nine(id, sensors, subfolder):
+    '''
+    Sets up NetworkTopo9.
+    :param id: (Incremental) Identifier of the experiment
+    :param sensors: list of boolean values telling which sensors have to be used
+    :return: Saves the topology stored in the ledger in a file called print_topo[id].png
+    '''
+    servers = start_blockchain()
+    (net, topo) = start_network_number(9, sensor1=sensors[0], sensor2=sensors[1], sensor3=sensors[2], sensor4=sensors[3])
+    os.system('./init.sh')
+    topo.create_alias_file()
+    asnames = topo.active_sensors
+    psnames = topo.passive_sensors
+    msnames = topo.monitor_sensors
+    sensors = []
+    startup(len(msnames), msnames, net)
+    ips = get_responding_ips(msnames)
+    topo.add_firewall_rules(net)
+    clean_cmd_base = 'rm -rf traceroute/'
+    for i in range(len(psnames)):
+        clean_cmd = [clean_cmd_base + msnames[i] + '/*']
+        os.system('mkdir traceroute/' + msnames[i])
+        sensors.append(sensor(psnames[i], len(msnames), net, 'configuration/sensor_config' + str(i + 1) + '.json',
+                              hosts=msnames, max_fail=3, clean_cmd=clean_cmd, known_ips=ips, simulation=True,
+                              sleep_time=30, subnets = '192.168.0.0/16 or 12.0.0.0/8',
+                              verbose=False, asid=asnames[i], msid=msnames[i], include_hosts=True,
+                              intf=topo.interface_name[i]))
+    [s.start() for s in sensors]
+    hosts = [net['h1'], net['h2'], net['h3'], net['h4'], net['h5'], net['h6'], net['h7'], net['h8']]
+    time.sleep(10)
+    print '\n\n ...............  PINGING   .............. \n\n'
+    net.ping(hosts=hosts)
+    time.sleep(200)
+    [s.stop() for s in sensors]
+    [s.wait_end() for s in sensors]
+    servers[3].draw_topology(prefix='topo_exp9/' + subfolder + '/', suffix=str(id))
     stop_blockchain(servers)
 
 if __name__ == '__main__':
@@ -413,6 +489,10 @@ if __name__ == '__main__':
         experiment_six(id, [s1, s2, s3], subfolder=sub)
     elif num == 7:
         experiment_seven(id, [s1, s2, s3], subfolder=sub)
+    elif num == 8:
+        experiment_eight(id, [s1, s2, s3, s4], subfolder=sub)
+    elif num == 9:
+        experiment_nine(id, [s1, s2, s3, s4], subfolder=sub)
 
 
 

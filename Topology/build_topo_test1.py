@@ -727,93 +727,6 @@ class NetworkTopo5( Topo ):
                 f.write('\n')
 
 
-class NetworkTopoUnknown( Topo ):
-    "This topology simulates a  network with more hosts connected to a single router through several switches \
-    and belonging to different subnets. A given amount of sensors is inserted to monitor the topology."
-
-    def __init__(self, *args, **params):
-
-        self.num_sensor = params['num_sensor']
-        self.num_host = params['num_host']
-        self.net_hosts = []
-        self.active_sensors = []
-        self.passive_sensors = []
-        self.monitor_sensors = []
-        self.alias = {} # Dictionary st: key = router/host name, value = list of IP addresses of the router/host
-        self.sroutes = {} # Key: Router/Host/senor id, value = list of static routes to be setup
-        super(NetworkTopo1, self).__init__()
-        '''        
-        :param num_hosts:  Number of hosts to be inserted in the topology     
-        :param num_sensors: Number of sensors to be inserted in the topology
-        '''
-
-    def build( self, **_opts ):
-
-        self.router = self.addNode( 'r1', cls=LinuxRouter, ip='192.168.1.1/24' ) #'14.21.5.38/8'
-        self.alias['r1'] = []
-        self.sroutes['r1'] = []
-        ip = 1
-        swid = 2
-        for i in range(1, self.num_host+1):
-            sw = self.addSwitch('s'+str(swid))
-            hid = 'h'+str(i)
-            rIP = '192.168.' + str(ip) + '.1'
-            hIP = '192.168.' + str(ip) + '.2'
-            self.net_hosts.append(self.addHost(hid, ip=hIP + '/24', defaultRoute=rIP))
-            self.addLink(sw, self.router, intfName2='r1-eth'+ str(swid),
-                         params2={'ip': rIP + '/24'})
-            self.addLink(hid, sw)
-            self.alias[hid] = [hIP]
-            self.alias['r1'].append(rIP)
-            self.sroutes['r1'].append('ip route add ' + hIP + '/32 via ' + hIP + ' dev r1-eth'+ str(swid))
-            self.sroutes[hid] = ['ip route add default via ' + rIP + ' dev ' + hid + '-eth0']
-            ip += 1 # era +=2
-            swid += 1
-        # In Mininet you can't send simultaneously 2 commands to the same host. To circumvent this limitation
-        # we create 3 hosts for each sensor, connected to the same switch: the active host looks for dead nodes,
-        # The passive host looks for new nodes, the monitor host runs the topology inference algorithm
-        for i in range(1, self.num_sensor+1):
-            sw = self.addSwitch('s' + str(swid))
-            asid = 'has'+str(i)
-            psid = 'hps' + str(i)
-            msid = 'hms' + str(i)
-            rIP = '192.168.' + str(ip) + '.1'
-            asIP = '192.168.' + str(ip) + '.2' # Active sensor IP
-            psIP = '192.168.' + str(ip) + '.3' # Passive sensor IP
-            msIP = '192.168.' + str(ip) + '.4' # Monitor sensor IP (the one that runs iTop)
-            self.active_sensors.append(self.addHost(asid, ip=asIP + '/24', defaultRoute=rIP))
-            self.passive_sensors.append(self.addHost(psid, ip=psIP + '/24', defaultRoute=rIP))
-            self.monitor_sensors.append(self.addHost(msid, ip=msIP + '/24', defaultRoute=rIP))
-            self.addLink(sw, self.router, intfName2='r1-eth' + str(swid), params2={'ip': rIP + '/24'})
-            self.addLink(asid, sw)
-            self.addLink(psid, sw)
-            self.addLink(msid, sw)
-            self.alias[asid] = [asIP]
-            self.alias[psid] = [psIP]
-            self.alias[msid] = [msIP]
-            self.alias['r1'].append(rIP)
-            self.sroutes['r1'].append('ip route add ' + asIP + '/32 via ' + asIP + ' dev r1-eth' + str(swid))
-            self.sroutes[asid] = ['ip route add default via ' + rIP + ' dev ' + asid + '-eth0']
-            self.sroutes[psid] = ['ip route add default via ' + rIP + ' dev ' + psid + '-eth0']
-            self.sroutes[msid] = ['ip route add default via ' + rIP + ' dev ' + msid + '-eth0']
-            ip += 1
-            swid += 1
-
-
-    def add_static_routes(self, net):
-        '''Add static routes to the router for subnets not directly visible'''
-        for k in self.sroutes.keys():
-            for r in self.sroutes[k]:
-                net[k].cmd(r)
-
-    def create_alias_file(self):
-        with open('alias', 'w') as f:
-            for k in self.alias.keys():
-                f.write(k + ' ')
-                for ip in self.alias[k]:
-                    f.write(ip + ' ')
-                f.write('\n')
-
 class NetworkTopo6( Topo ):
     """
     This topology simulates a network with one router.
@@ -1138,3 +1051,401 @@ class NetworkTopo7( Topo ):
         for k in self.fw_rules.keys():
             for r in self.fw_rules[k]:
                 net[k].cmd(r)
+
+class NetworkTopo8( Topo ):
+    """
+    This topology simulates a network with three routers.
+    Two hosts belong to subnet 12.0.0.0/8, representing the internet.
+    Two hosts belong to subnet 192.168.1.0/24, representing the DMZ.
+    Two hosts belong to subnet 192.168.2.0/24, representing LAN 1.
+    Two hosts belong to subnet 192.168.3.0/24, representing LAN 2.
+    Router1, the one that connects the three subnets, is anonymous.
+    """
+
+    def __init__(self, *args, **params):
+        '''
+        :param sensor1: True if a sensor has to be placed in subnet 12.0.0.0/8
+        :param sensor2: True if a sensor has to be placed in subnet 192.168.1.0/24
+        :param sensor2: True if a sensor has to be placed in subnet 192.168.2.0/24
+        :param sensor2: True if a sensor has to be placed in subnet 192.168.3.0/24
+        '''
+        self.sensor1 = False if (params['sensor1'] is None or params['sensor1'] is False) else True
+        self.sensor2 = False if (params['sensor2'] is None or params['sensor2'] is False) else True
+        self.sensor3 = False if (params['sensor3'] is None or params['sensor3'] is False) else True
+        self.sensor4 = False if (params['sensor4'] is None or params['sensor4'] is False) else True
+        self.swc = {} # Key: Number of switch, value: switch
+        self.net_hosts = []
+        self.active_sensors = []
+        self.passive_sensors = []
+        self.monitor_sensors = []
+        self.interface_name = []
+        self.alias = {} # Dictionary st: key = router/host name, value = list of IP addresses of the router/host
+        self.sroutes = {} # Key: Router/Host/sensor id, value = list of static routes to be setup
+        super(NetworkTopo8, self).__init__()
+
+    def build( self, **_opts ):
+        # Connect router r1 to Internet Hosts
+        r1IP1 = '12.10.5.1'
+        self.router1 = self.addNode( 'r1', cls=LinuxRouter, ip=r1IP1+'/8' )
+        self.alias['r1'] = []
+        self.alias['r1'].append(r1IP1)
+        self.sroutes['r1'] = []
+        self.swc[1] = self.addSwitch('s1')
+        self.addLink(self.swc[1], self.router1, intfName2='r1-eth1', params2={'ip': r1IP1+'/8'})
+        self.net_hosts.append(self.addHost('h1', ip='12.10.5.2/8', defaultRoute=r1IP1+'/8'))
+        self.addLink('h1', self.swc[1])
+        self.alias['h1'] = ['12.10.5.2']
+        self.net_hosts.append(self.addHost('h2', ip='12.10.5.3/8', defaultRoute=r1IP1+'/8'))
+        self.addLink('h2', self.swc[1])
+        self.alias['h2'] = ['12.10.5.3']
+        self.sroutes['r1'].append('ip route add 12.10.5.2/8 via 12.10.5.2 dev r1-eth1')
+        self.sroutes['r1'].append('ip route add 12.10.5.3/8 via 12.10.5.3 dev r1-eth1')
+        self.sroutes['h1'] = ['ip route add default via 12.10.5.1 dev h1-eth0']
+        self.sroutes['h2'] = ['ip route add default via 12.10.5.1 dev h2-eth0']
+
+        # Connect the DMZ
+        r1IP2 = '192.168.4.1'
+        r2IP1 = '192.168.4.2'
+        r2IP2 = '192.168.1.1'
+        # TODO l' indirizzo di default del router deve corrispondere sempre al' indirizzo della stessa classe degli host che gli sono attaccati (es: r2IP1 non funziona qui!)
+        self.router2 = self.addNode('r2', cls=LinuxRouter, ip=r2IP1) #r2IP2
+        self.alias['r2'] = []
+        self.alias['r1'].append(r1IP2)
+        self.alias['r2'].append(r2IP1)
+        self.alias['r2'].append(r2IP2)
+        self.sroutes['r2'] = []
+        self.swc[5] = self.addSwitch('s5')
+        self.addLink(self.swc[5], self.router2, intfName2='r2-eth1', params2={'ip': r2IP1+'/24'})
+        self.addLink(self.swc[5], self.router1, intfName2='r1-eth2', params2={'ip': r1IP2+'/24'})
+        self.swc[2] = self.addSwitch('s2')
+        self.addLink(self.swc[2], self.router2, intfName2='r2-eth2',  params2={'ip': r2IP2+'/24'})
+        self.net_hosts.append(self.addHost('h3', ip='192.168.1.2/24', defaultRoute=r2IP2+'/24'))
+        self.addLink('h3', self.swc[2])
+        self.alias['h3'] = ['192.168.1.2']
+        self.net_hosts.append(self.addHost('h4', ip='192.168.1.3/24', defaultRoute=r2IP2+'/24'))
+        self.addLink('h4', self.swc[2])
+        self.alias['h4'] = ['192.168.1.3']
+        self.sroutes['h3'] = ['ip route add default via 192.168.1.1 dev h3-eth0']
+        self.sroutes['h4'] = ['ip route add default via 192.168.1.1 dev h4-eth0']
+        self.sroutes['r1'].append('ip route add 192.168.1.0/24 via 192.168.4.2 dev r1-eth2')
+        self.sroutes['r2'].append('ip route add 192.168.2.0/24 via 192.168.4.1 dev r2-eth1')
+        self.sroutes['r2'].append('ip route add 192.168.3.0/24 via 192.168.4.1 dev r2-eth1')
+        self.sroutes['r2'].append('ip route add 192.168.5.0/24 via 192.168.4.1 dev r2-eth1')
+        self.sroutes['r2'].append('ip route add 12.0.0.0/8 via 192.168.4.1 dev r2-eth1')
+
+        # Connect LAN 1 and LAN 2
+        r1IP3 = '192.168.5.1'
+        r3IP1 = '192.168.5.2'
+        r3IP2 = '192.168.2.1'
+        r3IP3 = '192.168.3.1'
+        self.router3 = self.addNode('r3', cls=LinuxRouter, ip=r3IP1)
+        self.alias['r3'] = []
+        self.alias['r1'].append(r1IP3)
+        self.alias['r3'].append(r3IP1)
+        self.alias['r3'].append(r3IP2)
+        self.alias['r3'].append(r3IP3)
+        self.sroutes['r3'] = []
+        self.swc[6] = self.addSwitch('s6')
+        # Il primo collegamento switch-router DEVE usare l'indirizzo usato nella definizione del router
+        self.addLink(self.swc[6], self.router3, intfName2='r3-eth1', params2={'ip': r3IP1+'/24'})
+        self.addLink(self.swc[6], self.router1, intfName2='r1-eth3', params2={'ip': r1IP3+'/24'})
+        self.swc[3] = self.addSwitch('s3')
+        self.addLink(self.swc[3], self.router3, intfName2='r3-eth2', params2={'ip': r3IP2+'/24'})
+        self.net_hosts.append(self.addHost('h5', ip='192.168.2.2/24', defaultRoute=r3IP2+'/24'))
+        self.addLink('h5', self.swc[3])
+        self.alias['h5'] = ['192.168.2.2']
+        self.net_hosts.append(self.addHost('h6', ip='192.168.2.3/24', defaultRoute=r3IP2+'/24'))
+        self.addLink('h6', self.swc[3])
+        self.alias['h6'] = ['192.168.2.3']
+        self.sroutes['h5'] = ['ip route add default via 192.168.2.1 dev h5-eth0']
+        self.sroutes['h6'] = ['ip route add default via 192.168.2.1 dev h6-eth0']
+        self.sroutes['r1'].append('ip route add 192.168.2.0/24 via 192.168.5.2 dev r1-eth3')
+        self.sroutes['r1'].append('ip route add 192.168.3.0/24 via 192.168.5.2 dev r1-eth3')
+        self.sroutes['r3'].append('ip route add 192.168.1.0/24 via 192.168.5.1 dev r3-eth1')
+        self.sroutes['r3'].append('ip route add 192.168.4.0/24 via 192.168.5.1 dev r3-eth1')
+        self.sroutes['r3'].append('ip route add 12.0.0.0/8 via 192.168.5.1 dev r3-eth1')
+        self.sroutes['r3'].append('ip route add 12.10.5.2/8 via 192.168.5.1 dev r3-eth1')
+        self.swc[4] = self.addSwitch('s4')
+        self.addLink(self.swc[4], self.router3, intfName2='r3-eth3', params2={'ip': r3IP3+'/24'})
+        self.net_hosts.append(self.addHost('h7', ip='192.168.3.2/24', defaultRoute=r3IP3+'/24'))
+        self.addLink('h7', self.swc[4])
+        self.alias['h7'] = ['192.168.3.2']
+        self.net_hosts.append(self.addHost('h8', ip='192.168.3.3/24', defaultRoute=r3IP3+'/24'))
+        self.addLink('h8', self.swc[4])
+        self.alias['h8'] = ['192.168.3.3']
+        self.sroutes['h7'] = ['ip route add default via 192.168.3.1 dev h7-eth0']
+        self.sroutes['h8'] = ['ip route add default via 192.168.3.1 dev h8-eth0']
+        if self.sensor1: self.add_sensor_Internet()
+        if self.sensor2: self.add_sensor_LAN(1)
+        if self.sensor3: self.add_sensor_LAN(2)
+        if self.sensor4: self.add_sensor_LAN(3)
+
+    def add_sensor_LAN(self, i):
+        asid = 'has' + str(i)
+        msid = 'hms' + str(i)
+        rIP = '192.168.' + str(i) + '.1'
+        asIP = '192.168.' + str(i) + '.101'  # Active sensor IP
+        msIP = '192.168.' + str(i) + '.103'  # Monitor sensor IP (the one that runs iTop)
+        self.active_sensors.append(self.addHost(asid, ip=asIP + '/24', defaultRoute=rIP))
+        if i == 1:
+            sensor=self.swc[2]
+            intf = 's2-eth1'
+        elif i == 2 :
+            sensor=self.swc[3]
+            intf = 's3-eth1'
+        else:
+            sensor=self.swc[4]
+            intf = 's4-eth1'
+        self.passive_sensors.append(sensor)
+        self.interface_name.append(intf)
+        self.monitor_sensors.append(self.addHost(msid, ip=msIP + '/24', defaultRoute=rIP))
+        self.addLink(asid, self.swc[i + 1])
+        self.addLink(msid, self.swc[i + 1])
+        # The three IP address of the sensor are referred to the monitor sensor, because it is the only one that can actively ask
+        self.alias[msid] = [asIP]
+        self.alias[msid].append(msIP)
+        if i == 1:
+            self.sroutes['r2'].append('ip route add ' + msIP + '/32 via ' + msIP + ' dev r2-eth2')
+        else:
+            self.sroutes['r3'].append('ip route add ' + msIP + '/32 via ' + msIP + ' dev r3-eth' + str(i))
+        self.sroutes[asid] = ['ip route add default via ' + rIP + ' dev ' + asid + '-eth0']
+        self.sroutes[msid] = ['ip route add default via ' + rIP + ' dev ' + msid + '-eth0']
+
+
+    def add_sensor_Internet(self):
+        asid = 'hasI'
+        msid = 'hmsI'
+        rIP = '12.10.5.1'
+        asIP = '12.10.5.101'  # Active sensor IP
+        msIP = '12.10.5.103'  # Monitor sensor IP (the one that runs iTop)
+        self.active_sensors.append(self.addHost(asid, ip=asIP + '/8', defaultRoute=rIP))
+        self.passive_sensors.append(self.swc[1])
+        self.interface_name.append('s1-eth1')
+        self.monitor_sensors.append(self.addHost(msid, ip=msIP + '/8', defaultRoute=rIP))
+        self.addLink(asid, self.swc[1])
+        self.addLink(msid, self.swc[1])
+        # The three IP address of the sensor are referred to the monitor sensor, because it is the only one that can actively ask
+        self.alias[msid] = [asIP]
+        self.alias[msid].append(msIP)
+        self.sroutes['r1'].append('ip route add ' + msIP + '/32 via ' + msIP + ' dev r1-eth1')
+        self.sroutes[asid] = ['ip route add default via ' + rIP + ' dev ' + asid + '-eth0']
+        self.sroutes[msid] = ['ip route add default via ' + rIP + ' dev ' + msid + '-eth0']
+
+
+    def add_static_routes(self, net):
+        '''Add static routes to the router for subnets not directly visible'''
+        for k in self.sroutes.keys():
+            for r in self.sroutes[k]:
+                net[k].cmd(r)
+
+    def create_alias_file(self):
+        with open('alias', 'w') as f:
+            for k in self.alias.keys():
+                f.write(k + ' ')
+                for ip in self.alias[k]:
+                    f.write(ip + ' ')
+                f.write('\n')
+
+    def add_firewall_rules(self, net):
+        '''Add firewall rules to make router r1 anonymous'''
+        net['r1'].cmd('iptables -P OUTPUT DROP')
+
+class NetworkTopo9( Topo ):
+    """
+    This topology simulates a network with three routers.
+    Two hosts belong to subnet 12.0.0.0/8, representing the internet.
+    Two hosts belong to subnet 192.168.1.0/24, representing the DMZ.
+    Two hosts belong to subnet 192.168.2.0/24, representing LAN 1.
+    Two hosts belong to subnet 192.168.3.0/24, representing LAN 2.
+    Router1, the one that connects the three subnets, is blocking.
+    """
+
+    def __init__(self, *args, **params):
+        '''
+        :param sensor1: True if a sensor has to be placed in subnet 12.0.0.0/8
+        :param sensor2: True if a sensor has to be placed in subnet 192.168.1.0/24
+        :param sensor2: True if a sensor has to be placed in subnet 192.168.2.0/24
+        :param sensor2: True if a sensor has to be placed in subnet 192.168.3.0/24
+        '''
+        self.sensor1 = False if (params['sensor1'] is None or params['sensor1'] is False) else True
+        self.sensor2 = False if (params['sensor2'] is None or params['sensor2'] is False) else True
+        self.sensor3 = False if (params['sensor3'] is None or params['sensor3'] is False) else True
+        self.sensor4 = False if (params['sensor4'] is None or params['sensor4'] is False) else True
+        self.swc = {} # Key: Number of switch, value: switch
+        self.net_hosts = []
+        self.active_sensors = []
+        self.passive_sensors = []
+        self.monitor_sensors = []
+        self.interface_name = []
+        self.alias = {} # Dictionary st: key = router/host name, value = list of IP addresses of the router/host
+        self.sroutes = {} # Key: Router/Host/sensor id, value = list of static routes to be setup
+        super(NetworkTopo9, self).__init__()
+
+    def build( self, **_opts ):
+        # Connect router r1 to Internet Hosts
+        r1IP1 = '12.10.5.1'
+        self.router1 = self.addNode( 'r1', cls=LinuxRouter, ip=r1IP1+'/8' )
+        self.alias['r1'] = []
+        self.alias['r1'].append(r1IP1)
+        self.sroutes['r1'] = []
+        self.swc[1] = self.addSwitch('s1')
+        self.addLink(self.swc[1], self.router1, intfName2='r1-eth1', params2={'ip': r1IP1+'/8'})
+        self.net_hosts.append(self.addHost('h1', ip='12.10.5.2/8', defaultRoute=r1IP1+'/8'))
+        self.addLink('h1', self.swc[1])
+        self.alias['h1'] = ['12.10.5.2']
+        self.net_hosts.append(self.addHost('h2', ip='12.10.5.3/8', defaultRoute=r1IP1+'/8'))
+        self.addLink('h2', self.swc[1])
+        self.alias['h2'] = ['12.10.5.3']
+        self.sroutes['r1'].append('ip route add 12.10.5.2/8 via 12.10.5.2 dev r1-eth1')
+        self.sroutes['r1'].append('ip route add 12.10.5.3/8 via 12.10.5.3 dev r1-eth1')
+        self.sroutes['h1'] = ['ip route add default via 12.10.5.1 dev h1-eth0']
+        self.sroutes['h2'] = ['ip route add default via 12.10.5.1 dev h2-eth0']
+
+        # Connect the DMZ
+        r1IP2 = '192.168.4.1'
+        r2IP1 = '192.168.4.2'
+        r2IP2 = '192.168.1.1'
+        # TODO l' indirizzo di default del router deve corrispondere sempre al' indirizzo della stessa classe degli host che gli sono attaccati (es: r2IP1 non funziona qui!)
+        self.router2 = self.addNode('r2', cls=LinuxRouter, ip=r2IP1) #r2IP2
+        self.alias['r2'] = []
+        self.alias['r1'].append(r1IP2)
+        self.alias['r2'].append(r2IP1)
+        self.alias['r2'].append(r2IP2)
+        self.sroutes['r2'] = []
+        self.swc[5] = self.addSwitch('s5')
+        self.addLink(self.swc[5], self.router2, intfName2='r2-eth1', params2={'ip': r2IP1+'/24'})
+        self.addLink(self.swc[5], self.router1, intfName2='r1-eth2', params2={'ip': r1IP2+'/24'})
+        self.swc[2] = self.addSwitch('s2')
+        self.addLink(self.swc[2], self.router2, intfName2='r2-eth2',  params2={'ip': r2IP2+'/24'})
+        self.net_hosts.append(self.addHost('h3', ip='192.168.1.2/24', defaultRoute=r2IP2+'/24'))
+        self.addLink('h3', self.swc[2])
+        self.alias['h3'] = ['192.168.1.2']
+        self.net_hosts.append(self.addHost('h4', ip='192.168.1.3/24', defaultRoute=r2IP2+'/24'))
+        self.addLink('h4', self.swc[2])
+        self.alias['h4'] = ['192.168.1.3']
+        self.sroutes['h3'] = ['ip route add default via 192.168.1.1 dev h3-eth0']
+        self.sroutes['h4'] = ['ip route add default via 192.168.1.1 dev h4-eth0']
+        self.sroutes['r1'].append('ip route add 192.168.1.0/24 via 192.168.4.2 dev r1-eth2')
+        self.sroutes['r2'].append('ip route add 192.168.2.0/24 via 192.168.4.1 dev r2-eth1')
+        self.sroutes['r2'].append('ip route add 192.168.3.0/24 via 192.168.4.1 dev r2-eth1')
+        self.sroutes['r2'].append('ip route add 192.168.5.0/24 via 192.168.4.1 dev r2-eth1')
+        self.sroutes['r2'].append('ip route add 12.0.0.0/8 via 192.168.4.1 dev r2-eth1')
+
+        # Connect LAN 1 and LAN 2
+        r1IP3 = '192.168.5.1'
+        r3IP1 = '192.168.5.2'
+        r3IP2 = '192.168.2.1'
+        r3IP3 = '192.168.3.1'
+        self.router3 = self.addNode('r3', cls=LinuxRouter, ip=r3IP1)
+        self.alias['r3'] = []
+        self.alias['r1'].append(r1IP3)
+        self.alias['r3'].append(r3IP1)
+        self.alias['r3'].append(r3IP2)
+        self.alias['r3'].append(r3IP3)
+        self.sroutes['r3'] = []
+        self.swc[6] = self.addSwitch('s6')
+        # Il primo collegamento switch-router DEVE usare l'indirizzo usato nella definizione del router
+        self.addLink(self.swc[6], self.router3, intfName2='r3-eth1', params2={'ip': r3IP1+'/24'})
+        self.addLink(self.swc[6], self.router1, intfName2='r1-eth3', params2={'ip': r1IP3+'/24'})
+        self.swc[3] = self.addSwitch('s3')
+        self.addLink(self.swc[3], self.router3, intfName2='r3-eth2', params2={'ip': r3IP2+'/24'})
+        self.net_hosts.append(self.addHost('h5', ip='192.168.2.2/24', defaultRoute=r3IP2+'/24'))
+        self.addLink('h5', self.swc[3])
+        self.alias['h5'] = ['192.168.2.2']
+        self.net_hosts.append(self.addHost('h6', ip='192.168.2.3/24', defaultRoute=r3IP2+'/24'))
+        self.addLink('h6', self.swc[3])
+        self.alias['h6'] = ['192.168.2.3']
+        self.sroutes['h5'] = ['ip route add default via 192.168.2.1 dev h5-eth0']
+        self.sroutes['h6'] = ['ip route add default via 192.168.2.1 dev h6-eth0']
+        self.sroutes['r1'].append('ip route add 192.168.2.0/24 via 192.168.5.2 dev r1-eth3')
+        self.sroutes['r1'].append('ip route add 192.168.3.0/24 via 192.168.5.2 dev r1-eth3')
+        self.sroutes['r3'].append('ip route add 192.168.1.0/24 via 192.168.5.1 dev r3-eth1')
+        self.sroutes['r3'].append('ip route add 192.168.4.0/24 via 192.168.5.1 dev r3-eth1')
+        self.sroutes['r3'].append('ip route add 12.0.0.0/8 via 192.168.5.1 dev r3-eth1')
+        self.sroutes['r3'].append('ip route add 12.10.5.2/8 via 192.168.5.1 dev r3-eth1')
+        self.swc[4] = self.addSwitch('s4')
+        self.addLink(self.swc[4], self.router3, intfName2='r3-eth3', params2={'ip': r3IP3+'/24'})
+        self.net_hosts.append(self.addHost('h7', ip='192.168.3.2/24', defaultRoute=r3IP3+'/24'))
+        self.addLink('h7', self.swc[4])
+        self.alias['h7'] = ['192.168.3.2']
+        self.net_hosts.append(self.addHost('h8', ip='192.168.3.3/24', defaultRoute=r3IP3+'/24'))
+        self.addLink('h8', self.swc[4])
+        self.alias['h8'] = ['192.168.3.3']
+        self.sroutes['h7'] = ['ip route add default via 192.168.3.1 dev h7-eth0']
+        self.sroutes['h8'] = ['ip route add default via 192.168.3.1 dev h8-eth0']
+        if self.sensor1: self.add_sensor_Internet()
+        if self.sensor2: self.add_sensor_LAN(1)
+        if self.sensor3: self.add_sensor_LAN(2)
+        if self.sensor4: self.add_sensor_LAN(3)
+
+    def add_sensor_LAN(self, i):
+        asid = 'has' + str(i)
+        msid = 'hms' + str(i)
+        rIP = '192.168.' + str(i) + '.1'
+        asIP = '192.168.' + str(i) + '.101'  # Active sensor IP
+        msIP = '192.168.' + str(i) + '.103'  # Monitor sensor IP (the one that runs iTop)
+        self.active_sensors.append(self.addHost(asid, ip=asIP + '/24', defaultRoute=rIP))
+        if i == 1:
+            sensor=self.swc[2]
+            intf = 's2-eth1'
+        elif i == 2 :
+            sensor=self.swc[3]
+            intf = 's3-eth1'
+        else:
+            sensor=self.swc[4]
+            intf = 's4-eth1'
+        self.passive_sensors.append(sensor)
+        self.interface_name.append(intf)
+        self.monitor_sensors.append(self.addHost(msid, ip=msIP + '/24', defaultRoute=rIP))
+        self.addLink(asid, self.swc[i + 1])
+        self.addLink(msid, self.swc[i + 1])
+        # The three IP address of the sensor are referred to the monitor sensor, because it is the only one that can actively ask
+        self.alias[msid] = [asIP]
+        self.alias[msid].append(msIP)
+        if i == 1:
+            self.sroutes['r2'].append('ip route add ' + msIP + '/32 via ' + msIP + ' dev r2-eth2')
+        else:
+            self.sroutes['r3'].append('ip route add ' + msIP + '/32 via ' + msIP + ' dev r3-eth' + str(i))
+        self.sroutes[asid] = ['ip route add default via ' + rIP + ' dev ' + asid + '-eth0']
+        self.sroutes[msid] = ['ip route add default via ' + rIP + ' dev ' + msid + '-eth0']
+
+
+    def add_sensor_Internet(self):
+        asid = 'hasI'
+        msid = 'hmsI'
+        rIP = '12.10.5.1'
+        asIP = '12.10.5.101'  # Active sensor IP
+        msIP = '12.10.5.103'  # Monitor sensor IP (the one that runs iTop)
+        self.active_sensors.append(self.addHost(asid, ip=asIP + '/8', defaultRoute=rIP))
+        self.passive_sensors.append(self.swc[1])
+        self.interface_name.append('s1-eth1')
+        self.monitor_sensors.append(self.addHost(msid, ip=msIP + '/8', defaultRoute=rIP))
+        self.addLink(asid, self.swc[1])
+        self.addLink(msid, self.swc[1])
+        # The three IP address of the sensor are referred to the monitor sensor, because it is the only one that can actively ask
+        self.alias[msid] = [asIP]
+        self.alias[msid].append(msIP)
+        self.sroutes['r1'].append('ip route add ' + msIP + '/32 via ' + msIP + ' dev r1-eth1')
+        self.sroutes[asid] = ['ip route add default via ' + rIP + ' dev ' + asid + '-eth0']
+        self.sroutes[msid] = ['ip route add default via ' + rIP + ' dev ' + msid + '-eth0']
+
+
+    def add_static_routes(self, net):
+        '''Add static routes to the router for subnets not directly visible'''
+        for k in self.sroutes.keys():
+            for r in self.sroutes[k]:
+                net[k].cmd(r)
+
+    def create_alias_file(self):
+        with open('alias', 'w') as f:
+            for k in self.alias.keys():
+                f.write(k + ' ')
+                for ip in self.alias[k]:
+                    f.write(ip + ' ')
+                f.write('\n')
+
+    def add_firewall_rules(self, net):
+        '''Add firewall rules to make router r1 anonymous'''
+        net['r1'].cmd('iptables -P FORWARD DROP')
+        net['r1'].cmd('iptables -P INPUT DROP')
+        net['r1'].cmd('iptables -P OUTPUT DROP')

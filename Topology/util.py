@@ -202,6 +202,18 @@ def start_network_number(num, **params):
         sensor2 = params['sensor2']
         sensor3 = params['sensor3']
         topo = NetworkTopo7(sensor1=sensor1, sensor2=sensor2, sensor3=sensor3)
+    elif num==8:
+        sensor1 = params['sensor1']
+        sensor2 = params['sensor2']
+        sensor3 = params['sensor3']
+        sensor4 = params['sensor4']
+        topo = NetworkTopo8(sensor1=sensor1, sensor2=sensor2, sensor3=sensor3, sensor4=sensor4)
+    elif num==9:
+        sensor1 = params['sensor1']
+        sensor2 = params['sensor2']
+        sensor3 = params['sensor3']
+        sensor4 = params['sensor4']
+        topo = NetworkTopo9(sensor1=sensor1, sensor2=sensor2, sensor3=sensor3, sensor4=sensor4)
     else:
         print 'Invalid network number specified' #TODO throw exception?
         return

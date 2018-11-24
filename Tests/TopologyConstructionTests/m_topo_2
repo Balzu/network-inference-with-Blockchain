@@ -1,1 +1,0 @@
-{"hosts": ["hmsI", "hms1", "hms2"], "topology": [{"Neighbors": ["r1"], "Type": "R", "Name": "hmsI"}, {"Neighbors": ["hmsI", "hms1"], "Type": "R", "Name": "r1"}, {"Neighbors": ["r1"], "Type": "R", "Name": "hms1"}]}

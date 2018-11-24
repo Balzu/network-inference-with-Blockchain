@@ -120,9 +120,7 @@ def simulation_five():
                 ('sudo python run.py -n 5 -s3 -sub one_sensor -id ', 5),
                 ('sudo python run.py -n 5 -s4 -sub one_sensor -id ', 5)
             ]
-    cmd2s = [   ('sudo python run.py -n 5 -s2 -s4 -sub two_sensors -id ', 4),
-                ('sudo python run.py -n 5 -s3 -s4 -sub two_sensors -id ', 4),
-                ('sudo python run.py -n 5 -s1 -s2 -sub two_sensors -id ', 3),
+    cmd2s = [   ('sudo python run.py -n 5 -s1 -s2 -sub two_sensors -id ', 3),
                 ('sudo python run.py -n 5 -s1 -s3 -sub two_sensors -id ', 3),
                 ('sudo python run.py -n 5 -s1 -s4 -sub two_sensors -id ', 3),
                 ('sudo python run.py -n 5 -s2 -s3 -sub two_sensors -id ', 3),
@@ -219,6 +217,96 @@ def simulation_seven():
                     with open("error", "w") as file:
                         file.write(str(e))
 
+def simulation_eight():
+    '''
+    Runs the simulation number eight. Experiment eight is run with various combinations of sensors (1,2,3 or 4).
+    Network topology 8 is used.
+    '''
+    os.system('rm -rf topo_exp8')
+    os.system('mkdir topo_exp8')
+    os.system('mkdir topo_exp8/one_sensor')
+    os.system('mkdir topo_exp8/two_sensors')
+    os.system('mkdir topo_exp8/three_sensors')
+    os.system('mkdir topo_exp8/four_sensors')
+    os.system('sudo mn -c')
+    # First element of the pair: command. Second element: number of times the cmd has to be executed
+    cmd1s = [   ('sudo python run.py -n 8 -s1 -sub one_sensor -id ', 5),
+                ('sudo python run.py -n 8 -s2 -sub one_sensor -id ', 5),
+                ('sudo python run.py -n 8 -s3 -sub one_sensor -id ', 5),
+                ('sudo python run.py -n 8 -s4 -sub one_sensor -id ', 5)
+            ]
+    cmd2s = [   ('sudo python run.py -n 8 -s1 -s2 -sub two_sensors -id ', 3),
+                ('sudo python run.py -n 8 -s1 -s3 -sub two_sensors -id ', 3),
+                ('sudo python run.py -n 8 -s1 -s4 -sub two_sensors -id ', 3),
+                ('sudo python run.py -n 8 -s2 -s3 -sub two_sensors -id ', 3),
+                ('sudo python run.py -n 8 -s2 -s4 -sub two_sensors -id ', 4),
+                ('sudo python run.py -n 8 -s3 -s4 -sub two_sensors -id ', 4)
+            ]
+    cmd3s = [   ('sudo python run.py -n 8 -s1 -s2 -s3 -sub three_sensors -id ', 5),
+                ('sudo python run.py -n 8 -s1 -s2 -s4 -sub three_sensors -id ', 5),
+                ('sudo python run.py -n 8 -s1 -s3 -s4 -sub three_sensors -id ', 5),
+                ('sudo python run.py -n 8 -s2 -s3 -s4 -sub three_sensors -id ', 5)
+            ]
+    cmd4s = [   ('sudo python run.py -n 8 -s1 -s2 -s3 -s4 -sub four_sensors -id ', 20)
+            ]
+    commands = [cmd1s, cmd2s, cmd3s, cmd4s]
+    for cmdlist in commands:
+        id = 0
+        for pair in cmdlist:
+            for i in range(pair[1]):
+                try:
+                    os.system(pair[0] + str(id))
+                    id += 1
+                    time.sleep(25)
+                except Exception as e:
+                    with open("error", "w") as file:
+                        file.write(str(e))
+
+def simulation_nine():
+    '''
+    Runs the simulation number nine. Experiment nine is run with various combinations of sensors (1,2,3 or 4).
+    Network topology 9 is used.
+    '''
+    os.system('rm -rf topo_exp9')
+    os.system('mkdir topo_exp9')
+    os.system('mkdir topo_exp9/one_sensor')
+    os.system('mkdir topo_exp9/two_sensors')
+    os.system('mkdir topo_exp9/three_sensors')
+    os.system('mkdir topo_exp9/four_sensors')
+    os.system('sudo mn -c')
+    # First element of the pair: command. Second element: number of times the cmd has to be executed
+    cmd1s = [   ('sudo python run.py -n 9 -s1 -sub one_sensor -id ', 5),
+                ('sudo python run.py -n 9 -s2 -sub one_sensor -id ', 5),
+                ('sudo python run.py -n 9 -s3 -sub one_sensor -id ', 5),
+                ('sudo python run.py -n 9 -s4 -sub one_sensor -id ', 5)
+            ]
+    cmd2s = [   ('sudo python run.py -n 9 -s1 -s2 -sub two_sensors -id ', 3),
+                ('sudo python run.py -n 9 -s1 -s3 -sub two_sensors -id ', 3),
+                ('sudo python run.py -n 9 -s1 -s4 -sub two_sensors -id ', 3),
+                ('sudo python run.py -n 9 -s2 -s3 -sub two_sensors -id ', 3),
+                ('sudo python run.py -n 9 -s2 -s4 -sub two_sensors -id ', 4),
+                ('sudo python run.py -n 9 -s3 -s4 -sub two_sensors -id ', 4)
+            ]
+    cmd3s = [   ('sudo python run.py -n 9 -s1 -s2 -s3 -sub three_sensors -id ', 5),
+                ('sudo python run.py -n 9 -s1 -s2 -s4 -sub three_sensors -id ', 5),
+                ('sudo python run.py -n 9 -s1 -s3 -s4 -sub three_sensors -id ', 5),
+                ('sudo python run.py -n 9 -s2 -s3 -s4 -sub three_sensors -id ', 5)
+            ]
+    cmd4s = [   ('sudo python run.py -n 9 -s1 -s2 -s3 -s4 -sub four_sensors -id ', 20)
+            ]
+    commands = [cmd1s, cmd2s, cmd3s, cmd4s]
+    for cmdlist in commands:
+        id = 0
+        for pair in cmdlist:
+            for i in range(pair[1]):
+                try:
+                    os.system(pair[0] + str(id))
+                    id += 1
+                    time.sleep(25)
+                except Exception as e:
+                    with open("error", "w") as file:
+                        file.write(str(e))
+
 if __name__ == '__main__':
     args = parse_cmd_args()
     snum = args.num
@@ -237,6 +325,10 @@ if __name__ == '__main__':
         simulation_six()
     elif snum == 7:
         simulation_seven()
+    elif snum == 8:
+        simulation_eight()
+    elif snum == 9:
+        simulation_nine()
 
 
 
