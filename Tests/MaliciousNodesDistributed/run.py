@@ -118,6 +118,7 @@ def experiment_one_server(i):
     else:
         server = configure_server('configuration/server' + str(i) + '_config.json', unl_from_file=False, stop=True,
                              verbose=True)
+    time.sleep(6 - i * 0.1)  # The last to be run waits less
     register_observer(server)
     time.sleep(5-i*0.1) # The last to be run waits less
     server.start()
@@ -131,15 +132,15 @@ def experiment_one_client(num_htx):
     # Create transactions and send them to servers
     trans = get_honest_transactions() if num_htx == 0 else get_honest_transactions_tree(num_htx)
     c = configure_client('configuration/client_config.json')
-    register_client(c)
     i= 1
     pdb.set_trace()
     for sip in c.validators:
-        #os.system("ssh mininet@" + sip.split(':')[0])
         os.system("sshpass -p mininet ssh -o StrictHostKeyChecking=no mininet@" + sip.split(':')[
             0] + " 'cd guest_share/network-inference-with-Blockchain/Tests/MaliciousNodesDistributed/;"
-                 "sudo python run.py --type 1s --server_number " + str(i) + "'")
+                 "python run.py --type 1s --server_number " + str(i) + " > /dev/null &'")
         i += 1
+    time.sleep(5)
+    register_client(c)
     c.send_transactions(trans)
 
 

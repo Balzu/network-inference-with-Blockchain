@@ -93,14 +93,19 @@ def simulation_one(num_exp, num_htx=0):
     :param num_exp: Number of experiments that comprise the simulation.
     :param num_htx: Number of honest transactions sent to the blockchain nodes. If 0, use default transactions (104)
     '''
-    os.system("rm *.log")
+    servers = configure_client('configuration/client_config.json').validators
+    for sip in servers:
+        os.system("sshpass -p mininet ssh -o StrictHostKeyChecking=no mininet@" + sip.split(':')[
+            0] + " 'cd guest_share/network-inference-with-Blockchain/Tests/MaliciousNodesDistributed/;"
+                 " rm *.log > /dev/null &'")
     for i in range(0, num_exp):
         # Run one experiment of the simulation
         os.system("python run.py --type 1 --honest_transactions " + str(num_htx))
-        time.sleep(600)
+        time.sleep(300)
         # Kill the processes that still use the sockets (if any). Returns usage message if nothing to kill
-        os.system("kill $(sudo netstat -pltn | grep 10000 | awk '{print $7}' | awk -F'/' '{print $1}')")
-        #time.sleep(5)
+        for sip in servers:
+            os.system("sshpass -p mininet ssh -o StrictHostKeyChecking=no mininet@" + sip.split(':')[
+                0] + " 'kill $(sudo netstat -pltn | grep 10000 | awk '{print $7}' | awk -F'/' '{print $1}') >test.txt &'")
     open, est, acc = retrieve_times()
     plot_avg_group_times(open, est, acc, 'first', 6, 'c1_g1.png')
     plot_avg_group_times(open, est, acc, 'second', 6, 'c1_g2.png')

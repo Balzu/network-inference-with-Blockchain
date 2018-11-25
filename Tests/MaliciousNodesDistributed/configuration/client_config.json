@@ -1,5 +1,5 @@
 {
-  "ip" : "127.0.0.20",
+  "ip" : "192.168.0.104",
   "port" : "10000",
   "topology_filename" : "topo.json",
   "validators" : [
