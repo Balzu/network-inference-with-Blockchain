@@ -378,9 +378,12 @@ def experiment_seven(id, sensors, subfolder):
                               intf=topo.interface_name[i]))
     [s.start() for s in sensors]
     hosts = [net['h1'], net['h2'], net['h3'], net['h4'], net['h5'], net['h6'], net['h7'], net['h8'], net['h9']]
-    #net['h7'].cmd('ping -c 1 -W 1 ' + net['h1'].IP())
-    #net['h8'].cmd('ping -c 1 -W 1 ' + net['h1'].IP())
-    #net['h9'].cmd('ping -c 1 -W 1 ' + net['h1'].IP())
+    net['h7'].cmd('ping -c 1 -W 1 ' + net['h1'].IP())
+    net['h8'].cmd('ping -c 1 -W 1 ' + net['h1'].IP())
+    net['h9'].cmd('ping -c 1 -W 1 ' + net['h1'].IP())
+    net['h4'].cmd('ping -c 1 -W 1 ' + net['h1'].IP())
+    net['h5'].cmd('ping -c 1 -W 1 ' + net['h1'].IP())
+    net['h6'].cmd('ping -c 1 -W 1 ' + net['h1'].IP())
     time.sleep(10)
     print '\n\n ...............  PINGING   .............. \n\n'
     net.ping(hosts=hosts)
