@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from __future__ import division
-import random, os, pdb, glob, time
+import random, os, pdb, glob, time, subprocess
 from run import *
 
 def retrieve_times():
@@ -99,9 +99,14 @@ def simulation_one(num_exp, num_htx=0):
             0] + " 'cd guest_share/network-inference-with-Blockchain/Tests/MaliciousNodesDistributed/;"
                  " rm *.log > /dev/null &'")
     for i in range(0, num_exp):
+        print '\n Number of experiment: ' + str(i)
+        pdb.set_trace()
         # Run one experiment of the simulation
-        os.system("python run.py --type 1 --honest_transactions " + str(num_htx))
-        time.sleep(300)
+        #os.system("python run.py --type 1 --honest_transactions " + str(num_htx)) + " &"
+        subprocess.Popen(["python", "run.py", "--type", "1", "--honest_transactions", str(num_htx)])
+        print '\n Going to sleep..\n'
+        time.sleep(150)
+        print '\n Going to kill stale processes..\n'
         # Kill the processes that still use the sockets (if any). Returns usage message if nothing to kill
         for sip in servers:
             os.system("sshpass -p mininet ssh -o StrictHostKeyChecking=no mininet@" + sip.split(':')[

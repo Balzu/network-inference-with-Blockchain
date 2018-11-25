@@ -122,6 +122,9 @@ def experiment_one_server(i):
     register_observer(server)
     time.sleep(5-i*0.1) # The last to be run waits less
     server.start()
+    while not server.end():  # Consider one server that for sure has been started (servers[9]!)
+        time.sleep(5)
+    server.draw_topology()
 
 def experiment_one_client(num_htx):
     '''
@@ -133,7 +136,6 @@ def experiment_one_client(num_htx):
     trans = get_honest_transactions() if num_htx == 0 else get_honest_transactions_tree(num_htx)
     c = configure_client('configuration/client_config.json')
     i= 1
-    pdb.set_trace()
     for sip in c.validators:
         os.system("sshpass -p mininet ssh -o StrictHostKeyChecking=no mininet@" + sip.split(':')[
             0] + " 'cd guest_share/network-inference-with-Blockchain/Tests/MaliciousNodesDistributed/;"
@@ -142,6 +144,7 @@ def experiment_one_client(num_htx):
     time.sleep(5)
     register_client(c)
     c.send_transactions(trans)
+    sys.exit()
 
 
 def experiment_two(num_htx, num):
@@ -254,6 +257,7 @@ if __name__=='__main__':
     nht = int(args.honest_transactions)
     if t == '1':
         experiment_one_client(nht)
+        print '\n\nAAA'
     elif t == '1s':
         experiment_one_server(ns)
     elif t == '2':

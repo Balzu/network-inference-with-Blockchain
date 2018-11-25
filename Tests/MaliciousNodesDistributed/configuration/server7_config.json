@@ -12,8 +12,8 @@
     }
   ],
   "quorum" : "0.8",
-  "ledger_min_close" : "55",
-  "ledger_max_close" : "65",
+  "ledger_min_close" : "20",
+  "ledger_max_close" : "30",
   "threshold_values" : {
     "init" : "0.50",
     "mid" : "0.65",
@@ -26,7 +26,7 @@
     "late" : "40",
     "stuck" : "60"
   },
-  "ledger_min_consensus" : "45",
-  "ledger_max_consensus" : "65",
+  "ledger_min_consensus" : "10",
+  "ledger_max_consensus" : "30",
   "non_responding_routers" : "False"
 }
