@@ -109,7 +109,7 @@ def parse_cmd_args():
 
 def experiment_one_server(i):
     '''
-    Configure and run servers for experiment one. Servers from 1 to 6 have each other in their UNL.
+    Runs server number 'i'. Tis function is run on the remote, blockchain host. Servers from 1 to 6 have each other in their UNL.
     Servers from 7 to 10 have an UNL made of random servers. All servers are honest.
     '''
     print '\n----------------- Experiment one ------------------\n'
@@ -133,9 +133,12 @@ def experiment_one_client(num_htx):
     c = configure_client('configuration/client_config.json')
     register_client(c)
     i= 1
+    pdb.set_trace()
     for sip in c.validators:
-        os.system("sshpass -p mininet ssh mininet@" + sip + " 'sudo python guest_share/network-inference-with-Blockchain/"
-                        "Tests/MaliciousNodesDistributed/run.py --type 1s --server_number " + str(i) + "'")
+        #os.system("ssh mininet@" + sip.split(':')[0])
+        os.system("sshpass -p mininet ssh -o StrictHostKeyChecking=no mininet@" + sip.split(':')[
+            0] + " 'cd guest_share/network-inference-with-Blockchain/Tests/MaliciousNodesDistributed/;"
+                 "sudo python run.py --type 1s --server_number " + str(i) + "'")
         i += 1
     c.send_transactions(trans)
 
