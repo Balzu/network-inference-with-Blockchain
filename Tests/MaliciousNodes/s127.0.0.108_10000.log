@@ -1,14 +1,160 @@
-Open phase time 55.0433020592 , ledger 0
+Open phase time 55.060311079 , ledger 0
 Same Proposals: 0
 Quorum = 4.0
-
- Threshold: 3.25
-
-
- Added transactions: 1000
-
 Same Proposals: 5
 Quorum = 4.0
-Establish phase time 55.6226439476 , ledger 0
-Accept phase time 29.488505125 , ledger 1
+Establish phase time 55.5959060192 , ledger 0
+Accept phase time 22.532834053 , ledger 1
+Consensus Reached: True
+Open phase time 55.045235157 , ledger 0
+Same Proposals: 0
+Quorum = 4.0
+Same Proposals: 5
+Quorum = 4.0
+Establish phase time 55.5177719593 , ledger 0
+Accept phase time 22.6323599815 , ledger 1
+Consensus Reached: True
+Open phase time 55.0489590168 , ledger 0
+Same Proposals: 0
+Quorum = 4.0
+Same Proposals: 5
+Quorum = 4.0
+Establish phase time 55.5624060631 , ledger 0
+Accept phase time 22.2927691936 , ledger 1
+Consensus Reached: True
+Open phase time 55.0435810089 , ledger 0
+Same Proposals: 0
+Quorum = 4.0
+Same Proposals: 5
+Quorum = 4.0
+Establish phase time 55.4932470322 , ledger 0
+Accept phase time 22.2501130104 , ledger 1
+Consensus Reached: True
+Open phase time 55.0508549213 , ledger 0
+Same Proposals: 0
+Quorum = 4.0
+Same Proposals: 5
+Quorum = 4.0
+Establish phase time 55.4580571651 , ledger 0
+Accept phase time 22.2317259312 , ledger 1
+Consensus Reached: True
+Open phase time 55.0541779995 , ledger 0
+Same Proposals: 0
+Quorum = 4.0
+Same Proposals: 5
+Quorum = 4.0
+Establish phase time 55.5087850094 , ledger 0
+Accept phase time 22.4175181389 , ledger 1
+Consensus Reached: True
+Open phase time 55.0580158234 , ledger 0
+Same Proposals: 0
+Quorum = 4.0
+Same Proposals: 5
+Quorum = 4.0
+Establish phase time 55.525354147 , ledger 0
+Accept phase time 22.6126949787 , ledger 1
+Consensus Reached: True
+Open phase time 55.0431730747 , ledger 0
+Same Proposals: 0
+Quorum = 4.0
+Same Proposals: 5
+Quorum = 4.0
+Establish phase time 55.5237669945 , ledger 0
+Accept phase time 22.4624838829 , ledger 1
+Consensus Reached: True
+Open phase time 55.0519230366 , ledger 0
+Same Proposals: 0
+Quorum = 4.0
+Same Proposals: 5
+Quorum = 4.0
+Establish phase time 55.5250720978 , ledger 0
+Accept phase time 22.3587908745 , ledger 1
+Consensus Reached: True
+Open phase time 55.0614020824 , ledger 0
+Same Proposals: 0
+Quorum = 4.0
+Same Proposals: 5
+Quorum = 4.0
+Establish phase time 55.4583649635 , ledger 0
+Accept phase time 22.406373024 , ledger 1
+Consensus Reached: True
+Open phase time 55.0551571846 , ledger 0
+Same Proposals: 0
+Quorum = 4.0
+Same Proposals: 5
+Quorum = 4.0
+Establish phase time 55.4854950905 , ledger 0
+Accept phase time 22.4792709351 , ledger 1
+Consensus Reached: True
+Open phase time 55.0530629158 , ledger 0
+Same Proposals: 0
+Quorum = 4.0
+Same Proposals: 5
+Quorum = 4.0
+Establish phase time 55.542167902 , ledger 0
+Accept phase time 22.5797898769 , ledger 1
+Consensus Reached: True
+Open phase time 55.053260088 , ledger 0
+Same Proposals: 0
+Quorum = 4.0
+Same Proposals: 5
+Quorum = 4.0
+Establish phase time 55.5136311054 , ledger 0
+Accept phase time 22.2094049454 , ledger 1
+Consensus Reached: True
+Open phase time 55.0529360771 , ledger 0
+Same Proposals: 0
+Quorum = 4.0
+Same Proposals: 5
+Quorum = 4.0
+Establish phase time 55.5483388901 , ledger 0
+Accept phase time 22.4911119938 , ledger 1
+Consensus Reached: True
+Open phase time 55.0454909801 , ledger 0
+Same Proposals: 0
+Quorum = 4.0
+Same Proposals: 5
+Quorum = 4.0
+Establish phase time 55.4874620438 , ledger 0
+Accept phase time 22.1231729984 , ledger 1
+Consensus Reached: True
+Open phase time 55.0539238453 , ledger 0
+Same Proposals: 0
+Quorum = 4.0
+Same Proposals: 5
+Quorum = 4.0
+Establish phase time 55.4791998863 , ledger 0
+Accept phase time 22.3073379993 , ledger 1
+Consensus Reached: True
+Open phase time 55.0434360504 , ledger 0
+Same Proposals: 0
+Quorum = 4.0
+Same Proposals: 5
+Quorum = 4.0
+Establish phase time 55.5889818668 , ledger 0
+Accept phase time 22.4040360451 , ledger 1
+Consensus Reached: True
+Open phase time 55.0444200039 , ledger 0
+Same Proposals: 0
+Quorum = 4.0
+Same Proposals: 5
+Quorum = 4.0
+Establish phase time 55.5058250427 , ledger 0
+Accept phase time 22.3245050907 , ledger 1
+Consensus Reached: True
+Open phase time 55.0513570309 , ledger 0
+Same Proposals: 0
+Quorum = 4.0
+Same Proposals: 5
+Quorum = 4.0
+Establish phase time 55.5434169769 , ledger 0
+Accept phase time 22.4403078556 , ledger 1
+Consensus Reached: True
+Open phase time 55.0485641956 , ledger 0
+Same Proposals: 0
+Quorum = 4.0
+Same Proposals: 5
+Quorum = 4.0
+Establish phase time 55.5416479111 , ledger 0
+Accept phase time 22.3993661404 , ledger 1
 Consensus Reached: True

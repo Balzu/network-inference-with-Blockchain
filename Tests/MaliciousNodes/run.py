@@ -1,7 +1,9 @@
 # -*- coding: utf-8 -*-
 
-import random
+import random, sys, os
 from argparse import ArgumentParser
+topo_path = os.path.abspath(os.path.join('..', '..', 'Topology'))
+sys.path.insert(0, topo_path)
 from transactions_creation import *
 from malicious_node import *
 

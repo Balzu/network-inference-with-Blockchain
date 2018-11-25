@@ -1,6 +1,0 @@
-08:19:35.132530 ARP, Request who-has 12.10.5.3 tell 12.10.5.2, length 28
-08:19:35.135541 ARP, Request who-has 12.10.5.1 tell 12.10.5.2, length 28
-08:19:35.135552 ARP, Reply 12.10.5.1 is-at ca:71:f9:cb:74:af (oui Unknown), length 28
-08:19:35.136324 IP 12.10.5.2 > Tenda: ICMP echo request, id 7896, seq 1, length 64
-08:19:40.138601 ARP, Request who-has 12.10.5.2 tell 12.10.5.101, length 28
-

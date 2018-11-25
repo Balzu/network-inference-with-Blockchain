@@ -1,9 +1,8 @@
 # -*- coding: utf-8 -*-
 
 from __future__ import division
-import random
+import random, os, pdb, glob, time
 from run import *
-import os, pdb, glob, time
 
 def retrieve_times():
     '''
@@ -164,9 +163,8 @@ def simulation_four(num_exp, num_mal, num_tx, num_htx=0):
     plot_avg_group_times(open, est, acc, 'second', 6, 'c4_g2_n' + str(num_mal) + '_tx' + str(num_tx)  + '.png')
 
 
-
-#simulation_one(20, num_htx=1000)
-#simulation_two(20,1, num_htx=1000)
-#simulation_three(20, 1, 1000, num_htx=1000)
-simulation_four(1, 1, 900, num_htx=1000)
+simulation_one(20, num_htx=1000)
+simulation_two(20,1, num_htx=1000)
+simulation_three(20, 1, 1000, num_htx=1000)
+simulation_four(20, 1, 900, num_htx=1000)
 
