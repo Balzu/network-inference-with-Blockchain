@@ -100,7 +100,6 @@ def simulation_one(num_exp, num_htx=0):
                  " rm *.log > /dev/null &'")
     for i in range(0, num_exp):
         print '\n Number of experiment: ' + str(i)
-        pdb.set_trace()
         # Run one experiment of the simulation
         #os.system("python run.py --type 1 --honest_transactions " + str(num_htx)) + " &"
         subprocess.Popen(["python", "run.py", "--type", "1", "--honest_transactions", str(num_htx)])

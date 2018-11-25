@@ -126,6 +126,10 @@ def experiment_one(num_htx):
     c.send_transactions(trans)
     for s in servers:
         s.start()
+    #TODO aggiunte righe seguenti
+    while not servers[9].end():  # Consider one server that for sure has been started (servers[9]!)
+        time.sleep(5)
+    servers[9].store_topo_to_file('topo9')
 
 
 def experiment_two(num_htx, num):

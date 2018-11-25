@@ -125,6 +125,7 @@ def experiment_one_server(i):
     while not server.end():  # Consider one server that for sure has been started (servers[9]!)
         time.sleep(5)
     server.draw_topology()
+    server.store_topo_to_file(str(i))
 
 def experiment_one_client(num_htx):
     '''

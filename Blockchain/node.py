@@ -1081,10 +1081,18 @@ class server(client):
             src = str(tx.src())
             dst = str(tx.dst())
             if ((self.nrr) or (src.split(':')[1] == 'R' and dst.split(':')[1] == 'R')):
+                src = src.split(':')[0]
+                dst = dst.split(':')[0]
                 if src not in topo:
-                    topo[src] = 1
+                    topo[src] = [dst]
                 else:
-                    topo[src] = topo[src] + 1
+                    topo[src].append(dst)
+                if dst not in topo:
+                    topo[dst] = []
+        with open (prefix + filename + suffix, "w") as file:
+            for src in topo.keys():
+                for dst in topo[src]:
+                    file.write(src + ' -> ' + dst + '\n')
 
     # TODO send de-registration message to unl, end message to observers, and stop sockets?
     def finalize(self):
