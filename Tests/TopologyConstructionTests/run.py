@@ -402,8 +402,6 @@ def experiment_eight(id, sensors, subfolder):
     '''
     #servers = start_blockchain()
     (net, topo) = start_network_number(8, sensor1=sensors[0], sensor2=sensors[1], sensor3=sensors[2], sensor4=sensors[3])
-    topo.add_firewall_rules(net)
-    CLI(net)
     os.system('./init.sh')
     topo.create_alias_file()
     asnames = topo.active_sensors
@@ -413,7 +411,6 @@ def experiment_eight(id, sensors, subfolder):
     startup(len(msnames), msnames, net)
     ips = get_responding_ips(msnames)
     topo.add_firewall_rules(net)
-    CLI(net)
     clean_cmd_base = 'rm -rf traceroute/'
     for i in range(len(psnames)):
         clean_cmd = [clean_cmd_base + msnames[i] + '/*']
