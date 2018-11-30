@@ -127,7 +127,7 @@ def experiment_one_server(i):
     server.draw_topology()
     server.store_topo_to_file(str(i))
 
-def experiment_one_clientAUTOMATED(num_htx): #todo rename
+def experiment_one_client(num_htx): #todo rename
     '''
     Configure and run servers for experiment one. Servers from 1 to 6 have each other in their UNL.
     Servers from 7 to 10 have an UNL made of random servers. All servers are honest.
@@ -148,7 +148,7 @@ def experiment_one_clientAUTOMATED(num_htx): #todo rename
     sys.exit()
 
 
-def experiment_one_client(num_htx):
+def experiment_one_client_interactive(num_htx):
     
     print '\n----------------- Experiment one ------------------\n'
     # Create transactions and send them to servers
