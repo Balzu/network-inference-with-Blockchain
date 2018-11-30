@@ -287,7 +287,7 @@ class client(node):
                 try:
                     sender = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
                     sender.connect((ip_addr, port))
-                    pmsg = pickle.dumps(m)
+                    pmsg = pickle.dumps(m, protocol=2)
                     sender.sendall(pmsg) # No need for lock on msg, it is just read
                     ack = sender.recv(1024)
                     ack = pickle.loads(ack)
