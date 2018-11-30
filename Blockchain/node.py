@@ -54,12 +54,12 @@ class server_socket(threading.Thread):
 
     def handle_client_connection(self, client_socket):
         msg = client_socket.recv(8192) #Era 32768
-        self.server.logger().info('\nMsg length: ' + str(len(msg)) + '\n')
+        #self.server.logger().info('\nMsg length: ' + str(len(msg)) + '\n')
         try:
             msg = pickle.loads(msg)
         except (ValueError, EOFError) as e:
-            self.server.logger().info('\nMessage ' + str(msg) + ' :\nerror:\n ' + str(e) + '\n')
-            return #TODO this exception only happens in AWS EC2, never reproduced locally
+            #self.server.logger().info('\nMessage ' + str(msg) + ' :\nerror:\n ' + str(e) + '\n')
+            return #TODO this exception only happened in AWS EC2, never reproduced locally
         ack_msg = self.server.handle_message(msg)
         ack_msg = pickle.dumps(ack_msg, protocol=2)
         client_socket.send(ack_msg) # ack message is no longer a string, but a 'message'
