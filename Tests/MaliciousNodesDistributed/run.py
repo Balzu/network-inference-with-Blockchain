@@ -126,6 +126,27 @@ def experiment_one_server(i):
         time.sleep(5)
     server.draw_topology()
     server.store_topo_to_file(str(i))
+'''
+def experiment_one_client(num_htx):
+    \'\'\'
+    Configure and run servers for experiment one. Servers from 1 to 6 have each other in their UNL.
+    Servers from 7 to 10 have an UNL made of random servers. All servers are honest.
+    \'\'\'
+    print '\n----------------- Experiment one ------------------\n'
+    # Create transactions and send them to servers
+    trans = get_honest_transactions() if num_htx == 0 else get_honest_transactions_tree(num_htx)
+    c = configure_client('configuration/client_config.json')
+    i= 1
+    for sip in c.validators:
+        os.system("sshpass -p mininet ssh -o StrictHostKeyChecking=no mininet@" + sip.split(':')[
+            0] + " 'cd guest_share/network-inference-with-Blockchain/Tests/MaliciousNodesDistributed/;"
+                 "python run.py --type 1s --server_number " + str(i) + " > /dev/null &'")
+        i += 1
+    time.sleep(5)
+    register_client(c)
+    c.send_transactions(trans)
+    sys.exit()
+'''
 
 def experiment_one_client(num_htx):
     '''
@@ -136,15 +157,7 @@ def experiment_one_client(num_htx):
     # Create transactions and send them to servers
     trans = get_honest_transactions() if num_htx == 0 else get_honest_transactions_tree(num_htx)
     c = configure_client('configuration/client_config.json')
-    i= 1
-    for sip in c.validators:
-        os.system("sshpass -p mininet ssh -o StrictHostKeyChecking=no mininet@" + sip.split(':')[
-            0] + " 'cd guest_share/network-inference-with-Blockchain/Tests/MaliciousNodesDistributed/;"
-                 "python run.py --type 1s --server_number " + str(i) + " '") #> /dev/null &
-        i += 1
-    time.sleep(5)
     register_client(c)
-    pdb.set_trace()
     c.send_transactions(trans)
     sys.exit()
 

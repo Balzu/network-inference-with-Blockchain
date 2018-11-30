@@ -163,7 +163,7 @@
           <entry key="json" value="221" />
           <entry key="m_topo_1" value="7" />
           <entry key="md" value="8689" />
-          <entry key="py" value="70387" />
+          <entry key="py" value="70411" />
           <entry key="sh" value="366" />
         </counts>
       </usages-collector>
@@ -172,7 +172,7 @@
           <entry key="JSON" value="221" />
           <entry key="Markdown" value="8689" />
           <entry key="PLAIN_TEXT" value="447" />
-          <entry key="Python" value="70387" />
+          <entry key="Python" value="70411" />
         </counts>
       </usages-collector>
     </session>
@@ -182,8 +182,8 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/run.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="555">
-              <caret line="142" column="91" selection-start-line="142" selection-start-column="91" selection-end-line="142" selection-end-column="91" />
+            <state relative-caret-position="140">
+              <caret line="133" column="5" selection-start-line="133" selection-start-column="5" selection-end-line="133" selection-end-column="5" />
               <folding>
                 <element signature="e#25#47#0" expanded="true" />
               </folding>
@@ -1126,8 +1126,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="555">
-          <caret line="142" column="91" selection-start-line="142" selection-start-column="91" selection-end-line="142" selection-end-column="91" />
+        <state relative-caret-position="140">
+          <caret line="133" column="5" selection-start-line="133" selection-start-column="5" selection-end-line="133" selection-end-column="5" />
           <folding>
             <element signature="e#25#47#0" expanded="true" />
           </folding>
