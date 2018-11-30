@@ -163,7 +163,7 @@
           <entry key="json" value="221" />
           <entry key="m_topo_1" value="7" />
           <entry key="md" value="8689" />
-          <entry key="py" value="70563" />
+          <entry key="py" value="70574" />
           <entry key="sh" value="366" />
         </counts>
       </usages-collector>
@@ -172,18 +172,18 @@
           <entry key="JSON" value="221" />
           <entry key="Markdown" value="8689" />
           <entry key="PLAIN_TEXT" value="447" />
-          <entry key="Python" value="70563" />
+          <entry key="Python" value="70574" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/run.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="300">
-              <caret line="142" column="18" lean-forward="true" selection-start-line="142" selection-start-column="18" selection-end-line="142" selection-end-column="57" />
+            <state relative-caret-position="825">
+              <caret line="159" column="3" selection-start-line="159" selection-start-column="3" selection-end-line="159" selection-end-column="3" />
               <folding>
                 <element signature="e#25#47#0" expanded="true" />
               </folding>
@@ -191,11 +191,11 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Blockchain/node.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="347">
-              <caret line="60" column="89" selection-start-line="60" selection-start-column="89" selection-end-line="60" selection-end-column="89" />
+            <state relative-caret-position="302">
+              <caret line="57" column="14" selection-start-line="57" selection-start-column="14" selection-end-line="57" selection-end-column="14" />
               <folding>
                 <element signature="e#24#55#0" expanded="true" />
                 <marker date="1543596114145" expanded="true" signature="3373:3379" ph="..." />
@@ -211,7 +211,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/start_simulation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
+            <state relative-caret-position="-175">
               <caret line="104" column="100" lean-forward="true" selection-start-line="104" selection-start-column="100" selection-end-line="104" selection-end-column="100" />
               <folding>
                 <element signature="e#25#56#0" expanded="true" />
@@ -362,9 +362,9 @@
         <option value="$PROJECT_DIR$/Tests/MaliciousNodesDistributed/reboot.sh" />
         <option value="$PROJECT_DIR$/Tests/MaliciousNodesDistributed/update_VM.sh" />
         <option value="$PROJECT_DIR$/Tests/MaliciousNodesDistributed/init_VM.sh" />
-        <option value="$PROJECT_DIR$/Tests/MaliciousNodesDistributed/run.py" />
         <option value="$PROJECT_DIR$/Tests/MaliciousNodesDistributed/start_simulation.py" />
         <option value="$PROJECT_DIR$/Blockchain/node.py" />
+        <option value="$PROJECT_DIR$/Tests/MaliciousNodesDistributed/run.py" />
       </list>
     </option>
   </component>
@@ -1103,19 +1103,15 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/run.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="300">
-          <caret line="142" column="18" lean-forward="true" selection-start-line="142" selection-start-column="18" selection-end-line="142" selection-end-column="57" />
-          <folding>
-            <element signature="e#25#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
+    <entry file="file://$PROJECT_DIR$/Blockchain/cmd line">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blockchain/ledger.py">
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/start_simulation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
+        <state relative-caret-position="-175">
           <caret line="104" column="100" lean-forward="true" selection-start-line="104" selection-start-column="100" selection-end-line="104" selection-end-column="100" />
           <folding>
             <element signature="e#25#56#0" expanded="true" />
@@ -1123,16 +1119,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Blockchain/cmd line">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Blockchain/ledger.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://$PROJECT_DIR$/Blockchain/node.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="347">
-          <caret line="60" column="89" selection-start-line="60" selection-start-column="89" selection-end-line="60" selection-end-column="89" />
+        <state relative-caret-position="302">
+          <caret line="57" column="14" selection-start-line="57" selection-start-column="14" selection-end-line="57" selection-end-column="14" />
           <folding>
             <element signature="e#24#55#0" expanded="true" />
             <marker date="1543596114145" expanded="true" signature="3373:3379" ph="..." />
@@ -1140,6 +1130,16 @@
             <marker date="1543596114145" expanded="true" signature="43607:48675" ph="..." />
             <marker date="1543596114145" expanded="true" signature="47356:48675" ph="..." />
             <marker date="1543596114145" expanded="true" signature="47645:48675" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="825">
+          <caret line="159" column="3" selection-start-line="159" selection-start-column="3" selection-end-line="159" selection-end-column="3" />
+          <folding>
+            <element signature="e#25#47#0" expanded="true" />
           </folding>
         </state>
       </provider>
