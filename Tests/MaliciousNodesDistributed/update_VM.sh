@@ -1,6 +1,7 @@
 #!/bin/bash
 
 #sshpass -p mininet ssh -o StrictHostKeyChecking=no mininet@54.171.131.77 'rm -rf guest_share/network-inference-with-Blockchain'
+sshpass -p mininet ssh -o StrictHostKeyChecking=no mininet@34.254.252.97 'cd guest_share/network-inference-with-Blockchain; git fetch --all; git reset --hard origin/iTopModifications'
 sshpass -p mininet ssh -o StrictHostKeyChecking=no mininet@54.171.131.77 'cd guest_share/network-inference-with-Blockchain; git fetch --all; git reset --hard origin/iTopModifications'
 #sshpass -p mininet ssh -o StrictHostKeyChecking=no mininet@63.33.67.168 'rm -rf guest_share/network-inference-with-Blockchain'
 sshpass -p mininet ssh -o StrictHostKeyChecking=no mininet@63.33.57.84 'cd guest_share/network-inference-with-Blockchain; git fetch --all; git reset --hard origin/iTopModifications'

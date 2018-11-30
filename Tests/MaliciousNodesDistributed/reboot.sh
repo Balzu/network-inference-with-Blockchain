@@ -1,5 +1,6 @@
 #!/bin/bash
 
+sshpass -p mininet ssh -o StrictHostKeyChecking=no mininet@34.254.252.97 'sudo reboot'
 sshpass -p mininet ssh -o StrictHostKeyChecking=no mininet@54.171.131.77 'sudo reboot'
 sshpass -p mininet ssh -o StrictHostKeyChecking=no mininet@63.33.57.84 'sudo reboot'
 sshpass -p mininet ssh -o StrictHostKeyChecking=no mininet@54.154.237.109 'sudo reboot'

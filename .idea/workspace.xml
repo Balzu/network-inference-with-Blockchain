@@ -127,7 +127,7 @@
           <entry key="hms2r1" value="7" />
           <entry key="hmsI" value="3" />
           <entry key="hosts" value="5" />
-          <entry key="json" value="190" />
+          <entry key="json" value="199" />
           <entry key="log" value="18" />
           <entry key="m_topo_0" value="2" />
           <entry key="m_topo_1" value="2" />
@@ -137,9 +137,9 @@
           <entry key="m_topo_r1" value="1" />
           <entry key="md" value="15" />
           <entry key="png" value="5" />
-          <entry key="py" value="376" />
+          <entry key="py" value="379" />
           <entry key="s1" value="2" />
-          <entry key="sh" value="29" />
+          <entry key="sh" value="30" />
           <entry key="tcpdump_out" value="3" />
           <entry key="tcpdump_outs3" value="1" />
           <entry key="txt" value="1" />
@@ -148,10 +148,10 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Image" value="5" />
-          <entry key="JSON" value="190" />
+          <entry key="JSON" value="199" />
           <entry key="Markdown" value="16" />
-          <entry key="PLAIN_TEXT" value="325" />
-          <entry key="Python" value="376" />
+          <entry key="PLAIN_TEXT" value="326" />
+          <entry key="Python" value="379" />
           <entry key="UNKNOWN" value="1" />
         </counts>
       </usages-collector>
@@ -163,54 +163,27 @@
           <entry key="json" value="221" />
           <entry key="m_topo_1" value="7" />
           <entry key="md" value="8689" />
-          <entry key="py" value="70376" />
-          <entry key="sh" value="333" />
+          <entry key="py" value="70387" />
+          <entry key="sh" value="366" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
           <entry key="JSON" value="221" />
           <entry key="Markdown" value="8689" />
-          <entry key="PLAIN_TEXT" value="414" />
-          <entry key="Python" value="70376" />
+          <entry key="PLAIN_TEXT" value="447" />
+          <entry key="Python" value="70387" />
         </counts>
       </usages-collector>
     </session>
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/configuration/client_config.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="630">
-              <caret line="42" selection-start-line="42" selection-end-line="42" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/reboot.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" column="59" selection-start-line="2" selection-start-column="59" selection-end-line="2" selection-end-column="72" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/init_VM.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="60">
-              <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/run.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="285">
-              <caret line="142" column="40" selection-start-line="142" selection-start-column="18" selection-end-line="142" selection-end-column="40" />
+            <state relative-caret-position="555">
+              <caret line="142" column="91" selection-start-line="142" selection-start-column="91" selection-end-line="142" selection-end-column="91" />
               <folding>
                 <element signature="e#25#47#0" expanded="true" />
               </folding>
@@ -218,59 +191,31 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/start_simulation.py">
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Blockchain/node.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-295">
-              <caret line="114" column="5" selection-start-line="114" selection-start-column="5" selection-end-line="114" selection-end-column="5" />
+            <state relative-caret-position="256">
+              <caret line="894" column="24" selection-start-line="894" selection-start-column="8" selection-end-line="894" selection-end-column="24" />
               <folding>
-                <element signature="e#25#56#0" expanded="true" />
+                <element signature="e#24#55#0" expanded="true" />
+                <marker date="1543528320768" expanded="true" signature="3171:3177" ph="..." />
+                <marker date="1543528320768" expanded="true" signature="31266:31272" ph="..." />
+                <marker date="1543528320768" expanded="true" signature="43405:48473" ph="..." />
+                <marker date="1543528320768" expanded="true" signature="47154:48473" ph="..." />
+                <marker date="1543528320768" expanded="true" signature="47443:48473" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/start_sim_remote.sh">
+        <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/start_simulation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="30">
-              <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/configuration/server1_config.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="315">
-              <caret line="21" column="14" selection-start-line="21" selection-start-column="14" selection-end-line="21" selection-end-column="14" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/configuration/server2_config.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/configuration/server9_config.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="17" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/configuration/server10_config.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="22" />
+            <state relative-caret-position="255">
+              <caret line="104" column="100" lean-forward="true" selection-start-line="104" selection-start-column="100" selection-end-line="104" selection-end-column="100" />
+              <folding>
+                <element signature="e#25#56#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -286,7 +231,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>-n 6</find>
       <find>topolog</find>
       <find>self.fw_rules</find>
       <find>self.__with_hosts</find>
@@ -316,6 +260,7 @@
       <find>get_rea</find>
       <find>get_servers_id()</find>
       <find>random_server_selection</find>
+      <find>add_transactions</find>
     </findStrings>
     <replaceStrings>
       <replace>num_keep</replace>
@@ -359,7 +304,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Topology/build_topo3.py" />
         <option value="$PROJECT_DIR$/Tests/TopologyConstructionTests/readme.md" />
         <option value="$PROJECT_DIR$/Tests/UpAndDown/start_net_and_sensor.py" />
         <option value="$PROJECT_DIR$/Tests/TopologyConstructionTests/sensor_config2.json" />
@@ -387,7 +331,6 @@
         <option value="$PROJECT_DIR$/Topology/build_topo_test1.py" />
         <option value="$PROJECT_DIR$/Tests/MaliciousNodesDistributed/readme.md" />
         <option value="$PROJECT_DIR$/Tests/MaliciousNodesDistributed/configuration/server10_config.json" />
-        <option value="$PROJECT_DIR$/Tests/MaliciousNodesDistributed/reboot.sh" />
         <option value="$PROJECT_DIR$/Tests/MaliciousNodesDistributed/script.sh" />
         <option value="$PROJECT_DIR$/Tests/MaliciousNodesDistributed/configuration/server1_config.json" />
         <option value="$PROJECT_DIR$/Tests/MaliciousNodesDistributed/configuration/server2_config.json" />
@@ -398,7 +341,6 @@
         <option value="$PROJECT_DIR$/Tests/MaliciousNodesDistributed/configuration/server7_config.json" />
         <option value="$PROJECT_DIR$/Tests/MaliciousNodesDistributed/configuration/server8_config.json" />
         <option value="$PROJECT_DIR$/Tests/MaliciousNodesDistributed/configuration/server9_config.json" />
-        <option value="$PROJECT_DIR$/Tests/MaliciousNodesDistributed/init_VM.sh" />
         <option value="$PROJECT_DIR$/Tests/MaliciousNodes/run.py" />
         <option value="$PROJECT_DIR$/Tests/MaliciousNodes/start_simulation.py" />
         <option value="$PROJECT_DIR$/Tests/TopologyConstructionTests/script.sh" />
@@ -407,9 +349,12 @@
         <option value="$PROJECT_DIR$/Tests/TopologyConstructionTests/start_simulation.py" />
         <option value="$PROJECT_DIR$/Blockchain/node.py" />
         <option value="$PROJECT_DIR$/Tests/MaliciousNodesDistributed/configuration/client_config.json" />
-        <option value="$PROJECT_DIR$/Tests/MaliciousNodesDistributed/run.py" />
         <option value="$PROJECT_DIR$/Tests/MaliciousNodesDistributed/start_simulation.py" />
         <option value="$PROJECT_DIR$/Tests/MaliciousNodesDistributed/start_sim_remote.sh" />
+        <option value="$PROJECT_DIR$/Tests/MaliciousNodesDistributed/reboot.sh" />
+        <option value="$PROJECT_DIR$/Tests/MaliciousNodesDistributed/update_VM.sh" />
+        <option value="$PROJECT_DIR$/Tests/MaliciousNodesDistributed/init_VM.sh" />
+        <option value="$PROJECT_DIR$/Tests/MaliciousNodesDistributed/run.py" />
       </list>
     </option>
   </component>
@@ -437,6 +382,11 @@
             <path>
               <item name="network-inference-with-BlockchainNEW" type="b2602c69:ProjectViewProjectNode" />
               <item name="network-inference-with-BlockchainNEW" type="462c0819:PsiDirectoryNode" />
+              <item name="Blockchain" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="network-inference-with-BlockchainNEW" type="b2602c69:ProjectViewProjectNode" />
+              <item name="network-inference-with-BlockchainNEW" type="462c0819:PsiDirectoryNode" />
               <item name="Tests" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -444,13 +394,6 @@
               <item name="network-inference-with-BlockchainNEW" type="462c0819:PsiDirectoryNode" />
               <item name="Tests" type="462c0819:PsiDirectoryNode" />
               <item name="MaliciousNodesDistributed" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="network-inference-with-BlockchainNEW" type="b2602c69:ProjectViewProjectNode" />
-              <item name="network-inference-with-BlockchainNEW" type="462c0819:PsiDirectoryNode" />
-              <item name="Tests" type="462c0819:PsiDirectoryNode" />
-              <item name="MaliciousNodesDistributed" type="462c0819:PsiDirectoryNode" />
-              <item name="configuration" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="network-inference-with-BlockchainNEW" type="b2602c69:ProjectViewProjectNode" />
@@ -962,27 +905,6 @@
     <entry file="file://$PROJECT_DIR$/Blockchain/file_config_prova/server1_config.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/configuration/server3_config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/configuration/server4_config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/update_VM.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="22" lean-forward="true" selection-start-line="22" selection-end-line="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodes/start_simulation.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="300">
@@ -1072,36 +994,49 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Blockchain/node.py">
+    <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/start_sim_remote.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="575">
-          <caret line="1042" column="40" selection-start-line="1042" selection-start-column="32" selection-end-line="1042" selection-end-column="40" />
-          <folding>
-            <element signature="e#24#55#0" expanded="true" />
-            <marker date="1543528320768" expanded="true" signature="3171:3177" ph="..." />
-            <marker date="1543528320768" expanded="true" signature="31266:31272" ph="..." />
-            <marker date="1543528320768" expanded="true" signature="43405:48473" ph="..." />
-            <marker date="1543528320768" expanded="true" signature="47154:48473" ph="..." />
-            <marker date="1543528320768" expanded="true" signature="47443:48473" ph="..." />
-          </folding>
+        <state relative-caret-position="30">
+          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/configuration/server5_config.json">
+    <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/reboot.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
+        <state relative-caret-position="30">
+          <caret line="2" column="72" selection-start-line="2" selection-start-column="72" selection-end-line="2" selection-end-column="72" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/configuration/server6_config.json">
+    <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/update_VM.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
+        <state relative-caret-position="45">
+          <caret line="3" column="72" selection-start-line="3" selection-start-column="72" selection-end-line="3" selection-end-column="72" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/configuration/server7_config.json">
+    <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/init_VM.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="45">
+          <caret line="3" column="102" selection-start-line="3" selection-start-column="102" selection-end-line="3" selection-end-column="102" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/configuration/client_config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="80">
+          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/configuration/server10_config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/configuration/server9_config.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="17" />
@@ -1115,17 +1050,31 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/configuration/server9_config.json">
+    <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/configuration/server7_config.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="15">
           <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="17" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/configuration/server10_config.json">
+    <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/configuration/server6_config.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="22" />
+        <state relative-caret-position="645">
+          <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/configuration/server4_config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/configuration/server3_config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="645">
+          <caret line="43" column="1" selection-start-line="43" selection-start-column="1" selection-end-line="43" selection-end-column="1" />
         </state>
       </provider>
     </entry>
@@ -1143,50 +1092,44 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/configuration/client_config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="630">
-          <caret line="42" selection-start-line="42" selection-end-line="42" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/init_VM.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="60">
-          <caret line="4" lean-forward="true" selection-start-line="4" selection-end-line="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/reboot.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="59" selection-start-line="2" selection-start-column="59" selection-end-line="2" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/start_sim_remote.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" lean-forward="true" selection-start-line="2" selection-end-line="2" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/run.py">
+    <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/configuration/server5_config.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
-          <caret line="142" column="40" selection-start-line="142" selection-start-column="18" selection-end-line="142" selection-end-column="40" />
+          <caret line="19" column="6" lean-forward="true" selection-start-line="19" selection-start-column="6" selection-end-line="19" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Blockchain/node.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="256">
+          <caret line="894" column="24" selection-start-line="894" selection-start-column="8" selection-end-line="894" selection-end-column="24" />
           <folding>
-            <element signature="e#25#47#0" expanded="true" />
+            <element signature="e#24#55#0" expanded="true" />
+            <marker date="1543528320768" expanded="true" signature="3171:3177" ph="..." />
+            <marker date="1543528320768" expanded="true" signature="31266:31272" ph="..." />
+            <marker date="1543528320768" expanded="true" signature="43405:48473" ph="..." />
+            <marker date="1543528320768" expanded="true" signature="47154:48473" ph="..." />
+            <marker date="1543528320768" expanded="true" signature="47443:48473" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/start_simulation.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-295">
-          <caret line="114" column="5" selection-start-line="114" selection-start-column="5" selection-end-line="114" selection-end-column="5" />
+        <state relative-caret-position="255">
+          <caret line="104" column="100" lean-forward="true" selection-start-line="104" selection-start-column="100" selection-end-line="104" selection-end-column="100" />
           <folding>
             <element signature="e#25#56#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="142" column="91" selection-start-line="142" selection-start-column="91" selection-end-line="142" selection-end-column="91" />
+          <folding>
+            <element signature="e#25#47#0" expanded="true" />
           </folding>
         </state>
       </provider>

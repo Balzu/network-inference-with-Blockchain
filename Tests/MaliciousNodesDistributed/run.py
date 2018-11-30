@@ -140,10 +140,11 @@ def experiment_one_client(num_htx):
     for sip in c.validators:
         os.system("sshpass -p mininet ssh -o StrictHostKeyChecking=no mininet@" + sip.split(':')[
             0] + " 'cd guest_share/network-inference-with-Blockchain/Tests/MaliciousNodesDistributed/;"
-                 "python run.py --type 1s --server_number " + str(i) + " > /dev/null &'")
+                 "python run.py --type 1s --server_number " + str(i) + " '") #> /dev/null &
         i += 1
     time.sleep(5)
     register_client(c)
+    pdb.set_trace()
     c.send_transactions(trans)
     sys.exit()
 

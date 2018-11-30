@@ -1,5 +1,7 @@
 #!/bin/bash
 
+sshpass -p mininet ssh -o StrictHostKeyChecking=no mininet@34.254.252.97 'cd guest_share; git clone -b iTopModifications https://github.com/Balzu/network-inference-with-Blockchain.git'
+sshpass -p mininet ssh -o StrictHostKeyChecking=no mininet@34.254.252.97 'sudo apt-get install sshpass'
 
 sshpass -p mininet ssh -o StrictHostKeyChecking=no mininet@54.171.131.77 'cd guest_share; git clone -b iTopModifications https://github.com/Balzu/network-inference-with-Blockchain.git'
 
