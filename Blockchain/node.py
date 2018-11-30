@@ -212,7 +212,7 @@ class client(node):
 
     def send_transactions(self, transactions, servers=[]):
         '''Sends the transactions to the provided list of servers or to the validators if no list is provided.
-        The maximum number of transactions that can be sent in a single message is 50.'''
+        The maximum number of transactions that can be sent in a single message is 20.'''
         msgs = self.create_txset_messages(transactions)
         if len(servers) == 0:
             self.send_all(msgs, list = True)
@@ -223,12 +223,12 @@ class client(node):
     def create_txset_messages(self, transactions):
         msgs = []
         num = len(transactions)
-        while num > 50:
-            tmp = transactions[0:50]
+        while num > 20:
+            tmp = transactions[0:20]
             header = message_header(self.id(), self.signature(), 'id', 1, message_type.transaction_set)
             payload = message_payload(transaction_set(tmp))
             msgs.append(message(header, payload))
-            transactions = transactions[50:]
+            transactions = transactions[20:]
             num = len(transactions)
         header = message_header(self.id(), self.signature(), 'id', 0, message_type.transaction_set)
         payload = message_payload(transaction_set( transactions))
@@ -734,13 +734,13 @@ class server(client):
         msgs = []
         num = len(transactions)
         #pdb.set_trace()
-        while num > 40:
-            tmp = transactions[0:40]
+        while num > 20:
+            tmp = transactions[0:20]
             header = message_header(self.id(), self.signature(), 'id', 1, message_type.ledger)
             txset = transaction_set(tmp)
             payload = message_payload(full_ledger(seq, txset))
             msgs.append(message(header, payload))
-            transactions = transactions[40:]
+            transactions = transactions[20:]
             num = len(transactions)
         header = message_header(self.id(), self.signature(), 'id', 0, message_type.ledger)
         txset = transaction_set(transactions)
