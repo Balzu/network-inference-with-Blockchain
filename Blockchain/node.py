@@ -4,7 +4,8 @@ import threading
 from threading import Lock
 import socket
 import thread
-import cPickle as pickle
+#import cPickle as pickle
+import pickle
 import rsa
 import time, datetime
 import os
