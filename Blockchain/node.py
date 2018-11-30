@@ -57,9 +57,8 @@ class server_socket(threading.Thread):
         self.server.logger().info('\nMsg length: ' + str(len(msg)) + '\n')
         try:
             msg = pickle.loads(msg)
-        except ValueError as e:
-            pdb.set_trace()
-            self.server.logger().info('\nValue Error: ' + str(e) + '\n')
+        except (ValueError, EOFError) as e:
+            self.server.logger().info('\nMessage ' + str(msg) + ' :\nerror:\n ' + str(e) + '\n')
             return #TODO this exception only happens in AWS EC2, never reproduced locally
         ack_msg = self.server.handle_message(msg)
         ack_msg = pickle.dumps(ack_msg, protocol=2)
