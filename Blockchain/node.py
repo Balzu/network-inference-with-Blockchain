@@ -556,13 +556,13 @@ class server(client):
     def create_proposal_messages(self, transactions, r):
         msgs = []
         num = len(transactions)
-        while num > 45:
-            tmp = transactions[0:45]
+        while num > 20:
+            tmp = transactions[0:20]
             header = message_header(self.id(), self.signature(), 'id', 1, message_type.proposal)
             txset = transaction_set(tmp)
             payload = message_payload(proposal(self.id(), r[0], txset, self.__blockchain.current_ledger_id(), complete=False))
             msgs.append(message(header, payload))
-            transactions = transactions[45:]
+            transactions = transactions[20:]
             num = len(transactions)
         header = message_header(self.id(), self.signature(), 'id', 0, message_type.proposal)
         txset = transaction_set(transactions)
@@ -734,13 +734,13 @@ class server(client):
         msgs = []
         num = len(transactions)
         #pdb.set_trace()
-        while num > 15:
-            tmp = transactions[0:15]
+        while num > 20:
+            tmp = transactions[0:20]
             header = message_header(self.id(), self.signature(), 'id', 1, message_type.ledger)
             txset = transaction_set(tmp)
             payload = message_payload(full_ledger(seq, txset))
             msgs.append(message(header, payload))
-            transactions = transactions[15:]
+            transactions = transactions[20:]
             num = len(transactions)
         header = message_header(self.id(), self.signature(), 'id', 0, message_type.ledger)
         txset = transaction_set(transactions)
