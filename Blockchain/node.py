@@ -734,13 +734,13 @@ class server(client):
         msgs = []
         num = len(transactions)
         #pdb.set_trace()
-        while num > 20:
-            tmp = transactions[0:20]
+        while num > 15:
+            tmp = transactions[0:15]
             header = message_header(self.id(), self.signature(), 'id', 1, message_type.ledger)
             txset = transaction_set(tmp)
             payload = message_payload(full_ledger(seq, txset))
             msgs.append(message(header, payload))
-            transactions = transactions[20:]
+            transactions = transactions[15:]
             num = len(transactions)
         header = message_header(self.id(), self.signature(), 'id', 0, message_type.ledger)
         txset = transaction_set(transactions)
