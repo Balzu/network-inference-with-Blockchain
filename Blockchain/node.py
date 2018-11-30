@@ -58,6 +58,7 @@ class server_socket(threading.Thread):
             msg = pickle.loads(msg)
         except ValueError as e:
             self.server.logger().info('\nValue Error: ' + str(e) + '\n')
+            return #TODO this exception only happens in AWS EC2, never reproduced locally
         ack_msg = self.server.handle_message(msg)
         ack_msg = pickle.dumps(ack_msg)
         client_socket.send(ack_msg) # ack message is no longer a string, but a 'message'
