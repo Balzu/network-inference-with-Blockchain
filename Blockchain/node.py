@@ -229,12 +229,12 @@ class client(node):
     def create_txset_messages(self, transactions):
         msgs = []
         num = len(transactions)
-        while num > 5:
-            tmp = transactions[0:5]
+        while num > 10:
+            tmp = transactions[0:10]
             header = message_header(self.id(), self.signature(), 'id', 1, message_type.transaction_set)
             payload = message_payload(transaction_set(tmp))
             msgs.append(message(header, payload))
-            transactions = transactions[5:]
+            transactions = transactions[10:]
             num = len(transactions)
         header = message_header(self.id(), self.signature(), 'id', 0, message_type.transaction_set)
         payload = message_payload(transaction_set( transactions))
@@ -562,13 +562,13 @@ class server(client):
     def create_proposal_messages(self, transactions, r):
         msgs = []
         num = len(transactions)
-        while num > 5:
-            tmp = transactions[0:5]
+        while num > 10:
+            tmp = transactions[0:10]
             header = message_header(self.id(), self.signature(), 'id', 1, message_type.proposal)
             txset = transaction_set(tmp)
             payload = message_payload(proposal(self.id(), r[0], txset, self.__blockchain.current_ledger_id(), complete=False))
             msgs.append(message(header, payload))
-            transactions = transactions[5:]
+            transactions = transactions[10:]
             num = len(transactions)
         header = message_header(self.id(), self.signature(), 'id', 0, message_type.proposal)
         txset = transaction_set(transactions)
@@ -740,13 +740,13 @@ class server(client):
         msgs = []
         num = len(transactions)
         #pdb.set_trace()
-        while num > 5:
-            tmp = transactions[0:5]
+        while num > 10:
+            tmp = transactions[0:10]
             header = message_header(self.id(), self.signature(), 'id', 1, message_type.ledger)
             txset = transaction_set(tmp)
             payload = message_payload(full_ledger(seq, txset))
             msgs.append(message(header, payload))
-            transactions = transactions[5:]
+            transactions = transactions[10:]
             num = len(transactions)
         header = message_header(self.id(), self.signature(), 'id', 0, message_type.ledger)
         txset = transaction_set(transactions)
