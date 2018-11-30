@@ -52,7 +52,7 @@ class server_socket(threading.Thread):
         self.start_listening(server)
 
     def handle_client_connection(self, client_socket):
-        msg = client_socket.recv(16384) #Era 32768
+        msg = client_socket.recv(4096) #Era 32768
         #self.server.logger().info('\nMsg length: ' + str(len(msg)) + '\n')
         try:
             msg = pickle.loads(msg)
@@ -227,12 +227,12 @@ class client(node):
     def create_txset_messages(self, transactions):
         msgs = []
         num = len(transactions)
-        while num > 20:
-            tmp = transactions[0:20]
+        while num > 10:
+            tmp = transactions[0:10]
             header = message_header(self.id(), self.signature(), 'id', 1, message_type.transaction_set)
             payload = message_payload(transaction_set(tmp))
             msgs.append(message(header, payload))
-            transactions = transactions[20:]
+            transactions = transactions[10:]
             num = len(transactions)
         header = message_header(self.id(), self.signature(), 'id', 0, message_type.transaction_set)
         payload = message_payload(transaction_set( transactions))
@@ -560,13 +560,13 @@ class server(client):
     def create_proposal_messages(self, transactions, r):
         msgs = []
         num = len(transactions)
-        while num > 20:
-            tmp = transactions[0:20]
+        while num > 10:
+            tmp = transactions[0:10]
             header = message_header(self.id(), self.signature(), 'id', 1, message_type.proposal)
             txset = transaction_set(tmp)
             payload = message_payload(proposal(self.id(), r[0], txset, self.__blockchain.current_ledger_id(), complete=False))
             msgs.append(message(header, payload))
-            transactions = transactions[20:]
+            transactions = transactions[10:]
             num = len(transactions)
         header = message_header(self.id(), self.signature(), 'id', 0, message_type.proposal)
         txset = transaction_set(transactions)
@@ -738,13 +738,13 @@ class server(client):
         msgs = []
         num = len(transactions)
         #pdb.set_trace()
-        while num > 20:
-            tmp = transactions[0:20]
+        while num > 10:
+            tmp = transactions[0:10]
             header = message_header(self.id(), self.signature(), 'id', 1, message_type.ledger)
             txset = transaction_set(tmp)
             payload = message_payload(full_ledger(seq, txset))
             msgs.append(message(header, payload))
-            transactions = transactions[20:]
+            transactions = transactions[10:]
             num = len(transactions)
         header = message_header(self.id(), self.signature(), 'id', 0, message_type.ledger)
         txset = transaction_set(transactions)
