@@ -52,8 +52,8 @@ class server_socket(threading.Thread):
         self.start_listening(server)
 
     def handle_client_connection(self, client_socket):
-        msg = client_socket.recv(32768) #16384 insufficiente
-        #self.server.logger().info('\nMsg length: ' + str(len(msg)) + '\n')
+        msg = client_socket.recv(16384) #Era 32768
+        self.server.logger().info('\nMsg length: ' + str(len(msg)) + '\n')
         msg = pickle.loads(msg)
         ack_msg = self.server.handle_message(msg)
         ack_msg = pickle.dumps(ack_msg)
