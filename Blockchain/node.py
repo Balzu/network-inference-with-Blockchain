@@ -1068,10 +1068,7 @@ class server(client):
         return self.__logger
 
     def store_topo_to_file(self, filename, prefix = '', suffix = ''):
-        '''Draws the topology of the current ledger and stores it to file.
-           If self.nrr is False, draws only responding routers.
-           A prefix is specified if the image must be saved at a given path.
-           A suffix is specified to discriminate different executions.
+        '''Stores the current ledger topology to file.
         '''
         # Create data structure for the topology
         lgr = self.__blockchain.current_ledger()

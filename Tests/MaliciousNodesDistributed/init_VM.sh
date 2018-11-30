@@ -1,22 +1,22 @@
 #!/bin/bash
 
 
-sshpass -p mininet ssh -o StrictHostKeyChecking=no mininet@54.229.83.110 'cd guest_share; git clone -b iTopModifications https://github.com/Balzu/network-inference-with-Blockchain.git'
+sshpass -p mininet ssh -o StrictHostKeyChecking=no mininet@54.171.131.77 'cd guest_share; git clone -b iTopModifications https://github.com/Balzu/network-inference-with-Blockchain.git'
 
-sshpass -p mininet ssh -o StrictHostKeyChecking=no mininet@63.33.67.168 'cd guest_share; git clone -b iTopModifications https://github.com/Balzu/network-inference-with-Blockchain.git'
+sshpass -p mininet ssh -o StrictHostKeyChecking=no mininet@63.33.57.84 'cd guest_share; git clone -b iTopModifications https://github.com/Balzu/network-inference-with-Blockchain.git'
 
-sshpass -p mininet ssh -o StrictHostKeyChecking=no mininet@52.211.165.104 'cd guest_share; git clone -b iTopModifications https://github.com/Balzu/network-inference-with-Blockchain.git'
+sshpass -p mininet ssh -o StrictHostKeyChecking=no mininet@54.154.237.109 'cd guest_share; git clone -b iTopModifications https://github.com/Balzu/network-inference-with-Blockchain.git'
 
-sshpass -p mininet ssh -o StrictHostKeyChecking=no mininet@63.32.98.104 'cd guest_share; git clone -b iTopModifications https://github.com/Balzu/network-inference-with-Blockchain.git'
+sshpass -p mininet ssh -o StrictHostKeyChecking=no mininet@34.241.241.66 'cd guest_share; git clone -b iTopModifications https://github.com/Balzu/network-inference-with-Blockchain.git'
 
-sshpass -p mininet ssh -o StrictHostKeyChecking=no mininet@34.242.236.11 'cd guest_share; git clone -b iTopModifications https://github.com/Balzu/network-inference-with-Blockchain.git'
+sshpass -p mininet ssh -o StrictHostKeyChecking=no mininet@34.244.165.105 'cd guest_share; git clone -b iTopModifications https://github.com/Balzu/network-inference-with-Blockchain.git'
 
-sshpass -p mininet ssh -o StrictHostKeyChecking=no mininet@18.202.244.134 'cd guest_share; git clone -b iTopModifications https://github.com/Balzu/network-inference-with-Blockchain.git'
+sshpass -p mininet ssh -o StrictHostKeyChecking=no mininet@54.229.67.153 'cd guest_share; git clone -b iTopModifications https://github.com/Balzu/network-inference-with-Blockchain.git'
 
-sshpass -p mininet ssh -o StrictHostKeyChecking=no mininet@52.208.226.203 'cd guest_share; git clone -b iTopModifications https://github.com/Balzu/network-inference-with-Blockchain.git'
+sshpass -p mininet ssh -o StrictHostKeyChecking=no mininet@34.254.222.226 'cd guest_share; git clone -b iTopModifications https://github.com/Balzu/network-inference-with-Blockchain.git'
 
-sshpass -p mininet ssh -o StrictHostKeyChecking=no mininet@34.250.249.63 'cd guest_share; git clone -b iTopModifications https://github.com/Balzu/network-inference-with-Blockchain.git'
+sshpass -p mininet ssh -o StrictHostKeyChecking=no mininet@63.32.111.186 'cd guest_share; git clone -b iTopModifications https://github.com/Balzu/network-inference-with-Blockchain.git'
 
-sshpass -p mininet ssh -o StrictHostKeyChecking=no mininet@34.247.46.2 'cd guest_share; git clone -b iTopModifications https://github.com/Balzu/network-inference-with-Blockchain.git'
+sshpass -p mininet ssh -o StrictHostKeyChecking=no mininet@52.210.125.171 'cd guest_share; git clone -b iTopModifications https://github.com/Balzu/network-inference-with-Blockchain.git'
 
-sshpass -p mininet ssh -o StrictHostKeyChecking=no mininet@34.247.46.2 'cd guest_share; git clone -b iTopModifications https://github.com/Balzu/network-inference-with-Blockchain.git'
+sshpass -p mininet ssh -o StrictHostKeyChecking=no mininet@54.171.213.251 'cd guest_share; git clone -b iTopModifications https://github.com/Balzu/network-inference-with-Blockchain.git'

@@ -11,8 +11,8 @@ def get_servers_id():
     '''
     :return: The ID of the servers defined in the configuration files
     '''
-    return ["127.0.0.100:10000", "127.0.0.101:10000", "127.0.0.102:10000", "127.0.0.103:10000", "127.0.0.104:10000",
-            "127.0.0.105:10000", "127.0.0.106:10000", "127.0.0.107:10000", "127.0.0.108:10000", "127.0.0.109:10000"]
+    return ["172.31.19.103:10000", "172.31.19.80:10000", "172.31.16.141:10000", "172.31.21.248:10000", "172.31.19.142:10000",
+            "172.31.19.36:10000", "172.31.25.86:10000", "172.31.17.120:10000", "172.31.24.184:10000", "172.31.29.155:10000"]
 
 def configure_server(config_file, unl_from_file = True, stop=False, verbose=False, malicious = 0, num_tx = 10, tree_tx = False):
     '''Uses the parameters defined in the configuration file to create a server and return it.'''

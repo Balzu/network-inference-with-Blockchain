@@ -110,9 +110,10 @@ def simulation_one(num_exp, num_htx=0):
         for sip in servers:
             os.system("sshpass -p mininet ssh -o StrictHostKeyChecking=no mininet@" + sip.split(':')[
                 0] + " 'kill $(sudo netstat -pltn | grep 10000 | awk '{print $7}' | awk -F'/' '{print $1}') >test.txt &'")
-    open, est, acc = retrieve_times()
-    plot_avg_group_times(open, est, acc, 'first', 6, 'c1_g1.png')
-    plot_avg_group_times(open, est, acc, 'second', 6, 'c1_g2.png')
+    print '\nEXPERIMENT ENDED. COPY THE FILES FROM SERVERS TO CLIENT (this machine) AND THEN COMPUTE TIMES AND DRAW GRAPH..\n'
+    #open, est, acc = retrieve_times()
+    #plot_avg_group_times(open, est, acc, 'first', 6, 'c1_g1.png')
+    #plot_avg_group_times(open, est, acc, 'second', 6, 'c1_g2.png')
 
 
 def simulation_two(num_exp, num_mal, num_htx=0):

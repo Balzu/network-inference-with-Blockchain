@@ -400,7 +400,7 @@ def experiment_eight(id, sensors, subfolder):
     :param sensors: list of boolean values telling which sensors have to be used
     :return: Saves the topology stored in the ledger in a file called print_topo[id].png
     '''
-    #servers = start_blockchain()
+    servers = start_blockchain()
     (net, topo) = start_network_number(8, sensor1=sensors[0], sensor2=sensors[1], sensor3=sensors[2], sensor4=sensors[3])
     os.system('./init.sh')
     topo.create_alias_file()

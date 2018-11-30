@@ -294,7 +294,8 @@ def simulation_nine():
             ]
     cmd4s = [   ('sudo python run.py -n 9 -s1 -s2 -s3 -s4 -sub four_sensors -id ', 20)
             ]
-    commands = [cmd1s, cmd2s, cmd3s, cmd4s]
+    #commands = [cmd1s, cmd2s, cmd3s, cmd4s]
+    commands = [cmd4s]
     for cmdlist in commands:
         id = 0
         for pair in cmdlist:
