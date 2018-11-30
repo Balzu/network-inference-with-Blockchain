@@ -52,7 +52,7 @@ class server_socket(threading.Thread):
         self.start_listening(server)
 
     def handle_client_connection(self, client_socket):
-        msg = client_socket.recv(4096) #Era 32768
+        msg = client_socket.recv(8192) #Era 32768
         #self.server.logger().info('\nMsg length: ' + str(len(msg)) + '\n')
         try:
             msg = pickle.loads(msg)
