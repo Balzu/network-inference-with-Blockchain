@@ -52,11 +52,12 @@ class server_socket(threading.Thread):
         self.start_listening(server)
 
     def handle_client_connection(self, client_socket):
-        msg = client_socket.recv(4096) #Era 32768
+        msg = client_socket.recv(8192) #Era 32768
         self.server.logger().info('\nMsg length: ' + str(len(msg)) + '\n')
         try:
             msg = pickle.loads(msg)
         except ValueError as e:
+            pdb.set_trace()
             self.server.logger().info('\nValue Error: ' + str(e) + '\n')
             return #TODO this exception only happens in AWS EC2, never reproduced locally
         ack_msg = self.server.handle_message(msg)
