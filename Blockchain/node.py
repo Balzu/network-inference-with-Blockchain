@@ -53,12 +53,12 @@ class server_socket(threading.Thread):
         self.start_listening(server)
 
     def handle_client_connection(self, client_socket):
-        msg = client_socket.recv(8192) #Era 32768
+        msg = client_socket.recv(32768) #Era 32768
         #self.server.logger().info('\nMsg length: ' + str(len(msg)) + '\n')
         try:
             msg = pickle.loads(msg)
         except (ValueError, EOFError) as e:
-            #self.server.logger().info('\nMessage ' + str(msg) + ' :\nerror:\n ' + str(e) + '\n')
+            self.server.logger().info('\nMessage ' + str(msg) + ' :\nerror:\n ' + str(e) + '\n')
             return #TODO this exception only happened in AWS EC2, never reproduced locally
         ack_msg = self.server.handle_message(msg)
         ack_msg = pickle.dumps(ack_msg, protocol=2)
@@ -68,14 +68,10 @@ class server_socket(threading.Thread):
     def stop(self):
         self.end = True
 
-    '''TODO Aggiungi condizione booleana 'end', che viene settata dal main() quando il programma deve terminare
-     (può essere messaggio particolare per socket), un TIMEOUT sulla wait che dopo un po' di tempo senza connessioni
-     lo riporta a testare la condizione ( che invece di 'while TRUE' diventa 'while not end') '''
     def start_listening(self, server):
         while not self.end:
             try:
                 client_sock, address = server.accept()
-                #print 'Accepted connection from {}:{}'.format(address[0], address[1])
                 client_handler = threading.Thread(
                 target=self.handle_client_connection,
                 args=(client_sock,)
@@ -86,10 +82,9 @@ class server_socket(threading.Thread):
         server.shutdown(socket.SHUT_RDWR)
         server.close()
 
-
-
 class topology_node(object):
-    """ Interface for a node of the topology. The type can be 'R', 'A', 'B', 'NC', 'H' """
+    """ Interface for a node of the topology. The type can be 'R', 'A', 'B', 'NC', 'H' or 'P'
+    ('P' means arbitrary node added to fit the topology to a given pattern)"""
     def __init__(self, name, type):
         self._name = name
         self._type = type
@@ -228,12 +223,12 @@ class client(node):
     def create_txset_messages(self, transactions):
         msgs = []
         num = len(transactions)
-        while num > 10:
-            tmp = transactions[0:10]
+        while num > 40:
+            tmp = transactions[0:40]
             header = message_header(self.id(), self.signature(), 'id', 1, message_type.transaction_set)
             payload = message_payload(transaction_set(tmp))
             msgs.append(message(header, payload))
-            transactions = transactions[10:]
+            transactions = transactions[40:]
             num = len(transactions)
         header = message_header(self.id(), self.signature(), 'id', 0, message_type.transaction_set)
         payload = message_payload(transaction_set( transactions))
@@ -561,13 +556,13 @@ class server(client):
     def create_proposal_messages(self, transactions, r):
         msgs = []
         num = len(transactions)
-        while num > 10:
-            tmp = transactions[0:10]
+        while num > 40:
+            tmp = transactions[0:40]
             header = message_header(self.id(), self.signature(), 'id', 1, message_type.proposal)
             txset = transaction_set(tmp)
             payload = message_payload(proposal(self.id(), r[0], txset, self.__blockchain.current_ledger_id(), complete=False))
             msgs.append(message(header, payload))
-            transactions = transactions[10:]
+            transactions = transactions[40:]
             num = len(transactions)
         header = message_header(self.id(), self.signature(), 'id', 0, message_type.proposal)
         txset = transaction_set(transactions)
@@ -627,7 +622,6 @@ class server(client):
                 if t.type() == 'I':
                     new_txset.add_transaction(t)
                 else: # Type of transaction is 'Delete'. If dst is None, remove all the tx in which src appears.
-                    #pdb.set_trace()
                     dst = t.dst()
                     removed = False
                     if dst is not None:
@@ -739,13 +733,13 @@ class server(client):
         msgs = []
         num = len(transactions)
         #pdb.set_trace()
-        while num > 10:
-            tmp = transactions[0:10]
+        while num > 35:
+            tmp = transactions[0:35]
             header = message_header(self.id(), self.signature(), 'id', 1, message_type.ledger)
             txset = transaction_set(tmp)
             payload = message_payload(full_ledger(seq, txset))
             msgs.append(message(header, payload))
-            transactions = transactions[10:]
+            transactions = transactions[35:]
             num = len(transactions)
         header = message_header(self.id(), self.signature(), 'id', 0, message_type.ledger)
         txset = transaction_set(transactions)
@@ -1021,7 +1015,12 @@ class server(client):
             (name,type) = v.split(':')
             vprop_name[added[v]] = name
             vprop_type[added[v]] = type
-            vprop_col[added[v]] = [0.3, 0.1, 1, 0.9] if type == 'R' else [0.3, 0.4, 0.5, 0.9]
+            if type == 'R':
+                vprop_col[added[v]] = [0.3, 0.1, 1, 0.9]
+            elif type =='P':
+                vprop_col[added[v]] = [1, 0.101, 0.152, 0.9] # Special Handling for 'Pattern' node
+            else:
+                vprop_col[added[v]] = [0.3, 0.4, 0.5, 0.9]
         if collapse:
             removed = g.new_vertex_property("bool")
             removed.a = False

@@ -19,7 +19,7 @@ class sensor(object):
     def __init__(self, id, nh, net, config_file, hosts=[], active = True, passive = True, full = False, ignored_ips=[],
                  known_ips = [], max_fail = 5, simulation=False, readmit=True, verbose=False, interactive=False,
                  include_hosts=False, asid=None, msid=None, intf = 'any', clean_cmd = [], sleep_time = 10,
-                 subnets = '192.168.0.0/16'):
+                 subnets = '192.168.0.0/16', nrr=True, pattern='', **pattern_params):
         '''
         :param id: the id of this sensor. It must be the ID of the node on which the sensor is placed.
         :param nh: the number of hosts (monitors) to be used when they are chosen randomly to run iTop(if hosts=[])
@@ -47,6 +47,10 @@ class sensor(object):
         :param clean_cmd: List of commands to be executed by this sensor to clean previously generated traces
         :param sleep_time: time to wait before the next cycle of alive/dead nodes checks is started from the sensor
         :param subnets: The network or combination of networks to which packet sniffing is restricted to (only applies if simulation=True)
+        :param nrr: Set to False if you want to skip Non Responding Routers (NRR) from the topology. The transactions
+               are rearranged to reflect this modification to the topology.
+        :param pattern: The pattern to which the induced topology should fit
+        :param **pattern_params: The parameters passed to manage the specific pattern
         '''
         setup_logger('sensor ' + id + '.log', 'sensor ' + id + '.log')
         self.__logger = logging.getLogger('sensor ' + id + '.log')
@@ -79,8 +83,12 @@ class sensor(object):
         self.__clean_cmd = clean_cmd
         self.__intercycles_time = sleep_time
         self.__subnets = subnets
+        self.__nrr = nrr
+        self.__pattern = pattern
+        self.__pattern_params = pattern_params
         self.__c = configure_client(config_file)
         register_client(self.__c)
+        #self.impose_pattern() #TODO
 #TODO conviene avere metodi synchronized per accedere in scrittura a S.D. condivise
 
 
@@ -98,7 +106,6 @@ class sensor(object):
                 threading.Thread(target=self.active_sensor).start()
         threading.Thread(target=self.run).start()
         if self.__interactive: threading.Thread(target=self.wait_user_input).start()
-
 
     def run(self):
         while not self.__end:
@@ -146,7 +153,7 @@ class sensor(object):
         #pdb.set_trace()
         try:
             self.__fail_count[ip] = self.__fail_count[ip] + 1
-            if self.__verbose:  print '\nFail count for ' + ip + ' = ' + str(self.__fail_count[ip])
+            if self.__verbose:  print '\n' + self.__msid + ' : Fail count for ' + ip + ' = ' + str(self.__fail_count[ip])
             if self.__fail_count[ip] > self.__max_fail:
                 self.__dead.append(ip)
                 if not self.__readmit:
@@ -245,7 +252,7 @@ class sensor(object):
             if self.__full or res == False: # if fastiTop is not run it is guaranteed that full iTop is run
                 out = self.fulliTop()
             topo = get_topo_from_json(out)
-            trans = get_transactions_from_topo(topo)
+            trans = get_transactions_from_topo(topo) if self.__nrr else create_transactions_for_compacted_topo(topo)
             self.__c.send_transactions(trans)
         self.__new = list(set(self.__new) - set(new)) # In the meantime some new IP could have arrived..
 
@@ -353,6 +360,59 @@ class sensor(object):
             return (True, out)
         return (False, None)
 
+    def impose_pattern(self):
+        '''
+        Generates the pattern-specific transactions and sends them to the Blockchain
+        '''
+        trans = self.pattern_transactions()
+        if len(trans) > 0: self.__c.send_transactions(trans)
+
+
+    def pattern_transactions(self):
+        '''
+        Returns a list of transactions to be sent to Blockchain nodes to fit the induced topology to the pattern
+        :return: List of transactions
+        '''
+        if self.__pattern == 'tree':
+            return self.tree_pattern_transactions()
+        else: #TODO each different pattern has a specific handler. Put here a series of 'elif'...
+            return []
+
+    def tree_pattern_transactions(self):
+        '''
+        Returns the pair of transactions needed to fit the induced topology to a tree topology:
+        Root -> Child and Child -> Root.
+        If Root_IP is specified, the transactions are added only if Root_IP is not a known host, else if Root_IP
+        is not specified the transactions are added anyway.
+        If child_IP is specified, the child node is the one specified, otherwise we assume this sensor to be the
+        child of the root.
+        :return: List of two transactions
+        '''
+        #TODO: va controllato cosa succede se un sensore 'trova' la radice e un altro no
+        # After retrieving the 'names' of the nodes, we insert in the Blockchain the transactions Root -> Child and Child -> Root
+        root_IP = self.__pattern_params['root_IP'] if 'root_IP' in self.__pattern_params else ''
+        child_IP = self.__pattern_params['child_IP'] if 'child_IP' in self.__pattern_params else ''
+        if root_IP is not '':
+            if root_IP in self.__known_ips:
+                return [] # Nothing to do, we already discovered the root
+            else:
+                alias = create_alias()
+                root = topology_node(alias[root_IP], 'P') if root_IP in alias else topology_node('ROOT', 'P')
+        else:
+            root = topology_node('ROOT', 'P')
+        if child_IP is not '':
+            alias = create_alias()
+            if child_IP in self.__known_ips:
+                child = topology_node(alias[child_IP], 'R') if child_IP in alias else topology_node(self.__msid, 'R')
+            else:
+                child = topology_node(alias[child_IP], 'P') if child_IP in alias else topology_node(self.__msid, 'R')
+        else:
+            child = topology_node(self.__msid, 'R')
+        trx1 = transaction(child, root)
+        trx2 = transaction(root, child)
+        return [trx1, trx2]
+
+
     def ips_alias(self, hosts):
         '''
         Scans the known_ips + host list to create a list of alias. If an IP has no known alias, it does not insert that
@@ -381,6 +441,8 @@ class sensor(object):
 
     #TODO lo stoppi in questo modo? Considera se devi proteggere variabili con lock o no
     def stop(self):
+        # TODO pattern viene imposto prima di stoppare il sensore per comodità di simulazione, potresti farlo quando vuoi
+        #if self.__pattern is not '' : self.impose_pattern()
         self.__end = True
 
     def wait_end(self):

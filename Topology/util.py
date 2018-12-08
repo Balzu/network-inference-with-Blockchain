@@ -102,6 +102,33 @@ def get_transactions_from_topo(topo):
             transactions.append(tx)
     return transactions
 
+def create_transactions_for_compacted_topo(topo):
+    '''Creates a list of transactions for a compacted topology in which non responding routers are absent.'''
+    # First build dictionary having key = node_name, value = (node, list of neighbors)
+    nodes = {}
+    for n in topo:
+        node = topology_node(n["Name"], n["Type"])
+        nodes[n["Name"]] = (node, n["Neighbors"][:])
+    # Then create transactions and finally pass them to the transaction_set
+    transactions = []
+    for n in topo:
+        if n["Type"] == "R":
+            i = 0
+            neighbors = n["Neighbors"][:]
+    # removed keeps the nodes that we already removed from the neighbors list and that should not be considered again
+            removed = [n["Name"]] if n["Name"] not in neighbors else []# To avoid the self-loop (if self-loop is not present)
+            while i < len (neighbors):
+                if nodes[neighbors[i]][0].type() != "R":
+                    removed.append(neighbors[i])
+                    neighbors = list(set(neighbors).union(set(nodes[neighbors[i]][1])))
+                    neighbors = [v for v in neighbors if v not in removed]
+                    i = 0
+                else:
+                    i += 1
+            for dst in neighbors:
+                transactions.append(transaction(nodes[n["Name"]][0], nodes[dst][0]))
+    return transactions
+
 #TODO gestisci caso in cui registrazione non va a buon fine(?)
 def register_client(c):
     c.ask_client_registration()

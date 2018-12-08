@@ -473,6 +473,51 @@ def experiment_nine(id, sensors, subfolder):
     servers[3].draw_topology(prefix='topo_exp9/' + subfolder + '/', suffix=str(id))
     stop_blockchain(servers)
 
+def experiment_ten(id, sensors, subfolder):
+    '''
+    Sets up NetworkTopo9 with pattern=Tree..
+    :param id: (Incremental) Identifier of the experiment
+    :param sensors: list of boolean values telling which sensors have to be used
+    :param subfolders: tells in which subfolder to store the drawing of the topology
+    :return: Saves the topology stored in the ledger in a file called print_topo[id].png
+    '''
+    servers = start_blockchain()
+    (net, topo) = start_network_number(9, sensor1=sensors[0], sensor2=sensors[1], sensor3=sensors[2], sensor4=sensors[3])
+    os.system('./init.sh')
+    topo.create_alias_file()
+    asnames = topo.active_sensors
+    psnames = topo.passive_sensors
+    msnames = topo.monitor_sensors
+    sensors = []
+    topo.add_firewall_rules(net)
+    # Here we skip the preliminary traces gathered by the sensors
+    compute_distances(net, msnames)
+    clean_cmd_base = 'rm -rf traceroute/'
+    child_IP = {'s1': '', 's2' : '192.168.4.2', 's3' : '192.168.5.2', 's4' : '192.168.5.2'} # Each sensor has a different child_IP. Knowledge about the topology is exploited here
+    for i in range(len(psnames)):
+        clean_cmd = [clean_cmd_base + msnames[i] + '/*']
+        os.system('mkdir traceroute/' + msnames[i])
+        sensors.append(sensor(psnames[i], len(msnames), net, 'configuration/sensor_config' + str(i + 1) + '.json',
+                              hosts=msnames, max_fail=3, clean_cmd=clean_cmd, known_ips=[], simulation=True,
+                              sleep_time=30, subnets = '192.168.0.0/16 or 12.0.0.0/8',
+                              verbose=False, asid=asnames[i], msid=msnames[i], include_hosts=True,
+                              intf=topo.interface_name[i], nrr = False, pattern ='tree', root_IP='12.10.5.1', child_IP=child_IP[psnames[i]]))
+        # root_IP is the IP address of r1. You could give a different IP for r1 based on which IP address the sensor (should) see, but it is the same..
+    [s.start() for s in sensors]
+    hosts = [net['h1'], net['h2'], net['h3'], net['h4'], net['h5'], net['h6'], net['h7'], net['h8'], net['r2'], net['r3']]
+    time.sleep(10)
+    print '\n\n ...............  PINGING   .............. \n\n'
+    net.ping(hosts=hosts, timeout = 2)
+    time.sleep(100)
+    for s in sensors:
+        s.impose_pattern()
+    time.sleep(100)
+    [s.stop() for s in sensors]
+    [s.wait_end() for s in sensors]
+    servers[3].draw_topology(prefix='topo_exp10/' + subfolder + '/', suffix=str(id), collapse = False) #TODO messo collapse = false
+    servers[3].store_topo_to_file('FINAL_TOPOLOGY')
+    stop_blockchain(servers)
+
 if __name__ == '__main__':
     args = parse_cmd_args()
     num = args.num
@@ -500,6 +545,8 @@ if __name__ == '__main__':
         experiment_eight(id, [s1, s2, s3, s4], subfolder=sub)
     elif num == 9:
         experiment_nine(id, [s1, s2, s3, s4], subfolder=sub)
+    elif num == 10:
+        experiment_ten(id, [s1, s2, s3, s4], subfolder=sub)
 
 
 

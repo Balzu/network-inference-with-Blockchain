@@ -1,16 +1,24 @@
 Cmd: sudo timeout 30 tcpdump -l -i s2-eth1 net 192.168.0.0/16 or 12.0.0.0/8 >> tcpdump_outs2
-2018-11-29 19:29:13 : New IP discovered by s2 : 192.168.1.101
-2018-11-29 19:29:13 : New IP discovered by s2 : 192.168.1.3
-2018-11-29 19:31:23 : New IP discovered by s2 : 192.168.1.2
+2018-12-07 15:58:15 : New IP discovered by s2 : 192.168.1.2
+2018-12-07 15:58:27 : New IP discovered by s2 : 192.168.4.2
+2018-12-07 15:58:29 : New IP discovered by s2 : 192.168.1.3
 Run full iTop
 full iTop hosts: 
-hms1
+h3
 h4
 r2
-h3
+2018-12-07 15:58:33 : New IP discovered by s2 : 192.168.1.103
+2018-12-07 15:58:38 : New IP discovered by s2 : 192.168.1.101
+2018-12-07 15:59:28 : New IP discovered by s2 : 192.168.1.1
 Run full iTop
 full iTop hosts: 
-hms1
+h3
 h4
 r2
+hms1
+Run full iTop
+full iTop hosts: 
 h3
+h4
+r2
+hms1

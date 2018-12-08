@@ -226,8 +226,13 @@ def add_routers(topo, host1, host2, x, alias, traces, max_iter, blocking_case, i
                         (src, dst) = add_link(topo, (host1, dst), x, max_iter)
                         traces[host1 + host2].append(src)
                         traces[host1 + host2].append(dst)
-            if not blocking_case: #TODO Questo if era annidato, ma credo sia giusto ora. Controlloa
+            if not blocking_case:
                 traces[host1+host2].append(dst)
+        if include_host:
+            src = host1
+            dst = find_router(lines[1].split(), alias)
+            (src, dst) = add_link(topo, (src, dst), x, 0)
+            #TODO forse devi introdurre il router ance nelle tracce?
         for i in range(1, max_iter):
             src = find_router(lines[i].split(), alias)
             dst = find_router(lines[i+1].split(), alias)

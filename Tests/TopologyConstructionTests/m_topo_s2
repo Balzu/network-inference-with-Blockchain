@@ -1,1 +1,1 @@
-{"hosts": ["hms1", "h4", "r2", "h3"], "topology": [{"Neighbors": ["h3", "r2", "h4"], "Type": "R", "Name": "hms1"}, {"Neighbors": ["hms1"], "Type": "R", "Name": "r2"}, {"Neighbors": ["hms1"], "Type": "R", "Name": "h4"}, {"Neighbors": ["hms1"], "Type": "R", "Name": "h3"}]}
+{"hosts": ["h3", "h4", "r2", "hms1"], "topology": [{"Neighbors": ["hms1"], "Type": "R", "Name": "h3"}, {"Neighbors": ["hms1"], "Type": "R", "Name": "r2"}, {"Neighbors": ["hms1"], "Type": "R", "Name": "h4"}, {"Neighbors": ["h3", "r2", "h4"], "Type": "R", "Name": "hms1"}]}

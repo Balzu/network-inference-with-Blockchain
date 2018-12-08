@@ -269,7 +269,8 @@ if __name__=='__main__':
     nht = int(args.honest_transactions)
     if t == '1':
         experiment_one_client(nht)
-        print '\n\nAAA'
+    if t == '1i':
+        experiment_one_client_interactive(nht)
     elif t == '1s':
         experiment_one_server(ns)
     elif t == '2':
