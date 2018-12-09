@@ -58,7 +58,7 @@ class server_socket(threading.Thread):
         try:
             msg = pickle.loads(msg)
         except (ValueError, EOFError) as e:
-            self.server.logger().info('\nMessage ' + str(msg))# + ' :\nerror:\n ' + str(e) + '\n')
+            self.server.logger().info('\nError:\n ' + str(e) + '\n') #'\nMessage ' + str(msg) +
             return #TODO this exception only happened in AWS EC2, never reproduced locally
         ack_msg = self.server.handle_message(msg)
         ack_msg = pickle.dumps(ack_msg, protocol=2)
