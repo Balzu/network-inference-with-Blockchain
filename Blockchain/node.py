@@ -62,7 +62,7 @@ class server_socket(threading.Thread):
         #    self.server.logger().info('\nError:\n ' + str(e) + '\n') #'\nMessage ' + str(msg) +
         #    return #TODO this exception only happened in AWS EC2, never reproduced locally
         ack_msg = self.server.handle_message(msg)
-        ack_msg = pickle.dumps(ack_msg, protocol=2)
+        ack_msg = pickle.dumps(ack_msg)#, protocol=2)
         client_socket.send(ack_msg) # ack message is no longer a string, but a 'message'
         client_socket.close()
 
@@ -269,7 +269,7 @@ class client(node):
             try:
                 sender = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
                 sender.connect((ip_addr, port))
-                pmsg = pickle.dumps(msg, protocol=2)
+                pmsg = pickle.dumps(msg)#, protocol=2)
                 sender.sendall(pmsg) # No need for lock on msg, it is just read
                 ack = sender.recv(1024)
                 ack = pickle.loads(ack)
@@ -282,7 +282,7 @@ class client(node):
                 try:
                     sender = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
                     sender.connect((ip_addr, port))
-                    pmsg = pickle.dumps(m, protocol=2)
+                    pmsg = pickle.dumps(m)#, protocol=2)
                     sender.sendall(pmsg) # No need for lock on msg, it is just read
                     ack = sender.recv(1024)
                     ack = pickle.loads(ack)
