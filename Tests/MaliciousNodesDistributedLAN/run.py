@@ -112,7 +112,7 @@ def experiment_one_server(i):
     Runs server number 'i'. Tis function is run on the remote, blockchain host. Servers from 1 to 6 have each other in their UNL.
     '''
     print '\n----------------- Experiment one ------------------\n'
-    server = configure_server('configuration/server' + str(i) + '_config.json', stop=True, verbose=False)
+    server = configure_server('configuration/server' + str(i) + '_config.json', stop=True, verbose=True)
     time.sleep(6 - i * 0.1)  # The last to be run waits less
     register_observer(server)
     time.sleep(5-i*0.1) # The last to be run waits less
