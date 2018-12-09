@@ -112,7 +112,7 @@ def experiment_one_server(i):
     Runs server number 'i'. Tis function is run on the remote, blockchain host. Servers from 1 to 6 have each other in their UNL.
     '''
     print '\n----------------- Experiment one ------------------\n'
-    server = configure_server('configuration/server' + str(i) + '_config.json', stop=True, verbose=True)
+    server = configure_server('configuration/server' + str(i) + '_config.json', stop=True, verbose=False)
     time.sleep(6 - i * 0.1)  # The last to be run waits less
     register_observer(server)
     time.sleep(5-i*0.1) # The last to be run waits less
@@ -132,8 +132,8 @@ def experiment_one_client(num_htx): #todo rename
     c = configure_client('configuration/client_config.json')
     i= 1
     for sip in c.validators:
-        os.system("sshpass -p mininet ssh -o StrictHostKeyChecking=no mininet@" + sip.split(':')[
-            0] + " 'cd guest_share/network-inference-with-Blockchain/Tests/MaliciousNodesDistributed/;"
+        os.system("ssh mininet@" + sip.split(':')[
+            0] + " 'cd network-inference-with-BlockchainNEW/Tests/MaliciousNodesDistributedLAN/;"
                  "python run.py --type 1s --server_number " + str(i) + " > /dev/null &'")
         i += 1
     time.sleep(5)

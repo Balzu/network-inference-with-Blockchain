@@ -95,8 +95,8 @@ def simulation_one(num_exp, num_htx=0):
     '''
     servers = configure_client('configuration/client_config.json').validators
     for sip in servers:
-        os.system("sshpass -p mininet ssh -o StrictHostKeyChecking=no mininet@" + sip.split(':')[
-            0] + " 'cd guest_share/network-inference-with-Blockchain/Tests/MaliciousNodesDistributed/;"
+        os.system("ssh mininet@" + sip.split(':')[
+            0] + " 'cd network-inference-with-BlockchainNEW/Tests/MaliciousNodesDistributedLAN/;"
                  " rm *.log > /dev/null &'")
     for i in range(0, num_exp):
         print '\n Number of experiment: ' + str(i)
@@ -108,7 +108,7 @@ def simulation_one(num_exp, num_htx=0):
         print '\n Going to kill stale processes..\n'
         # Kill the processes that still use the sockets (if any). Returns usage message if nothing to kill
         for sip in servers:
-            os.system("sshpass -p mininet ssh -o StrictHostKeyChecking=no mininet@" + sip.split(':')[
+            os.system("ssh mininet@" + sip.split(':')[
                 0] + " 'kill $(sudo netstat -pltn | grep 10000 | awk '{print $7}' | awk -F'/' '{print $1}') >test.txt &'")
     print '\nEXPERIMENT ENDED. COPY THE FILES FROM SERVERS TO CLIENT (this machine) AND THEN COMPUTE TIMES AND DRAW GRAPH..\n'
     #open, est, acc = retrieve_times()
