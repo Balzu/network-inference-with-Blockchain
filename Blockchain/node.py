@@ -54,7 +54,7 @@ class server_socket(threading.Thread):
 
     def handle_client_connection(self, client_socket):
         msg = client_socket.recv(4096) #TODO Era 32768
-        #self.server.logger().info('\nMsg length: ' + str(len(msg)) + '\n')
+        self.server.logger().info('\nMsg length: ' + str(len(msg)) + '\n')
         #msg = pickle.loads(msg)
         try:
             msg = pickle.loads(msg)
