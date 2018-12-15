@@ -95,3 +95,27 @@ Establish phase time 60.0735771656 , ledger 0
 Accept phase time 60.0634949207 , ledger 0
 Consensus Reached: False
 Open phase time 40.0143887997 , ledger 0
+Open phase time 26.6879191399 , ledger 0
+Same Proposals: 0
+Quorum = 4.0
+Establish phase time 20.2695100307 , ledger 0
+Accept phase time 60.0573549271 , ledger 1
+Consensus Reached: True
+Open phase time 5.50746917725e-05 , ledger 1
+Same Proposals: 0
+Quorum = 4.0
+Establish phase time 20.1337580681 , ledger 1
+Accept phase time 36.0437719822 , ledger 1
+Consensus Reached: False
+Open phase time 4.50611114502e-05 , ledger 1
+Same Proposals: 0
+Quorum = 4.0
+Same Proposals: 2
+Quorum = 4.0
+Establish phase time 40.1596019268 , ledger 1
+Accept phase time 6.09289884567 , ledger 2
+Consensus Reached: True
+Open phase time 26.6887879372 , ledger 2
+Same Proposals: 0
+Quorum = 4.0
+Establish phase time 20.2042388916 , ledger 2

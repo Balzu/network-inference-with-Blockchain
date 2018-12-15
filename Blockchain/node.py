@@ -52,7 +52,7 @@ class server_socket(threading.Thread):
         #print 'Listening on {}:{}'.format(self.ip_addr, self.port)
         self.start_listening(server)
 
-    def recv_timeout(self, the_socket, timeout=2):
+    def recv_timeout(self, the_socket, timeout=1):
         # make socket non blocking
         the_socket.setblocking(0)
         # total data partwise in an array
@@ -76,7 +76,7 @@ class server_socket(threading.Thread):
                     begin = time.time()
                 else:
                     # sleep for sometime to indicate a gap
-                    time.sleep(0.1)
+                    time.sleep(0.05)
             except:
                 pass
         # join all parts to make final string
