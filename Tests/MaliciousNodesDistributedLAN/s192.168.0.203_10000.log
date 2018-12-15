@@ -119,3 +119,11 @@ Open phase time 26.6887879372 , ledger 2
 Same Proposals: 0
 Quorum = 4.0
 Establish phase time 20.2042388916 , ledger 2
+Accept phase time 60.0897989273 , ledger 2
+Consensus Reached: False
+Open phase time 26.6738488674 , ledger 0
+Same Proposals: 0
+Quorum = 4.0
+Establish phase time 20.0550999641 , ledger 0
+Accept phase time 0.0651299953461 , ledger 1
+Consensus Reached: True
