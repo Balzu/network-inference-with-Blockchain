@@ -14,7 +14,7 @@ from client import *
 from argparse import ArgumentParser
 
 
-def run(i, hosts, net):
+def run(i, hosts, net, nrr=True):
     alias = create_alias()
     compute_distances(net, hosts)
     create_traces(net, hosts, src_hosts = [hosts[i]]) # Each sensor collects the traces only from itself
@@ -25,7 +25,7 @@ def run(i, hosts, net):
     c = configure_client("configuration/client_config.json")
     register_client(c)
     topo = get_topo_from_json(out)
-    trans = get_transactions_from_topo(topo)
+    trans = get_transactions_from_topo(topo) if nrr else create_transactions_for_compacted_topo(topo)
     c.send_transactions(trans)
 
 def configure_server(config_file, init_unl = True):
@@ -93,9 +93,9 @@ def parse_cmd_args():
                         help="Specify the name of the subfolder in which the drawings have to be put")
     return parser.parse_args()
 
-def startup(nt, hosts, net):
+def startup(nt, hosts, net, nrr=True):
     for i in range(int(nt)):
-        run(i, hosts, net)
+        run(i, hosts, net, nrr)
 
 def start_blockchain():
     '''
@@ -147,14 +147,14 @@ def experiment_one(id):
     # Ping toward the sensor on the other subnet
     hosts = [net['h3'], net['h4'], net['h5'], net['h1'],net['h2'], net['h0'] ]
     net.ping(hosts=hosts)
-    '''
+
     net['h3'].cmd('ping -c 1 192.168.1.102 ')  # hps1
     net['h4'].cmd('ping -c 1 192.168.1.102 ')  # hps1
     net['h5'].cmd('ping -c 1 192.168.1.102 ')  # hps1
     net['h1'].cmd('ping -c 1 192.168.2.102 ')  # hps2
     net['h2'].cmd('ping -c 1 192.168.2.102  ')  # hps2
     net['h0'].cmd('ping -c 1 192.168.2.102  ')  # hps2
-    '''
+    
     time.sleep(120)
     [s.stop() for s in sensors]
     servers[3].draw_topology(prefix = 'topo_exp1/', suffix = str(id))
@@ -197,7 +197,7 @@ def experiment_two(id):
     servers[3].draw_topology(prefix = 'topo_exp2/', suffix = str(id))
     stop_blockchain(servers)
 
-def experiment_three(id):
+def experiment_three(id, nrr=True):
     '''
     Sets up NetworkTopo3 with two sensors.
     :param id: (Incremental) Identifier of the experiment
@@ -210,7 +210,7 @@ def experiment_three(id):
     asnames = topo.active_sensors
     psnames = topo.passive_sensors
     msnames = topo.monitor_sensors
-    startup(2, msnames, net)
+    startup(2, msnames, net, nrr)
     ips = get_responding_ips(msnames)
     sensors = []
     clean_cmd_base = 'rm -rf traceroute/'
@@ -219,7 +219,8 @@ def experiment_three(id):
         os.system('mkdir traceroute/' + msnames[i])
         sensors.append(sensor(psnames[i], len(msnames), net, 'configuration/sensor_config' + str(i+1) + '.json',
                               hosts = msnames, max_fail=3, clean_cmd=clean_cmd,  known_ips=ips, simulation=True, sleep_time = 30,
-                              verbose=False, asid=asnames[i], msid=msnames[i], include_hosts=True, intf=psnames[i]+'-eth0'))
+                              verbose=False, asid=asnames[i], msid=msnames[i], include_hosts=True,
+                              intf=psnames[i]+'-eth0', nrr = nrr))
     [s.start() for s in sensors]
     time.sleep(10)
     # Ping toward the sensor on the other subnet
@@ -532,7 +533,7 @@ if __name__ == '__main__':
     elif num == 2:
         experiment_two(id)
     elif num == 3:
-        experiment_three(id)
+        experiment_three(id, nrr=False) #TODO fai 'nrr' cmd line argument
     elif num == 4:
         experiment_four(id, [s1, s2, s3, s4], subfolder=sub)
     elif num == 5:

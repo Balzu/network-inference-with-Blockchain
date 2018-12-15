@@ -129,7 +129,7 @@
           <entry key="hms2r1" value="7" />
           <entry key="hmsI" value="3" />
           <entry key="hosts" value="5" />
-          <entry key="json" value="207" />
+          <entry key="json" value="217" />
           <entry key="log" value="18" />
           <entry key="m_topo_0" value="2" />
           <entry key="m_topo_1" value="2" />
@@ -140,7 +140,7 @@
           <entry key="md" value="16" />
           <entry key="png" value="5" />
           <entry key="prova" value="1" />
-          <entry key="py" value="402" />
+          <entry key="py" value="407" />
           <entry key="s1" value="2" />
           <entry key="sh" value="36" />
           <entry key="tcpdump_out" value="3" />
@@ -151,10 +151,10 @@
       <usages-collector id="statistics.file.types.open">
         <counts>
           <entry key="Image" value="5" />
-          <entry key="JSON" value="207" />
+          <entry key="JSON" value="217" />
           <entry key="Markdown" value="17" />
           <entry key="PLAIN_TEXT" value="337" />
-          <entry key="Python" value="402" />
+          <entry key="Python" value="407" />
           <entry key="UNKNOWN" value="1" />
         </counts>
       </usages-collector>
@@ -163,19 +163,19 @@
           <entry key="cmd line" value="2" />
           <entry key="dummy" value="62" />
           <entry key="hosts" value="10" />
-          <entry key="json" value="264" />
+          <entry key="json" value="273" />
           <entry key="m_topo_1" value="7" />
           <entry key="md" value="8888" />
-          <entry key="py" value="75953" />
+          <entry key="py" value="76201" />
           <entry key="sh" value="408" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
         <counts>
-          <entry key="JSON" value="264" />
+          <entry key="JSON" value="273" />
           <entry key="Markdown" value="8888" />
           <entry key="PLAIN_TEXT" value="489" />
-          <entry key="Python" value="75953" />
+          <entry key="Python" value="76201" />
         </counts>
       </usages-collector>
     </session>
@@ -183,90 +183,101 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributedLAN/run.py">
+        <entry file="file://$PROJECT_DIR$/Tests/TopologyConstructionTests/start_simulation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="453">
-              <caret line="146" column="65" selection-start-line="146" selection-start-column="65" selection-end-line="146" selection-end-column="65" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Blockchain/ledger.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-921" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/Blockchain/node.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="193">
-              <caret line="108" column="50" lean-forward="true" selection-start-line="108" selection-start-column="50" selection-end-line="108" selection-end-column="50" />
+            <state relative-caret-position="594">
+              <caret line="329" column="43" selection-start-line="329" selection-start-column="43" selection-end-line="329" selection-end-column="43" />
               <folding>
-                <element signature="e#24#55#0" expanded="true" />
-                <marker date="1544475123814" expanded="true" signature="32412:32418" ph="..." />
-                <marker date="1544475123814" expanded="true" signature="44551:49815" ph="..." />
-                <marker date="1544475123814" expanded="true" signature="48496:49815" ph="..." />
-                <marker date="1544475123814" expanded="true" signature="48785:49815" ph="..." />
+                <marker date="1544103644263" expanded="true" signature="1030:16037" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributedLAN/init_VM.sh">
+        <entry file="file://$PROJECT_DIR$/Sensor/sensor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="195">
-              <caret line="18" selection-start-line="18" selection-end-line="18" />
+            <state relative-caret-position="298">
+              <caret line="295" column="16" lean-forward="true" selection-start-line="295" selection-start-column="16" selection-end-line="295" selection-end-column="16" />
+              <folding>
+                <element signature="e#16#33#0" expanded="true" />
+                <marker date="1544203087690" expanded="true" signature="10463:10468" ph="..." />
+                <marker date="1544203087690" expanded="true" signature="17092:23034" ph="..." />
+                <marker date="1544203087690" expanded="true" signature="19844:19851" ph="..." />
+                <marker date="1544203087690" expanded="true" signature="23028:23034" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/Tests/TopologyConstructionTests/run.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="454">
+              <caret line="156" column="4" lean-forward="true" selection-start-line="156" selection-start-column="4" selection-end-line="156" selection-end-column="4" />
+              <folding>
+                <element signature="e#16#41#0" expanded="true" />
+                <marker date="1544866073065" expanded="true" signature="4908:5058" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributedLAN/reboot.sh">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="150">
-              <caret line="10" selection-start-line="10" selection-end-line="10" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributedLAN/start_sim_remote.sh">
+        <entry file="file://$PROJECT_DIR$/Tests/TopologyConstructionTests/configuration/sensor_config1.json">
           <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributedLAN/update_VM.sh">
+        <entry file="file://$PROJECT_DIR$/Tests/TopologyConstructionTests/configuration/server1_config.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="210">
-              <caret line="14" selection-start-line="14" selection-end-line="14" />
+            <state relative-caret-position="534">
+              <caret line="44" lean-forward="true" selection-start-line="25" selection-start-column="2" selection-end-line="44" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributedLAN/start_simulation.py">
+        <entry file="file://$PROJECT_DIR$/Tests/TopologyConstructionTests/configuration/server2_config.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-1170" />
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributedLAN/configuration/server1_config.json">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="15">
-              <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="23" />
+            <state relative-caret-position="564">
+              <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributedLAN/configuration/server6_config.json">
+        <entry file="file://$PROJECT_DIR$/Tests/TopologyConstructionTests/configuration/server3_config.json">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="225">
-              <caret line="21" column="27" selection-start-line="21" selection-start-column="27" selection-end-line="21" selection-end-column="27" />
+            <state relative-caret-position="564">
+              <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tests/TopologyConstructionTests/configuration/server4_config.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="564">
+              <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tests/TopologyConstructionTests/configuration/server5_config.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="564">
+              <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Tests/TopologyConstructionTests/configuration/server6_config.json">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="564">
+              <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
             </state>
           </provider>
         </entry>
@@ -282,21 +293,12 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>'I'</find>
-      <find>removing</find>
-      <find>remove_all</find>
-      <find>remove</find>
-      <find>self.__dead</find>
-      <find>stop</find>
       <find>i</find>
       <find>TODO</find>
       <find>get_responding_ips</find>
       <find>get_respo</find>
       <find>compute</find>
-      <find>compute_distances</find>
-      <find>startup</find>
       <find>impose_pattern</find>
-      <find>run</find>
       <find>class server</find>
       <find>*</find>
       <find>find_router</find>
@@ -312,6 +314,15 @@
       <find>send_all</find>
       <find>recv</find>
       <find>handle_client_connection</find>
+      <find>create_transactions_for_compacted_topo</find>
+      <find>compute_di</find>
+      <find>compacted</find>
+      <find>compacte</find>
+      <find>compute_distances</find>
+      <find>run</find>
+      <find>get_topo_from_json</find>
+      <find>startup</find>
+      <find>full</find>
     </findStrings>
     <replaceStrings>
       <replace>cmd</replace>
@@ -342,8 +353,8 @@
       <replace>172.31.23.127</replace>
       <replace>172.31.28.93</replace>
       <replace>exp10</replace>
-      <replace>-n 10</replace>
       <replace>172.31.17.132</replace>
+      <replace>-n 10</replace>
     </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$</dir>
@@ -355,12 +366,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/Tests/TopologyConstructionTests/configuration/server6_config.json" />
-        <option value="$PROJECT_DIR$/Tests/TopologyConstructionTests/configuration/client_config.json" />
-        <option value="$PROJECT_DIR$/Tests/TopologyConstructionTests/configuration/client_configFULL.json" />
-        <option value="$PROJECT_DIR$/Tests/TopologyConstructionTests/configuration/sensor_config1.json" />
-        <option value="$PROJECT_DIR$/Tests/TopologyConstructionTests/configuration/sensor_config2.json" />
-        <option value="$PROJECT_DIR$/Tests/TopologyConstructionTests/configuration/sensor_config3.json" />
         <option value="$PROJECT_DIR$/Tests/TopologyConstructionTests/configuration/sensor_config4.json" />
         <option value="$PROJECT_DIR$/Tests/TopologyConstructionTests/init.sh" />
         <option value="$PROJECT_DIR$/Topology/build_topo_test1.py" />
@@ -389,10 +394,8 @@
         <option value="$PROJECT_DIR$/Tests/MaliciousNodesDistributed/run.py" />
         <option value="$PROJECT_DIR$/Tests/TopologyConstructionTests/start_simulation.py" />
         <option value="$PROJECT_DIR$/Tests/TopologyConstructionTests/compattazione.py" />
-        <option value="$PROJECT_DIR$/Topology/util.py" />
         <option value="$PROJECT_DIR$/Topology/build_virtual_topo.py" />
         <option value="$PROJECT_DIR$/Sensor/sensor.py" />
-        <option value="$PROJECT_DIR$/Tests/TopologyConstructionTests/run.py" />
         <option value="$PROJECT_DIR$/Tests/MaliciousNodesDistributedLAN/readme.md" />
         <option value="$PROJECT_DIR$/Tests/MaliciousNodesDistributedLAN/configuration/client_config.json" />
         <option value="$PROJECT_DIR$/Tests/MaliciousNodesDistributedLAN/configuration/server1_config.json" />
@@ -406,6 +409,14 @@
         <option value="$PROJECT_DIR$/Tests/MaliciousNodesDistributedLAN/reboot.sh" />
         <option value="$PROJECT_DIR$/Tests/MaliciousNodesDistributedLAN/update_VM.sh" />
         <option value="$PROJECT_DIR$/Blockchain/node.py" />
+        <option value="$PROJECT_DIR$/Topology/util.py" />
+        <option value="$PROJECT_DIR$/Tests/TopologyConstructionTests/configuration/server1_config.json" />
+        <option value="$PROJECT_DIR$/Tests/TopologyConstructionTests/configuration/server2_config.json" />
+        <option value="$PROJECT_DIR$/Tests/TopologyConstructionTests/configuration/server3_config.json" />
+        <option value="$PROJECT_DIR$/Tests/TopologyConstructionTests/configuration/server4_config.json" />
+        <option value="$PROJECT_DIR$/Tests/TopologyConstructionTests/configuration/server5_config.json" />
+        <option value="$PROJECT_DIR$/Tests/TopologyConstructionTests/configuration/server6_config.json" />
+        <option value="$PROJECT_DIR$/Tests/TopologyConstructionTests/run.py" />
       </list>
     </option>
   </component>
@@ -433,11 +444,6 @@
             <path>
               <item name="network-inference-with-BlockchainNEW" type="b2602c69:ProjectViewProjectNode" />
               <item name="network-inference-with-BlockchainNEW" type="462c0819:PsiDirectoryNode" />
-              <item name="Blockchain" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="network-inference-with-BlockchainNEW" type="b2602c69:ProjectViewProjectNode" />
-              <item name="network-inference-with-BlockchainNEW" type="462c0819:PsiDirectoryNode" />
               <item name="Sensor" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -450,6 +456,19 @@
               <item name="network-inference-with-BlockchainNEW" type="462c0819:PsiDirectoryNode" />
               <item name="Tests" type="462c0819:PsiDirectoryNode" />
               <item name="MaliciousNodesDistributedLAN" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="network-inference-with-BlockchainNEW" type="b2602c69:ProjectViewProjectNode" />
+              <item name="network-inference-with-BlockchainNEW" type="462c0819:PsiDirectoryNode" />
+              <item name="Tests" type="462c0819:PsiDirectoryNode" />
+              <item name="TopologyConstructionTests" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="network-inference-with-BlockchainNEW" type="b2602c69:ProjectViewProjectNode" />
+              <item name="network-inference-with-BlockchainNEW" type="462c0819:PsiDirectoryNode" />
+              <item name="Tests" type="462c0819:PsiDirectoryNode" />
+              <item name="TopologyConstructionTests" type="462c0819:PsiDirectoryNode" />
+              <item name="configuration" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="network-inference-with-BlockchainNEW" type="b2602c69:ProjectViewProjectNode" />
@@ -826,62 +845,6 @@
     </expressions>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/reboot.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="30">
-          <caret line="2" column="72" selection-start-line="2" selection-start-column="72" selection-end-line="2" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/update_VM.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="72" selection-start-line="3" selection-start-column="72" selection-end-line="3" selection-end-column="72" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/init_VM.sh">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="45">
-          <caret line="3" column="102" selection-start-line="3" selection-start-column="102" selection-end-line="3" selection-end-column="102" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/configuration/client_config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="80">
-          <caret line="10" column="5" lean-forward="true" selection-start-line="10" selection-start-column="5" selection-end-line="10" selection-end-column="5" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/configuration/server10_config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/configuration/server9_config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/configuration/server8_config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/configuration/server7_config.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="15">
-          <caret line="1" column="10" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/configuration/server6_config.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="645">
@@ -1026,52 +989,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Topology/util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="40">
-          <caret line="104" column="48" selection-start-line="104" selection-start-column="4" selection-end-line="104" selection-end-column="48" />
-          <folding>
-            <element signature="e#63#74#0" expanded="true" />
-            <marker date="1544199171659" expanded="true" signature="4777:4779" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Sensor/sensor.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="208">
-          <caret line="254" column="66" selection-start-line="254" selection-start-column="63" selection-end-line="254" selection-end-column="66" />
-          <folding>
-            <element signature="e#16#33#0" expanded="true" />
-            <marker date="1544203087690" expanded="true" signature="10463:10468" ph="..." />
-            <marker date="1544203087690" expanded="true" signature="17092:23034" ph="..." />
-            <marker date="1544203087690" expanded="true" signature="19844:19851" ph="..." />
-            <marker date="1544203087690" expanded="true" signature="23028:23034" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/TopologyConstructionTests/start_simulation.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="329" column="43" selection-start-line="329" selection-start-column="43" selection-end-line="329" selection-end-column="43" />
-          <folding>
-            <marker date="1544103644263" expanded="true" signature="1030:16037" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/TopologyConstructionTests/run.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="98">
-          <caret line="483" column="32" selection-start-line="483" selection-start-column="32" selection-end-line="483" selection-end-column="32" />
-          <folding>
-            <element signature="e#16#41#0" expanded="true" />
-            <marker date="1544203147111" expanded="true" signature="4826:4976" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributed/malicious_node.py">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1178,26 +1095,118 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/Tests/MaliciousNodesDistributedLAN/run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
+        <state relative-caret-position="-66">
           <caret line="146" column="65" selection-start-line="146" selection-start-column="65" selection-end-line="146" selection-end-column="65" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Blockchain/ledger.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-921" />
-      </provider>
+      <provider selected="true" editor-type-id="text-editor" />
     </entry>
     <entry file="file://$PROJECT_DIR$/Blockchain/node.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="193">
-          <caret line="108" column="50" lean-forward="true" selection-start-line="108" selection-start-column="50" selection-end-line="108" selection-end-column="50" />
+        <state relative-caret-position="118">
+          <caret line="82" column="34" lean-forward="true" selection-start-line="82" selection-start-column="34" selection-end-line="82" selection-end-column="34" />
           <folding>
             <element signature="e#24#55#0" expanded="true" />
             <marker date="1544475123814" expanded="true" signature="32412:32418" ph="..." />
             <marker date="1544475123814" expanded="true" signature="44551:49815" ph="..." />
             <marker date="1544475123814" expanded="true" signature="48496:49815" ph="..." />
             <marker date="1544475123814" expanded="true" signature="48785:49815" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Topology/util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="478">
+          <caret line="105" column="29" lean-forward="true" selection-start-line="105" selection-start-column="4" selection-end-line="105" selection-end-column="48" />
+          <folding>
+            <element signature="e#63#74#0" expanded="true" />
+            <marker date="1544689710041" expanded="true" signature="4829:4831" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/TopologyConstructionTests/configuration/sensor_config2.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/TopologyConstructionTests/configuration/sensor_config1.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/TopologyConstructionTests/configuration/server1_config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="534">
+          <caret line="44" lean-forward="true" selection-start-line="25" selection-start-column="2" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/TopologyConstructionTests/configuration/server2_config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="564">
+          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/TopologyConstructionTests/configuration/server3_config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="564">
+          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/TopologyConstructionTests/configuration/server4_config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="564">
+          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/TopologyConstructionTests/configuration/server5_config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="564">
+          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/TopologyConstructionTests/configuration/server6_config.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="564">
+          <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/TopologyConstructionTests/start_simulation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="329" column="43" selection-start-line="329" selection-start-column="43" selection-end-line="329" selection-end-column="43" />
+          <folding>
+            <marker date="1544103644263" expanded="true" signature="1030:16037" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Sensor/sensor.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="298">
+          <caret line="295" column="16" lean-forward="true" selection-start-line="295" selection-start-column="16" selection-end-line="295" selection-end-column="16" />
+          <folding>
+            <element signature="e#16#33#0" expanded="true" />
+            <marker date="1544203087690" expanded="true" signature="10463:10468" ph="..." />
+            <marker date="1544203087690" expanded="true" signature="17092:23034" ph="..." />
+            <marker date="1544203087690" expanded="true" signature="19844:19851" ph="..." />
+            <marker date="1544203087690" expanded="true" signature="23028:23034" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/TopologyConstructionTests/run.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="454">
+          <caret line="156" column="4" lean-forward="true" selection-start-line="156" selection-start-column="4" selection-end-line="156" selection-end-column="4" />
+          <folding>
+            <element signature="e#16#41#0" expanded="true" />
+            <marker date="1544866073065" expanded="true" signature="4908:5058" ph="..." />
           </folding>
         </state>
       </provider>

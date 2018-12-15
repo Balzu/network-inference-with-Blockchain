@@ -89,6 +89,7 @@ def build_txset_from_topo(topo):
     return transaction_set( transactions)
 
 def get_transactions_from_topo(topo):
+    '''Returns the transactions of the topology.'''
     # First build dictionary having key = node_name, value = node
     nodes = {}
     for n in topo:
