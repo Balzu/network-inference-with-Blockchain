@@ -104,7 +104,7 @@ def simulation_one(num_exp, num_htx=0):
         #os.system("python run.py --type 1 --honest_transactions " + str(num_htx)) + " &"
         subprocess.Popen(["python", "run.py", "--type", "1", "--honest_transactions", str(num_htx)])
         print '\n Going to sleep..\n'
-        time.sleep(180)
+        time.sleep(250)
         print '\n Going to kill stale processes..\n'
         # Kill the processes that still use the sockets (if any). Returns usage message if nothing to kill
         for sip in servers:
