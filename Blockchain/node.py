@@ -633,7 +633,7 @@ class server(client):
             #    self.__logger.info(str(t))
         self.accept = False
         if self.__stop_on_consensus:
-            if consensus:
+            if consensus and len(self.__unapproved_tx) == 0:  #If there are pending transactions we don't stop yet
                 self.stop()
 
 

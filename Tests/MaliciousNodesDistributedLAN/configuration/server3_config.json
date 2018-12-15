@@ -24,8 +24,8 @@
     }
   ],
   "quorum" : "0.8",
-  "ledger_min_close" : "20",
-  "ledger_max_close" : "30",
+  "ledger_min_close" : "40",
+  "ledger_max_close" : "60",
   "threshold_values" : {
     "init" : "0.50",
     "mid" : "0.65",
@@ -33,12 +33,13 @@
     "stuck" : "0.95"
   },
   "threshold_times" : {
-    "init" : "20",
-    "mid" : "30",
-    "late" : "40",
-    "stuck" : "60"
+    "init" : "30",
+    "mid" : "60",
+    "late" : "80",
+    "stuck" : "120"
   },
-  "ledger_min_consensus" : "10",
-  "ledger_max_consensus" : "30",
+  "ledger_min_consensus" : "20",
+  "ledger_max_consensus" : "60",
   "non_responding_routers" : "False"
 }
+
