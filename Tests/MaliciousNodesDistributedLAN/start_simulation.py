@@ -104,7 +104,7 @@ def simulation_one(num_exp, num_htx=0):
         #os.system("python run.py --type 1 --honest_transactions " + str(num_htx)) + " &"
         subprocess.Popen(["python", "run.py", "--type", "1", "--honest_transactions", str(num_htx)])
         print '\n Going to sleep..\n'
-        time.sleep(150)
+        time.sleep(180)
         print '\n Going to kill stale processes..\n'
         # Kill the processes that still use the sockets (if any). Returns usage message if nothing to kill
         for sip in servers:
@@ -174,8 +174,8 @@ def simulation_four(num_exp, num_mal, num_tx, num_htx=0):
     plot_avg_group_times(open, est, acc, 'second', 6, 'c4_g2_n' + str(num_mal) + '_tx' + str(num_tx)  + '.png')
 
 
-simulation_one(20, num_htx=1000)
-#simulation_two(20,1, num_htx=1000)
-#simulation_three(20, 1, 1000, num_htx=1000)
-#simulation_four(20, 1, 900, num_htx=1000)
+simulation_one(20, num_htx=500)
+#simulation_two(20,1, num_htx=500)
+#simulation_three(20, 1, 1000, num_htx=500)
+#simulation_four(20, 1, 900, num_htx=500)
 
