@@ -52,7 +52,7 @@ class server_socket(threading.Thread):
         #print 'Listening on {}:{}'.format(self.ip_addr, self.port)
         self.start_listening(server)
 
-    def recv_timeout(self, the_socket, timeout=1):
+    def recv_timeout(self, the_socket, timeout=2):
         # make socket non blocking
         the_socket.setblocking(0)
         # total data partwise in an array
@@ -90,7 +90,7 @@ class server_socket(threading.Thread):
         try:
             msg = pickle.loads(msg)
         except (EOFError) as e:
-            pdb.set_trace()
+            #pdb.set_trace()
             self.server.logger().info('\nError:\n ' + str(e) + '\n') #'\nMessage ' + str(msg) +
             client_socket.close()
             return #TODO this exception only happened in AWS EC2, never reproduced locally
