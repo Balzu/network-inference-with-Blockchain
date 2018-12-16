@@ -40,6 +40,7 @@ def configure_server(config_file, unl_from_file = True, stop=False, verbose=Fals
             id = ip + ":" + str(port)
             unl = random_server_selection(get_servers_id(), id)
         if malicious == 1:
+            print '\nSet up Malicious node number 1 !!!\n'
             return malicious_server1(ip, port, q, lmc, lmcl, tval, ttimes, lminc, lmaxc, unl=unl, nrr=nrr,
                                      stop_on_consensus=stop, verbose=verbose, fraudolent_tx = num_tx)
         elif malicious==2:
