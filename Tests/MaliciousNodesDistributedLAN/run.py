@@ -113,9 +113,9 @@ def experiment_one_server(i):
     '''
     print '\n----------------- Experiment one ------------------\n'
     server = configure_server('configuration/server' + str(i) + '_config.json', stop=True, verbose=True)
-    time.sleep(8 - i * 0.4)  # The last to be run waits less
+    time.sleep(10 - i * 0.4)  # The last to be run waits less
     register_observer(server)
-    time.sleep(8-i*0.4) # The last to be run waits less
+    time.sleep(10-i*0.4) # The last to be run waits less
     server.start()
     while not server.end():  # Consider one server that for sure has been started (servers[9]!)
         time.sleep(5)
