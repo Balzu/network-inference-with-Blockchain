@@ -91,9 +91,12 @@ def parse_cmd_args():
                              "\n1 = all nodes honest \n2 = Malicious nodes that do not join consensus process"
                              "\n3 = Malicious nodes that join consensus process inserting fraudolent transactions"
                              "\n4 = Malicious nodes that join consensus process dropping honest transactions")
-    parser.add_argument("-n", "--number",
-                        dest="number", default = 1,
-                        help="Number of malicious nodes. If omitted, defaults to one.")
+    parser.add_argument("-m", "--malicious", type = bool,
+                        dest="malicious", default = False,
+                        help="Tells if the server node is malicious. Defaults: False.")
+    parser.add_argument("-j", "--join", type = bool,
+                        dest="join_consensus", default = True,
+                        help = "Tells if the server node joins the consensus process. Defaults: True.")
     parser.add_argument("-ns", "--server_number",
                         dest="server_number", default=1,
                         help="Number of the server.")
@@ -153,70 +156,68 @@ def experiment_one_client_interactive(num_htx):
     c.send_transactions(trans)
     sys.exit()
 
+def experiment_two_server(i, join = True):
+    '''
+    Runs server number 'i'. This function is run on the remote, blockchain host. Servers from 1 to 6 have each other in their UNL.
+    @param join: True if this server joins the consensus process
+    '''
+    print '\n----------------- Experiment one ------------------\n'
+    server = configure_server('configuration/server' + str(i) + '_config.json', stop=True, verbose=True)
+    time.sleep(10 - i * 0.4)  # The last to be run waits less
+    register_observer(server)
+    time.sleep(10-i*0.4) # The last to be run waits less
+    if join: 
+        server.start()
+        while not server.end():  # Consider one server that for sure has been started (servers[9]!)
+            time.sleep(5)
+        server.draw_topology()
+        server.store_topo_to_file(str(i))
+    server.finalize()
 
-def experiment_two(num_htx, num):
+def experiment_two_client_interactive(num_htx):
     '''
-    Runs experiment 2, in which some servers do not participate actively in the consensus process.
-    :param num: Number of servers that do not participate in the consensus process. Only the servers belonging to
-    the first group (from 1 to 6) are considered. num must be <= |group 1|
+    Equal to "experiment_one_client_interactive"
     '''
-    print '\n----------------- Experiment two ------------------\n'
-    servers = []
-    for i in range(1, 7):
-        servers.append(configure_server('configuration/server' + str(i) + '_config.json', stop=True, verbose=True))
-    for i in range(7, 11):
-        servers.append(
-            configure_server('configuration/server' + str(i) + '_config.json', unl_from_file=False, stop=True,
-                             verbose=True))
-    for s in servers:
-        register_observer(s)
+    print '\n----------------- Experiment one ------------------\n'
     # Create transactions and send them to servers
     trans = get_honest_transactions() if num_htx == 0 else get_honest_transactions_tree(num_htx)
     c = configure_client('configuration/client_config.json')
     register_client(c)
-    #pdb.set_trace()
     c.send_transactions(trans)
-    #for i in range(len(servers)):
-    for i in range(num, 10):
-        servers[i].start()
-    while not servers[9].end():  # Consider one server that for sure has been started (servers[9]!)
+    sys.exit()
+
+def experiment_three_client_interactive(num_htx):
+    '''
+    Equal to "experiment_one_client_interactive"
+    '''
+    print '\n----------------- Experiment one ------------------\n'
+    # Create transactions and send them to servers
+    trans = get_honest_transactions() if num_htx == 0 else get_honest_transactions_tree(num_htx)
+    c = configure_client('configuration/client_config.json')
+    register_client(c)
+    c.send_transactions(trans)
+    sys.exit()
+
+def experiment_three_server(i, malicious, num_ftx):
+    '''
+    Configure and run servers for experiment three. Servers from 1 to 6 have each other in their UNL.    
+    :param malicious: True if this server is fraudolent. 
+    :param num_ftx: Number of fraudolent transactions (the same!) inserted by each malicious node
+    '''
+    print '\n----------------- Experiment three ------------------\n'  
+    if malicious:
+        server = configure_server('configuration/server' + str(i) + '_config.json', stop=True,verbose=True, 
+                malicious=1, num_tx=num_ftx) 
+    else:
+        server = configure_server('configuration/server' + str(i) + '_config.json', stop=True, verbose=True)  
+    time.sleep(10 - i * 0.4)  # The last to be run waits less
+    register_observer(server)
+    time.sleep(10-i*0.4) # The last to be run waits less
+    server.start()
+    while not server.end():  # Consider one server that for sure has been started (servers[9]!)
         time.sleep(5)
-    for i in range(0, num):
-        servers[i].finalize() # Server socket was started anyway, so have to close it
-
-def experiment_three(num_htx, num, num_ftx):
-    '''
-    Configure and run servers for experiment three. Servers from 1 to 6 have each other in their UNL.
-    Servers from 7 to 10 have an UNL made of random servers.
-    :param num: Number of malicious servers that participate in the consensus process inserting also fraudolent transactions.
-    Only the servers belonging to the first group (from 1 to 6) are considered. num must be <= |group 1|
-    :param num_tx: Number of fraudolent transactions (the same!) inserted by each malicious node
-    '''
-    print '\n----------------- Experiment three ------------------\n'
-    servers = []
-    num_mal = num
-    for i in range(1, 7):
-        if num_mal > 0:
-            servers.append(configure_server('configuration/server' + str(i) + '_config.json', stop=True,
-                                            verbose=True, malicious=1, num_tx=num_ftx))
-            num_mal -= 1
-        else:
-            servers.append(
-                configure_server('configuration/server' + str(i) + '_config.json', stop=True, verbose=True))
-    for i in range(7, 11):
-        servers.append(
-            configure_server('configuration/server' + str(i) + '_config.json', unl_from_file=False, stop=True,
-                             verbose=True))
-    for s in servers:
-        register_observer(s)
-    # Create transactions and send them to servers
-    trans = get_honest_transactions() if num_htx == 0 else get_honest_transactions_tree(num_htx)
-    c = configure_client('configuration/client_config.json')
-    register_client(c)
-    c.send_transactions(trans)
-    for s in servers:
-        s.start()
-
+    server.draw_topology()
+    server.store_topo_to_file(str(i))
 
 def experiment_four(num_htx, num, num_ftx):
     '''
@@ -258,7 +259,8 @@ def experiment_four(num_htx, num, num_ftx):
 if __name__=='__main__':
     args = parse_cmd_args()
     t = args.type
-    n = int(args.number)
+    m = bool(args.malicious)
+    j = bool(args.join_consensus)
     ns = int(args.server_number)
     nft = int(args.fraudolent_transactions)
     nht = int(args.honest_transactions)
@@ -268,10 +270,14 @@ if __name__=='__main__':
         experiment_one_client_interactive(nht)
     elif t == '1s':
         experiment_one_server(ns)
-    elif t == '2':
-        experiment_two(nht, n)
-    elif t == '3':
-        experiment_three(nht, n, nft)
+    elif t == '2i':
+        experiment_two_client_interactive(nht) 
+    elif t == '2s':
+        experiment_two_server(ns, j)
+    elif t == '3i':
+        experiment_three_interactive(nht)
+    elif t == '3s':
+        experiment_three_server(ns, m, nft)
     elif t == '4':
         experiment_four(nht, n, nft)
     else:
