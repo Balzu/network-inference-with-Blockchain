@@ -217,8 +217,9 @@ def experiment_three_server(i, malicious, num_ftx):
     server.start()
     while not server.end():  # Consider one server that for sure has been started (servers[9]!)
         time.sleep(5)
-    server.draw_topology()
-    server.store_topo_to_file(str(i))
+    if not malicious:
+        server.draw_topology()
+        server.store_topo_to_file(str(i))
 
 def experiment_four(num_htx, num, num_ftx):
     '''
