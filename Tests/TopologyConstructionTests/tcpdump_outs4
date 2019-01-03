@@ -1,0 +1,479 @@
+14:08:02.458605 ARP, Request who-has 192.168.4.10 tell 192.168.4.1, length 28
+14:08:02.459437 ARP, Reply 192.168.4.10 is-at 56:61:0d:95:58:fd (oui Unknown), length 28
+14:08:09.771503 ARP, Request who-has 192.168.4.1 tell 192.168.4.11, length 28
+14:08:09.771557 ARP, Reply 192.168.4.1 is-at 42:1d:40:e1:35:7f (oui Unknown), length 28
+14:08:09.772477 IP 192.168.4.11 > 12.10.5.1: ICMP echo request, id 18655, seq 1, length 64
+14:08:09.772485 IP 12.10.5.1 > 192.168.4.11: ICMP echo reply, id 18655, seq 1, length 64
+14:08:09.775724 ARP, Request who-has 192.168.4.1 tell 192.168.4.12, length 28
+14:08:09.775744 ARP, Reply 192.168.4.1 is-at 42:1d:40:e1:35:7f (oui Unknown), length 28
+14:08:09.776766 IP 192.168.4.12 > 12.10.5.1: ICMP echo request, id 18656, seq 1, length 64
+14:08:09.776775 IP 12.10.5.1 > 192.168.4.12: ICMP echo reply, id 18656, seq 1, length 64
+14:08:09.779661 ARP, Request who-has 192.168.4.1 tell 192.168.4.13, length 28
+14:08:09.779678 ARP, Reply 192.168.4.1 is-at 42:1d:40:e1:35:7f (oui Unknown), length 28
+14:08:09.780657 IP 192.168.4.13 > 12.10.5.1: ICMP echo request, id 18657, seq 1, length 64
+14:08:09.780664 IP 12.10.5.1 > 192.168.4.13: ICMP echo reply, id 18657, seq 1, length 64
+14:08:09.783053 ARP, Request who-has 192.168.4.1 tell 192.168.4.14, length 28
+14:08:09.783074 ARP, Reply 192.168.4.1 is-at 42:1d:40:e1:35:7f (oui Unknown), length 28
+14:08:09.784323 IP 192.168.4.14 > 12.10.5.1: ICMP echo request, id 18658, seq 1, length 64
+14:08:09.784331 IP 12.10.5.1 > 192.168.4.14: ICMP echo reply, id 18658, seq 1, length 64
+14:08:09.788222 ARP, Request who-has 192.168.4.1 tell 192.168.4.15, length 28
+14:08:09.788241 ARP, Reply 192.168.4.1 is-at 42:1d:40:e1:35:7f (oui Unknown), length 28
+14:08:09.789206 IP 192.168.4.15 > 12.10.5.1: ICMP echo request, id 18659, seq 1, length 64
+14:08:09.789214 IP 12.10.5.1 > 192.168.4.15: ICMP echo reply, id 18659, seq 1, length 64
+14:08:09.791629 ARP, Request who-has 192.168.4.1 tell 192.168.4.16, length 28
+14:08:09.791644 ARP, Reply 192.168.4.1 is-at 42:1d:40:e1:35:7f (oui Unknown), length 28
+14:08:09.792595 IP 192.168.4.16 > 12.10.5.1: ICMP echo request, id 18660, seq 1, length 64
+14:08:09.792602 IP 12.10.5.1 > 192.168.4.16: ICMP echo reply, id 18660, seq 1, length 64
+14:08:09.795094 ARP, Request who-has 192.168.4.1 tell 192.168.4.17, length 28
+14:08:09.795110 ARP, Reply 192.168.4.1 is-at 42:1d:40:e1:35:7f (oui Unknown), length 28
+14:08:09.796034 IP 192.168.4.17 > 12.10.5.1: ICMP echo request, id 18661, seq 1, length 64
+14:08:09.796042 IP 12.10.5.1 > 192.168.4.17: ICMP echo reply, id 18661, seq 1, length 64
+14:08:09.799240 IP 12.10.5.2 > 192.168.4.12: ICMP echo request, id 18662, seq 1, length 64
+14:08:09.800306 IP 192.168.4.12 > 12.10.5.2: ICMP echo reply, id 18662, seq 1, length 64
+14:08:09.817683 IP 192.168.4.2 > 12.10.5.1: ICMP echo request, id 18669, seq 1, length 64
+14:08:09.817692 IP 12.10.5.1 > 192.168.4.2: ICMP echo reply, id 18669, seq 1, length 64
+14:08:09.819439 IP 192.168.4.1 > 192.168.4.2: ICMP echo request, id 18670, seq 1, length 64
+14:08:09.820417 IP 192.168.4.2 > 192.168.4.1: ICMP echo reply, id 18670, seq 1, length 64
+14:08:14.669984 ARP, Request who-has 192.168.4.11 tell 192.168.4.9, length 28
+14:08:14.674477 ARP, Request who-has 192.168.4.1 tell 192.168.4.9, length 28
+14:08:14.674495 ARP, Reply 192.168.4.1 is-at 42:1d:40:e1:35:7f (oui Unknown), length 28
+14:08:14.675368 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 18734, seq 1, length 64
+14:08:14.675375 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 18734, seq 1, length 64
+14:08:14.679362 ARP, Request who-has 192.168.4.12 tell 192.168.4.9, length 28
+14:08:14.684356 ARP, Request who-has 192.168.4.13 tell 192.168.4.9, length 28
+14:08:14.687919 ARP, Request who-has 192.168.4.14 tell 192.168.4.9, length 28
+14:08:14.693718 ARP, Request who-has 192.168.4.15 tell 192.168.4.9, length 28
+14:08:14.698399 ARP, Request who-has 192.168.4.16 tell 192.168.4.9, length 28
+14:08:14.704635 ARP, Request who-has 192.168.4.17 tell 192.168.4.9, length 28
+14:08:14.709335 IP 192.168.4.9 > 12.10.5.2: ICMP echo request, id 18755, seq 1, length 64
+14:08:14.778147 ARP, Request who-has 192.168.4.11 tell 192.168.4.1, length 28
+14:08:14.778148 ARP, Request who-has 192.168.4.12 tell 192.168.4.1, length 28
+14:08:14.780211 ARP, Reply 192.168.4.12 is-at 92:5f:12:6e:04:dc (oui Unknown), length 28
+14:08:14.780221 ARP, Reply 192.168.4.11 is-at e2:a0:1e:15:42:92 (oui Unknown), length 28
+14:08:14.794127 ARP, Request who-has 192.168.4.13 tell 192.168.4.1, length 28
+14:08:14.794129 ARP, Request who-has 192.168.4.14 tell 192.168.4.1, length 28
+14:08:14.794130 ARP, Request who-has 192.168.4.15 tell 192.168.4.1, length 28
+14:08:14.794131 ARP, Request who-has 192.168.4.16 tell 192.168.4.1, length 28
+14:08:14.795671 ARP, Reply 192.168.4.16 is-at 76:0b:bc:28:31:bd (oui Unknown), length 28
+14:08:14.795686 ARP, Reply 192.168.4.13 is-at f6:df:db:5e:6b:3e (oui Unknown), length 28
+14:08:14.795695 ARP, Reply 192.168.4.15 is-at 56:a9:f4:0a:b2:6a (oui Unknown), length 28
+14:08:14.795704 ARP, Reply 192.168.4.14 is-at d2:50:b9:5d:c3:fd (oui Unknown), length 28
+14:08:14.810113 ARP, Request who-has 192.168.4.17 tell 192.168.4.1, length 28
+14:08:14.811340 ARP, Reply 192.168.4.17 is-at ee:39:27:a9:f7:1d (oui Unknown), length 28
+14:08:14.827528 ARP, Request who-has 192.168.4.1 tell 192.168.4.2, length 28
+14:08:14.827536 ARP, Reply 192.168.4.1 is-at 42:1d:40:e1:35:7f (oui Unknown), length 28
+14:08:15.714386 ARP, Request who-has 192.168.4.2 tell 192.168.4.9, length 28
+14:08:15.719131 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 18761, seq 1, length 64
+14:08:15.719140 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 18761, seq 1, length 64
+14:08:20.727365 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 18836, seq 1, length 64
+14:08:20.727378 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 18836, seq 1, length 64
+14:08:20.730226 ARP, Request who-has 192.168.4.9 tell 192.168.4.1, length 28
+14:08:20.732013 ARP, Reply 192.168.4.9 is-at 0a:dc:ff:8e:f7:69 (oui Unknown), length 28
+14:08:20.750384 IP 192.168.4.9 > 12.10.5.2: ICMP echo request, id 18857, seq 1, length 64
+14:08:21.758637 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 18863, seq 1, length 64
+14:08:21.758650 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 18863, seq 1, length 64
+14:08:26.773992 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 18938, seq 1, length 64
+14:08:26.774004 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 18938, seq 1, length 64
+14:08:26.798463 IP 192.168.4.9 > 12.10.5.2: ICMP echo request, id 18959, seq 1, length 64
+14:08:27.804296 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 18965, seq 1, length 64
+14:08:27.804307 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 18965, seq 1, length 64
+
+14:08:32.818813 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 19055, seq 1, length 64
+14:08:32.818824 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 19055, seq 1, length 64
+14:08:32.838270 IP 192.168.4.9 > 12.10.5.2: ICMP echo request, id 19076, seq 1, length 64
+14:08:33.841542 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 19079, seq 1, length 64
+14:08:33.841554 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 19079, seq 1, length 64
+14:08:38.851697 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 19155, seq 1, length 64
+14:08:38.851706 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 19155, seq 1, length 64
+14:08:38.875106 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 19179, seq 1, length 64
+14:08:38.875116 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 19179, seq 1, length 64
+14:08:43.888444 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 19260, seq 1, length 64
+14:08:43.888453 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 19260, seq 1, length 64
+14:08:43.917904 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 19284, seq 1, length 64
+14:08:43.917917 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 19284, seq 1, length 64
+14:08:48.933148 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 19363, seq 1, length 64
+14:08:48.933157 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 19363, seq 1, length 64
+14:08:48.955060 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 19387, seq 1, length 64
+14:08:48.955069 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 19387, seq 1, length 64
+14:08:53.947399 ARP, Request who-has 192.168.4.1 tell 192.168.4.9, length 28
+14:08:53.947405 ARP, Reply 192.168.4.1 is-at 42:1d:40:e1:35:7f (oui Unknown), length 28
+14:08:53.968568 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 19469, seq 1, length 64
+14:08:53.968578 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 19469, seq 1, length 64
+14:08:53.990161 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 19493, seq 1, length 64
+14:08:53.990170 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 19493, seq 1, length 64
+
+14:09:04.337082 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 19747, seq 1, length 64
+14:09:04.337093 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 19747, seq 1, length 64
+14:09:04.359386 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 19771, seq 1, length 64
+14:09:04.359396 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 19771, seq 1, length 64
+14:09:09.338124 ARP, Request who-has 192.168.4.9 tell 192.168.4.1, length 28
+14:09:09.338311 ARP, Reply 192.168.4.9 is-at 0a:dc:ff:8e:f7:69 (oui Unknown), length 28
+14:09:09.373803 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 19868, seq 1, length 64
+14:09:09.373815 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 19868, seq 1, length 64
+14:09:09.402296 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 19892, seq 1, length 64
+14:09:09.402308 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 19892, seq 1, length 64
+14:09:14.416435 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 19978, seq 1, length 64
+14:09:14.416447 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 19978, seq 1, length 64
+14:09:14.440117 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 20002, seq 1, length 64
+14:09:14.440127 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 20002, seq 1, length 64
+14:09:19.499480 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 20105, seq 1, length 64
+14:09:19.499496 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 20105, seq 1, length 64
+14:09:19.827485 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 20141, seq 1, length 64
+14:09:19.827495 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 20141, seq 1, length 64
+14:09:24.872556 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 20254, seq 1, length 64
+14:09:24.872567 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 20254, seq 1, length 64
+14:09:24.894228 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 20278, seq 1, length 64
+14:09:24.894240 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 20278, seq 1, length 64
+14:09:25.200114 IP 192.168.4.10.54544 > 12.10.5.1.33434: UDP, length 32
+14:09:25.200129 IP 12.10.5.1 > 192.168.4.10: ICMP 12.10.5.1 udp port 33434 unreachable, length 68
+14:09:25.201227 IP 192.168.4.10.35539 > 12.10.5.1.33435: UDP, length 32
+14:09:25.201236 IP 12.10.5.1 > 192.168.4.10: ICMP 12.10.5.1 udp port 33435 unreachable, length 68
+14:09:25.202496 IP 192.168.4.10.48034 > 12.10.5.1.33436: UDP, length 32
+14:09:25.202505 IP 12.10.5.1 > 192.168.4.10: ICMP 12.10.5.1 udp port 33436 unreachable, length 68
+14:09:25.203693 IP 192.168.4.10.38228 > 12.10.5.1.33437: UDP, length 32
+14:09:25.203700 IP 12.10.5.1 > 192.168.4.10: ICMP 12.10.5.1 udp port 33437 unreachable, length 68
+14:09:25.205204 IP 192.168.4.10.44441 > 12.10.5.1.33448: UDP, length 32
+14:09:25.205211 IP 12.10.5.1 > 192.168.4.10: ICMP 12.10.5.1 udp port 33448 unreachable, length 68
+14:09:25.205796 IP 192.168.4.10.34405 > 12.10.5.1.33442: UDP, length 32
+14:09:25.205803 IP 12.10.5.1 > 192.168.4.10: ICMP 12.10.5.1 udp port 33442 unreachable, length 68
+14:09:25.205849 IP 192.168.4.10.56595 > 12.10.5.1.33443: UDP, length 32
+14:09:25.207129 IP 192.168.4.10.37590 > 12.10.5.1.33444: UDP, length 32
+14:09:25.207153 IP 192.168.4.10.33394 > 12.10.5.1.33445: UDP, length 32
+14:09:25.207168 IP 192.168.4.10.47257 > 12.10.5.1.33447: UDP, length 32
+14:09:25.207182 IP 192.168.4.10.38287 > 12.10.5.1.33438: UDP, length 32
+14:09:25.207195 IP 192.168.4.10.43369 > 12.10.5.1.33439: UDP, length 32
+14:09:25.207209 IP 192.168.4.10.48697 > 12.10.5.1.33441: UDP, length 32
+14:09:25.207222 IP 192.168.4.10.35068 > 12.10.5.1.33449: UDP, length 32
+14:09:25.207235 IP 192.168.4.10.56665 > 12.10.5.1.33446: UDP, length 32
+14:09:25.207248 IP 192.168.4.10.57895 > 12.10.5.1.33440: UDP, length 32
+14:09:25.223537 IP 192.168.4.10.60542 > 192.168.4.2.33434: UDP, length 32
+14:09:25.255134 ARP, Request who-has 192.168.4.17 tell 192.168.4.10, length 28
+14:09:25.299053 ARP, Request who-has 192.168.4.16 tell 192.168.4.10, length 28
+
+14:09:29.903527 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 20390, seq 1, length 64
+14:09:29.903536 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 20390, seq 1, length 64
+14:09:29.924490 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 20414, seq 1, length 64
+14:09:29.924499 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 20414, seq 1, length 64
+14:09:29.929912 ARP, Request who-has 192.168.4.10 tell 192.168.4.9, length 28
+14:09:30.202813 ARP, Request who-has 192.168.4.1 tell 192.168.4.10, length 28
+14:09:30.202821 ARP, Reply 192.168.4.1 is-at 42:1d:40:e1:35:7f (oui Unknown), length 28
+14:09:30.308434 ARP, Request who-has 192.168.4.15 tell 192.168.4.10, length 28
+14:09:34.906571 ARP, Request who-has 192.168.4.1 tell 192.168.4.9, length 28
+14:09:34.906579 ARP, Reply 192.168.4.1 is-at 42:1d:40:e1:35:7f (oui Unknown), length 28
+14:09:34.943005 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 20499, seq 1, length 64
+14:09:34.943014 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 20499, seq 1, length 64
+14:09:34.965149 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 20523, seq 1, length 64
+14:09:34.965157 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 20523, seq 1, length 64
+14:09:35.318692 ARP, Request who-has 192.168.4.14 tell 192.168.4.10, length 28
+14:09:35.331434 ARP, Request who-has 192.168.4.13 tell 192.168.4.10, length 28
+14:09:39.982248 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 20611, seq 1, length 64
+14:09:39.982258 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 20611, seq 1, length 64
+14:09:40.003748 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 20635, seq 1, length 64
+14:09:40.003758 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 20635, seq 1, length 64
+14:09:40.341021 ARP, Request who-has 192.168.4.12 tell 192.168.4.10, length 28
+14:09:45.018447 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 20720, seq 1, length 64
+14:09:45.018459 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 20720, seq 1, length 64
+14:09:45.040636 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 20744, seq 1, length 64
+14:09:45.040646 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 20744, seq 1, length 64
+14:09:45.356778 ARP, Request who-has 192.168.4.11 tell 192.168.4.10, length 28
+14:09:50.055879 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 20831, seq 1, length 64
+14:09:50.055891 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 20831, seq 1, length 64
+14:09:50.081643 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 20855, seq 1, length 64
+14:09:50.081654 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 20855, seq 1, length 64
+14:09:55.098259 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 20979, seq 1, length 64
+14:09:55.098273 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 20979, seq 1, length 64
+14:09:55.121299 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 21003, seq 1, length 64
+14:09:55.121308 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 21003, seq 1, length 64
+
+14:10:00.106287 ARP, Request who-has 192.168.4.9 tell 192.168.4.1, length 28
+14:10:00.106414 ARP, Reply 192.168.4.9 is-at 0a:dc:ff:8e:f7:69 (oui Unknown), length 28
+14:10:00.136977 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 21102, seq 1, length 64
+14:10:00.137016 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 21102, seq 1, length 64
+14:10:00.158955 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 21126, seq 1, length 64
+14:10:00.158964 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 21126, seq 1, length 64
+14:10:05.194778 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 21221, seq 1, length 64
+14:10:05.194793 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 21221, seq 1, length 64
+14:10:05.335422 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 21249, seq 1, length 64
+14:10:05.335435 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 21249, seq 1, length 64
+14:10:10.393608 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 21418, seq 1, length 64
+14:10:10.393620 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 21418, seq 1, length 64
+14:10:10.415640 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 21442, seq 1, length 64
+14:10:10.415649 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 21442, seq 1, length 64
+14:10:15.431857 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 21540, seq 1, length 64
+14:10:15.431867 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 21540, seq 1, length 64
+14:10:15.453562 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 21564, seq 1, length 64
+14:10:15.453571 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 21564, seq 1, length 64
+14:10:20.467315 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 21650, seq 1, length 64
+14:10:20.467325 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 21650, seq 1, length 64
+14:10:20.491362 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 21674, seq 1, length 64
+14:10:20.491374 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 21674, seq 1, length 64
+14:10:20.662992 IP 192.168.4.10.45457 > 12.10.5.1.33434: UDP, length 32
+14:10:20.663006 IP 12.10.5.1 > 192.168.4.10: ICMP 12.10.5.1 udp port 33434 unreachable, length 68
+14:10:20.664322 IP 192.168.4.10.40754 > 12.10.5.1.33435: UDP, length 32
+14:10:20.664330 IP 12.10.5.1 > 192.168.4.10: ICMP 12.10.5.1 udp port 33435 unreachable, length 68
+14:10:20.665442 IP 192.168.4.10.43278 > 12.10.5.1.33436: UDP, length 32
+14:10:20.665449 IP 12.10.5.1 > 192.168.4.10: ICMP 12.10.5.1 udp port 33436 unreachable, length 68
+14:10:20.666801 IP 192.168.4.10.38311 > 12.10.5.1.33437: UDP, length 32
+14:10:20.666809 IP 12.10.5.1 > 192.168.4.10: ICMP 12.10.5.1 udp port 33437 unreachable, length 68
+14:10:20.667319 IP 192.168.4.10.42260 > 12.10.5.1.33440: UDP, length 32
+14:10:20.667326 IP 12.10.5.1 > 192.168.4.10: ICMP 12.10.5.1 udp port 33440 unreachable, length 68
+14:10:20.667791 IP 192.168.4.10.41198 > 12.10.5.1.33441: UDP, length 32
+14:10:20.667798 IP 12.10.5.1 > 192.168.4.10: ICMP 12.10.5.1 udp port 33441 unreachable, length 68
+14:10:20.668210 IP 192.168.4.10.49093 > 12.10.5.1.33443: UDP, length 32
+14:10:20.669199 IP 192.168.4.10.38088 > 12.10.5.1.33442: UDP, length 32
+14:10:20.669254 IP 192.168.4.10.54322 > 12.10.5.1.33438: UDP, length 32
+14:10:20.669282 IP 192.168.4.10.41753 > 12.10.5.1.33439: UDP, length 32
+14:10:20.669291 IP 192.168.4.10.48439 > 12.10.5.1.33444: UDP, length 32
+14:10:20.669299 IP 192.168.4.10.55324 > 12.10.5.1.33445: UDP, length 32
+14:10:20.674450 IP 192.168.4.10.55552 > 12.10.5.1.33446: UDP, length 32
+14:10:20.674897 IP 192.168.4.10.52505 > 12.10.5.1.33449: UDP, length 32
+14:10:20.675299 IP 192.168.4.10.37505 > 12.10.5.1.33447: UDP, length 32
+14:10:20.675688 IP 192.168.4.10.55935 > 12.10.5.1.33448: UDP, length 32
+14:10:25.482577 ARP, Request who-has 192.168.4.1 tell 192.168.4.9, length 28
+14:10:25.482583 ARP, Reply 192.168.4.1 is-at 42:1d:40:e1:35:7f (oui Unknown), length 28
+14:10:25.535447 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 21805, seq 1, length 64
+14:10:25.535458 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 21805, seq 1, length 64
+14:10:25.674343 ARP, Request who-has 192.168.4.10 tell 192.168.4.1, length 28
+14:10:25.674421 ARP, Request who-has 192.168.4.1 tell 192.168.4.10, length 28
+14:10:25.674428 ARP, Reply 192.168.4.1 is-at 42:1d:40:e1:35:7f (oui Unknown), length 28
+14:10:25.676435 ARP, Reply 192.168.4.10 is-at 56:61:0d:95:58:fd (oui Unknown), length 28
+14:10:25.728240 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 21839, seq 1, length 64
+14:10:25.728250 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 21839, seq 1, length 64
+
+14:10:30.803975 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 22004, seq 1, length 64
+14:10:30.803988 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 22004, seq 1, length 64
+14:10:30.826616 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 22028, seq 1, length 64
+14:10:30.826627 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 22028, seq 1, length 64
+14:10:35.818130 ARP, Request who-has 192.168.4.9 tell 192.168.4.1, length 28
+14:10:35.818297 ARP, Reply 192.168.4.9 is-at 0a:dc:ff:8e:f7:69 (oui Unknown), length 28
+14:10:35.843340 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 22112, seq 1, length 64
+14:10:35.843353 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 22112, seq 1, length 64
+14:10:35.864668 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 22136, seq 1, length 64
+14:10:35.864677 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 22136, seq 1, length 64
+14:10:40.880179 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 22222, seq 1, length 64
+14:10:40.880191 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 22222, seq 1, length 64
+14:10:40.906654 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 22246, seq 1, length 64
+14:10:40.906666 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 22246, seq 1, length 64
+14:10:45.923035 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 22339, seq 1, length 64
+14:10:45.923047 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 22339, seq 1, length 64
+14:10:45.947021 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 22363, seq 1, length 64
+14:10:45.947031 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 22363, seq 1, length 64
+14:10:50.962505 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 22449, seq 1, length 64
+14:10:50.962515 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 22449, seq 1, length 64
+14:10:50.988627 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 22473, seq 1, length 64
+14:10:50.988639 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 22473, seq 1, length 64
+14:10:56.005809 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 22559, seq 1, length 64
+14:10:56.005818 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 22559, seq 1, length 64
+14:10:56.027684 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 22583, seq 1, length 64
+14:10:56.027692 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 22583, seq 1, length 64
+
+14:11:01.043096 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 22678, seq 1, length 64
+14:11:01.043106 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 22678, seq 1, length 64
+14:11:01.067114 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 22702, seq 1, length 64
+14:11:01.067169 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 22702, seq 1, length 64
+14:11:06.083423 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 22787, seq 1, length 64
+14:11:06.083435 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 22787, seq 1, length 64
+14:11:06.104957 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 22811, seq 1, length 64
+14:11:06.104966 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 22811, seq 1, length 64
+14:11:11.098123 ARP, Request who-has 192.168.4.9 tell 192.168.4.1, length 28
+14:11:11.098308 ARP, Reply 192.168.4.9 is-at 0a:dc:ff:8e:f7:69 (oui Unknown), length 28
+14:11:11.121113 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 22898, seq 1, length 64
+14:11:11.121124 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 22898, seq 1, length 64
+14:11:11.143946 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 22922, seq 1, length 64
+14:11:11.143955 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 22922, seq 1, length 64
+14:11:16.122305 ARP, Request who-has 192.168.4.1 tell 192.168.4.9, length 28
+14:11:16.122311 ARP, Reply 192.168.4.1 is-at 42:1d:40:e1:35:7f (oui Unknown), length 28
+14:11:16.159360 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 23006, seq 1, length 64
+14:11:16.159410 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 23006, seq 1, length 64
+14:11:16.179184 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 23030, seq 1, length 64
+14:11:16.179192 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 23030, seq 1, length 64
+14:11:21.194542 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 23116, seq 1, length 64
+14:11:21.194554 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 23116, seq 1, length 64
+14:11:21.221427 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 23140, seq 1, length 64
+14:11:21.221438 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 23140, seq 1, length 64
+14:11:26.237712 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 23224, seq 1, length 64
+14:11:26.237723 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 23224, seq 1, length 64
+14:11:26.258397 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 23248, seq 1, length 64
+14:11:26.258406 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 23248, seq 1, length 64
+
+14:11:31.271465 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 23343, seq 1, length 64
+14:11:31.271475 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 23343, seq 1, length 64
+14:11:31.294151 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 23367, seq 1, length 64
+14:11:31.294160 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 23367, seq 1, length 64
+14:11:36.307639 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 23451, seq 1, length 64
+14:11:36.307649 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 23451, seq 1, length 64
+14:11:36.327956 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 23475, seq 1, length 64
+14:11:36.327964 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 23475, seq 1, length 64
+14:11:41.424094 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 23628, seq 1, length 64
+14:11:41.424106 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 23628, seq 1, length 64
+14:11:41.724396 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 23662, seq 1, length 64
+14:11:41.724406 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 23662, seq 1, length 64
+14:11:46.426440 ARP, Request who-has 192.168.4.9 tell 192.168.4.1, length 28
+14:11:46.426574 ARP, Reply 192.168.4.9 is-at 0a:dc:ff:8e:f7:69 (oui Unknown), length 28
+14:11:46.920438 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 23759, seq 1, length 64
+14:11:46.920447 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 23759, seq 1, length 64
+14:11:46.942129 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 23783, seq 1, length 64
+14:11:46.942138 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 23783, seq 1, length 64
+14:11:51.960097 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 23869, seq 1, length 64
+14:11:51.960108 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 23869, seq 1, length 64
+14:11:51.987205 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 23893, seq 1, length 64
+14:11:51.987218 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 23893, seq 1, length 64
+14:11:57.004673 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 23977, seq 1, length 64
+14:11:57.004684 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 23977, seq 1, length 64
+14:11:57.023598 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 24001, seq 1, length 64
+14:11:57.023624 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 24001, seq 1, length 64
+
+14:12:02.102361 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 24167, seq 1, length 64
+14:12:02.102373 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 24167, seq 1, length 64
+14:12:02.372010 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 24199, seq 1, length 64
+14:12:02.372019 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 24199, seq 1, length 64
+14:12:07.114344 ARP, Request who-has 192.168.4.1 tell 192.168.4.9, length 28
+14:12:07.114351 ARP, Reply 192.168.4.1 is-at 42:1d:40:e1:35:7f (oui Unknown), length 28
+14:12:07.460123 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 24296, seq 1, length 64
+14:12:07.460132 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 24296, seq 1, length 64
+14:12:07.479391 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 24320, seq 1, length 64
+14:12:07.479400 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 24320, seq 1, length 64
+14:12:12.493618 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 24406, seq 1, length 64
+14:12:12.493644 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 24406, seq 1, length 64
+14:12:12.514782 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 24430, seq 1, length 64
+14:12:12.514791 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 24430, seq 1, length 64
+14:12:17.530751 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 24514, seq 1, length 64
+14:12:17.530760 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 24514, seq 1, length 64
+14:12:17.549904 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 24538, seq 1, length 64
+14:12:17.549912 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 24538, seq 1, length 64
+14:12:22.538114 ARP, Request who-has 192.168.4.9 tell 192.168.4.1, length 28
+14:12:22.538231 ARP, Reply 192.168.4.9 is-at 0a:dc:ff:8e:f7:69 (oui Unknown), length 28
+14:12:22.563228 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 24624, seq 1, length 64
+14:12:22.563237 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 24624, seq 1, length 64
+14:12:22.585573 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 24648, seq 1, length 64
+14:12:22.585598 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 24648, seq 1, length 64
+14:12:27.604489 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 24732, seq 1, length 64
+14:12:27.604498 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 24732, seq 1, length 64
+14:12:27.622872 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 24756, seq 1, length 64
+14:12:27.622879 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 24756, seq 1, length 64
+
+14:12:32.638037 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 24851, seq 1, length 64
+14:12:32.638046 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 24851, seq 1, length 64
+14:12:32.660318 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 24875, seq 1, length 64
+14:12:32.660328 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 24875, seq 1, length 64
+14:12:37.671837 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 24959, seq 1, length 64
+14:12:37.671846 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 24959, seq 1, length 64
+14:12:37.692207 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 24983, seq 1, length 64
+14:12:37.692217 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 24983, seq 1, length 64
+14:12:42.704229 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 25069, seq 1, length 64
+14:12:42.704238 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 25069, seq 1, length 64
+14:12:42.730677 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 25093, seq 1, length 64
+14:12:42.730685 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 25093, seq 1, length 64
+14:12:47.742962 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 25177, seq 1, length 64
+14:12:47.742972 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 25177, seq 1, length 64
+14:12:47.766831 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 25201, seq 1, length 64
+14:12:47.766842 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 25201, seq 1, length 64
+14:12:52.783838 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 25287, seq 1, length 64
+14:12:52.783847 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 25287, seq 1, length 64
+14:12:52.802964 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 25311, seq 1, length 64
+14:12:52.802974 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 25311, seq 1, length 64
+14:12:57.786306 ARP, Request who-has 192.168.4.9 tell 192.168.4.1, length 28
+14:12:57.786419 ARP, Request who-has 192.168.4.1 tell 192.168.4.9, length 28
+14:12:57.786423 ARP, Reply 192.168.4.1 is-at 42:1d:40:e1:35:7f (oui Unknown), length 28
+14:12:57.786461 ARP, Reply 192.168.4.9 is-at 0a:dc:ff:8e:f7:69 (oui Unknown), length 28
+14:12:57.818441 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 25395, seq 1, length 64
+14:12:57.818449 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 25395, seq 1, length 64
+14:12:57.837795 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 25419, seq 1, length 64
+14:12:57.837804 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 25419, seq 1, length 64
+
+14:13:02.851295 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 25514, seq 1, length 64
+14:13:02.851303 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 25514, seq 1, length 64
+14:13:02.873533 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 25538, seq 1, length 64
+14:13:02.873559 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 25538, seq 1, length 64
+14:13:07.887539 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 25622, seq 1, length 64
+14:13:07.887552 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 25622, seq 1, length 64
+14:13:07.905910 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 25646, seq 1, length 64
+14:13:07.905919 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 25646, seq 1, length 64
+14:13:12.947849 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 25757, seq 1, length 64
+14:13:12.947862 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 25757, seq 1, length 64
+14:13:13.144909 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 25781, seq 1, length 64
+14:13:13.144925 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 25781, seq 1, length 64
+14:13:18.267865 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 25930, seq 1, length 64
+14:13:18.267878 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 25930, seq 1, length 64
+14:13:18.402917 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 25954, seq 1, length 64
+14:13:18.402928 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 25954, seq 1, length 64
+14:13:23.447244 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 26040, seq 1, length 64
+14:13:23.447253 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 26040, seq 1, length 64
+14:13:23.465945 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 26064, seq 1, length 64
+14:13:23.465953 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 26064, seq 1, length 64
+14:13:28.480066 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 26148, seq 1, length 64
+14:13:28.480078 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 26148, seq 1, length 64
+14:13:28.500258 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 26172, seq 1, length 64
+14:13:28.500266 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 26172, seq 1, length 64
+
+14:13:33.482306 ARP, Request who-has 192.168.4.9 tell 192.168.4.1, length 28
+14:13:33.482433 ARP, Reply 192.168.4.9 is-at 0a:dc:ff:8e:f7:69 (oui Unknown), length 28
+14:13:33.547226 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 26292, seq 1, length 64
+14:13:33.547236 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 26292, seq 1, length 64
+14:13:33.728244 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 26316, seq 1, length 64
+14:13:33.728253 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 26316, seq 1, length 64
+14:13:38.787894 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 26465, seq 1, length 64
+14:13:38.787904 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 26465, seq 1, length 64
+14:13:38.899271 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 26489, seq 1, length 64
+14:13:38.899280 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 26489, seq 1, length 64
+14:13:43.951372 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 26575, seq 1, length 64
+14:13:43.951382 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 26575, seq 1, length 64
+14:13:43.972546 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 26599, seq 1, length 64
+14:13:43.972555 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 26599, seq 1, length 64
+14:13:48.954199 ARP, Request who-has 192.168.4.1 tell 192.168.4.9, length 28
+14:13:48.954205 ARP, Reply 192.168.4.1 is-at 42:1d:40:e1:35:7f (oui Unknown), length 28
+14:13:48.987996 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 26683, seq 1, length 64
+14:13:48.988005 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 26683, seq 1, length 64
+14:13:49.009454 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 26707, seq 1, length 64
+14:13:49.009483 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 26707, seq 1, length 64
+14:13:54.022409 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 26793, seq 1, length 64
+14:13:54.022417 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 26793, seq 1, length 64
+14:13:54.042071 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 26817, seq 1, length 64
+14:13:54.042082 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 26817, seq 1, length 64
+14:13:59.057721 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 26901, seq 1, length 64
+14:13:59.057730 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 26901, seq 1, length 64
+
+14:14:04.093663 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 27020, seq 1, length 64
+14:14:04.093679 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 27020, seq 1, length 64
+14:14:04.116553 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 27044, seq 1, length 64
+14:14:04.116563 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 27044, seq 1, length 64
+14:14:09.098367 ARP, Request who-has 192.168.4.9 tell 192.168.4.1, length 28
+14:14:09.098505 ARP, Reply 192.168.4.9 is-at 0a:dc:ff:8e:f7:69 (oui Unknown), length 28
+14:14:09.131077 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 27128, seq 1, length 64
+14:14:09.131086 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 27128, seq 1, length 64
+14:14:09.150876 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 27152, seq 1, length 64
+14:14:09.150884 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 27152, seq 1, length 64
+14:14:14.162762 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 27238, seq 1, length 64
+14:14:14.162771 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 27238, seq 1, length 64
+14:14:14.181859 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 27262, seq 1, length 64
+14:14:14.181867 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 27262, seq 1, length 64
+14:14:19.192854 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 27346, seq 1, length 64
+14:14:19.192862 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 27346, seq 1, length 64
+14:14:19.212099 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 27370, seq 1, length 64
+14:14:19.212109 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 27370, seq 1, length 64
+14:14:24.228331 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 27456, seq 1, length 64
+14:14:24.228354 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 27456, seq 1, length 64
+14:14:24.245524 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 27480, seq 1, length 64
+14:14:24.245532 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 27480, seq 1, length 64
+
+14:14:34.291539 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 27683, seq 1, length 64
+14:14:34.291547 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 27683, seq 1, length 64
+14:14:34.310875 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 27707, seq 1, length 64
+14:14:34.310882 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 27707, seq 1, length 64
+14:14:39.306247 ARP, Request who-has 192.168.4.1 tell 192.168.4.9, length 28
+14:14:39.306253 ARP, Reply 192.168.4.1 is-at 42:1d:40:e1:35:7f (oui Unknown), length 28
+14:14:39.321989 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 27791, seq 1, length 64
+14:14:39.321998 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 27791, seq 1, length 64
+14:14:39.341690 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 27815, seq 1, length 64
+14:14:39.341699 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 27815, seq 1, length 64
+14:14:44.330203 ARP, Request who-has 192.168.4.9 tell 192.168.4.1, length 28
+14:14:44.330327 ARP, Reply 192.168.4.9 is-at 0a:dc:ff:8e:f7:69 (oui Unknown), length 28
+14:14:44.357347 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 27901, seq 1, length 64
+14:14:44.357356 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 27901, seq 1, length 64
+14:14:44.375821 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 27925, seq 1, length 64
+14:14:44.375829 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 27925, seq 1, length 64
+14:14:49.425105 IP 192.168.4.9 > 12.10.5.1: ICMP echo request, id 28049, seq 1, length 64
+14:14:49.425118 IP 12.10.5.1 > 192.168.4.9: ICMP echo reply, id 28049, seq 1, length 64
+14:14:49.590634 IP 192.168.4.9 > 192.168.4.1: ICMP echo request, id 28073, seq 1, length 64
+14:14:49.590644 IP 192.168.4.1 > 192.168.4.9: ICMP echo reply, id 28073, seq 1, length 64
+

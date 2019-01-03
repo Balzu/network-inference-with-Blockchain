@@ -1,0 +1,57 @@
+Cmd: sudo timeout 30 tcpdump -l -i s3-eth1 net 192.168.0.0/16 or 12.0.0.0/8 >> tcpdump_outs3
+2018-12-27 14:08:12 : New IP discovered by s3 : 192.168.3.11
+2018-12-27 14:08:12 : New IP discovered by s3 : 192.168.2.3
+2018-12-27 14:08:12 : New IP discovered by s3 : 192.168.3.12
+2018-12-27 14:08:12 : New IP discovered by s3 : 192.168.3.13
+2018-12-27 14:08:12 : New IP discovered by s3 : 192.168.3.14
+2018-12-27 14:08:12 : New IP discovered by s3 : 192.168.3.15
+2018-12-27 14:08:12 : New IP discovered by s3 : 192.168.3.16
+2018-12-27 14:08:12 : New IP discovered by s3 : 192.168.3.17
+2018-12-27 14:08:12 : New IP discovered by s3 : 192.168.3.1
+2018-12-27 14:08:16 : New IP discovered by s3 : 192.168.3.9
+Run full iTop
+Known ips: 
+h31
+r2
+h32
+h33
+h34
+h35
+h36
+h37
+r2
+hms3
+full iTop hosts: 
+r2
+hms3
+h32
+h33
+h31
+h36
+h37
+h34
+h35
+2018-12-27 14:09:06 : New IP discovered by s3 : 192.168.3.10
+Run full iTop
+Known ips: 
+h31
+r2
+h32
+h33
+h34
+h35
+h36
+h37
+r2
+hms3
+hms3
+full iTop hosts: 
+r2
+hms3
+h32
+h33
+h31
+h36
+h37
+h34
+h35

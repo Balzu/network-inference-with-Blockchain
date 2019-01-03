@@ -154,7 +154,7 @@ def experiment_one(id):
     net['h1'].cmd('ping -c 1 192.168.2.102 ')  # hps2
     net['h2'].cmd('ping -c 1 192.168.2.102  ')  # hps2
     net['h0'].cmd('ping -c 1 192.168.2.102  ')  # hps2
-    
+
     time.sleep(120)
     [s.stop() for s in sensors]
     servers[3].draw_topology(prefix = 'topo_exp1/', suffix = str(id))
@@ -519,6 +519,94 @@ def experiment_ten(id, sensors, subfolder):
     servers[3].store_topo_to_file('FINAL_TOPOLOGY')
     stop_blockchain(servers)
 
+def experiment_eleven(id, sensors, subfolder):
+    '''
+    Sets up NetworkTopo11.
+    :param id: (Incremental) Identifier of the experiment
+    :param sensors: list of boolean values telling which sensors have to be used
+    :return: Saves the topology stored in the ledger in a file called print_topo[id].png
+    '''
+    def ping_subnets():
+        '''
+        All the hosts ping the sensor in their subnet. This is done to speedup the trace collection process.
+        Indeed, because of firewall rules, a ping done between all possible pairs of hosts would take hours (1640 pings,
+        with timeout because most of packets are filtered out by firewall policies..)
+        '''
+        #hps1 = psnames[0]
+        #hps2 = psnames[1]
+        #hps3 = psnames[2]
+        #hps4 = psnames[3]
+        net['h11'].cmd('ping -c 1 -W 1 ' + net['r1'].IP())
+        net['h12'].cmd('ping -c 1 -W 1 ' + net['r1'].IP())
+        net['h13'].cmd('ping -c 1 -W 1 ' + net['r1'].IP())
+        net['h14'].cmd('ping -c 1 -W 1 ' + net['r1'].IP())
+        net['h15'].cmd('ping -c 1 -W 1 ' + net['r1'].IP())
+        net['h16'].cmd('ping -c 1 -W 1 ' + net['r1'].IP())
+        net['h17'].cmd('ping -c 1 -W 1 ' + net['r1'].IP())
+        net['h21'].cmd('ping -c 1 -W 1 ' + net['r3'].IP())
+        net['h22'].cmd('ping -c 1 -W 1 ' + net['r3'].IP())
+        net['h23'].cmd('ping -c 1 -W 1 ' + net['r3'].IP())
+        net['h24'].cmd('ping -c 1 -W 1 ' + net['r3'].IP())
+        net['h25'].cmd('ping -c 1 -W 1 ' + net['r3'].IP())
+        net['h26'].cmd('ping -c 1 -W 1 ' + net['r3'].IP())
+        net['h27'].cmd('ping -c 1 -W 1 ' + net['r3'].IP())
+        net['h31'].cmd('ping -c 1 -W 1 ' + net['r2'].IP())
+        net['h32'].cmd('ping -c 1 -W 1 ' + net['r2'].IP())
+        net['h33'].cmd('ping -c 1 -W 1 ' + net['r2'].IP())
+        net['h34'].cmd('ping -c 1 -W 1 ' + net['r2'].IP())
+        net['h35'].cmd('ping -c 1 -W 1 ' + net['r2'].IP())
+        net['h36'].cmd('ping -c 1 -W 1 ' + net['r2'].IP())
+        net['h37'].cmd('ping -c 1 -W 1 ' + net['r2'].IP())
+        net['h41'].cmd('ping -c 1 -W 1 ' + net['r4'].IP())
+        net['h42'].cmd('ping -c 1 -W 1 ' + net['r4'].IP())
+        net['h43'].cmd('ping -c 1 -W 1 ' + net['r4'].IP())
+        net['h44'].cmd('ping -c 1 -W 1 ' + net['r4'].IP())
+        net['h45'].cmd('ping -c 1 -W 1 ' + net['r4'].IP())
+        net['h46'].cmd('ping -c 1 -W 1 ' + net['r4'].IP())
+        net['h47'].cmd('ping -c 1 -W 1 ' + net['r4'].IP())
+        net['hI'].cmd('ping -c 1 -W 1 ' + net['h42'].IP())
+        net['r1'].cmd('ping -c 1 -W 1 ' + net['h11'].IP())
+        net['r2'].cmd('ping -c 1 -W 1 ' + net['h31'].IP())
+        net['r1'].cmd('ping -c 1 -W 1 ' + net['r3'].IP())
+        net['r2'].cmd('ping -c 1 -W 1 ' + net['r3'].IP())
+        net['r3'].cmd('ping -c 1 -W 1 ' + net['r1'].IP())
+        net['r3'].cmd('ping -c 1 -W 1 ' + net['r2'].IP())
+        net['r3'].cmd('ping -c 1 -W 1 ' + net['r4'].IP())
+        net['r4'].cmd('ping -c 1 -W 1 ' + net['r3'].IP())
+
+    servers = start_blockchain()
+    (net, topo) = start_network_number(11, sensor1=sensors[0], sensor2=sensors[1], sensor3=sensors[2], sensor4=sensors[3])
+    #topo.add_firewall_rules(net) #TODO remove
+    #CLI(net)
+    os.system('./init.sh')
+    topo.create_alias_file()
+    asnames = topo.active_sensors
+    psnames = topo.passive_sensors
+    msnames = topo.monitor_sensors
+    sensors = []
+    #startup(len(msnames), msnames, net)
+    #ips = get_responding_ips(msnames)
+    compute_distances(net, msnames)
+    topo.add_firewall_rules(net)
+    clean_cmd_base = 'rm -rf traceroute/'
+    for i in range(len(psnames)):
+        clean_cmd = [clean_cmd_base + msnames[i] + '/*']
+        os.system('mkdir traceroute/' + msnames[i])
+        sensors.append(sensor(psnames[i], len(msnames), net, 'configuration/sensor_config' + str(i + 1) + '.json',
+                              hosts=msnames, max_fail=3, clean_cmd=clean_cmd, known_ips=[], simulation=True,
+                              sleep_time=30, subnets = '192.168.0.0/16 or 12.0.0.0/8',
+                              verbose=False, asid=asnames[i], msid=msnames[i], include_hosts=True,
+                              intf=topo.interface_name[i], nrr = False))
+    [s.start() for s in sensors]
+    time.sleep(10)
+    print '\n\n ...............  PINGING   .............. \n\n'
+    ping_subnets()
+    time.sleep(400)
+    [s.stop() for s in sensors]
+    [s.wait_end() for s in sensors]
+    servers[3].draw_topology(prefix='topo_exp11/' + subfolder + '/', suffix=str(id))
+    stop_blockchain(servers)
+
 if __name__ == '__main__':
     args = parse_cmd_args()
     num = args.num
@@ -548,6 +636,8 @@ if __name__ == '__main__':
         experiment_nine(id, [s1, s2, s3, s4], subfolder=sub)
     elif num == 10:
         experiment_ten(id, [s1, s2, s3, s4], subfolder=sub)
+    elif num == 11:
+        experiment_eleven(id, [s1, s2, s3, s4], subfolder=sub)
 
 
 

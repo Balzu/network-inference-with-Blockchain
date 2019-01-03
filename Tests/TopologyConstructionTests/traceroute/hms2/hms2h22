@@ -1,0 +1,2 @@
+traceroute to 192.168.2.12 (192.168.2.12), 30 hops max, 60 byte packets
+ 1  192.168.2.12  1.023 ms  0.719 ms  0.707 ms

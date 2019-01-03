@@ -420,11 +420,14 @@ class sensor(object):
         '''
         alias = create_alias()
         shosts = set()
+        self.__logger.info('Known ips: ')
         for ip in self.__known_ips:
             try:
                 a = alias[ip]
                 shosts.add(a)
+                self.__logger.info(a)
             except KeyError:
+                self.__logger.info('\nKey error for the IP: ' + ip)
                 pass # If an IP has no alias, we simply do not return it
         shosts.union(set(hosts)) # Hosts are already aliased
         return list(shosts)

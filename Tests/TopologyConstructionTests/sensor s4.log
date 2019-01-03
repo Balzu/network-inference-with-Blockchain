@@ -1,0 +1,63 @@
+Cmd: sudo timeout 30 tcpdump -l -i s4-eth2 net 192.168.0.0/16 or 12.0.0.0/8 >> tcpdump_outs4
+2018-12-27 14:08:12 : New IP discovered by s4 : 192.168.4.11
+2018-12-27 14:08:12 : New IP discovered by s4 : 12.10.5.1
+2018-12-27 14:08:12 : New IP discovered by s4 : 192.168.4.12
+2018-12-27 14:08:12 : New IP discovered by s4 : 192.168.4.13
+2018-12-27 14:08:12 : New IP discovered by s4 : 192.168.4.14
+2018-12-27 14:08:12 : New IP discovered by s4 : 192.168.4.15
+2018-12-27 14:08:12 : New IP discovered by s4 : 192.168.4.16
+2018-12-27 14:08:12 : New IP discovered by s4 : 192.168.4.17
+2018-12-27 14:08:12 : New IP discovered by s4 : 12.10.5.2
+2018-12-27 14:08:12 : New IP discovered by s4 : 192.168.4.2
+2018-12-27 14:08:12 : New IP discovered by s4 : 192.168.4.1
+2018-12-27 14:08:16 : New IP discovered by s4 : 192.168.4.9
+Run full iTop
+Known ips: 
+h41
+r4
+h42
+h43
+h44
+h45
+h46
+h47
+r3
+r4
+hms4
+full iTop hosts: 
+r4
+r3
+h47
+h46
+h45
+h44
+h43
+h42
+h41
+hms4
+2018-12-27 14:09:26 : New IP discovered by s4 : 192.168.4.10
+Run full iTop
+Known ips: 
+h41
+r4
+h42
+h43
+h44
+h45
+h46
+h47
+r3
+r4
+hms4
+hms4
+full iTop hosts: 
+r4
+r3
+h47
+h46
+h45
+h44
+h43
+h42
+h41
+hms4

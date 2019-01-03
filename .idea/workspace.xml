@@ -140,7 +140,7 @@
           <entry key="md" value="16" />
           <entry key="png" value="5" />
           <entry key="prova" value="1" />
-          <entry key="py" value="407" />
+          <entry key="py" value="410" />
           <entry key="s1" value="2" />
           <entry key="sh" value="36" />
           <entry key="tcpdump_out" value="3" />
@@ -154,7 +154,7 @@
           <entry key="JSON" value="217" />
           <entry key="Markdown" value="17" />
           <entry key="PLAIN_TEXT" value="337" />
-          <entry key="Python" value="407" />
+          <entry key="Python" value="410" />
           <entry key="UNKNOWN" value="1" />
         </counts>
       </usages-collector>
@@ -166,7 +166,7 @@
           <entry key="json" value="273" />
           <entry key="m_topo_1" value="7" />
           <entry key="md" value="8888" />
-          <entry key="py" value="76201" />
+          <entry key="py" value="79153" />
           <entry key="sh" value="408" />
         </counts>
       </usages-collector>
@@ -175,7 +175,7 @@
           <entry key="JSON" value="273" />
           <entry key="Markdown" value="8888" />
           <entry key="PLAIN_TEXT" value="489" />
-          <entry key="Python" value="76201" />
+          <entry key="Python" value="79153" />
         </counts>
       </usages-collector>
     </session>
@@ -185,10 +185,10 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Tests/TopologyConstructionTests/start_simulation.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="594">
-              <caret line="329" column="43" selection-start-line="329" selection-start-column="43" selection-end-line="329" selection-end-column="43" />
+            <state relative-caret-position="420">
+              <caret line="367" column="39" selection-start-line="367" selection-start-column="39" selection-end-line="367" selection-end-column="39" />
               <folding>
-                <marker date="1544103644263" expanded="true" signature="1030:16037" ph="..." />
+                <marker date="1545920785679" expanded="true" signature="1030:18273" ph="..." />
               </folding>
             </state>
           </provider>
@@ -197,14 +197,14 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Sensor/sensor.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="298">
-              <caret line="295" column="16" lean-forward="true" selection-start-line="295" selection-start-column="16" selection-end-line="295" selection-end-column="16" />
+            <state relative-caret-position="3810">
+              <caret line="254" column="110" selection-start-line="254" selection-start-column="72" selection-end-line="254" selection-end-column="110" />
               <folding>
                 <element signature="e#16#33#0" expanded="true" />
-                <marker date="1544203087690" expanded="true" signature="10463:10468" ph="..." />
-                <marker date="1544203087690" expanded="true" signature="17092:23034" ph="..." />
-                <marker date="1544203087690" expanded="true" signature="19844:19851" ph="..." />
-                <marker date="1544203087690" expanded="true" signature="23028:23034" ph="..." />
+                <marker date="1545841884883" expanded="true" signature="10463:10468" ph="..." />
+                <marker date="1545841884883" expanded="true" signature="17092:23182" ph="..." />
+                <marker date="1545841884883" expanded="true" signature="19844:19851" ph="..." />
+                <marker date="1545841884883" expanded="true" signature="23176:23182" ph="..." />
               </folding>
             </state>
           </provider>
@@ -213,35 +213,52 @@
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/Tests/TopologyConstructionTests/run.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="454">
-              <caret line="156" column="4" lean-forward="true" selection-start-line="156" selection-start-column="4" selection-end-line="156" selection-end-column="4" />
+            <state relative-caret-position="155">
+              <caret line="537" column="9" selection-start-line="537" selection-start-column="9" selection-end-line="537" selection-end-column="9" />
               <folding>
                 <element signature="e#16#41#0" expanded="true" />
-                <marker date="1544866073065" expanded="true" signature="4908:5058" ph="..." />
+                <marker date="1545920859508" expanded="true" signature="4908:5058" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tests/TopologyConstructionTests/configuration/sensor_config1.json">
-          <provider selected="true" editor-type-id="text-editor" />
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tests/TopologyConstructionTests/configuration/server1_config.json">
+        <entry file="file://$PROJECT_DIR$/Topology/util.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="534">
-              <caret line="44" lean-forward="true" selection-start-line="25" selection-start-column="2" selection-end-line="44" />
+            <state relative-caret-position="310">
+              <caret line="105" column="4" selection-start-line="105" selection-start-column="4" selection-end-line="105" selection-end-column="42" />
+              <folding>
+                <element signature="e#63#74#0" expanded="true" />
+                <marker date="1545667282484" expanded="true" signature="4829:4831" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/Tests/TopologyConstructionTests/configuration/server2_config.json">
+        <entry file="file://$PROJECT_DIR$/Topology/build_topo_test1.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="564">
-              <caret line="44" lean-forward="true" selection-start-line="44" selection-end-line="44" />
+            <state relative-caret-position="505">
+              <caret line="1697" column="38" lean-forward="true" selection-start-line="1697" selection-start-column="38" selection-end-line="1697" selection-end-column="38" />
+              <folding>
+                <element signature="e#18#47#0" expanded="true" />
+                <marker date="1545859122618" expanded="true" signature="1865:1875" ph="..." />
+                <marker date="1545859122618" expanded="true" signature="5698:5703" ph="..." />
+                <marker date="1545859122618" expanded="true" signature="37599:37605" ph="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/Topology/build_virtual_topo.py">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="225">
+              <caret line="30" column="11" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="11" />
+              <folding>
+                <element signature="e#19#33#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -293,19 +310,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>i</find>
-      <find>TODO</find>
-      <find>get_responding_ips</find>
-      <find>get_respo</find>
-      <find>compute</find>
-      <find>impose_pattern</find>
-      <find>class server</find>
-      <find>*</find>
-      <find>find_router</find>
-      <find>topology_n</find>
-      <find>stop()</find>
-      <find>pdb.s</find>
-      <find>traces</find>
       <find>get_topo</find>
       <find>fulliTop</find>
       <find>nrr</find>
@@ -314,19 +318,30 @@
       <find>send_all</find>
       <find>recv</find>
       <find>handle_client_connection</find>
-      <find>create_transactions_for_compacted_topo</find>
       <find>compute_di</find>
       <find>compacted</find>
       <find>compacte</find>
       <find>compute_distances</find>
       <find>run</find>
       <find>get_topo_from_json</find>
-      <find>startup</find>
+      <find>create_tra</find>
+      <find>Ri</find>
+      <find>.append(</find>
+      <find>1.</find>
+      <find>start_networ</find>
       <find>full</find>
+      <find>get_hos</find>
+      <find>self.__hosts</find>
+      <find>create_alias</find>
+      <find>ips_alias</find>
+      <find>interface_name</find>
+      <find>interfa</find>
+      <find>logger</find>
+      <find>startup</find>
+      <find>get_hosts</find>
+      <find>create_transactions_for_compacted_topo</find>
     </findStrings>
     <replaceStrings>
-      <replace>cmd</replace>
-      <replace>/24</replace>
       <replace>/8</replace>
       <replace>r7</replace>
       <replace>11.1</replace>
@@ -354,6 +369,8 @@
       <replace>172.31.28.93</replace>
       <replace>exp10</replace>
       <replace>172.31.17.132</replace>
+      <replace>] = [</replace>
+      <replace>4.</replace>
       <replace>-n 10</replace>
     </replaceStrings>
     <dirStrings>
@@ -368,7 +385,6 @@
       <list>
         <option value="$PROJECT_DIR$/Tests/TopologyConstructionTests/configuration/sensor_config4.json" />
         <option value="$PROJECT_DIR$/Tests/TopologyConstructionTests/init.sh" />
-        <option value="$PROJECT_DIR$/Topology/build_topo_test1.py" />
         <option value="$PROJECT_DIR$/Tests/MaliciousNodesDistributed/readme.md" />
         <option value="$PROJECT_DIR$/Tests/MaliciousNodesDistributed/configuration/server10_config.json" />
         <option value="$PROJECT_DIR$/Tests/MaliciousNodesDistributed/script.sh" />
@@ -392,10 +408,8 @@
         <option value="$PROJECT_DIR$/Tests/MaliciousNodesDistributed/start_simulation.py" />
         <option value="$PROJECT_DIR$/Tests/MaliciousNodesDistributed/stop_python.sh" />
         <option value="$PROJECT_DIR$/Tests/MaliciousNodesDistributed/run.py" />
-        <option value="$PROJECT_DIR$/Tests/TopologyConstructionTests/start_simulation.py" />
         <option value="$PROJECT_DIR$/Tests/TopologyConstructionTests/compattazione.py" />
         <option value="$PROJECT_DIR$/Topology/build_virtual_topo.py" />
-        <option value="$PROJECT_DIR$/Sensor/sensor.py" />
         <option value="$PROJECT_DIR$/Tests/MaliciousNodesDistributedLAN/readme.md" />
         <option value="$PROJECT_DIR$/Tests/MaliciousNodesDistributedLAN/configuration/client_config.json" />
         <option value="$PROJECT_DIR$/Tests/MaliciousNodesDistributedLAN/configuration/server1_config.json" />
@@ -409,13 +423,16 @@
         <option value="$PROJECT_DIR$/Tests/MaliciousNodesDistributedLAN/reboot.sh" />
         <option value="$PROJECT_DIR$/Tests/MaliciousNodesDistributedLAN/update_VM.sh" />
         <option value="$PROJECT_DIR$/Blockchain/node.py" />
-        <option value="$PROJECT_DIR$/Topology/util.py" />
         <option value="$PROJECT_DIR$/Tests/TopologyConstructionTests/configuration/server1_config.json" />
         <option value="$PROJECT_DIR$/Tests/TopologyConstructionTests/configuration/server2_config.json" />
         <option value="$PROJECT_DIR$/Tests/TopologyConstructionTests/configuration/server3_config.json" />
         <option value="$PROJECT_DIR$/Tests/TopologyConstructionTests/configuration/server4_config.json" />
         <option value="$PROJECT_DIR$/Tests/TopologyConstructionTests/configuration/server5_config.json" />
         <option value="$PROJECT_DIR$/Tests/TopologyConstructionTests/configuration/server6_config.json" />
+        <option value="$PROJECT_DIR$/Topology/util.py" />
+        <option value="$PROJECT_DIR$/Sensor/sensor.py" />
+        <option value="$PROJECT_DIR$/Topology/build_topo_test1.py" />
+        <option value="$PROJECT_DIR$/Tests/TopologyConstructionTests/start_simulation.py" />
         <option value="$PROJECT_DIR$/Tests/TopologyConstructionTests/run.py" />
       </list>
     </option>
@@ -455,20 +472,7 @@
               <item name="network-inference-with-BlockchainNEW" type="b2602c69:ProjectViewProjectNode" />
               <item name="network-inference-with-BlockchainNEW" type="462c0819:PsiDirectoryNode" />
               <item name="Tests" type="462c0819:PsiDirectoryNode" />
-              <item name="MaliciousNodesDistributedLAN" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="network-inference-with-BlockchainNEW" type="b2602c69:ProjectViewProjectNode" />
-              <item name="network-inference-with-BlockchainNEW" type="462c0819:PsiDirectoryNode" />
-              <item name="Tests" type="462c0819:PsiDirectoryNode" />
               <item name="TopologyConstructionTests" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="network-inference-with-BlockchainNEW" type="b2602c69:ProjectViewProjectNode" />
-              <item name="network-inference-with-BlockchainNEW" type="462c0819:PsiDirectoryNode" />
-              <item name="Tests" type="462c0819:PsiDirectoryNode" />
-              <item name="TopologyConstructionTests" type="462c0819:PsiDirectoryNode" />
-              <item name="configuration" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="network-inference-with-BlockchainNEW" type="b2602c69:ProjectViewProjectNode" />
@@ -650,11 +654,11 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="65" y="-4" width="1855" height="980" extended-state="6" />
+    <frame x="65" y="-4" width="1535" height="840" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Favorites" order="0" side_tool="true" />
-      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.6284585" visible="true" weight="0.15720524" />
+      <window_info active="true" content_ui="combo" id="Project" order="1" sideWeight="0.6284585" visible="true" weight="0.1904762" />
       <window_info id="Structure" order="2" sideWeight="0.3715415" side_tool="true" weight="0.15720524" />
       <window_info anchor="bottom" id="Terminal" order="0" weight="0.3295964" />
       <window_info anchor="bottom" id="Event Log" order="1" side_tool="true" weight="0.10915493" />
@@ -663,7 +667,7 @@
       <window_info anchor="bottom" id="Find" order="4" weight="0.20657277" />
       <window_info anchor="bottom" id="Version Control" order="5" weight="0.3295964" />
       <window_info anchor="bottom" id="Run" order="6" weight="0.33450705" />
-      <window_info anchor="bottom" id="Debug" order="7" visible="true" weight="0.1713615" />
+      <window_info anchor="bottom" id="Debug" order="7" visible="true" weight="0.13342696" />
       <window_info anchor="bottom" id="Cvs" order="8" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="9" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="10" />
@@ -931,19 +935,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Topology/build_topo_test1.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="515">
-          <caret line="1422" column="39" selection-start-line="1422" selection-start-column="39" selection-end-line="1422" selection-end-column="39" />
-          <folding>
-            <element signature="e#18#47#0" expanded="true" />
-            <marker date="1543075074515" expanded="true" signature="1865:1875" ph="..." />
-            <marker date="1543075074515" expanded="true" signature="5698:5703" ph="..." />
-            <marker date="1543075074515" expanded="true" signature="37599:37605" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Tests/TopologyConstructionTests/OUT_PROVA">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="317">
@@ -976,16 +967,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="40">
           <caret line="76" selection-start-line="76" selection-end-line="100" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Topology/build_virtual_topo.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1202">
-          <caret line="98" column="38" selection-start-line="98" selection-start-column="38" selection-end-line="98" selection-end-column="38" />
-          <folding>
-            <element signature="e#19#33#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1117,17 +1098,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Topology/util.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="478">
-          <caret line="105" column="29" lean-forward="true" selection-start-line="105" selection-start-column="4" selection-end-line="105" selection-end-column="48" />
-          <folding>
-            <element signature="e#63#74#0" expanded="true" />
-            <marker date="1544689710041" expanded="true" signature="4829:4831" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/Tests/TopologyConstructionTests/configuration/sensor_config2.json">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
@@ -1176,37 +1146,71 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Tests/TopologyConstructionTests/start_simulation.py">
+    <entry file="file://$PROJECT_DIR$/Topology/build_virtual_topo.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="594">
-          <caret line="329" column="43" selection-start-line="329" selection-start-column="43" selection-end-line="329" selection-end-column="43" />
+        <state relative-caret-position="225">
+          <caret line="30" column="11" selection-start-line="30" selection-start-column="4" selection-end-line="30" selection-end-column="11" />
           <folding>
-            <marker date="1544103644263" expanded="true" signature="1030:16037" ph="..." />
+            <element signature="e#19#33#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Topology/build_topo_test1.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="505">
+          <caret line="1697" column="38" lean-forward="true" selection-start-line="1697" selection-start-column="38" selection-end-line="1697" selection-end-column="38" />
+          <folding>
+            <element signature="e#18#47#0" expanded="true" />
+            <marker date="1545859122618" expanded="true" signature="1865:1875" ph="..." />
+            <marker date="1545859122618" expanded="true" signature="5698:5703" ph="..." />
+            <marker date="1545859122618" expanded="true" signature="37599:37605" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Topology/util.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="310">
+          <caret line="105" column="4" selection-start-line="105" selection-start-column="4" selection-end-line="105" selection-end-column="42" />
+          <folding>
+            <element signature="e#63#74#0" expanded="true" />
+            <marker date="1545667282484" expanded="true" signature="4829:4831" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Sensor/sensor.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="298">
-          <caret line="295" column="16" lean-forward="true" selection-start-line="295" selection-start-column="16" selection-end-line="295" selection-end-column="16" />
+        <state relative-caret-position="3810">
+          <caret line="254" column="110" selection-start-line="254" selection-start-column="72" selection-end-line="254" selection-end-column="110" />
           <folding>
             <element signature="e#16#33#0" expanded="true" />
-            <marker date="1544203087690" expanded="true" signature="10463:10468" ph="..." />
-            <marker date="1544203087690" expanded="true" signature="17092:23034" ph="..." />
-            <marker date="1544203087690" expanded="true" signature="19844:19851" ph="..." />
-            <marker date="1544203087690" expanded="true" signature="23028:23034" ph="..." />
+            <marker date="1545841884883" expanded="true" signature="10463:10468" ph="..." />
+            <marker date="1545841884883" expanded="true" signature="17092:23182" ph="..." />
+            <marker date="1545841884883" expanded="true" signature="19844:19851" ph="..." />
+            <marker date="1545841884883" expanded="true" signature="23176:23182" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Tests/TopologyConstructionTests/start_simulation.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="420">
+          <caret line="367" column="39" selection-start-line="367" selection-start-column="39" selection-end-line="367" selection-end-column="39" />
+          <folding>
+            <marker date="1545920785679" expanded="true" signature="1030:18273" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/Tests/TopologyConstructionTests/run.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="454">
-          <caret line="156" column="4" lean-forward="true" selection-start-line="156" selection-start-column="4" selection-end-line="156" selection-end-column="4" />
+        <state relative-caret-position="155">
+          <caret line="537" column="9" selection-start-line="537" selection-start-column="9" selection-end-line="537" selection-end-column="9" />
           <folding>
             <element signature="e#16#41#0" expanded="true" />
-            <marker date="1544866073065" expanded="true" signature="4908:5058" ph="..." />
+            <marker date="1545920859508" expanded="true" signature="4908:5058" ph="..." />
           </folding>
         </state>
       </provider>

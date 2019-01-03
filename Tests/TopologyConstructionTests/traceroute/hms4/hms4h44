@@ -1,0 +1,2 @@
+traceroute to 192.168.4.14 (192.168.4.14), 30 hops max, 60 byte packets
+ 1  192.168.4.14  0.848 ms  0.941 ms  1.077 ms

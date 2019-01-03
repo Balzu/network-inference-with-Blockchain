@@ -277,7 +277,7 @@ if __name__=='__main__':
     elif t == '2s':
         experiment_two_server(ns, j)
     elif t == '3i':
-        experiment_three_interactive(nht)
+        experiment_three_client_interactive(nht)
     elif t == '3s':
         experiment_three_server(ns, m, nft)
     elif t == '4':

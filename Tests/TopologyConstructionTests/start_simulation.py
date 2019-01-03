@@ -349,6 +349,51 @@ def simulation_ten():
                     with open("error", "w") as file:
                         file.write(str(e))
 
+def simulation_eleven():
+    '''
+    Runs the simulation number eleven. Experiment eleven is run with various combination of sensors (2,3 or 4).
+    Network topology 11 is used.
+    '''
+    os.system('rm -rf topo_exp11')
+    os.system('mkdir topo_exp11')
+    os.system('mkdir topo_exp11/one_sensor')
+    os.system('mkdir topo_exp11/two_sensors')
+    os.system('mkdir topo_exp11/three_sensors')
+    os.system('mkdir topo_exp11/four_sensors')
+    os.system('sudo mn -c')
+    # First element of the pair: command. Second element: number of times the cmd has to be executed
+    cmd1s = [('sudo python run.py -n 11 -s1 -sub one_sensor -id ', 5),
+             ('sudo python run.py -n 11 -s2 -sub one_sensor -id ', 5),
+             ('sudo python run.py -n 11 -s3 -sub one_sensor -id ', 5),
+             ('sudo python run.py -n 11 -s4 -sub one_sensor -id ', 5)]
+    cmd2s = [   ('sudo python run.py -n 11 -s1 -s2 -sub two_sensors -id ', 3),
+                ('sudo python run.py -n 11 -s1 -s3 -sub two_sensors -id ', 3),
+                ('sudo python run.py -n 11 -s1 -s4 -sub two_sensors -id ', 3),
+                ('sudo python run.py -n 11 -s2 -s3 -sub two_sensors -id ', 3),
+                ('sudo python run.py -n 11 -s2 -s4 -sub two_sensors -id ', 4),
+                ('sudo python run.py -n 11 -s3 -s4 -sub two_sensors -id ', 4)
+            ]
+    cmd3s = [   ('sudo python run.py -n 11 -s1 -s2 -s3 -sub three_sensors -id ', 5),
+                ('sudo python run.py -n 11 -s1 -s2 -s4 -sub three_sensors -id ', 5),
+                ('sudo python run.py -n 11 -s1 -s3 -s4 -sub three_sensors -id ', 5),
+                ('sudo python run.py -n 11 -s2 -s3 -s4 -sub three_sensors -id ', 5)
+            ]
+    cmd4s = [   ('sudo python run.py -n 11 -s1 -s2 -s3 -s4 -sub four_sensors -id ', 20)
+            ]
+    commands = [cmd1s, cmd2s, cmd3s]
+    #commands = [cmd4s]
+    for cmdlist in commands:
+        id = 0
+        for pair in cmdlist:
+            for i in range(pair[1]):
+                try:
+                    os.system(pair[0] + str(id))
+                    id += 1
+                    time.sleep(25)
+                except Exception as e:
+                    with open("error", "w") as file:
+                        file.write(str(e))
+
 
 
 if __name__ == '__main__':
@@ -375,6 +420,8 @@ if __name__ == '__main__':
         simulation_nine()
     elif snum == 10:
         simulation_ten()
+    elif snum == 11:
+        simulation_eleven()
 
 
 
