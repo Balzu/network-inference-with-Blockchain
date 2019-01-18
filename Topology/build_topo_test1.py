@@ -1460,7 +1460,7 @@ class NetworkTopo11( Topo ):
     Seven hosts and a sensor belong to subnet 192.168.4.0/24, representing LAN3.
     Router1(FW1) allows only the communication between h11 and h31;
     Router2(FW2) allows only the communication between h21 and h31;
-    Router3(FW3) allows only the communication between h31 and hd1;
+    Router3(FW3) allows only the communication between h31 and h41;
     RouterI(FW4) allows the communication between any Internet host and any host in the DMZ.
 
     LAN1 - |FW1| - -  LAN2 - |FW3| - DMZ - |FW4| - INTERNET
