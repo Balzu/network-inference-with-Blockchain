@@ -149,6 +149,7 @@ def experiment_one_client_interactive(num_htx):
     # Create transactions and send them to servers
     trans = get_honest_transactions() if num_htx == 0 else get_honest_transactions_tree(num_htx)
     c = configure_client('configuration/client_config.json')
+    #pdb.set_trace()
     register_client(c)
     c.send_transactions(trans)
     sys.exit()
