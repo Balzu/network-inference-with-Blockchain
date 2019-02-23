@@ -1,4 +1,4 @@
-# Discovering and Se4curely storing a Network Topology
+# Discovering and Securely storing a Network Topology
 
 ## Abstract
 We present an automated tool to discover the topology of a network and to securely store it in a Blockchain. Our tool consists of two modules. The first one implements the network topology inference algorithm. This algorithm that has been defined according to state-of-the-art techniques can infer a network topology even in cases where only partial information is available. The second module is the Blockchain related one. It adopts a fast, energy-efficient consensus algorithm and is tailored to store topology information. The two components are independent entities and experimental results confirm that their integration results in an accurate network topology reconstruction which is resilient to tampering attempts.
